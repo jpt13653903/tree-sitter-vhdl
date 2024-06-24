@@ -53,7 +53,7 @@ parser_config.vhdl = {
     files = { 'src/parser.c', 'src/scanner.c' },
     branch = 'master',
     generate_requires_npm = false,
-    requires_generate_from_grammar = true,
+    requires_generate_from_grammar = false,
   },
   filetype = 'vhdl',
 }
