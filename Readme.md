@@ -47,7 +47,7 @@ parser_config.vhdl = {
   install_info = {
     url = "https://github.com/jpt13653903/tree-sitter-vhdl.git",
     files = { 'src/parser.c', 'src/scanner.c' },
-    branch = 'new_parser',
+    branch = 'master',
     generate_requires_npm = false,
     requires_generate_from_grammar = true,
   },
@@ -67,9 +67,9 @@ treesitter.setup {
 }
 ```
 
-Then copy the `queries` folder to your `after` configuration folder,
-typically `~/.config/nvim/after/` on Linux
-and `~/AppData/Local/nvim/after/` on Windows.
+Then copy the contents of the `queries` folder to your `after/queries/vhdl`
+configuration folder, typically `~/.config/nvim/after/queries/vhdl` on Linux
+and `~/AppData/Local/nvim/after/queries/vhdl` on Windows.
 
 Finally, run `:TSUpdate`.
 

@@ -1,0 +1,18 @@
+; [
+;     (entity_declaration)
+;     (entity_header)
+;     (architecture_body)
+;     (generic_clause)
+;     (port_clause)
+;     (if_statement)
+;     (case_statement)
+;     (concurrent_statement_part)
+;     (declarative_part)
+;     (sequence_of_statements)
+;     (process_statement)
+;     (record_type_definition)
+;     (component_declaration)
+;     (component_instantiation_statement)
+;     (port_map_aspect)
+;     (generic_map_aspect)
+; ] @fold
