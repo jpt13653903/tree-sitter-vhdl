@@ -44,8 +44,3 @@ dist/
 *.obj
 *.o
 
-# Temporarily ignore the auto-gen output
-src/node-types.json
-src/grammar.json
-src/parser.c
-
