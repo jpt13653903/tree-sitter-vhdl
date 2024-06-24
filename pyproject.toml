@@ -4,9 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tree-sitter-vhdl"
-description = "Vhdl grammar for tree-sitter"
+description = "VHDL grammar for tree-sitter"
 version = "0.0.1"
 keywords = ["incremental", "parsing", "tree-sitter", "vhdl"]
+authors = [
+  {name = "John-Philip Taylor"}
+]
 classifiers = [
   "Intended Audience :: Developers",
   "License :: OSI Approved :: MIT License",
@@ -19,7 +22,7 @@ license.text = "MIT"
 readme = "README.md"
 
 [project.urls]
-Homepage = "https://github.com/tree-sitter/tree-sitter-vhdl"
+Homepage = "https://github.com/jpt13653903/tree-sitter-vhdl"
 
 [project.optional-dependencies]
 core = ["tree-sitter~=0.21"]

@@ -5,6 +5,7 @@ LANGUAGE_NAME := tree-sitter-vhdl
 # repository
 SRC_DIR := src
 
+PARSER_URL := https://github.com/jpt13653903/tree-sitter-vhdl
 PARSER_REPO_URL := $(shell git -C $(SRC_DIR) remote get-url origin 2>/dev/null)
 
 ifeq ($(PARSER_URL),)
