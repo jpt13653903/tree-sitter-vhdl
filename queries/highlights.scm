@@ -142,8 +142,10 @@
 [ (ALL) (OTHERS) (box) (DEFAULT) (OPEN) ] @constant.builtin
 
 [ (IS) (BEGIN) (END) ] @keyword
+(parameter_specification (IN) @keyword)
 
 [ (PROCESS) (WAIT) (ON) (UNTIL) ] @keyword.coroutine
+(timeout_clause (FOR) @keyword.coroutine)
 
 [ (FUNCTION) (PROCEDURE) ] @keyword.function
 
@@ -160,12 +162,20 @@
     (PROTECTED) (PRIVATE)
     (PURE) (IMPURE)
     (INERTIAL) (POSTPONED) (STRONG) (GUARDED)
-    (IN) (OUT) (INOUT) (LINKAGE) (BUFFER)
+    (OUT) (INOUT) (LINKAGE) (BUFFER)
     (REGISTER) (BUS)
     (SHARED)
 ] @keyword.modifier
+(mode (IN) @keyword.modifier)
+(force_mode (IN) @keyword.modifier)
 
-[ (FOR) (WHILE) (LOOP) (NEXT) (EXIT) ] @keyword.repeat
+[ (WHILE) (LOOP) (NEXT) (EXIT) ] @keyword.repeat
+(for_loop (FOR) @keyword.repeat)
+
+(block_configuration (FOR) @keyword)
+(configuration_specification (FOR) @keyword)
+(component_configuration (FOR) @keyword)
+(end_for (FOR) @keyword)
 
 [ (RETURN) ] @keyword.return
 
@@ -211,11 +221,7 @@
 
 [ "("  ")" "["  "]" "<<" ">>" ] @punctuation.bracket
 
-[
-    ":"
-    "@"
-    "=>"
-] @punctuation.special
+[ ":" "@" "=>" ] @punctuation.special
 
 [
     (decimal_literal)
