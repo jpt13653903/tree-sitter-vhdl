@@ -122,25 +122,25 @@ static void register_std_standard_constants(TokenTree* token_tree)
     token_tree_insert(token_tree, "error",               LIBRARY_CONSTANT_DEBUG);
     token_tree_insert(token_tree, "failure",             LIBRARY_CONSTANT_DEBUG);
 
-    token_tree_insert(token_tree, "ascending",           LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "descending",          LIBRARY_CONSTANT);
+    token_tree_insert(token_tree, "ascending",           LIBRARY_CONSTANT_STANDARD);
+    token_tree_insert(token_tree, "descending",          LIBRARY_CONSTANT_STANDARD);
 
-    token_tree_insert(token_tree, "read_mode",           LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "write_mode",          LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "append_mode",         LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "read_write_mode",     LIBRARY_CONSTANT);
+    token_tree_insert(token_tree, "read_mode",           LIBRARY_CONSTANT_STANDARD);
+    token_tree_insert(token_tree, "write_mode",          LIBRARY_CONSTANT_STANDARD);
+    token_tree_insert(token_tree, "append_mode",         LIBRARY_CONSTANT_STANDARD);
+    token_tree_insert(token_tree, "read_write_mode",     LIBRARY_CONSTANT_STANDARD);
 
-    token_tree_insert(token_tree, "open_ok",             LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "name_error",          LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "mode_error",          LIBRARY_CONSTANT);
+    token_tree_insert(token_tree, "open_ok",             LIBRARY_CONSTANT_STANDARD);
+    token_tree_insert(token_tree, "name_error",          LIBRARY_CONSTANT_STANDARD);
+    token_tree_insert(token_tree, "mode_error",          LIBRARY_CONSTANT_STANDARD);
     // status_error is defined in standard.h
 
-    token_tree_insert(token_tree, "state_open",          LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "state_closed",        LIBRARY_CONSTANT);
+    token_tree_insert(token_tree, "state_open",          LIBRARY_CONSTANT_STANDARD);
+    token_tree_insert(token_tree, "state_closed",        LIBRARY_CONSTANT_STANDARD);
 
-    token_tree_insert(token_tree, "file_origin_begin",   LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "file_origin_current", LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "file_origin_end",     LIBRARY_CONSTANT);
+    token_tree_insert(token_tree, "file_origin_begin",   LIBRARY_CONSTANT_STANDARD);
+    token_tree_insert(token_tree, "file_origin_current", LIBRARY_CONSTANT_STANDARD);
+    token_tree_insert(token_tree, "file_origin_end",     LIBRARY_CONSTANT_STANDARD);
 
     token_tree_insert(token_tree, "fs",                  LIBRARY_CONSTANT_UNIT);
     token_tree_insert(token_tree, "ps",                  LIBRARY_CONSTANT_UNIT);

@@ -105,6 +105,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "name",
           "named": true
         },
@@ -168,6 +180,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -290,6 +314,18 @@
       "types": [
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -599,7 +635,46 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attribute_identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -1498,6 +1573,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -1896,6 +1983,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "string_literal",
           "named": true
         },
@@ -2079,6 +2178,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "name",
           "named": true
         }
@@ -2196,6 +2307,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -2883,6 +3006,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -2952,6 +3087,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -2994,6 +3141,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -3017,6 +3176,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -3039,6 +3210,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -3151,6 +3334,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -3177,6 +3372,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -3228,6 +3435,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -3251,6 +3470,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -3273,6 +3504,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -3300,6 +3543,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -3473,6 +3728,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -3491,6 +3758,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -3739,6 +4018,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -4201,6 +4492,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "name",
           "named": true
         },
@@ -4610,6 +4913,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "name",
           "named": true
         }
@@ -4638,6 +4953,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -4703,6 +5030,18 @@
       "types": [
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -5065,6 +5404,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "record_mode_view_indication",
           "named": true
         },
@@ -5124,6 +5475,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -5221,6 +5584,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "name",
           "named": true
         }
@@ -5241,6 +5616,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -5330,6 +5717,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "physical_incomplete_type_definition",
           "named": true
         },
@@ -5365,6 +5764,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "record_mode_view_indication",
           "named": true
         },
@@ -5393,6 +5804,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -5427,11 +5850,50 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "record_mode_view_indication",
           "named": true
         },
         {
           "type": "simple_mode_indication",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "label",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -5519,7 +5981,19 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
           "type": "library_namespace",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -5731,6 +6205,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "mode_view_body",
           "named": true
         },
@@ -5799,6 +6285,10 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
           "named": true
         },
         {
@@ -5915,6 +6405,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -6041,6 +6543,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -6181,6 +6695,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "name",
           "named": true
         }
@@ -6197,6 +6723,18 @@
       "types": [
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -6239,6 +6777,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -6307,6 +6857,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "pathname_element",
           "named": true
         }
@@ -6327,6 +6889,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -6451,6 +7025,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -6522,6 +7108,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -6794,6 +7392,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -6863,6 +7473,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -6960,6 +7582,18 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
         }
       ]
     }
@@ -6974,6 +7608,18 @@
       "types": [
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -7255,7 +7901,19 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
           "type": "library_constant_unit",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -7379,7 +8037,19 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
           "type": "library_namespace",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -7503,6 +8173,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -8000,10 +8682,6 @@
           "named": true
         },
         {
-          "type": "library_constant",
-          "named": true
-        },
-        {
           "type": "library_constant_boolean",
           "named": true
         },
@@ -8013,6 +8691,14 @@
         },
         {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_env",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -8335,6 +9021,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "operator_symbol",
           "named": true
         }
@@ -8480,6 +9178,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "name",
           "named": true
         },
@@ -8512,6 +9222,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         },
         {
@@ -8711,6 +9433,18 @@
           "named": true
         },
         {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        },
+        {
           "type": "physical_type_definition",
           "named": true
         },
@@ -8741,6 +9475,33 @@
     "type": "unary_operator",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "unit",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "unspecified_type_indication",
@@ -8830,6 +9591,18 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]
@@ -9665,10 +10438,6 @@
     "named": true
   },
   {
-    "type": "attribute_identifier",
-    "named": true
-  },
-  {
     "type": "attribute_impure_function",
     "named": true
   },
@@ -9765,10 +10534,6 @@
     "named": true
   },
   {
-    "type": "label",
-    "named": true
-  },
-  {
     "type": "library_attribute",
     "named": true
   },
@@ -9786,6 +10551,14 @@
   },
   {
     "type": "library_constant_debug",
+    "named": true
+  },
+  {
+    "type": "library_constant_env",
+    "named": true
+  },
+  {
+    "type": "library_constant_standard",
     "named": true
   },
   {
@@ -9810,10 +10583,6 @@
   },
   {
     "type": "string_literal",
-    "named": true
-  },
-  {
-    "type": "unit",
     "named": true
   },
   {
