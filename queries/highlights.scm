@@ -214,8 +214,7 @@
 [
     ":"
     "@"
-    (association_element)
-    (case_statement_alternative)
+    "=>"
 ] @punctuation.special
 
 [
