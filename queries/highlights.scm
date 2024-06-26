@@ -172,36 +172,44 @@
 [ (WHILE) (LOOP) (NEXT) (EXIT) ] @keyword.repeat
 (for_loop (FOR) @keyword.repeat)
 
-(block_configuration (FOR) @keyword)
+(block_configuration         (FOR) @keyword)
 (configuration_specification (FOR) @keyword)
-(component_configuration (FOR) @keyword)
-(end_for (FOR) @keyword)
+(component_configuration     (FOR) @keyword)
+(end_for                     (FOR) @keyword)
 
 [ (RETURN) ] @keyword.return
 
 [ (ASSERT) (REPORT) (SEVERITY) ] @keyword.debug
 
-[ (IF) (THEN) (ELSIF) (ELSE) (CASE) ] @keyword.conditional
+[ (IF) (THEN) (ELSIF) (CASE) ] @keyword.conditional
+(when_element              (WHEN) @keyword.conditional)
+(case_generate_alternative (WHEN) @keyword.conditional)
+(else_statements           (ELSE) @keyword.conditional)
+(else_generate             (ELSE) @keyword.conditional)
 
-[ (WITH) (WHEN) (SELECT) ] @keyword.conditional.ternary
+[ (WITH) (SELECT) ] @keyword.conditional.ternary
+(when_expression               (WHEN) @keyword.conditional.ternary)
+(else_expression               (ELSE) @keyword.conditional.ternary)
+(else_waveform                 (ELSE) @keyword.conditional.ternary)
+(else_expression_or_unaffected (ELSE) @keyword.conditional.ternary)
 
 [ (NULL) ] @constant.builtin
 
-(user_directive) @keyword.directive
+(user_directive)    @keyword.directive
 (protect_directive) @keyword.directive
 (warning_directive) @keyword.directive
-(error_directive) @keyword.directive
+(error_directive)   @keyword.directive
 
-(if_conditional_analysis) @keyword.directive
+(if_conditional_analysis)    @keyword.directive
 (elsif_conditional_analysis) @keyword.directive
-(else_conditional_analysis) @keyword.directive
-(end_conditional_analysis) @keyword.directive
+(else_conditional_analysis)  @keyword.directive
+(end_conditional_analysis)   @keyword.directive
 
-(directive_body) @keyword.directive
+(directive_body)             @keyword.directive
 (directive_constant_builtin) @constant.macro
-(directive_error) @comment.error
-(directive_protect) @keyword.directive
-(directive_warning) @comment.warning
+(directive_error)            @comment.error
+(directive_protect)          @keyword.directive
+(directive_warning)          @comment.warning
 
 [
     (condition_conversion)

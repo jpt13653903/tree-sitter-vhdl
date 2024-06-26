@@ -8,3 +8,5 @@ export CC=gcc
 # tree-sitter generate && tree-sitter parse test/conditional_expression.vhd
 tree-sitter generate && tree-sitter parse test/corpus/specification_examples/architecture.vhd
 
+tree-sitter test
+
