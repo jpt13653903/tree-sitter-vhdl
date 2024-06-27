@@ -58,6 +58,11 @@ end entity Processor;
 architecture Behaviour of Processor is
   signal clk, rst        : std_logic;
   signal bus_in, bus_out : streaming_bus;
+
+  type IntArray is array 1 to 3 of integer;
+  constant integers : IntArray   := (123, 7#1645#, 13#AC83#);
+  variable floats   : FloatArray := (123.456, 7#16.45#e7, 13#AC.83#);
+  signal   logic    : LogicArray := (b"01101", sx"123ABC", d"123456");
 begin
   producer : entity work.source port map(clk, rst, bus_in);
   consumer : entity work.sink   port map(clk, rst, bus_out);
