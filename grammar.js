@@ -1221,6 +1221,13 @@ module.exports = grammar({
                 alias($.library_type,     $.label),
             ),
 
+            _attribute: $ => choice(
+                alias($.identifier,       $.attribute_identifier),
+                alias($.library_constant, $.attribute_identifier),
+                alias($.library_function, $.attribute_identifier),
+                alias($.library_type,     $.attribute_identifier),
+            ),
+
             _unit: $ => choice(
                 alias($.identifier,       $.unit),
                 alias($.library_constant, $.unit),
@@ -1327,7 +1334,7 @@ module.exports = grammar({
             ),
 
             _attribute_designator: $ => choice(
-                alias($._identifier, $.attribute_identifier),
+                $._attribute,
                 $.attribute_function,
                 $.attribute_impure_function,
                 $.attribute_mode_view,

@@ -472,26 +472,19 @@ static bool graphic_characters(TSLexer* lexer)
 }
 //------------------------------------------------------------------------------
 
-static void show_looking_for(const bool* valid_symbols)
-{
-    #ifdef DEBUG
-        debug("Looking for:");
-        for(int n = 0; n < ERROR_SENTINEL; n++){
-            if(valid_symbols[n]) printf("    %s\n", token_type_to_string(n));
-        }
-        printf("\n");
-    #endif
-}
-//------------------------------------------------------------------------------
-
 bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, const bool* valid_symbols)
 {
-    if(valid_symbols[ERROR_SENTINEL]){
-        debug("Error correction mode");
-        // return false;
-    }else{
-        show_looking_for(valid_symbols);
-    }
+    #ifdef DEBUG
+        if(valid_symbols[ERROR_SENTINEL]){
+            debug("Error correction mode");
+        }else{
+            debug("Looking for:");
+            for(int n = 0; n < ERROR_SENTINEL; n++){
+                if(valid_symbols[n]) printf("    %s\n", token_type_to_string(n));
+            }
+            printf("\n");
+        }
+    #endif
 
     skip_whitespace(scanner, lexer);
 
