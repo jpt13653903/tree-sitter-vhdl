@@ -4,6 +4,7 @@ export CC=gcc
 # touch src/scanner.c
 
 tree-sitter generate && tree-sitter test
+# tree-sitter parse test/corpus/broken.vhd
 
 # tree-sitter parse test/entity.vhd
 # tree-sitter parse test/corpus/specification_examples/entity.vhd

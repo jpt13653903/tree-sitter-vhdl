@@ -10,6 +10,7 @@ entity MyModule is port(
   signal processes  : inout std_logic; -- Contains a keyword
   signal proc       : inout std_logic; -- Starts like a keyword
   signal proc_stuff : inout std_logic; -- Almost contains a keyword
+  signal integ      : inout std_logic; -- Starts with a keyword, but also contains a keyword
 
   signal assume_something : out std_logic; -- Starts like a keyword, but breaks just after the underscore
   signal delayed          : out std_logic; -- A pre-defined attribute, but also a valid identifier
@@ -72,6 +73,17 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
+            (intervace_signal_declaration
+              (SIGNAL)
+              (identifier_list
+                (identifier))
+              (simple_mode_indication
+                (mode
+                  (INOUT))
+                (subtype_indication
+                  (name
+                    (library_type)))))
+            (comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list

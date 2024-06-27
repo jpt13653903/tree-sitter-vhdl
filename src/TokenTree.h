@@ -304,7 +304,7 @@ TypeNode* token_tree_match(TokenTree* this, TSLexer* lexer)
             if(node->type){ // Keep track of the best option
                 lexer->mark_end(lexer);
                 type = node->type;
-            }else if(type && type->type == IDENTIFIER_EXPECTING_LETTER){
+            }else if(type && can_start_identifier(type->type)){
                 type = 0;
             }
             node = node->next;
