@@ -3,8 +3,7 @@ Entity declaration, with some tool directives
 ================================================================================
 
 entity MyModule is port(
-  signal Clk   : in  std_logic;
-  signal Reset : in  std_logic;
+  signal Clk, Reset : in  std_logic;
 
   signal \extended identifier\       : out   std_logic;
   signal identifier_with_underscores : inout std_logic;
@@ -44,7 +43,9 @@ entity MyModule is port(
           (interface_list
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier)
+                (identifier))
               (simple_mode_indication
                 (mode
                   (IN))
@@ -53,16 +54,8 @@ entity MyModule is port(
                     (library_type)))))
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
-              (simple_mode_indication
-                (mode
-                  (IN))
-                (subtype_indication
-                  (name
-                    (library_type)))))
-            (intervace_signal_declaration
-              (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
                   (OUT))
@@ -71,7 +64,8 @@ entity MyModule is port(
                     (library_type)))))
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
                   (INOUT))
@@ -80,17 +74,8 @@ entity MyModule is port(
                     (library_type)))))
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
-              (simple_mode_indication
-                (mode
-                  (INOUT))
-                (subtype_indication
-                  (name
-                    (library_type)))))
-            (comment)
-            (intervace_signal_declaration
-              (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
                   (INOUT))
@@ -100,7 +85,8 @@ entity MyModule is port(
             (comment)
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
                   (INOUT))
@@ -110,17 +96,19 @@ entity MyModule is port(
             (comment)
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
-                  (OUT))
+                  (INOUT))
                 (subtype_indication
                   (name
                     (library_type)))))
             (comment)
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
                   (OUT))
@@ -130,7 +118,19 @@ entity MyModule is port(
             (comment)
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
+              (simple_mode_indication
+                (mode
+                  (OUT))
+                (subtype_indication
+                  (name
+                    (library_type)))))
+            (comment)
+            (intervace_signal_declaration
+              (SIGNAL)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
                   (IN))
@@ -144,7 +144,8 @@ entity MyModule is port(
                       (bit_string_literal))))))
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
                   (IN))
@@ -158,7 +159,8 @@ entity MyModule is port(
                       (based_literal_float))))))
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
                   (IN))
@@ -205,7 +207,8 @@ entity MyModule is port(
               (directive_body))
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
                   (IN))
@@ -222,7 +225,8 @@ entity MyModule is port(
                         (decimal_literal)))))))
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
                   (IN))
@@ -246,7 +250,8 @@ entity MyModule is port(
                               (decimal_literal))))))))))
             (intervace_signal_declaration
               (SIGNAL)
-              (identifier)
+              (identifier_list
+                (identifier))
               (simple_mode_indication
                 (mode
                   (IN))

@@ -1530,19 +1530,19 @@ module.exports = grammar({
             ),
 
             interface_declaration: $ => seq(
-                $._identifier, ":", $._mode_indication
+                $.identifier_list, ":", $._mode_indication
             ),
 
             intervace_constant_declaration: $ => seq(
-                $.CONSTANT, $._identifier, ":", $._mode_indication
+                $.CONSTANT, $.identifier_list, ":", $._mode_indication
             ),
 
             intervace_signal_declaration: $ => seq(
-                $.SIGNAL, $._identifier, ":", $._mode_indication
+                $.SIGNAL, $.identifier_list, ":", $._mode_indication
             ),
 
             intervace_variable_declaration: $ => seq(
-                $.VARIABLE, $._identifier, ":", $._mode_indication
+                $.VARIABLE, $.identifier_list, ":", $._mode_indication
             ),
 
             interface_subprogram_declaration: $ => seq(

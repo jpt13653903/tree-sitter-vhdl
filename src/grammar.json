@@ -7741,7 +7741,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_identifier"
+          "name": "identifier_list"
         },
         {
           "type": "STRING",
@@ -7762,7 +7762,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_identifier"
+          "name": "identifier_list"
         },
         {
           "type": "STRING",
@@ -7783,7 +7783,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_identifier"
+          "name": "identifier_list"
         },
         {
           "type": "STRING",
@@ -7804,7 +7804,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_identifier"
+          "name": "identifier_list"
         },
         {
           "type": "STRING",

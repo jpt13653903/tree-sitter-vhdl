@@ -5400,19 +5400,7 @@
           "named": true
         },
         {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "library_constant",
-          "named": true
-        },
-        {
-          "type": "library_function",
-          "named": true
-        },
-        {
-          "type": "library_type",
+          "type": "identifier_list",
           "named": true
         },
         {
@@ -5760,19 +5748,7 @@
           "named": true
         },
         {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "library_constant",
-          "named": true
-        },
-        {
-          "type": "library_function",
-          "named": true
-        },
-        {
-          "type": "library_type",
+          "type": "identifier_list",
           "named": true
         },
         {
@@ -5803,19 +5779,7 @@
           "named": true
         },
         {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "library_constant",
-          "named": true
-        },
-        {
-          "type": "library_function",
-          "named": true
-        },
-        {
-          "type": "library_type",
+          "type": "identifier_list",
           "named": true
         },
         {
@@ -5846,19 +5810,7 @@
           "named": true
         },
         {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "library_constant",
-          "named": true
-        },
-        {
-          "type": "library_function",
-          "named": true
-        },
-        {
-          "type": "library_type",
+          "type": "identifier_list",
           "named": true
         },
         {
