@@ -311,5 +311,27 @@
 (procedure_specification
   (identifier) @function.method)
 
+(type_declaration      (identifier) @type.definition)
+(mode_view_declaration (identifier) @type.definition)
+(record_mode_view_indication (name (identifier) @type))
+
+(package_declaration (identifier) @module)
+(package_definition  (identifier) @module)
+(end_package         (identifier) @module)
+(end_package_body    (identifier) @module)
+
+(entity_declaration  (identifier) @module)
+(end_entity          (identifier) @module)
+
+(architecture_definition
+  (ARCHITECTURE)
+  (identifier) @property
+  (OF)
+  (name
+    (identifier) @module))
+
+(end_architecture (identifier) @property)
+(subprogram_end   (identifier) @function)
+
 (ERROR) @error
 

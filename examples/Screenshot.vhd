@@ -32,7 +32,18 @@ package interfaces is
   end view;
 
   alias streaming_slave is streaming_master'converse;
-end;
+
+  function MyFunc (x: integer) return float;
+end interfaces;
+--------------------------------------------------------------------------------
+
+package body interfaces is
+  function MyFunc (x: integer) return float is
+    variable a, b, c: integer;
+  begin
+    return float(x + a) / float(b*c);
+  end function MyFunc;
+end package body interfaces;
 --------------------------------------------------------------------------------
 
 entity Processor is
@@ -41,35 +52,35 @@ entity Processor is
     adc_data : view streaming_slave;
     ddc_data : view streaming_master
   );
-end;
+end entity Processor;
 --------------------------------------------------------------------------------
 
 architecture Behaviour of Processor is
-  signal clk, rst      : std_logic;
-  signal input, output : streaming_bus;
+  signal clk, rst        : std_logic;
+  signal bus_in, bus_out : streaming_bus;
 begin
-  producer : entity work.source port map(clk, rst, input);
-  consumer : entity work.sink   port map(clk, rst, output);
+  producer : entity work.source port map(clk, rst, bus_in);
+  consumer : entity work.sink   port map(clk, rst, bus_out);
 
-  input.ready <= output.ready;
+  bus_in.ready <= bus_out.ready;
 
   digital_downconverter: process(clk) is
     variable temp : integer;
   begin
     if(rising_edge(clk)) then
       if(reset) then
-        output <= (data => (others => 'X'), valid => '0');
+        bus_out <= (data => (others => 'X'), valid => '0');
       else
-        if(output.ready) then
+        if(bus_out.ready) then
           -- TODO: Implement the DDC
-          output.data  <= input.data;
-          output.valid <= input.valid;
+          bus_out.data  <= bus_in.data;
+          bus_out.valid <= bus_in.valid;
         else
-          output.valid <= '0';
+          bus_out.valid <= '0';
         end if;
       end if;
     end if;
   end process digital_downconverter;
-end;
+end Behaviour;
 --------------------------------------------------------------------------------
 

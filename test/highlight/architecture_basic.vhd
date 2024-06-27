@@ -1,8 +1,8 @@
 architecture EXAMPLE of STRUCTURE is
 -- <- keyword
---           ^ variable
+--           ^ property
 --                   ^ keyword.operator
---                      ^ variable
+--                      ^ module
 --                                ^ keyword
   subtype  DIGIT is integer range 0 to 9;
 -- ^ keyword.type
@@ -23,6 +23,6 @@ begin
 --            ^ punctuation.delimiters
 end EXAMPLE;
 -- <- keyword
---  ^ variable
+--  ^ property
 --         ^ punctuation.delimiters
 
