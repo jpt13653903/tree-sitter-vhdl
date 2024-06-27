@@ -244,6 +244,7 @@
 
 (string_literal) @string @spell
 (character_literal) @character
+(library_constant_std_logic) @constant.builtin
 
 [
     (attribute_function)

@@ -506,14 +506,20 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
         debug("Returning type IDENTIFIER");
         return true;
 
-    }else if(valid_symbols[TOKEN_CHARACTER_LITERAL] && lexer->lookahead == '\''){
-        lexer->advance(lexer, false);
+    }else if((valid_symbols[TOKEN_CHARACTER_LITERAL] ||
+              valid_symbols[LIBRARY_CONSTANT_STD_LOGIC]) && lexer->lookahead == '\''){
+        int32_t lookahead = advance(lexer);
+        lexer->result_symbol = TOKEN_CHARACTER_LITERAL;
+        if(lookahead == '0' || lookahead == '1' || is_special_value(lookahead)){
+            if(valid_symbols[LIBRARY_CONSTANT_STD_LOGIC]){
+                lexer->result_symbol = LIBRARY_CONSTANT_STD_LOGIC;
+            }
+        }
         if(lexer->eof(lexer)) return false;
         lexer->advance(lexer, false);
         if(lexer->lookahead != '\'') return false;
         lexer->advance(lexer, false);
-        lexer->result_symbol = TOKEN_CHARACTER_LITERAL;
-        debug("Returning type TOKEN_CHARACTER_LITERAL");
+        debug("Returning type %s", token_type_to_string(lexer->result_symbol));
         return true;
 
     }else if(lexer->lookahead >= '0' && lexer->lookahead <= '9'){

@@ -176,6 +176,7 @@ module.exports = grammar({
         $.library_constant_debug,
         $.library_constant_env,
         $.library_constant_standard,
+        $.library_constant_std_logic,
         $.library_constant_unit,
         $.library_function,
         $.library_namespace,
@@ -1209,6 +1210,7 @@ module.exports = grammar({
                 $._identifier,
                 $.operator_symbol,
                 $.character_literal,
+                $.library_constant_std_logic,
                 $._external_name,
             )),
 

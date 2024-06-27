@@ -6265,6 +6265,10 @@
           "named": true
         },
         {
+          "type": "library_constant_std_logic",
+          "named": true
+        },
+        {
           "type": "library_function",
           "named": true
         },
@@ -10536,6 +10540,10 @@
   },
   {
     "type": "library_constant_standard",
+    "named": true
+  },
+  {
+    "type": "library_constant_std_logic",
     "named": true
   },
   {

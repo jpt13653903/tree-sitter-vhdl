@@ -167,6 +167,7 @@ typedef enum TokenTypeTag{
     LIBRARY_CONSTANT_DEBUG,
     LIBRARY_CONSTANT_ENV,
     LIBRARY_CONSTANT_STANDARD,
+    LIBRARY_CONSTANT_STD_LOGIC,
     LIBRARY_CONSTANT_UNIT,
     LIBRARY_FUNCTION,
     LIBRARY_NAMESPACE,
@@ -365,6 +366,7 @@ bool is_base_specifier   (TokenType type);
             case LIBRARY_CONSTANT_DEBUG:                   return "LIBRARY_CONSTANT_DEBUG";
             case LIBRARY_CONSTANT_ENV:                     return "LIBRARY_CONSTANT_ENV";
             case LIBRARY_CONSTANT_STANDARD:                return "LIBRARY_CONSTANT_STANDARD";
+            case LIBRARY_CONSTANT_STD_LOGIC:               return "LIBRARY_CONSTANT_STD_LOGIC";
             case LIBRARY_CONSTANT_UNIT:                    return "LIBRARY_CONSTANT_UNIT";
             case LIBRARY_FUNCTION:                         return "LIBRARY_FUNCTION";
             case LIBRARY_NAMESPACE:                        return "LIBRARY_NAMESPACE";
