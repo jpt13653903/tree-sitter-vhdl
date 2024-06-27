@@ -5873,33 +5873,6 @@
     }
   },
   {
-    "type": "label",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "library_constant",
-          "named": true
-        },
-        {
-          "type": "library_function",
-          "named": true
-        },
-        {
-          "type": "library_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "label_declaration",
     "named": true,
     "fields": {},
@@ -10531,6 +10504,10 @@
   },
   {
     "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "label",
     "named": true
   },
   {

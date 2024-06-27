@@ -267,7 +267,6 @@
 (library_constant_unit)      @keyword.modifier
 
 (label) @label
-(label (_) @label)
 
 (generic_map_aspect
     (GENERIC) @constructor

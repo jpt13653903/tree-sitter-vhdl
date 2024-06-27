@@ -774,7 +774,7 @@ module.exports = grammar({
             ),
 
             generate_block_end: $ => seq(
-                $.END, optional(alias($._identifier, $.label)), ";"
+                $.END, optional($._label), ";"
             ),
 
         // Statements
@@ -840,7 +840,7 @@ module.exports = grammar({
             ),
 
             end_block: $ => seq(
-                $.END, $.BLOCK, optional(alias($._identifier, $.label))
+                $.END, $.BLOCK, optional($._label)
             ),
 
             sequential_block_statement: $ => seq(
@@ -881,7 +881,7 @@ module.exports = grammar({
             ),
 
             end_process: $ => seq(
-                $.END, optional($.POSTPONED), $.PROCESS, optional(alias($._identifier, $.label))
+                $.END, optional($.POSTPONED), $.PROCESS, optional($._label)
             ),
 
             case_generate_statement: $ => seq(
@@ -913,7 +913,7 @@ module.exports = grammar({
             ),
 
             end_generate: $ => seq(
-                $.END, $.GENERATE, optional(alias($._identifier, $.label))
+                $.END, $.GENERATE, optional($._label)
             ),
 
             assertion_statement: $ => seq(
@@ -949,11 +949,11 @@ module.exports = grammar({
             ),
 
             end_case: $ => seq(
-                $.END, $.CASE, optional("?"), optional(alias($._identifier, $.label))
+                $.END, $.CASE, optional("?"), optional($._label)
             ),
 
             exit_statement: $ => seq(
-                optional($.label_declaration), $.EXIT, optional(alias($._identifier, $.label)), optional($.when_expression), ";"
+                optional($.label_declaration), $.EXIT, optional($._label), optional($.when_expression), ";"
             ),
 
             when_expression: $ => seq(
@@ -981,7 +981,7 @@ module.exports = grammar({
             ),
 
             end_if: $ => seq(
-                $.END, $.IF, optional(alias($._identifier, $.label))
+                $.END, $.IF, optional($._label)
             ),
 
             loop_statement: $ => seq(
@@ -998,11 +998,11 @@ module.exports = grammar({
             ),
 
             end_loop: $ => seq(
-                $.END, $.LOOP, optional(alias($._identifier, $.label))
+                $.END, $.LOOP, optional($._label)
             ),
 
             next_statement: $ => seq(
-                optional($.label_declaration), $.NEXT, optional(alias($._identifier, $.label)), optional($.when_expression), ";"
+                optional($.label_declaration), $.NEXT, optional($._label), optional($.when_expression), ";"
             ),
 
             null_statement: $ => seq(
@@ -1211,6 +1211,13 @@ module.exports = grammar({
                 $.character_literal,
                 $._external_name,
             )),
+
+            _label: $ => choice(
+                alias($.identifier,       $.label),
+                alias($.library_constant, $.label),
+                alias($.library_function, $.label),
+                alias($.library_type,     $.label),
+            ),
 
             _identifier: $ => choice(
                 $.identifier,
@@ -1874,7 +1881,7 @@ module.exports = grammar({
             ),
 
             label_declaration: $ => seq(
-                alias($._identifier, $.label), ":"
+                $._label, ":"
             ),
 
             sensitivity_clause: $ => seq(
@@ -1953,7 +1960,7 @@ module.exports = grammar({
             ),
 
             instantiation_list: $ => choice(
-                seq(alias($._identifier, $.label), repeat(seq(",", alias($._identifier, $.label)))),
+                seq($._label, repeat(seq(",", $._label))),
                 $.OTHERS,
                 $.ALL
             ),

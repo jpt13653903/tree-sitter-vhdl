@@ -3092,13 +3092,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_identifier"
-              },
-              "named": true,
-              "value": "label"
+              "type": "SYMBOL",
+              "name": "_label"
             },
             {
               "type": "BLANK"
@@ -3564,13 +3559,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_identifier"
-              },
-              "named": true,
-              "value": "label"
+              "type": "SYMBOL",
+              "name": "_label"
             },
             {
               "type": "BLANK"
@@ -3976,13 +3966,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_identifier"
-              },
-              "named": true,
-              "value": "label"
+              "type": "SYMBOL",
+              "name": "_label"
             },
             {
               "type": "BLANK"
@@ -4199,13 +4184,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_identifier"
-              },
-              "named": true,
-              "value": "label"
+              "type": "SYMBOL",
+              "name": "_label"
             },
             {
               "type": "BLANK"
@@ -4440,13 +4420,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_identifier"
-              },
-              "named": true,
-              "value": "label"
+              "type": "SYMBOL",
+              "name": "_label"
             },
             {
               "type": "BLANK"
@@ -4478,13 +4453,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_identifier"
-              },
-              "named": true,
-              "value": "label"
+              "type": "SYMBOL",
+              "name": "_label"
             },
             {
               "type": "BLANK"
@@ -4651,13 +4621,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_identifier"
-              },
-              "named": true,
-              "value": "label"
+              "type": "SYMBOL",
+              "name": "_label"
             },
             {
               "type": "BLANK"
@@ -4751,13 +4716,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_identifier"
-              },
-              "named": true,
-              "value": "label"
+              "type": "SYMBOL",
+              "name": "_label"
             },
             {
               "type": "BLANK"
@@ -4789,13 +4749,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_identifier"
-              },
-              "named": true,
-              "value": "label"
+              "type": "SYMBOL",
+              "name": "_label"
             },
             {
               "type": "BLANK"
@@ -6227,6 +6182,47 @@
           }
         ]
       }
+    },
+    "_label": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          },
+          "named": true,
+          "value": "label"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "library_constant"
+          },
+          "named": true,
+          "value": "label"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "library_function"
+          },
+          "named": true,
+          "value": "label"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "library_type"
+          },
+          "named": true,
+          "value": "label"
+        }
+      ]
     },
     "_identifier": {
       "type": "CHOICE",
@@ -9644,13 +9640,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_identifier"
-          },
-          "named": true,
-          "value": "label"
+          "type": "SYMBOL",
+          "name": "_label"
         },
         {
           "type": "STRING",
@@ -10122,13 +10113,8 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_identifier"
-              },
-              "named": true,
-              "value": "label"
+              "type": "SYMBOL",
+              "name": "_label"
             },
             {
               "type": "REPEAT",
@@ -10140,13 +10126,8 @@
                     "value": ","
                   },
                   {
-                    "type": "ALIAS",
-                    "content": {
-                      "type": "SYMBOL",
-                      "name": "_identifier"
-                    },
-                    "named": true,
-                    "value": "label"
+                    "type": "SYMBOL",
+                    "name": "_label"
                   }
                 ]
               }
