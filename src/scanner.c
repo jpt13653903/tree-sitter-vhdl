@@ -120,6 +120,8 @@ static bool bounded_token(TSLexer* lexer, int32_t bound)
             lexer->mark_end(lexer);
             if(lexer->lookahead != bound) return true;
         }
+        if(lexer->lookahead == '\r') return false;
+        if(lexer->lookahead == '\n') return false;
         lexer->advance(lexer, false);
     }
     return false;
