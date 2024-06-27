@@ -170,7 +170,7 @@ static Node* insert(
     Node* temp = root;
 
     while(temp){
-        if(*pattern < temp->character){
+        if((uint32_t)(*pattern) < temp->character){
             node        = node_new(*pattern);
             node->right = temp;
             node_setup(node, pattern, type);
@@ -178,7 +178,7 @@ static Node* insert(
             else     root        = node;
             return root;
 
-        }else if(*pattern > temp->character){
+        }else if((uint32_t)(*pattern) > temp->character){
             prev = temp;
             temp = temp->right;
 
@@ -288,7 +288,7 @@ static int32_t advance(TSLexer* lexer)
 
 TypeNode* token_tree_match(TokenTree* this, TSLexer* lexer)
 {
-    int32_t   lookahead = lowercase(lexer->lookahead);
+    uint32_t  lookahead = lowercase(lexer->lookahead);
     TypeNode* type      = 0;
     Node*     node      = this->root;
 

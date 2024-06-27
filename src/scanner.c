@@ -279,6 +279,7 @@ static bool finish_block_comment(TSLexer* lexer)
             lexer->advance(lexer, false);
         }
     }
+    return false;
 }
 //------------------------------------------------------------------------------
 
@@ -539,9 +540,9 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
 
     bool first_char_is_double_quote = (lexer->lookahead == '"');
 
-    TypeNode* type = token_tree_match(token_tree, lexer);
+    TypeNode* types = token_tree_match(token_tree, lexer);
 
-    if(!type && first_char_is_letter){
+    if(!types && first_char_is_letter){
         /* This works because all registered tokens in the search tree that
          * start with a letter are also valid identifiers.  If the tree search
          * exits early, whatever came before is a valid identifier
@@ -555,7 +556,7 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
         return valid_symbols[IDENTIFIER];
     }
 
-    if(!type && first_char_is_double_quote){
+    if(!types && first_char_is_double_quote){
         if(!bounded_token(lexer, '"')) return false;
         lexer->result_symbol = TOKEN_STRING_LITERAL;
         debug("Returning type TOKEN_STRING_LITERAL");
@@ -565,34 +566,34 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
     bool found_can_be_identifier    = false;
     bool found_cannot_be_identifier = false;
 
-    while(type){
-        if(type->type == COMMENT_LINE_START){
+    while(types){
+        if(types->type == COMMENT_LINE_START){
             finish_line_comment(lexer);
             lexer->result_symbol = TOKEN_COMMENT;
             debug("Returning type TOKEN_COMMENT");
             return true;
 
-        }else if(type->type == COMMENT_BLOCK_START){
+        }else if(types->type == COMMENT_BLOCK_START){
             if(finish_block_comment(lexer)){
                 lexer->result_symbol = TOKEN_COMMENT;
                 debug("Returning type TOKEN_COMMENT");
                 return true;
             }
 
-        }else if(can_start_identifier(type->type) &&
-            finish_identifier(lexer, type->type == IDENTIFIER_EXPECTING_LETTER)){
+        }else if(can_start_identifier(types->type) &&
+            finish_identifier(lexer, types->type == IDENTIFIER_EXPECTING_LETTER)){
             lexer->result_symbol = IDENTIFIER;
             debug("Returning type IDENTIFIER");
             return true;
 
-        }else if(is_base_specifier(type->type)){
-            if(finish_string_literal(lexer, type->type)){
+        }else if(is_base_specifier(types->type)){
+            if(finish_string_literal(lexer, types->type)){
                 lexer->result_symbol = TOKEN_BIT_STRING_LITERAL;
                 debug("Returning type TOKEN_BIT_STRING_LITERAL");
                 return true;
             }
 
-        }else if(type == TOKEN_OPERATOR_SYMBOL){
+        }else if(types->type == TOKEN_OPERATOR_SYMBOL){
             if(lexer->lookahead == '"'){
                 lexer->advance(lexer, false);
                 if(!bounded_token(lexer, '"')) return false;
@@ -600,12 +601,8 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
                 if(valid_symbols[TOKEN_STRING_LITERAL]){
                     debug("Returning type TOKEN_STRING_LITERAL");
                     return true;
-                }else{
-                    debug("Returning false");
-                    return false;
                 }
-            }
-            if(valid_symbols[TOKEN_OPERATOR_SYMBOL]){
+            }else if(valid_symbols[TOKEN_OPERATOR_SYMBOL]){
                 lexer->result_symbol = TOKEN_OPERATOR_SYMBOL;
                 debug("Returning type TOKEN_OPERATOR_SYMBOL");
                 return true;
@@ -617,24 +614,24 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
             debug("Returning false");
             return false;
 
-        }else if(type->type < ERROR_SENTINEL && valid_symbols[type->type]){
-            lexer->result_symbol = type->type;
+        }else if(types->type < ERROR_SENTINEL && valid_symbols[types->type]){
+            lexer->result_symbol = types->type;
 
             if(scanner->is_in_directive){
-               scanner->is_in_directive = (type->type != DIRECTIVE_NEWLINE);
+               scanner->is_in_directive = (types->type != DIRECTIVE_NEWLINE);
             }else{
-               scanner->is_in_directive = (type->type == DELIMITER_GRAVE_ACCENT);
+               scanner->is_in_directive = (types->type == DELIMITER_GRAVE_ACCENT);
             }
 
-            debug("Returning type %s", token_type_to_string(type->type));
+            debug("Returning type %s", token_type_to_string(types->type));
             return true;
 
-        }else if(can_be_identifier(scanner, type->type)){
+        }else if(can_be_identifier(scanner, types->type)){
             found_can_be_identifier = true;
         }else{
             found_cannot_be_identifier = true;
         }
-        type = type->next;
+        types = types->next;
     }
     if(valid_symbols[IDENTIFIER] && found_can_be_identifier && !found_cannot_be_identifier){
         lexer->result_symbol = IDENTIFIER;
