@@ -8078,18 +8078,6 @@
           "named": true
         },
         {
-          "type": "library_constant",
-          "named": true
-        },
-        {
-          "type": "library_function",
-          "named": true
-        },
-        {
-          "type": "library_type",
-          "named": true
-        },
-        {
           "type": "operator_symbol",
           "named": true
         }

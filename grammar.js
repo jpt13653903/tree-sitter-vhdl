@@ -1356,7 +1356,7 @@ module.exports = grammar({
             ),
 
             _suffix: $ => choice(
-                $._identifier,
+                $.identifier,
                 $.character_literal,
                 $.operator_symbol,
                 $.ALL
