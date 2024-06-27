@@ -9454,33 +9454,6 @@
     "fields": {}
   },
   {
-    "type": "unit",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "library_constant",
-          "named": true
-        },
-        {
-          "type": "library_function",
-          "named": true
-        },
-        {
-          "type": "library_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "unspecified_type_indication",
     "named": true,
     "fields": {},
@@ -10568,6 +10541,10 @@
   },
   {
     "type": "string_literal",
+    "named": true
+  },
+  {
+    "type": "unit",
     "named": true
   },
   {

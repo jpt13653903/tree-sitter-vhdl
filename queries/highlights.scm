@@ -265,6 +265,8 @@
 (library_constant_boolean)   @boolean
 (library_constant_character) @character
 (library_constant_debug)     @keyword.debug
+
+(unit)                       @keyword.modifier
 (library_constant_unit)      @keyword.modifier
 
 (label) @label

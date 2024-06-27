@@ -1221,6 +1221,14 @@ module.exports = grammar({
                 alias($.library_type,     $.label),
             ),
 
+            _unit: $ => choice(
+                alias($.identifier,       $.unit),
+                alias($.library_constant, $.unit),
+                alias($.library_function, $.unit),
+                alias($.library_type,     $.unit),
+                $.library_constant_unit
+            ),
+
             _identifier: $ => choice(
                 $.identifier,
                 $.library_constant,
@@ -1364,11 +1372,6 @@ module.exports = grammar({
                 $.decimal_literal_float,
                 $.based_literal,
                 $.based_literal_float
-            ),
-
-            _unit: $ => choice(
-                alias($._identifier, $.unit),
-                $.library_constant_unit
             ),
 
             allocator: $ => seq(

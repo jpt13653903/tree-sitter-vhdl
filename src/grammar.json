@@ -6228,6 +6228,51 @@
         }
       ]
     },
+    "_unit": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          },
+          "named": true,
+          "value": "unit"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "library_constant"
+          },
+          "named": true,
+          "value": "unit"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "library_function"
+          },
+          "named": true,
+          "value": "unit"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "library_type"
+          },
+          "named": true,
+          "value": "unit"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "library_constant_unit"
+        }
+      ]
+    },
     "_identifier": {
       "type": "CHOICE",
       "members": [
@@ -7002,24 +7047,6 @@
         {
           "type": "SYMBOL",
           "name": "based_literal_float"
-        }
-      ]
-    },
-    "_unit": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_identifier"
-          },
-          "named": true,
-          "value": "unit"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "library_constant_unit"
         }
       ]
     },
