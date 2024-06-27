@@ -200,10 +200,12 @@
 (warning_directive) @keyword.directive
 (error_directive)   @keyword.directive
 
-(if_conditional_analysis)    @keyword.directive
-(elsif_conditional_analysis) @keyword.directive
-(else_conditional_analysis)  @keyword.directive
-(end_conditional_analysis)   @keyword.directive
+(if_conditional_analysis    (IF)    @keyword.directive)
+(if_conditional_analysis    (THEN)  @keyword.directive)
+(elsif_conditional_analysis (ELSIF) @keyword.directive)
+(else_conditional_analysis  (ELSE)  @keyword.directive)
+(end_conditional_analysis   (END)   @keyword.directive)
+(end_conditional_analysis   (IF)    @keyword.directive)
 
 (directive_body)             @keyword.directive
 (directive_constant_builtin) @constant.macro

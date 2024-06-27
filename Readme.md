@@ -3,7 +3,7 @@
 [![CI][ci]](https://github.com/jpt13653903/tree-sitter-vhdl/actions/workflows/ci.yml)
 [![matrix][matrix]](https://matrix.to/#/#tree-sitter-chat:matrix.org)
 
-Tree-sitter-vhdl is a VHDL parser for syntax highlighting.
+A VHDL parser for syntax highlighting.
 
 ## References
 
@@ -15,6 +15,12 @@ Tree-sitter-vhdl is a VHDL parser for syntax highlighting.
 
 [ci]: https://img.shields.io/github/actions/workflow/status/jpt13653903/tree-sitter-vhdl/ci.yml?logo=github&label=CI
 [matrix]: https://img.shields.io/matrix/tree-sitter-chat%3Amatrix.org?logo=matrix&label=matrix
+
+## Screenshots
+
+[Neovim](https://neovim.io/), using [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) and a [Catppuccin](https://github.com/catppuccin/nvim) colour scheme:
+
+![Screenshot](examples/Screenshot.png)
 
 ## History
 
