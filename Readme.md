@@ -85,8 +85,10 @@ Finally, run `:TSUpdate`.
 
 ## Building
 
-- Follow the instructions
-  [here](https://tree-sitter.github.io/tree-sitter/creating-parsers#getting-started)
-  to setup your development environment.
+- Follow the instructions [here][ts-docs] to setup your development environment.
 - Run `npm install --save-dev tree-sitter-cli`
-- Run `node_modules/tree-sitter-cli/tree-sitter.exe generate`
+- Add `node_modules/.bin` to your environment path
+- Run `tree-sitter generate`
+- Run `tree-sitter test`
+
+[ts-docs]: https://tree-sitter.github.io/tree-sitter/creating-parsers#getting-started
