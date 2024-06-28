@@ -33,15 +33,15 @@ package interfaces is
 
   alias streaming_slave is streaming_master'converse;
 
-  function MyFunc (x: integer) return float;
+  function MyFunc (x: integer) return real;
 end interfaces;
 --------------------------------------------------------------------------------
 
 package body interfaces is
-  function MyFunc (x: integer) return float is
+  function MyFunc (x: integer) return real is
     variable a, b, c: integer;
   begin
-    return float(x + a) / float(b*c);
+    return real(x + a) / real(b*c);
   end function MyFunc;
 end package body interfaces;
 --------------------------------------------------------------------------------
@@ -60,9 +60,10 @@ architecture Behaviour of Processor is
   signal bus_in, bus_out : streaming_bus;
 
   type IntArray is array 1 to 3 of integer;
-  constant integers : IntArray   := (123, 7#1645#, 13#AC83#);
-  variable floats   : FloatArray := (123.456, 7#16.45#e7, 13#AC.83#);
-  signal   logic    : LogicArray := (b"01101", sx"123ABC", d"123456");
+  constant integers    : IntArray   := (123, 7#1645#, 13#AC83#);
+  variable reals       : RealArray  := (123.456, 7#16.45#e7, 13#AC.83#);
+  signal   logic       : LogicArray := ("1010", b"01101", sx"123ABC", d"123456");
+  signal   sized_logic : LogicArray := (5b"01101", 24sx"123ABC", 20d"123456");
 begin
   producer : entity work.source port map(clk, rst, bus_in);
   consumer : entity work.sink   port map(clk, rst, bus_out);
