@@ -91,4 +91,10 @@ Finally, run `:TSUpdate`.
 - Run `tree-sitter generate`
 - Run `tree-sitter test`
 
+## Contributing
+
+Contributions are welcome.  Read [Contributing.md] for more information.
+
 [ts-docs]: https://tree-sitter.github.io/tree-sitter/creating-parsers#getting-started
+[Contributing.md]: https://github.com/jpt13653903/tree-sitter-vhdl/blob/master/Contributing.md
+
