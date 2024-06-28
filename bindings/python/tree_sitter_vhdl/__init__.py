@@ -1,4 +1,4 @@
-"Vhdl grammar for tree-sitter"
+"VHDL grammar for tree-sitter"
 
 from ._binding import language
 

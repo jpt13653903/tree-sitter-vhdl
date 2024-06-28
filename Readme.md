@@ -1,8 +1,9 @@
 # Tree-sitter-vhdl
 
-Tree-sitter-vhdl is a VHDL parser for syntax highlighting.
+[![CI][ci]](https://github.com/jpt13653903/tree-sitter-vhdl/actions/workflows/ci.yml)
+[![matrix][matrix]](https://matrix.to/#/#tree-sitter-chat:matrix.org)
 
-**NOTE:**  This is a work in progress.  Use at own risk.
+A VHDL parser for syntax highlighting.
 
 ## References
 
@@ -11,6 +12,15 @@ Tree-sitter-vhdl is a VHDL parser for syntax highlighting.
 - [VHDL-2019](https://doi.org/10.1109/IEEESTD.2019.8938196)
 - [VHDL Library Files](https://standards.ieee.org/downloads/) (search for "1076")
 - [VSCode Modern VHDL](https://github.com/richjyoung/vscode-modern-vhdl/blob/master/syntaxes/vhdl.tmLanguage.yml)
+
+[ci]: https://img.shields.io/github/actions/workflow/status/jpt13653903/tree-sitter-vhdl/ci.yml?logo=github&label=CI
+[matrix]: https://img.shields.io/matrix/tree-sitter-chat%3Amatrix.org?logo=matrix&label=matrix
+
+## Screenshots
+
+[Neovim](https://neovim.io/), using [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) and a [Catppuccin](https://github.com/catppuccin/nvim) colour scheme:
+
+![Screenshot](examples/Screenshot.png)
 
 ## History
 
@@ -49,7 +59,7 @@ parser_config.vhdl = {
     files = { 'src/parser.c', 'src/scanner.c' },
     branch = 'master',
     generate_requires_npm = false,
-    requires_generate_from_grammar = true,
+    requires_generate_from_grammar = false,
   },
   filetype = 'vhdl',
 }

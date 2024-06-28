@@ -1,0 +1,114 @@
+================================================================================
+Bit values
+================================================================================
+
+architecture Behaviour of MyModule is
+  signal A : std_logic;
+begin
+  A <= 'U' or 'X' or '0' or '1' or 'Z' or 'W' or 'L' or 'H' or '-';
+  A <= 'A' or 'B' or '2' or '3' or '&';
+end Behaviour;
+
+--------------------------------------------------------------------------------
+
+(design_file
+  (design_unit
+    (architecture_definition
+      (ARCHITECTURE)
+      (identifier)
+      (OF)
+      (name
+        (identifier))
+      (architecture_head
+        (IS)
+        (signal_declaration
+          (SIGNAL)
+          (identifier_list
+            (identifier))
+          (subtype_indication
+            (name
+              (library_type)))))
+      (concurrent_block
+        (BEGIN)
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (logical_expression
+                (logical_expression
+                  (logical_expression
+                    (logical_expression
+                      (logical_expression
+                        (logical_expression
+                          (logical_expression
+                            (logical_expression
+                              (simple_expression
+                                (name
+                                  (library_constant_std_logic)))
+                              (logical_operator)
+                              (simple_expression
+                                (name
+                                  (library_constant_std_logic))))
+                            (logical_operator)
+                            (simple_expression
+                              (name
+                                (library_constant_std_logic))))
+                          (logical_operator)
+                          (simple_expression
+                            (name
+                              (library_constant_std_logic))))
+                        (logical_operator)
+                        (simple_expression
+                          (name
+                            (library_constant_std_logic))))
+                      (logical_operator)
+                      (simple_expression
+                        (name
+                          (library_constant_std_logic))))
+                    (logical_operator)
+                    (simple_expression
+                      (name
+                        (library_constant_std_logic))))
+                  (logical_operator)
+                  (simple_expression
+                    (name
+                      (library_constant_std_logic))))
+                (logical_operator)
+                (simple_expression
+                  (name
+                    (library_constant_std_logic)))))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (logical_expression
+                (logical_expression
+                  (logical_expression
+                    (logical_expression
+                      (simple_expression
+                        (name
+                          (character_literal)))
+                      (logical_operator)
+                      (simple_expression
+                        (name
+                          (character_literal))))
+                    (logical_operator)
+                    (simple_expression
+                      (name
+                        (character_literal))))
+                  (logical_operator)
+                  (simple_expression
+                    (name
+                      (character_literal))))
+                (logical_operator)
+                (simple_expression
+                  (name
+                    (character_literal))))))))
+      (end_architecture
+        (END)
+        (identifier)))))
+

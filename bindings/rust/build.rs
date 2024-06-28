@@ -15,4 +15,5 @@ fn main() {
     c_config.file(&scanner_path);
     println!("cargo:rerun-if-changed={}", scanner_path.to_str().unwrap());
 
-    c_config.compt}
+    c_config.compile("tree-sitter-vhdl");
+}

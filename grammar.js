@@ -174,6 +174,9 @@ module.exports = grammar({
         $.library_constant_boolean,
         $.library_constant_character,
         $.library_constant_debug,
+        $.library_constant_env,
+        $.library_constant_standard,
+        $.library_constant_std_logic,
         $.library_constant_unit,
         $.library_function,
         $.library_namespace,
@@ -228,7 +231,7 @@ module.exports = grammar({
 
             _logical_name: $ => choice(
                 $.library_namespace,
-                $.identifier
+                $._identifier
             ),
 
             selected_name_list: $ => seq(
@@ -236,7 +239,7 @@ module.exports = grammar({
             ),
 
             selected_name: $ => seq(
-                $._logical_name, repeat(seq(".", choice($.identifier, $.ALL)))
+                $._logical_name, repeat(seq(".", choice($._identifier, $.ALL)))
             ),
 
         // Library Units
@@ -252,7 +255,7 @@ module.exports = grammar({
             ),
 
             entity_declaration: $ => seq(
-                $.ENTITY, $.identifier, $.entity_head, optional($.entity_body), $.end_entity, ";"
+                $.ENTITY, $._identifier, $.entity_head, optional($.entity_body), $.end_entity, ";"
             ),
 
             entity_head: $ => seq(
@@ -268,11 +271,11 @@ module.exports = grammar({
             ),
 
             end_entity: $ => seq(
-                $.END, optional($.ENTITY), optional($.identifier)
+                $.END, optional($.ENTITY), optional($._identifier)
             ),
 
             configuration_declaration: $ => seq(
-                $.CONFIGURATION, $.identifier, $.OF, $.name, $.configuration_head, $.block_configuration, $.end_configuration, ";"
+                $.CONFIGURATION, $._identifier, $.OF, $.name, $.configuration_head, $.block_configuration, $.end_configuration, ";"
             ),
 
             configuration_head: $ => seq(
@@ -280,11 +283,11 @@ module.exports = grammar({
             ),
 
             end_configuration: $ => seq(
-                $.END, optional($.CONFIGURATION), optional($.identifier)
+                $.END, optional($.CONFIGURATION), optional($._identifier)
             ),
 
             package_declaration: $ => seq(
-                $.PACKAGE, $.identifier, $.package_declaration_body, $.end_package, ";"
+                $.PACKAGE, $._identifier, $.package_declaration_body, $.end_package, ";"
             ),
 
             package_declaration_body: $ => seq(
@@ -292,19 +295,19 @@ module.exports = grammar({
             ),
 
             end_package: $ => seq(
-                $.END, optional($.PACKAGE), optional($.identifier)
+                $.END, optional($.PACKAGE), optional($._identifier)
             ),
 
             package_instantiation_declaration: $ => seq(
-                $.PACKAGE, $.identifier, $.IS, $.NEW, $.name, optional($.generic_map_aspect), ";"
+                $.PACKAGE, $._identifier, $.IS, $.NEW, $.name, optional($.generic_map_aspect), ";"
             ),
 
             interface_package_declaration: $ => seq(
-                $.PACKAGE, $.identifier, $.IS, $.NEW, $.name, $._interface_package_generic_map_aspect
+                $.PACKAGE, $._identifier, $.IS, $.NEW, $.name, $._interface_package_generic_map_aspect
             ),
 
             context_declaration: $ => seq(
-                $.CONTEXT, $.identifier, $.context_declaration_body, $.end_context, ";"
+                $.CONTEXT, $._identifier, $.context_declaration_body, $.end_context, ";"
             ),
 
             context_declaration_body: $ => seq(
@@ -312,11 +315,11 @@ module.exports = grammar({
             ),
 
             end_context: $ => seq(
-                $.END, optional($.CONTEXT), optional($.identifier)
+                $.END, optional($.CONTEXT), optional($._identifier)
             ),
 
             architecture_definition: $ => seq(
-                $.ARCHITECTURE, $.identifier, $.OF, $.name, $.architecture_head, $.concurrent_block, $.end_architecture, ";"
+                $.ARCHITECTURE, $._identifier, $.OF, $.name, $.architecture_head, $.concurrent_block, $.end_architecture, ";"
             ),
 
             architecture_head: $ => seq(
@@ -324,11 +327,11 @@ module.exports = grammar({
             ),
 
             end_architecture: $ => seq(
-                $.END, optional($.ARCHITECTURE), optional($.identifier)
+                $.END, optional($.ARCHITECTURE), optional($._identifier)
             ),
 
             package_definition: $ => seq(
-                $.PACKAGE, $.BODY, $.identifier, $.package_definition_body, $.end_package_body, ";"
+                $.PACKAGE, $.BODY, $._identifier, $.package_definition_body, $.end_package_body, ";"
             ),
 
             package_definition_body: $ => seq(
@@ -336,7 +339,7 @@ module.exports = grammar({
             ),
 
             end_package_body: $ => seq(
-                $.END, optional(seq($.PACKAGE, $.BODY)), optional($.identifier)
+                $.END, optional(seq($.PACKAGE, $.BODY)), optional($._identifier)
             ),
 
         // Declaration Item Lists
@@ -521,15 +524,15 @@ module.exports = grammar({
             ),
 
             type_declaration: $ => seq(
-                $.TYPE, $.identifier, optional(seq($.IS, $._type_definition)), ";"
+                $.TYPE, $._identifier, optional(seq($.IS, $._type_definition)), ";"
             ),
 
             subtype_declaration: $ => seq(
-                $.SUBTYPE, $.identifier, $.IS, $.subtype_indication, ";"
+                $.SUBTYPE, $._identifier, $.IS, $.subtype_indication, ";"
             ),
 
             mode_view_declaration: $ => seq(
-                $.VIEW, $.identifier, $.OF, $.subtype_indication, $.mode_view_body, $.end_view, ";"
+                $.VIEW, $._identifier, $.OF, $.subtype_indication, $.mode_view_body, $.end_view, ";"
             ),
 
             mode_view_body: $ => seq(
@@ -537,7 +540,7 @@ module.exports = grammar({
             ),
 
             end_view: $ => seq(
-                $.END, $.VIEW, optional($.identifier)
+                $.END, $.VIEW, optional($._identifier)
             ),
 
             constant_declaration: $ => seq(
@@ -574,7 +577,7 @@ module.exports = grammar({
             ),
 
             component_declaration: $ => seq(
-                $.COMPONENT, $.identifier, optional($.component_body), $.end_component, ";"
+                $.COMPONENT, $._identifier, optional($.component_body), $.end_component, ";"
             ),
 
             component_body: $ => choice(
@@ -584,11 +587,11 @@ module.exports = grammar({
             ),
 
             end_component: $ => seq(
-                $.END, optional($.COMPONENT), optional($.identifier)
+                $.END, optional($.COMPONENT), optional($._identifier)
             ),
 
             attribute_declaration: $ => seq(
-                $.ATTRIBUTE, $.identifier, ":", $.name, ";"
+                $.ATTRIBUTE, $._identifier, ":", $.name, ";"
             ),
 
             attribute_specification: $ => seq(
@@ -600,11 +603,11 @@ module.exports = grammar({
             ),
 
             group_template_declaration: $ => seq(
-                $.GROUP, $.identifier, $.IS, "(", $.entity_class_entry_list, ")", ";"
+                $.GROUP, $._identifier, $.IS, "(", $.entity_class_entry_list, ")", ";"
             ),
 
             group_declaration: $ => seq(
-                $.GROUP, $.identifier, ":", $.name, "(", $.group_constituent_list, ")", ";"
+                $.GROUP, $._identifier, ":", $.name, "(", $.group_constituent_list, ")", ";"
             ),
 
             private_variable_declaration: $ => seq(
@@ -622,7 +625,7 @@ module.exports = grammar({
             ),
 
             interface_type_declaration: $ => seq(
-                $.TYPE, $.identifier, optional(seq($.IS, $._incomplete_type_definition))
+                $.TYPE, $._identifier, optional(seq($.IS, $._incomplete_type_definition))
             ),
 
             _incomplete_type_definition: $ => choice(
@@ -715,7 +718,7 @@ module.exports = grammar({
             ),
 
             record_element_resolution: $ => seq(
-                $.identifier, $.resolution_indication
+                $._identifier, $.resolution_indication
             ),
 
             _incomplete_subtype_indication: $ => choice(
@@ -772,7 +775,7 @@ module.exports = grammar({
             ),
 
             generate_block_end: $ => seq(
-                $.END, optional(alias($.identifier, $.label)), ";"
+                $.END, optional($._label), ";"
             ),
 
         // Statements
@@ -838,7 +841,7 @@ module.exports = grammar({
             ),
 
             end_block: $ => seq(
-                $.END, $.BLOCK, optional(alias($.identifier, $.label))
+                $.END, $.BLOCK, optional($._label)
             ),
 
             sequential_block_statement: $ => seq(
@@ -862,7 +865,7 @@ module.exports = grammar({
             ),
 
             architecture_identifier: $ => seq(
-                "(", $.identifier, ")"
+                "(", $._identifier, ")"
             ),
 
             process_statement: $ => seq(
@@ -879,7 +882,7 @@ module.exports = grammar({
             ),
 
             end_process: $ => seq(
-                $.END, optional($.POSTPONED), $.PROCESS, optional(alias($.identifier, $.label))
+                $.END, optional($.POSTPONED), $.PROCESS, optional($._label)
             ),
 
             case_generate_statement: $ => seq(
@@ -911,7 +914,7 @@ module.exports = grammar({
             ),
 
             end_generate: $ => seq(
-                $.END, $.GENERATE, optional(alias($.identifier, $.label))
+                $.END, $.GENERATE, optional($._label)
             ),
 
             assertion_statement: $ => seq(
@@ -947,11 +950,11 @@ module.exports = grammar({
             ),
 
             end_case: $ => seq(
-                $.END, $.CASE, optional("?"), optional(alias($.identifier, $.label))
+                $.END, $.CASE, optional("?"), optional($._label)
             ),
 
             exit_statement: $ => seq(
-                optional($.label_declaration), $.EXIT, optional(alias($.identifier, $.label)), optional($.when_expression), ";"
+                optional($.label_declaration), $.EXIT, optional($._label), optional($.when_expression), ";"
             ),
 
             when_expression: $ => seq(
@@ -979,7 +982,7 @@ module.exports = grammar({
             ),
 
             end_if: $ => seq(
-                $.END, $.IF, optional(alias($.identifier, $.label))
+                $.END, $.IF, optional($._label)
             ),
 
             loop_statement: $ => seq(
@@ -996,11 +999,11 @@ module.exports = grammar({
             ),
 
             end_loop: $ => seq(
-                $.END, $.LOOP, optional(alias($.identifier, $.label))
+                $.END, $.LOOP, optional($._label)
             ),
 
             next_statement: $ => seq(
-                optional($.label_declaration), $.NEXT, optional(alias($.identifier, $.label)), optional($.when_expression), ";"
+                optional($.label_declaration), $.NEXT, optional($._label), optional($.when_expression), ";"
             ),
 
             null_statement: $ => seq(
@@ -1204,13 +1207,41 @@ module.exports = grammar({
             )),
 
             _direct_name: $ => prec.left(choice(
-                $.identifier,
+                $._identifier,
                 $.operator_symbol,
                 $.character_literal,
-                $.library_function,
-                $.library_type,
+                $.library_constant_std_logic,
                 $._external_name,
             )),
+
+            _label: $ => choice(
+                alias($.identifier,       $.label),
+                alias($.library_constant, $.label),
+                alias($.library_function, $.label),
+                alias($.library_type,     $.label),
+            ),
+
+            _attribute: $ => choice(
+                alias($.identifier,       $.attribute_identifier),
+                alias($.library_constant, $.attribute_identifier),
+                alias($.library_function, $.attribute_identifier),
+                alias($.library_type,     $.attribute_identifier),
+            ),
+
+            _unit: $ => choice(
+                alias($.identifier,       $.unit),
+                alias($.library_constant, $.unit),
+                alias($.library_function, $.unit),
+                alias($.library_type,     $.unit),
+                $.library_constant_unit
+            ),
+
+            _identifier: $ => choice(
+                $.identifier,
+                $.library_constant,
+                $.library_function,
+                $.library_type,
+            ),
 
             name_selector: $ => choice(
                 $.function_call,
@@ -1245,7 +1276,7 @@ module.exports = grammar({
             ),
 
             package_pathname: $ => seq(
-                "@", $.identifier, ".", $.identifier, ".", repeat(seq($.identifier, ".")), $.identifier
+                "@", $._identifier, ".", $._identifier, ".", repeat(seq($._identifier, ".")), $._identifier
             ),
 
             absolute_pathname: $ => seq(
@@ -1257,11 +1288,11 @@ module.exports = grammar({
             ),
 
             partial_pathname: $ => seq(
-                repeat(seq($.pathname_element, ".")), $.identifier
+                repeat(seq($.pathname_element, ".")), $._identifier
             ),
 
             pathname_element: $ => seq(
-              $.identifier, optional(seq("(", $._expression, ")"))
+              $._identifier, optional(seq("(", $._expression, ")"))
             ),
 
             function_call: $ => prec.right(choice(
@@ -1303,7 +1334,7 @@ module.exports = grammar({
             ),
 
             _attribute_designator: $ => choice(
-                alias($.identifier, $.attribute_identifier),
+                $._attribute,
                 $.attribute_function,
                 $.attribute_impure_function,
                 $.attribute_mode_view,
@@ -1335,10 +1366,11 @@ module.exports = grammar({
                 seq($._abstract_literal, optional($._unit)),
                 $.bit_string_literal,
                 $.string_literal,
-                $.library_constant,
                 $.library_constant_boolean,
                 $.library_constant_character,
                 $.library_constant_debug,
+                $.library_constant_env,
+                $.library_constant_standard,
                 $.NULL
             ),
 
@@ -1347,11 +1379,6 @@ module.exports = grammar({
                 $.decimal_literal_float,
                 $.based_literal,
                 $.based_literal_float
-            ),
-
-            _unit: $ => choice(
-                alias($.identifier, $.unit),
-                $.library_constant_unit
             ),
 
             allocator: $ => seq(
@@ -1414,7 +1441,7 @@ module.exports = grammar({
             ),
 
             user_directive: $ => seq(
-                $.identifier, repeat($.directive_body)
+                $._identifier, repeat($.directive_body)
             ),
 
             protect_directive: $ => seq(
@@ -1465,7 +1492,7 @@ module.exports = grammar({
 
             _conditional_analysis_identifier: $ => choice(
                 $.directive_constant_builtin,
-                $.identifier
+                $._identifier
             ),
 
         // Configuration
@@ -1510,19 +1537,19 @@ module.exports = grammar({
             ),
 
             interface_declaration: $ => seq(
-                $.identifier, ":", $._mode_indication
+                $.identifier_list, ":", $._mode_indication
             ),
 
             intervace_constant_declaration: $ => seq(
-                $.CONSTANT, $.identifier, ":", $._mode_indication
+                $.CONSTANT, $.identifier_list, ":", $._mode_indication
             ),
 
             intervace_signal_declaration: $ => seq(
-                $.SIGNAL, $.identifier, ":", $._mode_indication
+                $.SIGNAL, $.identifier_list, ":", $._mode_indication
             ),
 
             intervace_variable_declaration: $ => seq(
-                $.VARIABLE, $.identifier, ":", $._mode_indication
+                $.VARIABLE, $.identifier_list, ":", $._mode_indication
             ),
 
             interface_subprogram_declaration: $ => seq(
@@ -1543,7 +1570,7 @@ module.exports = grammar({
             ),
 
             function_specification: $ => seq(
-                optional(choice($.PURE, $.IMPURE)), $.FUNCTION, $._designator, optional($.subprogram_header), optional($.parameter_list_specification), $.RETURN, optional(seq($.identifier, $.OF)), $.name
+                optional(choice($.PURE, $.IMPURE)), $.FUNCTION, $._designator, optional($.subprogram_header), optional($.parameter_list_specification), $.RETURN, optional(seq($._identifier, $.OF)), $.name
             ),
 
             interface_function_specification: $ => seq(
@@ -1582,12 +1609,12 @@ module.exports = grammar({
             ),
 
             _designator: $ => choice(
-                $.identifier,
+                $._identifier,
                 $.operator_symbol
             ),
 
             identifier_list: $ => seq(
-                $.identifier, repeat(seq(",", $.identifier))
+                $._identifier, repeat(seq(",", $._identifier))
             ),
 
             _mode_indication: $ => choice(
@@ -1617,7 +1644,7 @@ module.exports = grammar({
             ),
 
             record_element_list: $ => seq(
-                $.identifier, repeat(seq(",", $.identifier))
+                $._identifier, repeat(seq(",", $._identifier))
             ),
 
             _element_mode_indication: $ => choice(
@@ -1711,13 +1738,13 @@ module.exports = grammar({
             ),
 
             _entity_tag: $ => choice(
-                $.identifier,
+                $._identifier,
                 $.character_literal,
                 $.operator_symbol
             ),
 
             _alias_designator: $ => choice(
-                $.identifier,
+                $._identifier,
                 $.character_literal,
                 $.operator_symbol
             ),
@@ -1771,7 +1798,7 @@ module.exports = grammar({
             ),
 
             protected_type_declaration_end: $ => seq(
-                $.END, $.PROTECTED, optional($.identifier)
+                $.END, $.PROTECTED, optional($._identifier)
             ),
 
             protected_type_header: $ => seq(
@@ -1783,7 +1810,7 @@ module.exports = grammar({
             ),
 
             protected_type_body_end: $ => seq(
-                $.END, $.PROTECTED, $.BODY, optional($.identifier)
+                $.END, $.PROTECTED, $.BODY, optional($._identifier)
             ),
 
             while_loop: $ => seq(
@@ -1795,7 +1822,7 @@ module.exports = grammar({
             ),
 
             parameter_specification: $ => seq(
-                $.identifier, $.IN, $._range
+                $._identifier, $.IN, $._range
             ),
 
             case_statement_alternative: $ => seq(
@@ -1866,7 +1893,7 @@ module.exports = grammar({
             ),
 
             label_declaration: $ => seq(
-                alias($.identifier, $.label), ":"
+                $._label, ":"
             ),
 
             sensitivity_clause: $ => seq(
@@ -1890,15 +1917,15 @@ module.exports = grammar({
             ),
 
             primary_unit_declaration: $ => seq(
-                $.identifier, ";"
+                $._identifier, ";"
             ),
 
             secondary_unit_declaration: $ => seq(
-                $.identifier, "=", seq(optional($._abstract_literal), choice($.name, $.library_constant_unit)), ";"
+                $._identifier, "=", seq(optional($._abstract_literal), choice($.name, $.library_constant_unit)), ";"
             ),
 
             end_units: $ => seq(
-                $.END, $.UNITS, optional($.identifier)
+                $.END, $.UNITS, optional($._identifier)
             ),
 
             enumeration_type_definition: $ => seq(
@@ -1906,7 +1933,7 @@ module.exports = grammar({
             ),
 
             enumeration_literal: $ => choice(
-                $.identifier,
+                $._identifier,
                 $.character_literal
             ),
 
@@ -1915,7 +1942,7 @@ module.exports = grammar({
             ),
 
             end_record: $ => seq(
-                $.END, $.RECORD, optional($.identifier)
+                $.END, $.RECORD, optional($._identifier)
             ),
 
             element_declaration: $ => seq(
@@ -1945,7 +1972,7 @@ module.exports = grammar({
             ),
 
             instantiation_list: $ => choice(
-                seq(alias($.identifier, $.label), repeat(seq(",", alias($.identifier, $.label)))),
+                seq($._label, repeat(seq(",", $._label))),
                 $.OTHERS,
                 $.ALL
             ),
@@ -1955,7 +1982,7 @@ module.exports = grammar({
             ),
 
             entity_aspect: $ => choice(
-                seq($.ENTITY, $.name, optional(seq("(", $.identifier, ")"))),
+                seq($.ENTITY, $.name, optional(seq("(", $._identifier, ")"))),
                 seq($.CONFIGURATION, $.name),
                 $.OPEN
             ),

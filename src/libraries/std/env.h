@@ -27,24 +27,24 @@ static void register_std_env_types(TokenTree* token_tree)
 
 static void register_std_env_constants(TokenTree* token_tree)
 {
-    token_tree_insert(token_tree, "sunday",               LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "monday",               LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "tuesday",              LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "wednesday",            LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "thursday",             LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "friday",               LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "saturday",             LIBRARY_CONSTANT);
+    token_tree_insert(token_tree, "sunday",               LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "monday",               LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "tuesday",              LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "wednesday",            LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "thursday",             LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "friday",               LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "saturday",             LIBRARY_CONSTANT_ENV);
 
-    token_tree_insert(token_tree, "status_ok",            LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "status_not_found",     LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "status_no_directory",  LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "status_access_denied", LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "status_item_exists",   LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "status_not_empty",     LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "status_no_file",       LIBRARY_CONSTANT);
-    token_tree_insert(token_tree, "status_error",         LIBRARY_CONSTANT);
+    token_tree_insert(token_tree, "status_ok",            LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "status_not_found",     LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "status_no_directory",  LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "status_access_denied", LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "status_item_exists",   LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "status_not_empty",     LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "status_no_file",       LIBRARY_CONSTANT_ENV);
+    token_tree_insert(token_tree, "status_error",         LIBRARY_CONSTANT_ENV);
 
-    token_tree_insert(token_tree, "dir_separator",        LIBRARY_CONSTANT);
+    token_tree_insert(token_tree, "dir_separator",        LIBRARY_CONSTANT_ENV);
 }
 //------------------------------------------------------------------------------
 
