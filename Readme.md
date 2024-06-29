@@ -44,7 +44,7 @@ In addition, the following features are not implemented at the moment:
 - IEEE Property Specification Language
 - VHDL Procedural Interface
 
-## Setup Process
+## Neovim Setup Process
 
 This parser has not been merged into the official tree-sitter yet, so you need
 to perform a manual setup process.
@@ -57,7 +57,7 @@ parser_config.vhdl = {
   install_info = {
     url = "https://github.com/jpt13653903/tree-sitter-vhdl.git",
     files = { 'src/parser.c', 'src/scanner.c' },
-    branch = 'master',
+    branch = 'master', -- or 'develop' if you want the latest features
     generate_requires_npm = false,
     requires_generate_from_grammar = false,
   },
@@ -82,6 +82,27 @@ configuration folder, typically `~/.config/nvim/after/queries/vhdl` on Linux
 and `~/AppData/Local/nvim/after/queries/vhdl` on Windows.
 
 Finally, run `:TSUpdate`.
+
+## Helix Setup Process
+
+Helix still uses a fork of the old unmaintained [alemuller/tree-sitter-vhdl](https://github.com/alemuller/tree-sitter-vhdl). To manually use this tree-sitter instead, clone the [Helix repo](https://github.com/helix-editor/helix). In `languages.toml` replace the line:
+
+
+```toml
+source = { git = "https://github.com/teburd/tree-sitter-vhdl", rev = "c57313adee2231100db0a7880033f6865deeadb2" }
+```
+
+with:
+
+```toml
+source = { git = "https://github.com/jpt13653903/tree-sitter-vhdl", rev = "88a37868c2f1f47831a0b5eec3fbc41eb91b140f" }
+```
+
+Adjust the revision git hash if necessary (latest stable is recommended).
+
+Now [build Helix from source](https://docs.helix-editor.com/install.html#building-from-source). You can check if you got the right tree-sitter source files in the `helix/runtime/grammars/sources/vhdl/` directory.
+
+Replace the `helix/runtime/queries/vhdl/highlights.scm` file with the `queries/highlights.scm` from this repo. Keep in mind it is optimized for Neovim syntax highlighting rules and not for the Helix ones. Either adjust the `highlights.scm` file to your liking or change the highlighting in your theme .toml file. A `highlights.scm` file for Helix will be made available in the future.
 
 ## Building
 
