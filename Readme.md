@@ -13,19 +13,15 @@ A VHDL parser for syntax highlighting.
 - [VHDL Library Files](https://standards.ieee.org/downloads/) (search for "1076")
 - [VSCode Modern VHDL](https://github.com/richjyoung/vscode-modern-vhdl/blob/master/syntaxes/vhdl.tmLanguage.yml)
 
-[ci]: https://img.shields.io/github/actions/workflow/status/jpt13653903/tree-sitter-vhdl/ci.yml?logo=github&label=CI
-[matrix]: https://img.shields.io/matrix/tree-sitter-chat%3Amatrix.org?logo=matrix&label=matrix
-
 ## Screenshots
 
-[Neovim](https://neovim.io/), using [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) and a [Catppuccin](https://github.com/catppuccin/nvim) colour scheme:
+[Neovim], using [nvim-treesitter] and a [Catppuccin] colour scheme:
 
 ![Screenshot](examples/Screenshot.png)
 
 ## History
 
-This version started off as a fork of
-[alemuller/tree-sitter-vhdl](https://github.com/alemuller/tree-sitter-vhdl),
+This version started off as a fork of [alemuller/tree-sitter-vhdl][alemuller],
 but ended up as a complete rewrite of the parser and highlighting scripts.  It
 has very little in common with the original.
 
@@ -36,10 +32,10 @@ VHDL standard is highly ambiguous without compiling the entire code-base into
 a symbol table.  In many cases, invalid syntax will parse into a valid tree.
 
 For the same reason, there might be cases where valid syntax does not map
-to a valid tree.  In this case, please
-[log a bug report](https://github.com/jpt13653903/tree-sitter-vhdl/issues).
+to a valid tree.  In this case, please [log a bug report][issues].
 
-In addition, the following features are not implemented at the moment:
+In addition, the following features are not implemented, and are considered
+outside the scope of this project.
 
 - IEEE Property Specification Language
 - VHDL Procedural Interface
@@ -85,8 +81,9 @@ Finally, run `:TSUpdate`.
 
 ## Helix Setup Process
 
-Helix still uses a fork of the old unmaintained [alemuller/tree-sitter-vhdl](https://github.com/alemuller/tree-sitter-vhdl). To manually use this tree-sitter instead, clone the [Helix repo](https://github.com/helix-editor/helix). In `languages.toml` replace the line:
-
+Helix still uses a fork of the old unmaintained
+[alemuller/tree-sitter-vhdl][alemuller]. To manually use this tree-sitter
+instead, clone the [Helix repo][helix]. In `languages.toml` replace the line:
 
 ```toml
 source = { git = "https://github.com/teburd/tree-sitter-vhdl", rev = "c57313adee2231100db0a7880033f6865deeadb2" }
@@ -95,14 +92,18 @@ source = { git = "https://github.com/teburd/tree-sitter-vhdl", rev = "c57313adee
 with:
 
 ```toml
-source = { git = "https://github.com/jpt13653903/tree-sitter-vhdl", rev = "88a37868c2f1f47831a0b5eec3fbc41eb91b140f" }
+source = { git = "https://github.com/jpt13653903/tree-sitter-vhdl", rev = "8e43fd432b2791955656b0ee5edfe6af66dad8ad" }
 ```
 
 Adjust the revision git hash if necessary (latest stable is recommended).
 
-Now [build Helix from source](https://docs.helix-editor.com/install.html#building-from-source). You can check if you got the right tree-sitter source files in the `helix/runtime/grammars/sources/vhdl/` directory.
+Now [build Helix from source][build_helix]. You can check if you got the right
+tree-sitter source files in the `helix/runtime/grammars/sources/vhdl/` directory.
 
-Replace the `helix/runtime/queries/vhdl/highlights.scm` file with the `queries/Helix/highlights.scm` from this repo. Keep in mind it is optimized for Neovim syntax highlighting rules and not for the Helix ones. Either adjust the `highlights.scm` file to your liking or change the highlighting in your theme .toml file. A `highlights.scm` file for Helix will be made available in the future.
+Replace the `helix/runtime/queries/vhdl/highlights.scm` file with the
+`queries/Helix/highlights.scm` from this repo. You can also adjust
+the `highlights.scm` file to your liking or change the highlighting in your
+theme .toml file.
 
 ## Building
 
@@ -116,6 +117,14 @@ Replace the `helix/runtime/queries/vhdl/highlights.scm` file with the `queries/H
 
 Contributions are welcome.  Read [Contributing.md] for more information.
 
+[ci]: https://img.shields.io/github/actions/workflow/status/jpt13653903/tree-sitter-vhdl/ci.yml?logo=github&label=CI
+[matrix]: https://img.shields.io/matrix/tree-sitter-chat%3Amatrix.org?logo=matrix&label=matrix
+[Neovim]: https://neovim.io/
+[nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
+[Catppuccin]: https://github.com/catppuccin/nvim
+[alemuller]: https://github.com/alemuller/tree-sitter-vhdl
+[issues]: https://github.com/jpt13653903/tree-sitter-vhdl/issues
+[helix]: https://github.com/helix-editor/helix
+[build_helix]: https://docs.helix-editor.com/install.html#building-from-source
 [ts-docs]: https://tree-sitter.github.io/tree-sitter/creating-parsers#getting-started
 [Contributing.md]: https://github.com/jpt13653903/tree-sitter-vhdl/blob/master/Contributing.md
-
