@@ -77,7 +77,7 @@ treesitter.setup {
 }
 ```
 
-Then copy the contents of the `queries` folder to your `after/queries/vhdl`
+Then copy the contents of the `queries/Neovim` folder to your `after/queries/vhdl`
 configuration folder, typically `~/.config/nvim/after/queries/vhdl` on Linux
 and `~/AppData/Local/nvim/after/queries/vhdl` on Windows.
 
@@ -102,7 +102,7 @@ Adjust the revision git hash if necessary (latest stable is recommended).
 
 Now [build Helix from source](https://docs.helix-editor.com/install.html#building-from-source). You can check if you got the right tree-sitter source files in the `helix/runtime/grammars/sources/vhdl/` directory.
 
-Replace the `helix/runtime/queries/vhdl/highlights.scm` file with the `queries/highlights.scm` from this repo. Keep in mind it is optimized for Neovim syntax highlighting rules and not for the Helix ones. Either adjust the `highlights.scm` file to your liking or change the highlighting in your theme .toml file. A `highlights.scm` file for Helix will be made available in the future.
+Replace the `helix/runtime/queries/vhdl/highlights.scm` file with the `queries/Helix/highlights.scm` from this repo. Keep in mind it is optimized for Neovim syntax highlighting rules and not for the Helix ones. Either adjust the `highlights.scm` file to your liking or change the highlighting in your theme .toml file. A `highlights.scm` file for Helix will be made available in the future.
 
 ## Building
 
