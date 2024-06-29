@@ -11,6 +11,9 @@ entity MyModule is port(
   signal proc       : inout std_logic; -- Starts like a keyword
   signal proc_stuff : inout std_logic; -- Almost contains a keyword
   signal integ      : inout std_logic; -- Starts with a keyword, but also contains a keyword
+  signal x          : inout std_logic; -- Is a bit-string base
+  signal xc         : inout std_logic; -- Starts similar to a bit-string
+  signal xcsr_we    : inout std_logic; -- Starts similar to a bit-string
 
   signal assume_something : out std_logic; -- Starts like a keyword, but breaks just after the underscore
   signal delayed          : out std_logic; -- A pre-defined attribute, but also a valid identifier
@@ -83,7 +86,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -94,7 +97,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -105,7 +108,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -116,7 +119,40 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
+            (intervace_signal_declaration
+              (SIGNAL)
+              (identifier_list
+                (identifier))
+              (simple_mode_indication
+                (mode
+                  (INOUT))
+                (subtype_indication
+                  (name
+                    (library_type)))))
+            (line_comment)
+            (intervace_signal_declaration
+              (SIGNAL)
+              (identifier_list
+                (identifier))
+              (simple_mode_indication
+                (mode
+                  (INOUT))
+                (subtype_indication
+                  (name
+                    (library_type)))))
+            (line_comment)
+            (intervace_signal_declaration
+              (SIGNAL)
+              (identifier_list
+                (identifier))
+              (simple_mode_indication
+                (mode
+                  (INOUT))
+                (subtype_indication
+                  (name
+                    (library_type)))))
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -127,7 +163,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -138,7 +174,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -153,7 +189,9 @@ entity MyModule is port(
                   (variable_assignment)
                   (conditional_expression
                     (simple_expression
-                      (bit_string_literal))))))
+                      (bit_string_literal
+                        (bit_string_base)
+                        (bit_string_value)))))))
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -168,7 +206,9 @@ entity MyModule is port(
                   (variable_assignment)
                   (conditional_expression
                     (simple_expression
-                      (based_literal_float))))))
+                      (based_literal
+                        (based_base)
+                        (based_integer)))))))
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -183,7 +223,9 @@ entity MyModule is port(
                   (variable_assignment)
                   (conditional_expression
                     (simple_expression
-                      (bit_string_literal))))))
+                      (bit_string_literal
+                        (bit_string_base)
+                        (bit_string_value)))))))
             (user_directive
               (identifier)
               (directive_body)
@@ -231,10 +273,10 @@ entity MyModule is port(
                     (RANGE)
                     (simple_range
                       (simple_expression
-                        (decimal_literal))
+                        (decimal_integer))
                       (TO)
                       (simple_expression
-                        (decimal_literal)))))))
+                        (decimal_integer)))))))
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -250,16 +292,16 @@ entity MyModule is port(
                         (association_or_range_list
                           (simple_range
                             (simple_expression
-                              (decimal_literal))
+                              (decimal_integer))
                             (DOWNTO)
                             (simple_expression
-                              (decimal_literal)))
+                              (decimal_integer)))
                           (simple_range
                             (simple_expression
-                              (decimal_literal))
+                              (decimal_integer))
                             (DOWNTO)
                             (simple_expression
-                              (decimal_literal))))))))))
+                              (decimal_integer))))))))))
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list

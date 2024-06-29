@@ -7041,6 +7041,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "string_literal_std_logic"
+        },
+        {
+          "type": "SYMBOL",
           "name": "library_constant_boolean"
         },
         {
@@ -7065,24 +7069,67 @@
         }
       ]
     },
+    "bit_string_literal": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "bit_string_length"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "bit_string_base"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "bit_string_value"
+        }
+      ]
+    },
     "_abstract_literal": {
       "type": "CHOICE",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "decimal_literal"
+          "name": "decimal_integer"
         },
         {
           "type": "SYMBOL",
-          "name": "decimal_literal_float"
+          "name": "decimal_float"
         },
         {
           "type": "SYMBOL",
           "name": "based_literal"
-        },
+        }
+      ]
+    },
+    "based_literal": {
+      "type": "SEQ",
+      "members": [
         {
           "type": "SYMBOL",
-          "name": "based_literal_float"
+          "name": "based_base"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "based_integer"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "based_float"
+            }
+          ]
         }
       ]
     },
@@ -10329,7 +10376,11 @@
   "extras": [
     {
       "type": "SYMBOL",
-      "name": "comment"
+      "name": "line_comment"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "block_comment"
     },
     {
       "type": "SYMBOL",
@@ -10857,19 +10908,23 @@
     },
     {
       "type": "SYMBOL",
-      "name": "decimal_literal"
+      "name": "decimal_integer"
     },
     {
       "type": "SYMBOL",
-      "name": "decimal_literal_float"
+      "name": "decimal_float"
     },
     {
       "type": "SYMBOL",
-      "name": "based_literal"
+      "name": "based_base"
     },
     {
       "type": "SYMBOL",
-      "name": "based_literal_float"
+      "name": "based_integer"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "based_float"
     },
     {
       "type": "SYMBOL",
@@ -10881,7 +10936,19 @@
     },
     {
       "type": "SYMBOL",
-      "name": "bit_string_literal"
+      "name": "string_literal_std_logic"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "bit_string_length"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "bit_string_base"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "bit_string_value"
     },
     {
       "type": "SYMBOL",
@@ -10889,7 +10956,11 @@
     },
     {
       "type": "SYMBOL",
-      "name": "comment"
+      "name": "line_comment"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "block_comment"
     },
     {
       "type": "SYMBOL",

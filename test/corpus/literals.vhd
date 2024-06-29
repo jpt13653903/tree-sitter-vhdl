@@ -31,12 +31,23 @@ architecture Behaviour of MyModule is begin
   A <= sb"1001";
   A <= so"1362";
   A <= sx"18f2";
-  A <= d"6789";
+  A <= 25d"6789";
+  A <= 25b"1001";
+  A <= 25o"1362";
+  A <= 25x"18f2";
+  A <= 25ub"1001";
+  A <= 25uo"1362";
+  A <= 25ux"18f2";
+  A <= 25sb"1001";
+  A <= 25so"1362";
+  A <= 25sx"18f2";
+  A <= 25d"6789";
   A <= "UX01ZWLH-";
   A <= x"UX01ZWLH-";
   A <= read_mode;
   A <= true;
   A <= false;
+  A <= so;
   A <= soh;
   A <= warning;
   A <= null;
@@ -63,7 +74,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal)))))
+                (decimal_integer)))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -71,7 +82,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal_float)))))
+                (decimal_float)))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -79,7 +90,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal_float)))))
+                (decimal_integer)))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -87,7 +98,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal_float)))))
+                (decimal_float)))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -95,7 +106,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal)))))
+                (based_literal
+                  (based_base)
+                  (based_integer))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -103,7 +116,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_float))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -111,7 +126,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_integer))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -119,7 +136,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_float))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -127,7 +146,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal)))))
+                (based_literal
+                  (based_base)
+                  (based_integer))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -135,7 +156,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_float))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -143,7 +166,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_integer))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -151,7 +176,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_float))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -159,7 +186,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal)
+                (decimal_integer)
                 (library_constant_unit)))))
         (concurrent_simple_signal_assignment
           (name
@@ -168,7 +195,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal)
+                (decimal_integer)
                 (unit)))))
         (concurrent_simple_signal_assignment
           (name
@@ -177,7 +204,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal)
+                (based_literal
+                  (based_base)
+                  (based_integer))
                 (library_constant_unit)))))
         (concurrent_simple_signal_assignment
           (name
@@ -221,7 +250,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -229,7 +260,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -237,7 +270,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -245,7 +280,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -253,7 +290,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -261,7 +300,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -269,7 +310,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -277,7 +320,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -285,7 +330,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -293,7 +340,10 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_length)
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -301,7 +351,10 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (string_literal)))))
+                (bit_string_literal
+                  (bit_string_length)
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -309,7 +362,116 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_length)
+                  (bit_string_base)
+                  (bit_string_value))))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (bit_string_literal
+                  (bit_string_length)
+                  (bit_string_base)
+                  (bit_string_value))))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (bit_string_literal
+                  (bit_string_length)
+                  (bit_string_base)
+                  (bit_string_value))))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (bit_string_literal
+                  (bit_string_length)
+                  (bit_string_base)
+                  (bit_string_value))))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (bit_string_literal
+                  (bit_string_length)
+                  (bit_string_base)
+                  (bit_string_value))))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (bit_string_literal
+                  (bit_string_length)
+                  (bit_string_base)
+                  (bit_string_value))))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (bit_string_literal
+                  (bit_string_length)
+                  (bit_string_base)
+                  (bit_string_value))))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (bit_string_literal
+                  (bit_string_length)
+                  (bit_string_base)
+                  (bit_string_value))))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (bit_string_literal
+                  (bit_string_length)
+                  (bit_string_base)
+                  (bit_string_value))))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (string_literal_std_logic)))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (bit_string_literal
+                  (bit_string_base)
+                  (bit_string_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -334,6 +496,14 @@ end Behaviour;
             (waveform_element
               (simple_expression
                 (library_constant_boolean)))))
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (library_constant_character)))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))

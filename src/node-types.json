@@ -729,6 +729,29 @@
     }
   },
   {
+    "type": "based_literal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "based_base",
+          "named": true
+        },
+        {
+          "type": "based_float",
+          "named": true
+        },
+        {
+          "type": "based_integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "binding_indication",
     "named": true,
     "fields": {},
@@ -750,6 +773,29 @@
         },
         {
           "type": "port_map_aspect",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bit_string_literal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bit_string_base",
+          "named": true
+        },
+        {
+          "type": "bit_string_length",
+          "named": true
+        },
+        {
+          "type": "bit_string_value",
           "named": true
         }
       ]
@@ -7787,15 +7833,11 @@
           "named": true
         },
         {
-          "type": "based_literal_float",
+          "type": "decimal_float",
           "named": true
         },
         {
-          "type": "decimal_literal",
-          "named": true
-        },
-        {
-          "type": "decimal_literal_float",
+          "type": "decimal_integer",
           "named": true
         },
         {
@@ -8548,10 +8590,6 @@
           "named": true
         },
         {
-          "type": "based_literal_float",
-          "named": true
-        },
-        {
           "type": "bit_string_literal",
           "named": true
         },
@@ -8560,11 +8598,11 @@
           "named": true
         },
         {
-          "type": "decimal_literal",
+          "type": "decimal_float",
           "named": true
         },
         {
-          "type": "decimal_literal_float",
+          "type": "decimal_integer",
           "named": true
         },
         {
@@ -8629,6 +8667,10 @@
         },
         {
           "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "string_literal_std_logic",
           "named": true
         },
         {
@@ -10337,15 +10379,31 @@
     "named": true
   },
   {
-    "type": "based_literal",
+    "type": "based_base",
     "named": true
   },
   {
-    "type": "based_literal_float",
+    "type": "based_float",
     "named": true
   },
   {
-    "type": "bit_string_literal",
+    "type": "based_integer",
+    "named": true
+  },
+  {
+    "type": "bit_string_base",
+    "named": true
+  },
+  {
+    "type": "bit_string_length",
+    "named": true
+  },
+  {
+    "type": "bit_string_value",
+    "named": true
+  },
+  {
+    "type": "block_comment",
     "named": true
   },
   {
@@ -10357,19 +10415,15 @@
     "named": true
   },
   {
-    "type": "comment",
-    "named": true
-  },
-  {
     "type": "condition_conversion",
     "named": true
   },
   {
-    "type": "decimal_literal",
+    "type": "decimal_float",
     "named": true
   },
   {
-    "type": "decimal_literal_float",
+    "type": "decimal_integer",
     "named": true
   },
   {
@@ -10453,11 +10507,19 @@
     "named": true
   },
   {
+    "type": "line_comment",
+    "named": true
+  },
+  {
     "type": "operator_symbol",
     "named": true
   },
   {
     "type": "string_literal",
+    "named": true
+  },
+  {
+    "type": "string_literal_std_logic",
     "named": true
   },
   {

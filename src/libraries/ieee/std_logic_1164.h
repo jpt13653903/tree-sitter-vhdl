@@ -18,6 +18,30 @@ static void register_ieee_std_logic_1164_types(TokenTree* token_tree)
 }
 //------------------------------------------------------------------------------
 
+static void register_ieee_std_logic_1164_constants(TokenTree* token_tree)
+{
+    token_tree_insert(token_tree, "\"0", STRING_LITERAL_STD_LOGIC_START);
+    token_tree_insert(token_tree, "\"1", STRING_LITERAL_STD_LOGIC_START);
+    token_tree_insert(token_tree, "\"u", STRING_LITERAL_STD_LOGIC_START);
+    token_tree_insert(token_tree, "\"x", STRING_LITERAL_STD_LOGIC_START);
+    token_tree_insert(token_tree, "\"z", STRING_LITERAL_STD_LOGIC_START);
+    token_tree_insert(token_tree, "\"w", STRING_LITERAL_STD_LOGIC_START);
+    token_tree_insert(token_tree, "\"l", STRING_LITERAL_STD_LOGIC_START);
+    token_tree_insert(token_tree, "\"h", STRING_LITERAL_STD_LOGIC_START);
+    token_tree_insert(token_tree, "\"-", STRING_LITERAL_STD_LOGIC_START);
+
+    token_tree_insert(token_tree, "\"0\"", TOKEN_STRING_LITERAL_STD_LOGIC);
+    token_tree_insert(token_tree, "\"1\"", TOKEN_STRING_LITERAL_STD_LOGIC);
+    token_tree_insert(token_tree, "\"u\"", TOKEN_STRING_LITERAL_STD_LOGIC);
+    token_tree_insert(token_tree, "\"x\"", TOKEN_STRING_LITERAL_STD_LOGIC);
+    token_tree_insert(token_tree, "\"z\"", TOKEN_STRING_LITERAL_STD_LOGIC);
+    token_tree_insert(token_tree, "\"w\"", TOKEN_STRING_LITERAL_STD_LOGIC);
+    token_tree_insert(token_tree, "\"l\"", TOKEN_STRING_LITERAL_STD_LOGIC);
+    token_tree_insert(token_tree, "\"h\"", TOKEN_STRING_LITERAL_STD_LOGIC);
+    token_tree_insert(token_tree, "\"-\"", TOKEN_STRING_LITERAL_STD_LOGIC);
+}
+//------------------------------------------------------------------------------
+
 static void register_ieee_std_logic_1164_functions(TokenTree* token_tree)
 {
     token_tree_insert(token_tree, "resolved",             LIBRARY_FUNCTION);
@@ -48,6 +72,7 @@ static void register_ieee_std_logic_1164_aliases(TokenTree* token_tree)
 void register_ieee_std_logic_1164(TokenTree* token_tree)
 {
     register_ieee_std_logic_1164_types    (token_tree);
+    register_ieee_std_logic_1164_constants(token_tree);
     register_ieee_std_logic_1164_functions(token_tree);
     register_ieee_std_logic_1164_aliases  (token_tree);
 }

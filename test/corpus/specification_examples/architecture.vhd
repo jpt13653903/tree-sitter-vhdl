@@ -161,7 +161,7 @@ end architecture DataFlow;
         (END)
         (ENTITY)
         (identifier))))
-  (comment)
+  (line_comment)
   (design_unit
     (architecture_definition
       (ARCHITECTURE)
@@ -888,7 +888,7 @@ end architecture DataFlow;
                 (variable_assignment)
                 (conditional_expression
                   (simple_expression
-                    (decimal_literal_float)))))
+                    (decimal_float)))))
             (variable_declaration
               (VARIABLE)
               (identifier_list
@@ -900,7 +900,7 @@ end architecture DataFlow;
                 (variable_assignment)
                 (conditional_expression
                   (simple_expression
-                    (decimal_literal))))))
+                    (decimal_integer))))))
           (sequential_block
             (BEGIN)
             (if_statement
@@ -931,7 +931,7 @@ end architecture DataFlow;
                   (waveform
                     (waveform_element
                       (simple_expression
-                        (decimal_literal))))))
+                        (decimal_integer))))))
               (else_statements
                 (ELSE)
                 (simple_waveform_assignment
@@ -941,7 +941,7 @@ end architecture DataFlow;
                   (waveform
                     (waveform_element
                       (simple_expression
-                        (decimal_literal))))))
+                        (decimal_integer))))))
               (end_if
                 (END)
                 (IF)))
@@ -953,10 +953,10 @@ end architecture DataFlow;
                   (IN)
                   (simple_range
                     (simple_expression
-                      (decimal_literal))
+                      (decimal_integer))
                     (TO)
                     (simple_expression
-                      (decimal_literal)))))
+                      (decimal_integer)))))
               (loop_body
                 (LOOP)
                 (case_statement
@@ -990,7 +990,7 @@ end architecture DataFlow;
                       (when_element
                         (WHEN)
                         (simple_expression
-                          (string_literal)))
+                          (string_literal_std_logic)))
                       (simple_waveform_assignment
                         (name
                           (identifier)
@@ -1005,7 +1005,7 @@ end architecture DataFlow;
                                           (identifier)))
                                       (adding_operator)
                                       (simple_expression
-                                        (decimal_literal)))))))))
+                                        (decimal_integer)))))))))
                         (signal_assignment)
                         (waveform
                           (waveform_element
@@ -1016,7 +1016,7 @@ end architecture DataFlow;
                       (when_element
                         (WHEN)
                         (simple_expression
-                          (string_literal)))
+                          (string_literal_std_logic)))
                       (simple_waveform_assignment
                         (name
                           (identifier)
@@ -1031,7 +1031,7 @@ end architecture DataFlow;
                                           (identifier)))
                                       (adding_operator)
                                       (simple_expression
-                                        (decimal_literal)))))))))
+                                        (decimal_integer)))))))))
                         (signal_assignment)
                         (waveform
                           (waveform_element
@@ -1056,7 +1056,7 @@ end architecture DataFlow;
                                           (identifier)))
                                       (adding_operator)
                                       (simple_expression
-                                        (decimal_literal)))))))))
+                                        (decimal_integer)))))))))
                         (signal_assignment)
                         (waveform
                           (waveform_element

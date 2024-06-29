@@ -189,8 +189,8 @@ static void register_delimiters(TokenTree* token_tree)
     // token_tree_insert(token_tree, "<<",  DELIMITER_DOUBLE_LESS_THAN);
     // token_tree_insert(token_tree, ">>",  DELIMITER_DOUBLE_GREATER_THAN);
 
-    token_tree_insert(token_tree, "--",  COMMENT_LINE_START);
-    token_tree_insert(token_tree, "/*",  COMMENT_BLOCK_START);
+    token_tree_insert(token_tree, "--",  LINE_COMMENT_START);
+    token_tree_insert(token_tree, "/*",  BLOCK_COMMENT_START);
 }
 //------------------------------------------------------------------------------
 
@@ -287,16 +287,16 @@ static void register_attributes(TokenTree* token_tree)
 
 static void register_base_specifiers(TokenTree* token_tree)
 {
-    token_tree_insert(token_tree, "b\"",  BASE_SPECIFIER_BINARY);
-    token_tree_insert(token_tree, "o\"",  BASE_SPECIFIER_OCTAL);
-    token_tree_insert(token_tree, "x\"",  BASE_SPECIFIER_HEX);
-    token_tree_insert(token_tree, "ub\"", BASE_SPECIFIER_BINARY);
-    token_tree_insert(token_tree, "uo\"", BASE_SPECIFIER_OCTAL);
-    token_tree_insert(token_tree, "ux\"", BASE_SPECIFIER_HEX);
-    token_tree_insert(token_tree, "sb\"", BASE_SPECIFIER_BINARY);
-    token_tree_insert(token_tree, "so\"", BASE_SPECIFIER_OCTAL);
-    token_tree_insert(token_tree, "sx\"", BASE_SPECIFIER_HEX);
-    token_tree_insert(token_tree, "d\"",  BASE_SPECIFIER_DECIMAL);
+    token_tree_insert(token_tree, "b",  BASE_SPECIFIER_BINARY);
+    token_tree_insert(token_tree, "o",  BASE_SPECIFIER_OCTAL);
+    token_tree_insert(token_tree, "x",  BASE_SPECIFIER_HEX);
+    token_tree_insert(token_tree, "ub", BASE_SPECIFIER_BINARY);
+    token_tree_insert(token_tree, "uo", BASE_SPECIFIER_OCTAL);
+    token_tree_insert(token_tree, "ux", BASE_SPECIFIER_HEX);
+    token_tree_insert(token_tree, "sb", BASE_SPECIFIER_BINARY);
+    token_tree_insert(token_tree, "so", BASE_SPECIFIER_OCTAL);
+    token_tree_insert(token_tree, "sx", BASE_SPECIFIER_HEX);
+    token_tree_insert(token_tree, "d",  BASE_SPECIFIER_DECIMAL);
 }
 //------------------------------------------------------------------------------
 

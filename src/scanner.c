@@ -9,11 +9,6 @@
 #include "debug_macros.h"
 //------------------------------------------------------------------------------
 
-typedef struct ScannerTag{
-    bool is_in_directive;
-} Scanner;
-//------------------------------------------------------------------------------
-
 #include "TokenType.h"
 #include "TokenTree.h"
 //------------------------------------------------------------------------------
@@ -31,6 +26,17 @@ typedef struct ScannerTag{
 #include "libraries/ieee/float_pkg.h"
 #include "libraries/ieee/math_real.h"
 #include "libraries/ieee/math_complex.h"
+//------------------------------------------------------------------------------
+
+typedef struct ScannerTag{
+    bool      is_in_directive;
+    TokenType bit_string_base;
+    int       base;
+} Scanner;
+//------------------------------------------------------------------------------
+
+#include "TokenType.inc"
+#include "TokenTree.inc"
 //------------------------------------------------------------------------------
 
 static TokenTree* token_tree     = 0;
@@ -287,11 +293,10 @@ static bool finish_block_comment(TSLexer* lexer)
 
 static bool may_start_with_digit(const bool* valid_symbols)
 {
-    return valid_symbols[TOKEN_DECIMAL_LITERAL]       ||
-           valid_symbols[TOKEN_DECIMAL_LITERAL_FLOAT] ||
-           valid_symbols[TOKEN_BASED_LITERAL]         ||
-           valid_symbols[TOKEN_BASED_LITERAL_FLOAT]   ||
-           valid_symbols[TOKEN_BIT_STRING_LITERAL];
+    return valid_symbols[TOKEN_DECIMAL_INTEGER] ||
+           valid_symbols[TOKEN_DECIMAL_FLOAT]   ||
+           valid_symbols[TOKEN_BASED_BASE]      ||
+           valid_symbols[TOKEN_BIT_STRING_LENGTH];
 }
 //------------------------------------------------------------------------------
 
@@ -328,7 +333,6 @@ static bool parse_decimal_fraction(TSLexer* lexer)
     lexer->advance(lexer, false);
     if(lexer->lookahead < '0' || lexer->lookahead > '9') return false;
 
-    lexer->result_symbol = TOKEN_DECIMAL_LITERAL_FLOAT;
     parse_integer(lexer);
 
     if(lexer->lookahead == 'e' || lexer->lookahead == 'E'){
@@ -364,93 +368,63 @@ static bool based_integer(TSLexer* lexer, int base)
 static bool parse_base_literal(TSLexer* lexer, int base)
 {
     lexer->advance(lexer, false);
-    lexer->result_symbol = TOKEN_BASED_LITERAL;
+    lexer->result_symbol = TOKEN_BASED_INTEGER;
 
     if(!based_integer(lexer, base)) return false;
     if(lexer->lookahead == '.'){
         lexer->advance(lexer, false);
-        lexer->result_symbol = TOKEN_BASED_LITERAL_FLOAT;
+        lexer->result_symbol = TOKEN_BASED_FLOAT;
         if(!based_integer(lexer, base)) return false;
     }
     if(lexer->lookahead != '#') return false;
     lexer->advance(lexer, false);
     lexer->mark_end(lexer);
     if(lexer->lookahead == 'e' || lexer->lookahead == 'E'){
-        lexer->result_symbol = TOKEN_BASED_LITERAL_FLOAT;
         return parse_decimal_exponent(lexer);
     }
     return true;
 }
 //------------------------------------------------------------------------------
 
-static bool parse_digit_based_literal(TSLexer* lexer)
+static bool parse_digit_based_literal(Scanner* scanner, TSLexer* lexer)
 {
     TokenType type;
 
-    lexer->result_symbol = TOKEN_DECIMAL_LITERAL;
+    lexer->result_symbol = TOKEN_DECIMAL_INTEGER;
 
-    int base = parse_integer(lexer);
-    debug("base = %d", base);
+    scanner->base = parse_integer(lexer);
+    debug("base = %d", scanner->base);
     // NOTE: VHDL-2008 limits the base to 16, but I feel it's pointless to
     //       enforce, so I don't.  A future version will most likely relax
     //       that rule.
 
     switch(lowercase(lexer->lookahead)){
         case '.':
+            lexer->result_symbol = TOKEN_DECIMAL_FLOAT;
             return parse_decimal_fraction(lexer);
 
         case 'e':
-            lexer->result_symbol = TOKEN_DECIMAL_LITERAL_FLOAT;
             return parse_decimal_exponent(lexer);
 
         case '#':
-            return parse_base_literal(lexer, base);
+            lexer->result_symbol = TOKEN_BASED_BASE;
+            return true;
 
-        case 'b':
+        case 'b': case 'o': case 'd': case 'x':
             lexer->advance(lexer, false);
             if(lexer->lookahead != '"') return true;
-            lexer->advance(lexer, false);
-            lexer->result_symbol = TOKEN_BIT_STRING_LITERAL;
-            return finish_string_literal(lexer, BASE_SPECIFIER_BINARY);
-        case 'o':
-            lexer->advance(lexer, false);
-            if(lexer->lookahead != '"') return true;
-            lexer->advance(lexer, false);
-            lexer->result_symbol = TOKEN_BIT_STRING_LITERAL;
-            return finish_string_literal(lexer, BASE_SPECIFIER_OCTAL);
-        case 'd':
-            lexer->advance(lexer, false);
-            if(lexer->lookahead != '"') return true;
-            lexer->advance(lexer, false);
-            lexer->result_symbol = TOKEN_BIT_STRING_LITERAL;
-            return finish_string_literal(lexer, BASE_SPECIFIER_DECIMAL);
-        case 'x':
-            lexer->advance(lexer, false);
-            if(lexer->lookahead != '"') return true;
-            lexer->advance(lexer, false);
-            lexer->result_symbol = TOKEN_BIT_STRING_LITERAL;
-            return finish_string_literal(lexer, BASE_SPECIFIER_HEX);
+            lexer->result_symbol = TOKEN_BIT_STRING_LENGTH;
+            return true;
 
-        case 'u':
-        case 's':
+        case 'u': case 's':
             switch(advance(lexer)){
-                case 'b':
-                    type = BASE_SPECIFIER_BINARY;
-                    break;
-                case 'o':
-                    type = BASE_SPECIFIER_OCTAL;
-                    break;
-                case 'x':
-                    type = BASE_SPECIFIER_HEX;
-                    break;
-                default:
-                    return true;
+                case 'b': case 'o': case 'x': break;
+                default: return true;
             }
             lexer->advance(lexer, false);
             if(lexer->lookahead != '"') return true;
-            lexer->advance(lexer, false);
-            lexer->result_symbol = TOKEN_BIT_STRING_LITERAL;
-            return finish_string_literal(lexer, type);
+            lexer->result_symbol = TOKEN_BIT_STRING_LENGTH;
+            return true;
 
         default:
             return true;
@@ -520,9 +494,32 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
 
     }else if(lexer->lookahead >= '0' && lexer->lookahead <= '9'){
         if(!may_start_with_digit(valid_symbols)) return false;
-        if(!parse_digit_based_literal(lexer)) return false;
+        if(!parse_digit_based_literal(scanner, lexer)) return false;
         debug("returning type %s", token_type_to_string(lexer->result_symbol));
         return true;
+
+    }else if(!valid_symbols[ERROR_SENTINEL] && valid_symbols[TOKEN_BIT_STRING_VALUE]){
+        if(lexer->lookahead == '"'){
+            lexer->advance(lexer, false);
+            lexer->result_symbol = TOKEN_BIT_STRING_VALUE;
+            if(finish_string_literal(lexer, scanner->bit_string_base)){
+                debug("Returning type TOKEN_BIT_STRING_VALUE");
+                return true;
+            }
+        }
+        debug("Returning false");
+        return false;
+
+    }else if(!valid_symbols[ERROR_SENTINEL] &&
+             (valid_symbols[TOKEN_BASED_INTEGER] || valid_symbols[TOKEN_BASED_FLOAT])){
+        if(lexer->lookahead == '#'){
+            if(parse_base_literal(lexer, scanner->base)){
+                debug("Returning type %s", token_type_to_string(lexer->result_symbol));
+                return true;
+            }
+        }
+        debug("Returning false");
+        return false;
 
     }else if(!valid_symbols[ERROR_SENTINEL] && valid_symbols[DIRECTIVE_BODY] && graphic_characters(lexer)){
         lexer->result_symbol = DIRECTIVE_BODY;
@@ -562,18 +559,24 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
     bool found_cannot_be_identifier = false;
 
     while(types){
-        if(types->type == COMMENT_LINE_START){
-            finish_line_comment(lexer);
-            lexer->result_symbol = TOKEN_COMMENT;
-            debug("Returning type TOKEN_COMMENT");
-            return true;
-
-        }else if(types->type == COMMENT_BLOCK_START){
-            if(finish_block_comment(lexer)){
-                lexer->result_symbol = TOKEN_COMMENT;
-                debug("Returning type TOKEN_COMMENT");
+        if(types->type == LINE_COMMENT_START){
+            if(valid_symbols[TOKEN_LINE_COMMENT]){
+                finish_line_comment(lexer);
+                lexer->result_symbol = TOKEN_LINE_COMMENT;
+                debug("Returning type TOKEN_LINE_COMMENT");
                 return true;
             }
+            debug("Returning false");
+            return false;
+
+        }else if(types->type == BLOCK_COMMENT_START){
+            if(valid_symbols[TOKEN_BLOCK_COMMENT] && finish_block_comment(lexer)){
+                lexer->result_symbol = TOKEN_BLOCK_COMMENT;
+                debug("Returning type TOKEN_BLOCK_COMMENT");
+                return true;
+            }
+            debug("Returning false");
+            return false;
 
         }else if(can_start_identifier(types->type) &&
             finish_identifier(lexer, types->type == IDENTIFIER_EXPECTING_LETTER)){
@@ -582,29 +585,60 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
             return true;
 
         }else if(is_base_specifier(types->type)){
-            if(finish_string_literal(lexer, types->type)){
-                lexer->result_symbol = TOKEN_BIT_STRING_LITERAL;
-                debug("Returning type TOKEN_BIT_STRING_LITERAL");
+            if(lexer->lookahead == '"'){
+                scanner->bit_string_base = types->type;
+                lexer->result_symbol = TOKEN_BIT_STRING_BASE;
+                debug("Returning type TOKEN_BIT_STRING_BASE");
+                return true;
+            }else if(!types->next){
+                finish_identifier(lexer, false);
+                lexer->result_symbol = IDENTIFIER;
+                debug("Returning type IDENTIFIER");
                 return true;
             }
 
-        }else if(types->type == TOKEN_OPERATOR_SYMBOL){
+        }else if(types->type == LIBRARY_CONSTANT_CHARACTER && lexer->lookahead == '"'){
+            // This could actually be a bit-string base, so let the while continue
+            // It is not possible to follow a character constant with a string
+
+        }else if(types->type == TOKEN_OPERATOR_SYMBOL ||
+                 types->type == TOKEN_STRING_LITERAL_STD_LOGIC){
             if(lexer->lookahead == '"'){
-                lexer->advance(lexer, false);
-                if(!bounded_token(lexer, '"')) return false;
-                lexer->result_symbol = TOKEN_STRING_LITERAL;
                 if(valid_symbols[TOKEN_STRING_LITERAL]){
+                    lexer->advance(lexer, false);
+                    if(!bounded_token(lexer, '"')) return false;
+                    lexer->result_symbol = TOKEN_STRING_LITERAL;
                     debug("Returning type TOKEN_STRING_LITERAL");
                     return true;
+                }else{
+                    debug("Returning false");
+                    return false;
                 }
-            }else if(valid_symbols[TOKEN_OPERATOR_SYMBOL]){
-                lexer->result_symbol = TOKEN_OPERATOR_SYMBOL;
-                debug("Returning type TOKEN_OPERATOR_SYMBOL");
+            }else if(valid_symbols[types->type]){
+                lexer->result_symbol = types->type;
+                debug("Returning type %s", token_type_to_string(types->type));
                 return true;
-            }else if(valid_symbols[TOKEN_STRING_LITERAL]){
+            }else if(!types->next && valid_symbols[TOKEN_STRING_LITERAL]){
                 lexer->result_symbol = TOKEN_STRING_LITERAL;
                 debug("Returning type TOKEN_STRING_LITERAL");
                 return true;
+            }
+
+        }else if(types->type == STRING_LITERAL_STD_LOGIC_START){
+            if(valid_symbols[TOKEN_STRING_LITERAL_STD_LOGIC] && binary_string_literal(lexer)){
+                if(lexer->lookahead != '"'){
+                    lexer->result_symbol = TOKEN_STRING_LITERAL_STD_LOGIC;
+                    debug("Returning type TOKEN_STRING_LITERAL_STD_LOGIC");
+                    return valid_symbols[TOKEN_STRING_LITERAL_STD_LOGIC];
+                }else{
+                    lexer->advance(lexer, false);
+                    // and drop down to continue the string parsing below
+                }
+            }
+            if(valid_symbols[TOKEN_STRING_LITERAL] && bounded_token(lexer, '"')){
+                lexer->result_symbol = TOKEN_STRING_LITERAL;
+                debug("Returning type TOKEN_STRING_LITERAL");
+                return valid_symbols[TOKEN_STRING_LITERAL];
             }
             debug("Returning false");
             return false;
