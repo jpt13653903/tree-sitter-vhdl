@@ -562,18 +562,24 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
     bool found_cannot_be_identifier = false;
 
     while(types){
-        if(types->type == COMMENT_LINE_START){
-            finish_line_comment(lexer);
-            lexer->result_symbol = TOKEN_COMMENT;
-            debug("Returning type TOKEN_COMMENT");
-            return true;
-
-        }else if(types->type == COMMENT_BLOCK_START){
-            if(finish_block_comment(lexer)){
-                lexer->result_symbol = TOKEN_COMMENT;
-                debug("Returning type TOKEN_COMMENT");
+        if(types->type == LINE_COMMENT_START){
+            if(valid_symbols[TOKEN_LINE_COMMENT]){
+                finish_line_comment(lexer);
+                lexer->result_symbol = TOKEN_LINE_COMMENT;
+                debug("Returning type TOKEN_LINE_COMMENT");
                 return true;
             }
+            debug("Returning false");
+            return false;
+
+        }else if(types->type == BLOCK_COMMENT_START){
+            if(valid_symbols[TOKEN_BLOCK_COMMENT] && finish_block_comment(lexer)){
+                lexer->result_symbol = TOKEN_BLOCK_COMMENT;
+                debug("Returning type TOKEN_BLOCK_COMMENT");
+                return true;
+            }
+            debug("Returning false");
+            return false;
 
         }else if(can_start_identifier(types->type) &&
             finish_identifier(lexer, types->type == IDENTIFIER_EXPECTING_LETTER)){

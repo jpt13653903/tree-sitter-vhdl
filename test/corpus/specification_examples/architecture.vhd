@@ -161,7 +161,7 @@ end architecture DataFlow;
         (END)
         (ENTITY)
         (identifier))))
-  (comment)
+  (line_comment)
   (design_unit
     (architecture_definition
       (ARCHITECTURE)

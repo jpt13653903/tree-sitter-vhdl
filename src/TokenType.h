@@ -147,7 +147,8 @@ typedef enum TokenTypeTag{
     TOKEN_STRING_LITERAL_STD_LOGIC,
     TOKEN_BIT_STRING_LITERAL,
     TOKEN_OPERATOR_SYMBOL,
-    TOKEN_COMMENT,
+    TOKEN_LINE_COMMENT,
+    TOKEN_BLOCK_COMMENT,
 
     TOKEN_END_MARKER, // Internal use only
 
@@ -179,8 +180,8 @@ typedef enum TokenTypeTag{
     ERROR_SENTINEL,
 
     // For internal use only...
-    COMMENT_LINE_START,
-    COMMENT_BLOCK_START,
+    LINE_COMMENT_START,
+    BLOCK_COMMENT_START,
 
     STRING_LITERAL_STD_LOGIC_START,
 
@@ -349,7 +350,8 @@ bool is_base_specifier   (TokenType type);
             case TOKEN_STRING_LITERAL_STD_LOGIC:           return "TOKEN_STRING_LITERAL_STD_LOGIC";
             case TOKEN_BIT_STRING_LITERAL:                 return "TOKEN_BIT_STRING_LITERAL";
             case TOKEN_OPERATOR_SYMBOL:                    return "TOKEN_OPERATOR_SYMBOL";
-            case TOKEN_COMMENT:                            return "TOKEN_COMMENT";
+            case TOKEN_LINE_COMMENT:                       return "TOKEN_LINE_COMMENT";
+            case TOKEN_BLOCK_COMMENT:                      return "TOKEN_BLOCK_COMMENT";
 
             case TOKEN_END_MARKER:                         return "TOKEN_END_MARKER";
 
@@ -380,8 +382,8 @@ bool is_base_specifier   (TokenType type);
 
             case ERROR_SENTINEL:                           return "ERROR_SENTINEL";
 
-            case COMMENT_LINE_START:                       return "COMMENT_LINE_START";
-            case COMMENT_BLOCK_START:                      return "COMMENT_BLOCK_START";
+            case LINE_COMMENT_START:                       return "LINE_COMMENT_START";
+            case BLOCK_COMMENT_START:                      return "BLOCK_COMMENT_START";
 
             case STRING_LITERAL_STD_LOGIC_START:           return "STRING_LITERAL_STD_LOGIC_START";
 

@@ -156,7 +156,8 @@ module.exports = grammar({
         $.string_literal_std_logic,
         $.bit_string_literal,
         $.operator_symbol,
-        $.comment,
+        $.line_comment,
+        $.block_comment,
 
         $.token_end_marker, // Scanner internal use only
 
@@ -189,7 +190,8 @@ module.exports = grammar({
     ],
 
     extras: $ => [
-        $.comment,
+        $.line_comment,
+        $.block_comment,
         $._tool_directive,
         /\s+/
     ],
