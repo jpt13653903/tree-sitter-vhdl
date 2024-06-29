@@ -64,6 +64,7 @@ architecture Behaviour of Processor is
   variable reals       : RealArray  := (123.456, 7#16.45#e7, 13#AC.83#);
   signal   logic       : LogicArray := ("1010", b"01101", sx"123ABC", d"123456");
   signal   sized_logic : LogicArray := (5b"01101", 24sx"123ABC", 20d"123456");
+  constant strings     : String     := "Hello World!!!";
 begin
   producer : entity work.source port map(clk, rst, bus_in);
   consumer : entity work.sink   port map(clk, rst, bus_out);
