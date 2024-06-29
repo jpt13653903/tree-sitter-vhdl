@@ -137,10 +137,11 @@
 
             case DELIMITER_END_MARKER:                     return "DELIMITER_END_MARKER";
 
-            case TOKEN_DECIMAL_LITERAL:                    return "TOKEN_DECIMAL_LITERAL";
-            case TOKEN_DECIMAL_LITERAL_FLOAT:              return "TOKEN_DECIMAL_LITERAL_FLOAT";
-            case TOKEN_BASED_LITERAL:                      return "TOKEN_BASED_LITERAL";
-            case TOKEN_BASED_LITERAL_FLOAT:                return "TOKEN_BASED_LITERAL_FLOAT";
+            case TOKEN_DECIMAL_INTEGER:                    return "TOKEN_DECIMAL_LITERAL";
+            case TOKEN_DECIMAL_FLOAT:                      return "TOKEN_DECIMAL_LITERAL_FLOAT";
+            case TOKEN_BASED_BASE:                         return "TOKEN_BASED_BASE";
+            case TOKEN_BASED_INTEGER:                      return "TOKEN_BASED_INTEGER";
+            case TOKEN_BASED_FLOAT:                        return "TOKEN_BASED_FLOAT";
             case TOKEN_CHARACTER_LITERAL:                  return "TOKEN_CHARACTER_LITERAL";
             case TOKEN_STRING_LITERAL:                     return "TOKEN_STRING_LITERAL";
             case TOKEN_STRING_LITERAL_STD_LOGIC:           return "TOKEN_STRING_LITERAL_STD_LOGIC";

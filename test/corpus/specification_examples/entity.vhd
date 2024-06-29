@@ -76,7 +76,7 @@ end entity AndGate;
                   (variable_assignment)
                   (conditional_expression
                     (simple_expression
-                      (decimal_literal))))))))
+                      (decimal_integer))))))))
         (port_clause
           (PORT)
           (interface_list
@@ -94,7 +94,7 @@ end entity AndGate;
                         (association_or_range_list
                           (simple_range
                             (simple_expression
-                              (decimal_literal))
+                              (decimal_integer))
                             (TO)
                             (simple_expression
                               (name
@@ -202,10 +202,10 @@ end ROM;
               (index_constraint
                 (simple_range
                   (simple_expression
-                    (decimal_literal))
+                    (decimal_integer))
                   (TO)
                   (simple_expression
-                    (decimal_literal)))))
+                    (decimal_integer)))))
             (OF)
             (subtype_indication
               (name
@@ -272,7 +272,7 @@ end ROM;
                               (element_association
                                 (conditional_expression
                                   (simple_expression
-                                    (decimal_literal))))
+                                    (decimal_integer))))
                               (element_association
                                 (conditional_expression
                                   (simple_expression
@@ -296,11 +296,11 @@ end ROM;
                               (element_association
                                 (conditional_expression
                                   (simple_expression
-                                    (decimal_literal))))
+                                    (decimal_integer))))
                               (element_association
                                 (conditional_expression
                                   (simple_expression
-                                    (decimal_literal))))
+                                    (decimal_integer))))
                               (element_association
                                 (conditional_expression
                                   (simple_expression
@@ -324,11 +324,11 @@ end ROM;
                               (element_association
                                 (conditional_expression
                                   (simple_expression
-                                    (decimal_literal))))
+                                    (decimal_integer))))
                               (element_association
                                 (conditional_expression
                                   (simple_expression
-                                    (decimal_literal))))
+                                    (decimal_integer))))
                               (element_association
                                 (conditional_expression
                                   (simple_expression
@@ -415,7 +415,7 @@ end;
             (variable_assignment)
             (conditional_expression
               (simple_expression
-                (decimal_literal)
+                (decimal_integer)
                 (library_constant_unit)))))
         (constant_declaration
           (CONSTANT)
@@ -428,7 +428,7 @@ end;
             (variable_assignment)
             (conditional_expression
               (simple_expression
-                (decimal_literal)
+                (decimal_integer)
                 (library_constant_unit)))))
         (use_clause
           (USE)

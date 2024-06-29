@@ -293,10 +293,9 @@ static bool finish_block_comment(TSLexer* lexer)
 
 static bool may_start_with_digit(const bool* valid_symbols)
 {
-    return valid_symbols[TOKEN_DECIMAL_LITERAL]       ||
-           valid_symbols[TOKEN_DECIMAL_LITERAL_FLOAT] ||
-           valid_symbols[TOKEN_BASED_LITERAL]         ||
-           valid_symbols[TOKEN_BASED_LITERAL_FLOAT]   ||
+    return valid_symbols[TOKEN_DECIMAL_INTEGER] ||
+           valid_symbols[TOKEN_DECIMAL_FLOAT]   ||
+           valid_symbols[TOKEN_BASED_BASE]      ||
            valid_symbols[TOKEN_BIT_STRING_LENGTH];
 }
 //------------------------------------------------------------------------------
@@ -334,7 +333,6 @@ static bool parse_decimal_fraction(TSLexer* lexer)
     lexer->advance(lexer, false);
     if(lexer->lookahead < '0' || lexer->lookahead > '9') return false;
 
-    lexer->result_symbol = TOKEN_DECIMAL_LITERAL_FLOAT;
     parse_integer(lexer);
 
     if(lexer->lookahead == 'e' || lexer->lookahead == 'E'){
@@ -370,47 +368,47 @@ static bool based_integer(TSLexer* lexer, int base)
 static bool parse_base_literal(TSLexer* lexer, int base)
 {
     lexer->advance(lexer, false);
-    lexer->result_symbol = TOKEN_BASED_LITERAL;
+    lexer->result_symbol = TOKEN_BASED_INTEGER;
 
     if(!based_integer(lexer, base)) return false;
     if(lexer->lookahead == '.'){
         lexer->advance(lexer, false);
-        lexer->result_symbol = TOKEN_BASED_LITERAL_FLOAT;
+        lexer->result_symbol = TOKEN_BASED_FLOAT;
         if(!based_integer(lexer, base)) return false;
     }
     if(lexer->lookahead != '#') return false;
     lexer->advance(lexer, false);
     lexer->mark_end(lexer);
     if(lexer->lookahead == 'e' || lexer->lookahead == 'E'){
-        lexer->result_symbol = TOKEN_BASED_LITERAL_FLOAT;
         return parse_decimal_exponent(lexer);
     }
     return true;
 }
 //------------------------------------------------------------------------------
 
-static bool parse_digit_based_literal(TSLexer* lexer)
+static bool parse_digit_based_literal(Scanner* scanner, TSLexer* lexer)
 {
     TokenType type;
 
-    lexer->result_symbol = TOKEN_DECIMAL_LITERAL;
+    lexer->result_symbol = TOKEN_DECIMAL_INTEGER;
 
-    int base = parse_integer(lexer);
-    debug("base = %d", base);
+    scanner->base = parse_integer(lexer);
+    debug("base = %d", scanner->base);
     // NOTE: VHDL-2008 limits the base to 16, but I feel it's pointless to
     //       enforce, so I don't.  A future version will most likely relax
     //       that rule.
 
     switch(lowercase(lexer->lookahead)){
         case '.':
+            lexer->result_symbol = TOKEN_DECIMAL_FLOAT;
             return parse_decimal_fraction(lexer);
 
         case 'e':
-            lexer->result_symbol = TOKEN_DECIMAL_LITERAL_FLOAT;
             return parse_decimal_exponent(lexer);
 
         case '#':
-            return parse_base_literal(lexer, base);
+            lexer->result_symbol = TOKEN_BASED_BASE;
+            return true;
 
         case 'b': case 'o': case 'd': case 'x':
             lexer->advance(lexer, false);
@@ -496,7 +494,7 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
 
     }else if(lexer->lookahead >= '0' && lexer->lookahead <= '9'){
         if(!may_start_with_digit(valid_symbols)) return false;
-        if(!parse_digit_based_literal(lexer)) return false;
+        if(!parse_digit_based_literal(scanner, lexer)) return false;
         debug("returning type %s", token_type_to_string(lexer->result_symbol));
         return true;
 
@@ -512,6 +510,16 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
         debug("Returning false");
         return false;
 
+    }else if(!valid_symbols[ERROR_SENTINEL] &&
+             (valid_symbols[TOKEN_BASED_INTEGER] || valid_symbols[TOKEN_BASED_FLOAT])){
+        if(lexer->lookahead == '#'){
+            if(parse_base_literal(lexer, scanner->base)){
+                debug("Returning type %s", token_type_to_string(lexer->result_symbol));
+                return true;
+            }
+        }
+        debug("Returning false");
+        return false;
 
     }else if(!valid_symbols[ERROR_SENTINEL] && valid_symbols[DIRECTIVE_BODY] && graphic_characters(lexer)){
         lexer->result_symbol = DIRECTIVE_BODY;

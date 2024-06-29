@@ -224,19 +224,20 @@
 
 [ ":" "@" "=>" ] @punctuation.special
 
-[
-    (decimal_literal)
-    (based_literal)
-    (string_literal_std_logic)
-] @constant.numeric.integer
+[ (decimal_integer) (string_literal_std_logic) ] @constant.numeric.integer
+(decimal_float) @constant.numeric.float
+
 (bit_string_length) @type.parameter
 (bit_string_base)   @type.builtin
 (bit_string_value)  @constant.numeric.integer
 
-[
-    (decimal_literal_float)
-    (based_literal_float)
-] @constant.numeric.float
+(based_literal
+  (based_base)     @type.builtin
+  (based_integer)  @constant.numeric.integer)
+
+(based_literal
+  (based_base)     @type.builtin
+  (based_float)    @constant.numeric.float)
 
 (string_literal) @string
 (character_literal) @constant.character
