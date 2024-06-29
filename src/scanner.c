@@ -591,6 +591,7 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
                 debug("Returning type TOKEN_BIT_STRING_BASE");
                 return true;
             }else if(!types->next){
+                finish_identifier(lexer, false);
                 lexer->result_symbol = IDENTIFIER;
                 debug("Returning type IDENTIFIER");
                 return true;
