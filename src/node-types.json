@@ -10353,15 +10353,15 @@
     "named": true
   },
   {
+    "type": "block_comment",
+    "named": true
+  },
+  {
     "type": "box",
     "named": true
   },
   {
     "type": "character_literal",
-    "named": true
-  },
-  {
-    "type": "comment",
     "named": true
   },
   {
@@ -10454,6 +10454,10 @@
   },
   {
     "type": "library_type",
+    "named": true
+  },
+  {
+    "type": "line_comment",
     "named": true
   },
   {

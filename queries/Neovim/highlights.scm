@@ -120,7 +120,9 @@
 ; @tag.delimiter               XML-style tag delimiters
 ; ------------------------------------------------------------------------------
 
-(comment) @comment @spell
+(line_comment)  @comment @spell
+(block_comment) @comment @spell
+
 (identifier) @variable
 
 [

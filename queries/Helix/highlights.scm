@@ -110,7 +110,8 @@
 ;             gutter - gutter indicator
 ; ------------------------------------------------------------------------------
 
-(comment) @comment
+(line_comment)  @comment.line
+(block_comment) @comment.block
 (identifier) @variable
 
 [

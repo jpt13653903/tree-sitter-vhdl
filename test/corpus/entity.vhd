@@ -83,7 +83,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -94,7 +94,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -105,7 +105,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -116,7 +116,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -127,7 +127,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -138,7 +138,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (comment)
+            (line_comment)
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list

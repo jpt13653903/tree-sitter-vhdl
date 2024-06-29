@@ -189,8 +189,8 @@ static void register_delimiters(TokenTree* token_tree)
     // token_tree_insert(token_tree, "<<",  DELIMITER_DOUBLE_LESS_THAN);
     // token_tree_insert(token_tree, ">>",  DELIMITER_DOUBLE_GREATER_THAN);
 
-    token_tree_insert(token_tree, "--",  COMMENT_LINE_START);
-    token_tree_insert(token_tree, "/*",  COMMENT_BLOCK_START);
+    token_tree_insert(token_tree, "--",  LINE_COMMENT_START);
+    token_tree_insert(token_tree, "/*",  BLOCK_COMMENT_START);
 }
 //------------------------------------------------------------------------------
 

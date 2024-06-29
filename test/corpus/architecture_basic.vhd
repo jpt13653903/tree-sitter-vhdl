@@ -2,15 +2,21 @@
 Basic architecture, testing blocks
 ================================================================================
 
+/*------------------------------------------------------------------------------
+
+A multi-line block comment
+------------------------------------------------------------------------------*/
+
 architecture EXAMPLE of STRUCTURE is
   subtype  DIGIT is integer range 0 to 9;
 begin
-  DIGIT_A <= 3;
+  DIGIT_A <= 3; -- A line-comment
 end EXAMPLE;
 
 --------------------------------------------------------------------------------
 
 (design_file
+  (block_comment)
   (design_unit
     (architecture_definition
       (ARCHITECTURE)
@@ -45,6 +51,7 @@ end EXAMPLE;
         (waveform_element
           (simple_expression
             (decimal_literal))))))
+    (line_comment)
     (end_architecture
       (END)
       (identifier)))))
