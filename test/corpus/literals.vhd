@@ -221,7 +221,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_literal_base)
+                  (bit_string_literal_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -229,7 +231,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_literal_base)
+                  (bit_string_literal_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -237,7 +241,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_literal_base)
+                  (bit_string_literal_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -245,7 +251,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_literal_base)
+                  (bit_string_literal_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -253,7 +261,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_literal_base)
+                  (bit_string_literal_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -261,7 +271,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_literal_base)
+                  (bit_string_literal_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -269,7 +281,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_literal_base)
+                  (bit_string_literal_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -277,7 +291,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_literal_base)
+                  (bit_string_literal_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -285,7 +301,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_literal_base)
+                  (bit_string_literal_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -293,7 +311,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_literal_base)
+                  (bit_string_literal_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -309,7 +329,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (bit_string_literal)))))
+                (bit_string_literal
+                  (bit_string_literal_base)
+                  (bit_string_literal_value))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))

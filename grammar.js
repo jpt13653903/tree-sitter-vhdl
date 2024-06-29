@@ -154,7 +154,9 @@ module.exports = grammar({
         $.character_literal,
         $.string_literal,
         $.string_literal_std_logic,
-        $.bit_string_literal,
+        $.bit_string_literal_length,
+        $.bit_string_literal_base,
+        $.bit_string_literal_value,
         $.operator_symbol,
         $.line_comment,
         $.block_comment,
@@ -1376,6 +1378,12 @@ module.exports = grammar({
                 $.library_constant_env,
                 $.library_constant_standard,
                 $.NULL
+            ),
+
+            bit_string_literal: $ => seq(
+                optional($.bit_string_literal_length),
+                $.bit_string_literal_base,
+                $.bit_string_literal_value
             ),
 
             _abstract_literal: $ => choice(

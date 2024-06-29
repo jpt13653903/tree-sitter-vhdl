@@ -153,7 +153,9 @@ entity MyModule is port(
                   (variable_assignment)
                   (conditional_expression
                     (simple_expression
-                      (bit_string_literal))))))
+                      (bit_string_literal
+                        (bit_string_literal_base)
+                        (bit_string_literal_value)))))))
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -183,7 +185,9 @@ entity MyModule is port(
                   (variable_assignment)
                   (conditional_expression
                     (simple_expression
-                      (bit_string_literal))))))
+                      (bit_string_literal
+                        (bit_string_literal_base)
+                        (bit_string_literal_value)))))))
             (user_directive
               (identifier)
               (directive_body)

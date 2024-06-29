@@ -239,8 +239,10 @@
     (decimal_literal)
     (based_literal)
     (string_literal_std_logic)
-    (bit_string_literal)
 ] @number
+(bit_string_literal_length) @property
+(bit_string_literal_base)   @type.builtin
+(bit_string_literal_value)  @number
 
 [
     (decimal_literal_float)
