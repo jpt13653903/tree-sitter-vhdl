@@ -756,6 +756,29 @@
     }
   },
   {
+    "type": "bit_string_literal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bit_string_base",
+          "named": true
+        },
+        {
+          "type": "bit_string_length",
+          "named": true
+        },
+        {
+          "type": "bit_string_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "block_configuration",
     "named": true,
     "fields": {},
@@ -10349,7 +10372,15 @@
     "named": true
   },
   {
-    "type": "bit_string_literal",
+    "type": "bit_string_base",
+    "named": true
+  },
+  {
+    "type": "bit_string_length",
+    "named": true
+  },
+  {
+    "type": "bit_string_value",
     "named": true
   },
   {
