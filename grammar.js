@@ -147,10 +147,11 @@ module.exports = grammar({
 
         $.delimiter_end_marker, // Scanner internal use only
 
-        $.decimal_literal,
-        $.decimal_literal_float,
-        $.based_literal,
-        $.based_literal_float,
+        $.decimal_integer,
+        $.decimal_float,
+        $.based_base,
+        $.based_integer,
+        $.based_float,
         $.character_literal,
         $.string_literal,
         $.string_literal_std_logic,
@@ -1387,10 +1388,13 @@ module.exports = grammar({
             ),
 
             _abstract_literal: $ => choice(
-                $.decimal_literal,
-                $.decimal_literal_float,
+                $.decimal_integer,
+                $.decimal_float,
                 $.based_literal,
-                $.based_literal_float
+            ),
+
+            based_literal: $ => seq(
+                $.based_base, choice($.based_integer, $.based_float)
             ),
 
             allocator: $ => seq(

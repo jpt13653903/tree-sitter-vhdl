@@ -7099,19 +7099,37 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "decimal_literal"
+          "name": "decimal_integer"
         },
         {
           "type": "SYMBOL",
-          "name": "decimal_literal_float"
+          "name": "decimal_float"
         },
         {
           "type": "SYMBOL",
           "name": "based_literal"
-        },
+        }
+      ]
+    },
+    "based_literal": {
+      "type": "SEQ",
+      "members": [
         {
           "type": "SYMBOL",
-          "name": "based_literal_float"
+          "name": "based_base"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "based_integer"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "based_float"
+            }
+          ]
         }
       ]
     },
@@ -10890,19 +10908,23 @@
     },
     {
       "type": "SYMBOL",
-      "name": "decimal_literal"
+      "name": "decimal_integer"
     },
     {
       "type": "SYMBOL",
-      "name": "decimal_literal_float"
+      "name": "decimal_float"
     },
     {
       "type": "SYMBOL",
-      "name": "based_literal"
+      "name": "based_base"
     },
     {
       "type": "SYMBOL",
-      "name": "based_literal_float"
+      "name": "based_integer"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "based_float"
     },
     {
       "type": "SYMBOL",

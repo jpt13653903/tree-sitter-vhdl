@@ -729,6 +729,29 @@
     }
   },
   {
+    "type": "based_literal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "based_base",
+          "named": true
+        },
+        {
+          "type": "based_float",
+          "named": true
+        },
+        {
+          "type": "based_integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "binding_indication",
     "named": true,
     "fields": {},
@@ -7810,15 +7833,11 @@
           "named": true
         },
         {
-          "type": "based_literal_float",
+          "type": "decimal_float",
           "named": true
         },
         {
-          "type": "decimal_literal",
-          "named": true
-        },
-        {
-          "type": "decimal_literal_float",
+          "type": "decimal_integer",
           "named": true
         },
         {
@@ -8571,10 +8590,6 @@
           "named": true
         },
         {
-          "type": "based_literal_float",
-          "named": true
-        },
-        {
           "type": "bit_string_literal",
           "named": true
         },
@@ -8583,11 +8598,11 @@
           "named": true
         },
         {
-          "type": "decimal_literal",
+          "type": "decimal_float",
           "named": true
         },
         {
-          "type": "decimal_literal_float",
+          "type": "decimal_integer",
           "named": true
         },
         {
@@ -10364,11 +10379,15 @@
     "named": true
   },
   {
-    "type": "based_literal",
+    "type": "based_base",
     "named": true
   },
   {
-    "type": "based_literal_float",
+    "type": "based_float",
+    "named": true
+  },
+  {
+    "type": "based_integer",
     "named": true
   },
   {
@@ -10400,11 +10419,11 @@
     "named": true
   },
   {
-    "type": "decimal_literal",
+    "type": "decimal_float",
     "named": true
   },
   {
-    "type": "decimal_literal_float",
+    "type": "decimal_integer",
     "named": true
   },
   {

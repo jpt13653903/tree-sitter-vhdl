@@ -170,7 +170,9 @@ entity MyModule is port(
                   (variable_assignment)
                   (conditional_expression
                     (simple_expression
-                      (based_literal_float))))))
+                      (based_literal
+                        (based_base)
+                        (based_integer)))))))
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -235,10 +237,10 @@ entity MyModule is port(
                     (RANGE)
                     (simple_range
                       (simple_expression
-                        (decimal_literal))
+                        (decimal_integer))
                       (TO)
                       (simple_expression
-                        (decimal_literal)))))))
+                        (decimal_integer)))))))
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -254,16 +256,16 @@ entity MyModule is port(
                         (association_or_range_list
                           (simple_range
                             (simple_expression
-                              (decimal_literal))
+                              (decimal_integer))
                             (DOWNTO)
                             (simple_expression
-                              (decimal_literal)))
+                              (decimal_integer)))
                           (simple_range
                             (simple_expression
-                              (decimal_literal))
+                              (decimal_integer))
                             (DOWNTO)
                             (simple_expression
-                              (decimal_literal))))))))))
+                              (decimal_integer))))))))))
             (intervace_signal_declaration
               (SIGNAL)
               (identifier_list

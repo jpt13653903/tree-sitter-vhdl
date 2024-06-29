@@ -37,10 +37,10 @@ end EXAMPLE;
           (RANGE)
           (simple_range
             (simple_expression
-              (decimal_literal))
+              (decimal_integer))
             (TO)
             (simple_expression
-              (decimal_literal)))))))
+              (decimal_integer)))))))
     (concurrent_block
       (BEGIN)
       (concurrent_simple_signal_assignment
@@ -50,7 +50,7 @@ end EXAMPLE;
       (waveform
         (waveform_element
           (simple_expression
-            (decimal_literal))))))
+            (decimal_integer))))))
     (line_comment)
     (end_architecture
       (END)

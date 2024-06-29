@@ -74,7 +74,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal)))))
+                (decimal_integer)))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -82,7 +82,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal_float)))))
+                (decimal_float)))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -90,7 +90,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal_float)))))
+                (decimal_integer)))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -98,7 +98,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal_float)))))
+                (decimal_float)))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -106,7 +106,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal)))))
+                (based_literal
+                  (based_base)
+                  (based_integer))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -114,7 +116,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_float))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -122,7 +126,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_integer))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -130,7 +136,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_float))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -138,7 +146,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal)))))
+                (based_literal
+                  (based_base)
+                  (based_integer))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -146,7 +156,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_float))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -154,7 +166,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_integer))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -162,7 +176,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal_float)))))
+                (based_literal
+                  (based_base)
+                  (based_float))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -170,7 +186,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal)
+                (decimal_integer)
                 (library_constant_unit)))))
         (concurrent_simple_signal_assignment
           (name
@@ -179,7 +195,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (decimal_literal)
+                (decimal_integer)
                 (unit)))))
         (concurrent_simple_signal_assignment
           (name
@@ -188,7 +204,9 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (based_literal)
+                (based_literal
+                  (based_base)
+                  (based_integer))
                 (library_constant_unit)))))
         (concurrent_simple_signal_assignment
           (name
