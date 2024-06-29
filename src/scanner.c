@@ -588,23 +588,44 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
                 return true;
             }
 
-        }else if(types->type == TOKEN_OPERATOR_SYMBOL){
+        }else if(types->type == TOKEN_OPERATOR_SYMBOL ||
+                 types->type == TOKEN_STRING_LITERAL_STD_LOGIC){
             if(lexer->lookahead == '"'){
-                lexer->advance(lexer, false);
-                if(!bounded_token(lexer, '"')) return false;
-                lexer->result_symbol = TOKEN_STRING_LITERAL;
                 if(valid_symbols[TOKEN_STRING_LITERAL]){
+                    lexer->advance(lexer, false);
+                    if(!bounded_token(lexer, '"')) return false;
+                    lexer->result_symbol = TOKEN_STRING_LITERAL;
                     debug("Returning type TOKEN_STRING_LITERAL");
                     return true;
+                }else{
+                    debug("Returning false");
+                    return false;
                 }
-            }else if(valid_symbols[TOKEN_OPERATOR_SYMBOL]){
-                lexer->result_symbol = TOKEN_OPERATOR_SYMBOL;
-                debug("Returning type TOKEN_OPERATOR_SYMBOL");
+            }else if(valid_symbols[types->type]){
+                lexer->result_symbol = types->type;
+                debug("Returning type %s", token_type_to_string(types->type));
                 return true;
-            }else if(valid_symbols[TOKEN_STRING_LITERAL]){
+            }else if(!types->next && valid_symbols[TOKEN_STRING_LITERAL]){
                 lexer->result_symbol = TOKEN_STRING_LITERAL;
                 debug("Returning type TOKEN_STRING_LITERAL");
                 return true;
+            }
+
+        }else if(types->type == STRING_LITERAL_STD_LOGIC_START){
+            if(valid_symbols[TOKEN_STRING_LITERAL_STD_LOGIC] && binary_string_literal(lexer)){
+                if(lexer->lookahead != '"'){
+                    lexer->result_symbol = TOKEN_STRING_LITERAL_STD_LOGIC;
+                    debug("Returning type TOKEN_STRING_LITERAL_STD_LOGIC");
+                    return valid_symbols[TOKEN_STRING_LITERAL_STD_LOGIC];
+                }else{
+                    lexer->advance(lexer, false);
+                    // and drop down to continue the string parsing below
+                }
+            }
+            if(valid_symbols[TOKEN_STRING_LITERAL] && bounded_token(lexer, '"')){
+                lexer->result_symbol = TOKEN_STRING_LITERAL;
+                debug("Returning type TOKEN_STRING_LITERAL");
+                return valid_symbols[TOKEN_STRING_LITERAL];
             }
             debug("Returning false");
             return false;

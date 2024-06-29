@@ -301,7 +301,7 @@ end Behaviour;
           (waveform
             (waveform_element
               (simple_expression
-                (string_literal)))))
+                (string_literal_std_logic)))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
