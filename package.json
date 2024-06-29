@@ -18,7 +18,7 @@
     "binding.gyp",
     "prebuilds/**",
     "bindings/node/*",
-    "queries/*",
+    "queries/**",
     "src/**"
   ],
   "dependencies": {
@@ -49,7 +49,7 @@
     {
       "scope": "source.vhdl",
       "file-types": ["vhd", "vhdl"],
-      "highlights": "queries/highlights.scm",
+      "highlights": "queries/Neovim/highlights.scm",
       "injection-regex": "^vhdl$"
     }
   ]

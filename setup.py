@@ -8,9 +8,9 @@ from wheel.bdist_wheel import bdist_wheel
 
 class Build(build):
     def run(self):
-        if isdir("queries"):
+        if isdir("queries/Neovim"):
             dest = join(self.build_lib, "tree_sitter_vhdl", "queries")
-            self.copy_tree("queries", dest)
+            self.copy_tree("queries/Neovim", dest)
         super().run()
 
 
@@ -27,7 +27,7 @@ setup(
     package_dir={"": "bindings/python"},
     package_data={
         "tree_sitter_vhdl": ["*.pyi", "py.typed"],
-        "tree_sitter_vhdl.queries": ["*.scm"],
+        "tree_sitter_vhdl.queries.Neovim": ["*.scm"],
     },
     ext_package="tree_sitter_vhdl",
     ext_modules=[

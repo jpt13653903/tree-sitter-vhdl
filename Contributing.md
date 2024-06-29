@@ -21,7 +21,7 @@ Direct contribution follows the following branching model:
 
 ### What this means for you:
 
-- When issuing a PR, please base in onto `develop`.
+- When issuing a PR, please base it onto `develop`.
 - Call your branch whatever you like -- I'm not going to enforce traditional
   `feature`, `bugfix`, etc. prefixes, because I've found them too restrictive
   in the past, but it would be nice if you prefix your branch name with
