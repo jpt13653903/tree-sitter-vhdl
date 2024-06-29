@@ -18,17 +18,35 @@
       ]
     },
     "design_unit": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "_context_item"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_library_unit"
-        }
-      ]
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_context_item"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_library_unit"
+          },
+          {
+            "type": "REPEAT1",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_block_declarative_item"
+            }
+          },
+          {
+            "type": "REPEAT1",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_concurrent_statement"
+            }
+          }
+        ]
+      }
     },
     "_context_item": {
       "type": "CHOICE",

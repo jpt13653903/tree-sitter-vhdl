@@ -207,10 +207,14 @@ module.exports = grammar({
                 repeat($.design_unit), $._end_of_file
             ),
 
-            design_unit: $ => choice(
+            design_unit: $ => prec.right(choice(
                 $._context_item,
-                $._library_unit
-            ),
+                $._library_unit,
+
+                // These are useful for language injection, e.g. Markdown
+                repeat1($._block_declarative_item),
+                repeat1($._concurrent_statement)
+            )),
 
         // Context Items
             _context_item: $ => choice(
