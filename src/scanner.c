@@ -297,7 +297,7 @@ static bool may_start_with_digit(const bool* valid_symbols)
            valid_symbols[TOKEN_DECIMAL_LITERAL_FLOAT] ||
            valid_symbols[TOKEN_BASED_LITERAL]         ||
            valid_symbols[TOKEN_BASED_LITERAL_FLOAT]   ||
-           valid_symbols[TOKEN_BIT_STRING_LITERAL_LENGTH];
+           valid_symbols[TOKEN_BIT_STRING_LENGTH];
 }
 //------------------------------------------------------------------------------
 
@@ -415,7 +415,7 @@ static bool parse_digit_based_literal(TSLexer* lexer)
         case 'b': case 'o': case 'd': case 'x':
             lexer->advance(lexer, false);
             if(lexer->lookahead != '"') return true;
-            lexer->result_symbol = TOKEN_BIT_STRING_LITERAL_LENGTH;
+            lexer->result_symbol = TOKEN_BIT_STRING_LENGTH;
             return true;
 
         case 'u': case 's':
@@ -425,7 +425,7 @@ static bool parse_digit_based_literal(TSLexer* lexer)
             }
             lexer->advance(lexer, false);
             if(lexer->lookahead != '"') return true;
-            lexer->result_symbol = TOKEN_BIT_STRING_LITERAL_LENGTH;
+            lexer->result_symbol = TOKEN_BIT_STRING_LENGTH;
             return true;
 
         default:
@@ -500,12 +500,12 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
         debug("returning type %s", token_type_to_string(lexer->result_symbol));
         return true;
 
-    }else if(!valid_symbols[ERROR_SENTINEL] && valid_symbols[TOKEN_BIT_STRING_LITERAL_VALUE]){
+    }else if(!valid_symbols[ERROR_SENTINEL] && valid_symbols[TOKEN_BIT_STRING_VALUE]){
         if(lexer->lookahead == '"'){
             lexer->advance(lexer, false);
-            lexer->result_symbol = TOKEN_BIT_STRING_LITERAL_VALUE;
+            lexer->result_symbol = TOKEN_BIT_STRING_VALUE;
             if(finish_string_literal(lexer, scanner->bit_string_base)){
-                debug("Returning type TOKEN_BIT_STRING_LITERAL_VALUE");
+                debug("Returning type TOKEN_BIT_STRING_VALUE");
                 return true;
             }
         }
@@ -579,8 +579,8 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
         }else if(is_base_specifier(types->type)){
             if(lexer->lookahead == '"'){
                 scanner->bit_string_base = types->type;
-                lexer->result_symbol = TOKEN_BIT_STRING_LITERAL_BASE;
-                debug("Returning type TOKEN_BIT_STRING_LITERAL_BASE");
+                lexer->result_symbol = TOKEN_BIT_STRING_BASE;
+                debug("Returning type TOKEN_BIT_STRING_BASE");
                 return true;
             }else if(!types->next){
                 lexer->result_symbol = IDENTIFIER;

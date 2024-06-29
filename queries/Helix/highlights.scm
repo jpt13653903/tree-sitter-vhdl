@@ -74,7 +74,7 @@
 ;
 ;     tag - Tags (e.g. <body> in HTML)
 ;         builtin
-;
+
 ;     namespace
 ;
 ;     special
@@ -228,16 +228,18 @@
     (decimal_literal)
     (based_literal)
     (string_literal_std_logic)
-    (bit_string_literal)
-] @number
+] @constant.numeric.integer
+(bit_string_length) @type.parameter
+(bit_string_base)   @type.builtin
+(bit_string_value)  @constant.numeric.integer
 
 [
     (decimal_literal_float)
     (based_literal_float)
-] @number.float
+] @constant.numeric.float
 
 (string_literal) @string
-(character_literal) @character
+(character_literal) @constant.character
 (library_constant_std_logic) @constant.builtin
 
 [
@@ -307,22 +309,22 @@
 (mode_view_declaration (identifier) @type)
 (record_mode_view_indication (name (identifier) @type))
 
-(package_declaration (identifier) @module)
-(package_definition  (identifier) @module)
-(end_package         (identifier) @module)
-(end_package_body    (identifier) @module)
+(package_declaration (identifier) @namespace)
+(package_definition  (identifier) @namespace)
+(end_package         (identifier) @namespace)
+(end_package_body    (identifier) @namespace)
 
-(entity_declaration  (identifier) @module)
-(end_entity          (identifier) @module)
+(entity_declaration  (identifier) @namespace)
+(end_entity          (identifier) @namespace)
 
 (architecture_definition
   (ARCHITECTURE)
-  (identifier) @property
+  (identifier) @type.parameter
   (OF)
   (name
-    (identifier) @module))
+    (identifier) @namespace))
 
-(end_architecture (identifier) @property)
+(end_architecture (identifier) @type.parameter)
 (subprogram_end   (identifier) @function)
 
 (ERROR) @error

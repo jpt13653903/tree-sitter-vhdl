@@ -764,15 +764,15 @@
       "required": true,
       "types": [
         {
-          "type": "bit_string_literal_base",
+          "type": "bit_string_base",
           "named": true
         },
         {
-          "type": "bit_string_literal_length",
+          "type": "bit_string_length",
           "named": true
         },
         {
-          "type": "bit_string_literal_value",
+          "type": "bit_string_value",
           "named": true
         }
       ]
@@ -10372,15 +10372,15 @@
     "named": true
   },
   {
-    "type": "bit_string_literal_base",
+    "type": "bit_string_base",
     "named": true
   },
   {
-    "type": "bit_string_literal_length",
+    "type": "bit_string_length",
     "named": true
   },
   {
-    "type": "bit_string_literal_value",
+    "type": "bit_string_value",
     "named": true
   },
   {

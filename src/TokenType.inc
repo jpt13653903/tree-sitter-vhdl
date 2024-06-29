@@ -144,9 +144,9 @@
             case TOKEN_CHARACTER_LITERAL:                  return "TOKEN_CHARACTER_LITERAL";
             case TOKEN_STRING_LITERAL:                     return "TOKEN_STRING_LITERAL";
             case TOKEN_STRING_LITERAL_STD_LOGIC:           return "TOKEN_STRING_LITERAL_STD_LOGIC";
-            case TOKEN_BIT_STRING_LITERAL_LENGTH:          return "TOKEN_BIT_STRING_LITERAL_LENGTH";
-            case TOKEN_BIT_STRING_LITERAL_BASE:            return "TOKEN_BIT_STRING_LITERAL_BASE";
-            case TOKEN_BIT_STRING_LITERAL_VALUE:           return "TOKEN_BIT_STRING_LITERAL_VALUE";
+            case TOKEN_BIT_STRING_LENGTH:                  return "TOKEN_BIT_STRING_LENGTH";
+            case TOKEN_BIT_STRING_BASE:                    return "TOKEN_BIT_STRING_BASE";
+            case TOKEN_BIT_STRING_VALUE:                   return "TOKEN_BIT_STRING_VALUE";
             case TOKEN_OPERATOR_SYMBOL:                    return "TOKEN_OPERATOR_SYMBOL";
             case TOKEN_LINE_COMMENT:                       return "TOKEN_LINE_COMMENT";
             case TOKEN_BLOCK_COMMENT:                      return "TOKEN_BLOCK_COMMENT";

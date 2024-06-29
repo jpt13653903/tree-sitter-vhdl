@@ -7077,7 +7077,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "bit_string_literal_length"
+              "name": "bit_string_length"
             },
             {
               "type": "BLANK"
@@ -7086,11 +7086,11 @@
         },
         {
           "type": "SYMBOL",
-          "name": "bit_string_literal_base"
+          "name": "bit_string_base"
         },
         {
           "type": "SYMBOL",
-          "name": "bit_string_literal_value"
+          "name": "bit_string_value"
         }
       ]
     },
@@ -10918,15 +10918,15 @@
     },
     {
       "type": "SYMBOL",
-      "name": "bit_string_literal_length"
+      "name": "bit_string_length"
     },
     {
       "type": "SYMBOL",
-      "name": "bit_string_literal_base"
+      "name": "bit_string_base"
     },
     {
       "type": "SYMBOL",
-      "name": "bit_string_literal_value"
+      "name": "bit_string_value"
     },
     {
       "type": "SYMBOL",

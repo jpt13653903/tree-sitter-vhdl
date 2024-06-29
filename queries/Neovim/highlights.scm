@@ -240,9 +240,9 @@
     (based_literal)
     (string_literal_std_logic)
 ] @number
-(bit_string_literal_length) @property
-(bit_string_literal_base)   @type.builtin
-(bit_string_literal_value)  @number
+(bit_string_length) @property
+(bit_string_base)   @type.builtin
+(bit_string_value)  @number
 
 [
     (decimal_literal_float)
