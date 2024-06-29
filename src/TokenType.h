@@ -144,6 +144,7 @@ typedef enum TokenTypeTag{
     TOKEN_BASED_LITERAL_FLOAT,
     TOKEN_CHARACTER_LITERAL,
     TOKEN_STRING_LITERAL,
+    TOKEN_STRING_LITERAL_STD_LOGIC,
     TOKEN_BIT_STRING_LITERAL,
     TOKEN_OPERATOR_SYMBOL,
     TOKEN_COMMENT,
@@ -180,6 +181,8 @@ typedef enum TokenTypeTag{
     // For internal use only...
     COMMENT_LINE_START,
     COMMENT_BLOCK_START,
+
+    STRING_LITERAL_STD_LOGIC_START,
 
     BASE_SPECIFIER_BINARY,
     BASE_SPECIFIER_OCTAL,
@@ -343,6 +346,7 @@ bool is_base_specifier   (TokenType type);
             case TOKEN_BASED_LITERAL_FLOAT:                return "TOKEN_BASED_LITERAL_FLOAT";
             case TOKEN_CHARACTER_LITERAL:                  return "TOKEN_CHARACTER_LITERAL";
             case TOKEN_STRING_LITERAL:                     return "TOKEN_STRING_LITERAL";
+            case TOKEN_STRING_LITERAL_STD_LOGIC:           return "TOKEN_STRING_LITERAL_STD_LOGIC";
             case TOKEN_BIT_STRING_LITERAL:                 return "TOKEN_BIT_STRING_LITERAL";
             case TOKEN_OPERATOR_SYMBOL:                    return "TOKEN_OPERATOR_SYMBOL";
             case TOKEN_COMMENT:                            return "TOKEN_COMMENT";
@@ -378,6 +382,8 @@ bool is_base_specifier   (TokenType type);
 
             case COMMENT_LINE_START:                       return "COMMENT_LINE_START";
             case COMMENT_BLOCK_START:                      return "COMMENT_BLOCK_START";
+
+            case STRING_LITERAL_STD_LOGIC_START:           return "STRING_LITERAL_STD_LOGIC_START";
 
             case BASE_SPECIFIER_BINARY:                    return "BASE_SPECIFIER_BINARY";
             case BASE_SPECIFIER_OCTAL:                     return "BASE_SPECIFIER_OCTAL";

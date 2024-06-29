@@ -7041,6 +7041,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "string_literal_std_logic"
+        },
+        {
+          "type": "SYMBOL",
           "name": "library_constant_boolean"
         },
         {
@@ -10878,6 +10882,10 @@
     {
       "type": "SYMBOL",
       "name": "string_literal"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "string_literal_std_logic"
     },
     {
       "type": "SYMBOL",

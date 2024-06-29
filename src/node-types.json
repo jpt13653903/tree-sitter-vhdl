@@ -8632,6 +8632,10 @@
           "named": true
         },
         {
+          "type": "string_literal_std_logic",
+          "named": true
+        },
+        {
           "type": "unary_operator",
           "named": true
         },
@@ -10458,6 +10462,10 @@
   },
   {
     "type": "string_literal",
+    "named": true
+  },
+  {
+    "type": "string_literal_std_logic",
     "named": true
   },
   {

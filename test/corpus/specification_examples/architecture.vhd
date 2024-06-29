@@ -990,7 +990,7 @@ end architecture DataFlow;
                       (when_element
                         (WHEN)
                         (simple_expression
-                          (string_literal)))
+                          (string_literal_std_logic)))
                       (simple_waveform_assignment
                         (name
                           (identifier)
@@ -1016,7 +1016,7 @@ end architecture DataFlow;
                       (when_element
                         (WHEN)
                         (simple_expression
-                          (string_literal)))
+                          (string_literal_std_logic)))
                       (simple_waveform_assignment
                         (name
                           (identifier)
