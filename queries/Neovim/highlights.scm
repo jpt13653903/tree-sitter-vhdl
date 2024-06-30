@@ -6,7 +6,7 @@
 ;
 (line_comment) @comment @spell
 
-(block_comment) @comment @spell
+(block_comment) @comment.documentation @spell
 
 (identifier) @variable
 
