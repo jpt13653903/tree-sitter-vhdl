@@ -1,113 +1,7 @@
 ;-------------------------------------------------------------------------------
 ;
-; ## Capture Reference
-;
-; https://docs.helix-editor.com/themes.html#syntax-highlighting
-;
-; We use a similar set of scopes as Sublime Text. See also TextMate scopes.
-;
-;     attribute - Class attributes, HTML tag attributes
-;
-;     type - Types
-;         builtin - Primitive types provided by the language (int, usize)
-;         parameter - Generic type parameters (T)
-;         enum
-;             variant
-;
-;     constructor
-;
-;     constant (TODO: constant.other.placeholder for %v)
-;         builtin Special constants provided by the language (true, false, nil etc)
-;             boolean
-;         character
-;             escape
-;         numeric (numbers)
-;             integer
-;             float
-;
-;     string (TODO: string.quoted.{single, double}, string.raw/.unquoted)?
-;         regexp - Regular expressions
-;         special
-;             path
-;             url
-;             symbol - Erlang/Elixir atoms, Ruby symbols, Clojure keywords
-;
-;     comment - Code comments
-;         line - Single line comments (//)
-;         block - Block comments (e.g. (/* */)
-;             documentation - Documentation comments (e.g. /// in Rust)
-;
-;     variable - Variables
-;         builtin - Reserved language variables (self, this, super, etc.)
-;         parameter - Function parameters
-;         other
-;             member - Fields of composite data types (e.g. structs, unions)
-;
-;     label
-;
-;     punctuation
-;         delimiter - Commas, colons
-;         bracket - Parentheses, angle brackets, etc.
-;         special - String interpolation brackets.
-;
-;     keyword
-;         control
-;             conditional - if, else
-;             repeat - for, while, loop
-;             import - import, export
-;             return
-;             exception
-;         operator - or, in
-;         directive - Preprocessor directives (#if in C)
-;         function - fn, func
-;         storage - Keywords describing how things are stored
-;             type - The type of something, class, function, var, let, etc.
-;             modifier - Storage modifiers like static, mut, const, ref, etc.
-;
-;     operator - ||, +=, >
-;
-;     function
-;         builtin
-;         method
-;         macro
-;         special (preprocessor in C)
-;
-;     tag - Tags (e.g. <body> in HTML)
-;         builtin
-
-;     namespace
-;
-;     special
-;
-;     markup
-;         heading
-;             marker
-;             1, 2, 3, 4, 5, 6 - heading text for h1 through h6
-;         list
-;             unnumbered
-;             numbered
-;             checked
-;             unchecked
-;         bold
-;         italic
-;         strikethrough
-;         link
-;             url - URLs pointed to by links
-;             label - non-URL link references
-;             text - URL and image descriptions in links
-;         quote
-;         raw
-;             inline
-;             block
-;
-;     diff - version control changes
-;         plus - additions
-;             gutter - gutter indicator
-;         minus - deletions
-;             gutter - gutter indicator
-;         delta - modifications
-;             moved - renamed or moved files/changes
-;             gutter - gutter indicator
+; Maintainer: ???
+; Capture Reference: https://docs.helix-editor.com/themes.html#syntax-highlighting
 ; ------------------------------------------------------------------------------
 
 (line_comment)  @comment.line
@@ -115,19 +9,19 @@
 (identifier) @variable
 
 [
-    (ACCESS) (AFTER) (ALIAS) (ARCHITECTURE) (ARRAY) (ASSUME)
-    (ATTRIBUTE) (BLOCK) (BODY) (COMPONENT)
-    (CONFIGURATION) (CONTEXT) (COVER) (DISCONNECT)
-    (ENTITY) (FAIRNESS) (FILE)
-    (FORCE) (GENERATE) (GENERIC) (GROUP)
-    (LABEL) (LITERAL)
-    (MAP) (NEW) (PACKAGE)
-    (PARAMETER) (PORT) (PROPERTY)
-    (RANGE) (REJECT)
-    (RELEASE) (RESTRICT) (SEQUENCE)
-    (TRANSPORT)
-    (UNAFFECTED) (VIEW) (VPKG) (VMODE)
-    (VPROP) (VUNIT)
+  (ACCESS) (AFTER) (ALIAS) (ARCHITECTURE) (ARRAY) (ASSUME)
+  (ATTRIBUTE) (BLOCK) (BODY) (COMPONENT)
+  (CONFIGURATION) (CONTEXT) (COVER) (DISCONNECT)
+  (ENTITY) (FAIRNESS) (FILE)
+  (FORCE) (GENERATE) (GENERIC) (GROUP)
+  (LABEL) (LITERAL)
+  (MAP) (NEW) (PACKAGE)
+  (PARAMETER) (PORT) (PROPERTY)
+  (RANGE) (REJECT)
+  (RELEASE) (RESTRICT) (SEQUENCE)
+  (TRANSPORT)
+  (UNAFFECTED) (VIEW) (VPKG) (VMODE)
+  (VPROP) (VUNIT)
 ] @keyword
 
 [ (ALL) (OTHERS) (box) (DEFAULT) (OPEN) ] @constant.builtin
@@ -145,17 +39,17 @@
 [ (LIBRARY) (USE) ] @keyword.control.import
 
 [
-    (SUBTYPE) (TYPE) (RECORD) (UNITS)
-    (CONSTANT) (SIGNAL) (VARIABLE)
+  (SUBTYPE) (TYPE) (RECORD) (UNITS)
+  (CONSTANT) (SIGNAL) (VARIABLE)
 ] @keyword.storage.type
 
 [
-    (PROTECTED) (PRIVATE)
-    (PURE) (IMPURE)
-    (INERTIAL) (POSTPONED) (STRONG) (GUARDED)
-    (OUT) (INOUT) (LINKAGE) (BUFFER)
-    (REGISTER) (BUS)
-    (SHARED)
+  (PROTECTED) (PRIVATE)
+  (PURE) (IMPURE)
+  (INERTIAL) (POSTPONED) (STRONG) (GUARDED)
+  (OUT) (INOUT) (LINKAGE) (BUFFER)
+  (REGISTER) (BUS)
+  (SHARED)
 ] @keyword.storage.modifier
 (mode (IN) @keyword.storage.modifier)
 (force_mode (IN) @keyword.storage.modifier)
@@ -205,17 +99,17 @@
 (directive_warning)          @keyword.directive
 
 [
-    (condition_conversion)
-    (unary_operator)
-    (logical_operator)
-    (relational_operator)
-    (shift_operator)
-    (sign)
-    (adding_operator)
-    (multiplying_operator)
-    (exponentiate)
-    (variable_assignment)
-    (signal_assignment)
+  (condition_conversion)
+  (unary_operator)
+  (logical_operator)
+  (relational_operator)
+  (shift_operator)
+  (sign)
+  (adding_operator)
+  (multiplying_operator)
+  (exponentiate)
+  (variable_assignment)
+  (signal_assignment)
 ] @operator
 
 [ "'" "," "." ";" ] @punctuation.delimiters
@@ -244,16 +138,16 @@
 (library_constant_std_logic) @constant.builtin
 
 [
-    (attribute_function)
-    (attribute_impure_function)
-    (attribute_mode_view)
-    (attribute_pure_function)
-    (attribute_range)
-    (attribute_signal)
-    (attribute_subtype)
-    (attribute_type)
-    (attribute_value)
-    (library_attribute)
+  (attribute_function)
+  (attribute_impure_function)
+  (attribute_mode_view)
+  (attribute_pure_function)
+  (attribute_range)
+  (attribute_signal)
+  (attribute_subtype)
+  (attribute_type)
+  (attribute_value)
+  (library_attribute)
 ] @attribute
 
 (library_constant)           @constant.builtin
@@ -269,12 +163,12 @@
 (label) @label
 
 (generic_map_aspect
-    (GENERIC) @constructor
-    (MAP)     @constructor)
+  (GENERIC) @constructor
+  (MAP)     @constructor)
 
 (port_map_aspect
-    (PORT) @constructor
-    (MAP)  @constructor)
+  (PORT) @constructor
+  (MAP)  @constructor)
 
 (subtype_indication
   (name
