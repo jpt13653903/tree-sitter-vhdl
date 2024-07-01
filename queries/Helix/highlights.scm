@@ -1,6 +1,6 @@
 ;-------------------------------------------------------------------------------
 ;
-; Maintainer: ???
+; Maintainer: Chris44442
 ; Capture Reference: https://docs.helix-editor.com/themes.html#syntax-highlighting
 ;-------------------------------------------------------------------------------
 ;
