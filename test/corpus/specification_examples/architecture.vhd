@@ -921,27 +921,28 @@ end architecture DataFlow;
                                       (conditional_expression
                                         (simple_expression
                                           (name
-                                            (identifier))))))))))))))))
-              (then_statements
+                                            (identifier)))))))))))))))
                 (THEN)
-                (simple_waveform_assignment
-                  (name
-                    (identifier))
-                  (signal_assignment)
-                  (waveform
-                    (waveform_element
-                      (simple_expression
-                        (decimal_integer))))))
-              (else_statements
+                (if_statement_body
+                  (simple_waveform_assignment
+                    (name
+                      (identifier))
+                    (signal_assignment)
+                    (waveform
+                      (waveform_element
+                        (simple_expression
+                          (decimal_integer)))))))
+              (else_statement
                 (ELSE)
-                (simple_waveform_assignment
-                  (name
-                    (identifier))
-                  (signal_assignment)
-                  (waveform
-                    (waveform_element
-                      (simple_expression
-                        (decimal_integer))))))
+                (if_statement_body
+                  (simple_waveform_assignment
+                    (name
+                      (identifier))
+                    (signal_assignment)
+                    (waveform
+                      (waveform_element
+                        (simple_expression
+                          (decimal_integer)))))))
               (end_if
                 (END)
                 (IF)))
@@ -1100,4 +1101,5 @@ end architecture DataFlow;
         (END)
         (ARCHITECTURE)
         (identifier)))))
+
 

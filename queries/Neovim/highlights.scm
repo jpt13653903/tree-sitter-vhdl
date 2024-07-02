@@ -174,7 +174,7 @@
 (case_generate_alternative
   (WHEN) @keyword.conditional)
 
-(else_statements
+(else_statement
   (ELSE) @keyword.conditional)
 
 (else_generate

@@ -972,23 +972,23 @@ module.exports = grammar({
             ),
 
             if_statement: $ => seq(
-                optional($.label_declaration), $.if_expression, $.then_statements, repeat($.elsif_statements), optional($.else_statements), $.end_if, ";"
+                optional($.label_declaration), $.if_expression, repeat($.elsif_statement), optional($.else_statement), $.end_if, ";"
             ),
 
             if_expression: $ => seq(
-                $.IF, $._expression
+                $.IF, $._expression, $.THEN, optional($.if_statement_body)
             ),
 
-            then_statements: $ => seq(
-                $.THEN, repeat($._sequential_statement)
+            if_statement_body: $ => seq(
+                repeat1($._sequential_statement)
             ),
 
-            elsif_statements: $ => seq(
-                $.ELSIF, $._expression, $.then_statements
+            elsif_statement: $ => seq(
+                $.ELSIF, $._expression, $.THEN, optional($.if_statement_body)
             ),
 
-            else_statements: $ => seq(
-                $.ELSE, repeat($._sequential_statement)
+            else_statement: $ => seq(
+                $.ELSE, optional($.if_statement_body)
             ),
 
             end_if: $ => seq(
