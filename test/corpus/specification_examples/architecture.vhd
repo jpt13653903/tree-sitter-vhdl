@@ -903,8 +903,8 @@ end architecture DataFlow;
                     (decimal_integer))))))
           (sequential_block
             (BEGIN)
-            (if_statement
-              (if_expression
+            (if_statement_block
+              (if_statement
                 (IF)
                 (simple_expression
                   (parenthesis_expression

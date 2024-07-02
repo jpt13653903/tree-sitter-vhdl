@@ -24,8 +24,8 @@ end process;
         (ALL))
       (sequential_block
         (BEGIN)
-        (if_statement
-          (if_expression
+        (if_statement_block
+          (if_statement
             (IF)
             (relational_expression
               (simple_expression

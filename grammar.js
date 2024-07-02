@@ -816,7 +816,7 @@ module.exports = grammar({
                 $.assertion_statement,
                 $.case_statement,
                 $.exit_statement,
-                $.if_statement,
+                $.if_statement_block,
                 $.loop_statement,
                 $.next_statement,
                 $.null_statement,
@@ -971,11 +971,11 @@ module.exports = grammar({
                 $.WHEN, $._expression
             ),
 
-            if_statement: $ => seq(
-                optional($.label_declaration), $.if_expression, repeat($.elsif_statement), optional($.else_statement), $.end_if, ";"
+            if_statement_block: $ => seq(
+                optional($.label_declaration), $.if_statement, repeat($.elsif_statement), optional($.else_statement), $.end_if, ";"
             ),
 
-            if_expression: $ => seq(
+            if_statement: $ => seq(
                 $.IF, $._expression, $.THEN, optional($.if_statement_body)
             ),
 

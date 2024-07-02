@@ -3207,7 +3207,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "if_statement"
+          "name": "if_statement_block"
         },
         {
           "type": "SYMBOL",
@@ -4510,7 +4510,7 @@
         }
       ]
     },
-    "if_statement": {
+    "if_statement_block": {
       "type": "SEQ",
       "members": [
         {
@@ -4527,7 +4527,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "if_expression"
+          "name": "if_statement"
         },
         {
           "type": "REPEAT",
@@ -4558,7 +4558,7 @@
         }
       ]
     },
-    "if_expression": {
+    "if_statement": {
       "type": "SEQ",
       "members": [
         {

@@ -1398,7 +1398,7 @@
           "named": true
         },
         {
-          "type": "if_statement",
+          "type": "if_statement_block",
           "named": true
         },
         {
@@ -5134,49 +5134,6 @@
     }
   },
   {
-    "type": "if_expression",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "IF",
-          "named": true
-        },
-        {
-          "type": "THEN",
-          "named": true
-        },
-        {
-          "type": "condition_expression",
-          "named": true
-        },
-        {
-          "type": "if_statement_body",
-          "named": true
-        },
-        {
-          "type": "logical_expression",
-          "named": true
-        },
-        {
-          "type": "relational_expression",
-          "named": true
-        },
-        {
-          "type": "shift_expression",
-          "named": true
-        },
-        {
-          "type": "simple_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "if_generate",
     "named": true,
     "fields": {},
@@ -5259,6 +5216,49 @@
       "required": true,
       "types": [
         {
+          "type": "IF",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "condition_expression",
+          "named": true
+        },
+        {
+          "type": "if_statement_body",
+          "named": true
+        },
+        {
+          "type": "logical_expression",
+          "named": true
+        },
+        {
+          "type": "relational_expression",
+          "named": true
+        },
+        {
+          "type": "shift_expression",
+          "named": true
+        },
+        {
+          "type": "simple_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_statement_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
           "type": "else_statement",
           "named": true
         },
@@ -5271,7 +5271,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if_statement",
           "named": true
         },
         {
@@ -5306,7 +5306,7 @@
           "named": true
         },
         {
-          "type": "if_statement",
+          "type": "if_statement_block",
           "named": true
         },
         {
@@ -6116,7 +6116,7 @@
           "named": true
         },
         {
-          "type": "if_statement",
+          "type": "if_statement_block",
           "named": true
         },
         {
@@ -8347,7 +8347,7 @@
           "named": true
         },
         {
-          "type": "if_statement",
+          "type": "if_statement_block",
           "named": true
         },
         {
