@@ -5257,6 +5257,10 @@
           "named": true
         },
         {
+          "type": "generate_body",
+          "named": true
+        },
+        {
           "type": "label_declaration",
           "named": true
         },
@@ -5297,10 +5301,6 @@
         },
         {
           "type": "end_generate",
-          "named": true
-        },
-        {
-          "type": "generate_body",
           "named": true
         },
         {

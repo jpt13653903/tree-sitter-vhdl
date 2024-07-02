@@ -4076,10 +4076,6 @@
           "name": "if_generate"
         },
         {
-          "type": "SYMBOL",
-          "name": "generate_body"
-        },
-        {
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
@@ -4130,6 +4126,10 @@
         {
           "type": "SYMBOL",
           "name": "_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "generate_body"
         }
       ]
     },

@@ -908,11 +908,11 @@ module.exports = grammar({
             ),
 
             if_generate_statement: $ => seq(
-                $.label_declaration, $.if_generate, $.generate_body, repeat($.elsif_generate), optional($.else_generate), $.end_generate, ";"
+                $.label_declaration, $.if_generate, repeat($.elsif_generate), optional($.else_generate), $.end_generate, ";"
             ),
 
             if_generate: $ => seq(
-                $.IF, optional($.label_declaration), $._expression
+                $.IF, optional($.label_declaration), $._expression, $.generate_body
             ),
 
             elsif_generate: $ => seq(
