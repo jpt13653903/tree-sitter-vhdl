@@ -1398,7 +1398,7 @@
           "named": true
         },
         {
-          "type": "if_statement",
+          "type": "if_statement_block",
           "named": true
         },
         {
@@ -2904,7 +2904,7 @@
     }
   },
   {
-    "type": "else_statements",
+    "type": "else_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -2916,83 +2916,7 @@
           "named": true
         },
         {
-          "type": "assertion_statement",
-          "named": true
-        },
-        {
-          "type": "case_statement",
-          "named": true
-        },
-        {
-          "type": "conditional_signal_assignment",
-          "named": true
-        },
-        {
-          "type": "exit_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "loop_statement",
-          "named": true
-        },
-        {
-          "type": "next_statement",
-          "named": true
-        },
-        {
-          "type": "null_statement",
-          "named": true
-        },
-        {
-          "type": "procedure_call_statement",
-          "named": true
-        },
-        {
-          "type": "report_statement",
-          "named": true
-        },
-        {
-          "type": "return_statement",
-          "named": true
-        },
-        {
-          "type": "selected_force_assignment",
-          "named": true
-        },
-        {
-          "type": "selected_variable_assignment",
-          "named": true
-        },
-        {
-          "type": "selected_waveform_assignment",
-          "named": true
-        },
-        {
-          "type": "sequential_block_statement",
-          "named": true
-        },
-        {
-          "type": "simple_force_assignment",
-          "named": true
-        },
-        {
-          "type": "simple_release_assignment",
-          "named": true
-        },
-        {
-          "type": "simple_variable_assignment",
-          "named": true
-        },
-        {
-          "type": "simple_waveform_assignment",
-          "named": true
-        },
-        {
-          "type": "wait_statement",
+          "type": "if_statement_body",
           "named": true
         }
       ]
@@ -3084,7 +3008,7 @@
     }
   },
   {
-    "type": "elsif_statements",
+    "type": "elsif_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -3096,7 +3020,15 @@
           "named": true
         },
         {
+          "type": "THEN",
+          "named": true
+        },
+        {
           "type": "condition_expression",
+          "named": true
+        },
+        {
+          "type": "if_statement_body",
           "named": true
         },
         {
@@ -3113,10 +3045,6 @@
         },
         {
           "type": "simple_expression",
-          "named": true
-        },
-        {
-          "type": "then_statements",
           "named": true
         }
       ]
@@ -5206,41 +5134,6 @@
     }
   },
   {
-    "type": "if_expression",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "IF",
-          "named": true
-        },
-        {
-          "type": "condition_expression",
-          "named": true
-        },
-        {
-          "type": "logical_expression",
-          "named": true
-        },
-        {
-          "type": "relational_expression",
-          "named": true
-        },
-        {
-          "type": "shift_expression",
-          "named": true
-        },
-        {
-          "type": "simple_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "if_generate",
     "named": true,
     "fields": {},
@@ -5254,6 +5147,10 @@
         },
         {
           "type": "condition_expression",
+          "named": true
+        },
+        {
+          "type": "generate_body",
           "named": true
         },
         {
@@ -5300,10 +5197,6 @@
           "named": true
         },
         {
-          "type": "generate_body",
-          "named": true
-        },
-        {
           "type": "if_generate",
           "named": true
         },
@@ -5323,11 +5216,54 @@
       "required": true,
       "types": [
         {
-          "type": "else_statements",
+          "type": "IF",
           "named": true
         },
         {
-          "type": "elsif_statements",
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "condition_expression",
+          "named": true
+        },
+        {
+          "type": "if_statement_body",
+          "named": true
+        },
+        {
+          "type": "logical_expression",
+          "named": true
+        },
+        {
+          "type": "relational_expression",
+          "named": true
+        },
+        {
+          "type": "shift_expression",
+          "named": true
+        },
+        {
+          "type": "simple_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_statement_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "else_statement",
+          "named": true
+        },
+        {
+          "type": "elsif_statement",
           "named": true
         },
         {
@@ -5335,15 +5271,102 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if_statement",
           "named": true
         },
         {
           "type": "label_declaration",
           "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_statement_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assertion_statement",
+          "named": true
         },
         {
-          "type": "then_statements",
+          "type": "case_statement",
+          "named": true
+        },
+        {
+          "type": "conditional_signal_assignment",
+          "named": true
+        },
+        {
+          "type": "exit_statement",
+          "named": true
+        },
+        {
+          "type": "if_statement_block",
+          "named": true
+        },
+        {
+          "type": "loop_statement",
+          "named": true
+        },
+        {
+          "type": "next_statement",
+          "named": true
+        },
+        {
+          "type": "null_statement",
+          "named": true
+        },
+        {
+          "type": "procedure_call_statement",
+          "named": true
+        },
+        {
+          "type": "report_statement",
+          "named": true
+        },
+        {
+          "type": "return_statement",
+          "named": true
+        },
+        {
+          "type": "selected_force_assignment",
+          "named": true
+        },
+        {
+          "type": "selected_variable_assignment",
+          "named": true
+        },
+        {
+          "type": "selected_waveform_assignment",
+          "named": true
+        },
+        {
+          "type": "sequential_block_statement",
+          "named": true
+        },
+        {
+          "type": "simple_force_assignment",
+          "named": true
+        },
+        {
+          "type": "simple_release_assignment",
+          "named": true
+        },
+        {
+          "type": "simple_variable_assignment",
+          "named": true
+        },
+        {
+          "type": "simple_waveform_assignment",
+          "named": true
+        },
+        {
+          "type": "wait_statement",
           "named": true
         }
       ]
@@ -6093,7 +6116,7 @@
           "named": true
         },
         {
-          "type": "if_statement",
+          "type": "if_statement_block",
           "named": true
         },
         {
@@ -8324,7 +8347,7 @@
           "named": true
         },
         {
-          "type": "if_statement",
+          "type": "if_statement_block",
           "named": true
         },
         {
@@ -9309,101 +9332,6 @@
         },
         {
           "type": "resolution_indication",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "then_statements",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "THEN",
-          "named": true
-        },
-        {
-          "type": "assertion_statement",
-          "named": true
-        },
-        {
-          "type": "case_statement",
-          "named": true
-        },
-        {
-          "type": "conditional_signal_assignment",
-          "named": true
-        },
-        {
-          "type": "exit_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "loop_statement",
-          "named": true
-        },
-        {
-          "type": "next_statement",
-          "named": true
-        },
-        {
-          "type": "null_statement",
-          "named": true
-        },
-        {
-          "type": "procedure_call_statement",
-          "named": true
-        },
-        {
-          "type": "report_statement",
-          "named": true
-        },
-        {
-          "type": "return_statement",
-          "named": true
-        },
-        {
-          "type": "selected_force_assignment",
-          "named": true
-        },
-        {
-          "type": "selected_variable_assignment",
-          "named": true
-        },
-        {
-          "type": "selected_waveform_assignment",
-          "named": true
-        },
-        {
-          "type": "sequential_block_statement",
-          "named": true
-        },
-        {
-          "type": "simple_force_assignment",
-          "named": true
-        },
-        {
-          "type": "simple_release_assignment",
-          "named": true
-        },
-        {
-          "type": "simple_variable_assignment",
-          "named": true
-        },
-        {
-          "type": "simple_waveform_assignment",
-          "named": true
-        },
-        {
-          "type": "wait_statement",
           "named": true
         }
       ]

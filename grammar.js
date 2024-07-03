@@ -816,7 +816,7 @@ module.exports = grammar({
                 $.assertion_statement,
                 $.case_statement,
                 $.exit_statement,
-                $.if_statement,
+                $.if_statement_block,
                 $.loop_statement,
                 $.next_statement,
                 $.null_statement,
@@ -908,11 +908,11 @@ module.exports = grammar({
             ),
 
             if_generate_statement: $ => seq(
-                $.label_declaration, $.if_generate, $.generate_body, repeat($.elsif_generate), optional($.else_generate), $.end_generate, ";"
+                $.label_declaration, $.if_generate, repeat($.elsif_generate), optional($.else_generate), $.end_generate, ";"
             ),
 
             if_generate: $ => seq(
-                $.IF, optional($.label_declaration), $._expression
+                $.IF, optional($.label_declaration), $._expression, $.generate_body
             ),
 
             elsif_generate: $ => seq(
@@ -971,24 +971,24 @@ module.exports = grammar({
                 $.WHEN, $._expression
             ),
 
+            if_statement_block: $ => seq(
+                optional($.label_declaration), $.if_statement, repeat($.elsif_statement), optional($.else_statement), $.end_if, ";"
+            ),
+
             if_statement: $ => seq(
-                optional($.label_declaration), $.if_expression, $.then_statements, repeat($.elsif_statements), optional($.else_statements), $.end_if, ";"
+                $.IF, $._expression, $.THEN, optional($.if_statement_body)
             ),
 
-            if_expression: $ => seq(
-                $.IF, $._expression
+            if_statement_body: $ => seq(
+                repeat1($._sequential_statement)
             ),
 
-            then_statements: $ => seq(
-                $.THEN, repeat($._sequential_statement)
+            elsif_statement: $ => seq(
+                $.ELSIF, $._expression, $.THEN, optional($.if_statement_body)
             ),
 
-            elsif_statements: $ => seq(
-                $.ELSIF, $._expression, $.then_statements
-            ),
-
-            else_statements: $ => seq(
-                $.ELSE, repeat($._sequential_statement)
+            else_statement: $ => seq(
+                $.ELSE, optional($.if_statement_body)
             ),
 
             end_if: $ => seq(
