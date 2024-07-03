@@ -1546,9 +1546,9 @@ module.exports = grammar({
 
             _interface_declaration: $ => choice(
                 $.interface_declaration,
-                $.intervace_constant_declaration,
-                $.intervace_signal_declaration,
-                $.intervace_variable_declaration,
+                $.interface_constant_declaration,
+                $.interface_signal_declaration,
+                $.interface_variable_declaration,
                 $.interface_file_declaration,
 
                 $.interface_type_declaration,
@@ -1560,15 +1560,15 @@ module.exports = grammar({
                 $.identifier_list, ":", $._mode_indication
             ),
 
-            intervace_constant_declaration: $ => seq(
+            interface_constant_declaration: $ => seq(
                 $.CONSTANT, $.identifier_list, ":", $._mode_indication
             ),
 
-            intervace_signal_declaration: $ => seq(
+            interface_signal_declaration: $ => seq(
                 $.SIGNAL, $.identifier_list, ":", $._mode_indication
             ),
 
-            intervace_variable_declaration: $ => seq(
+            interface_variable_declaration: $ => seq(
                 $.VARIABLE, $.identifier_list, ":", $._mode_indication
             ),
 

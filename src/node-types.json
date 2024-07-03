@@ -5546,6 +5546,37 @@
     }
   },
   {
+    "type": "interface_constant_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "CONSTANT",
+          "named": true
+        },
+        {
+          "type": "array_mode_view_indication",
+          "named": true
+        },
+        {
+          "type": "identifier_list",
+          "named": true
+        },
+        {
+          "type": "record_mode_view_indication",
+          "named": true
+        },
+        {
+          "type": "simple_mode_indication",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "interface_declaration",
     "named": true,
     "fields": {},
@@ -5659,6 +5690,10 @@
       "required": true,
       "types": [
         {
+          "type": "interface_constant_declaration",
+          "named": true
+        },
+        {
           "type": "interface_declaration",
           "named": true
         },
@@ -5671,6 +5706,10 @@
           "named": true
         },
         {
+          "type": "interface_signal_declaration",
+          "named": true
+        },
+        {
           "type": "interface_subprogram_declaration",
           "named": true
         },
@@ -5679,15 +5718,7 @@
           "named": true
         },
         {
-          "type": "intervace_constant_declaration",
-          "named": true
-        },
-        {
-          "type": "intervace_signal_declaration",
-          "named": true
-        },
-        {
-          "type": "intervace_variable_declaration",
+          "type": "interface_variable_declaration",
           "named": true
         }
       ]
@@ -5782,6 +5813,37 @@
         },
         {
           "type": "parameter_list_specification",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "interface_signal_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "SIGNAL",
+          "named": true
+        },
+        {
+          "type": "array_mode_view_indication",
+          "named": true
+        },
+        {
+          "type": "identifier_list",
+          "named": true
+        },
+        {
+          "type": "record_mode_view_indication",
+          "named": true
+        },
+        {
+          "type": "simple_mode_indication",
           "named": true
         }
       ]
@@ -5890,69 +5952,7 @@
     }
   },
   {
-    "type": "intervace_constant_declaration",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "CONSTANT",
-          "named": true
-        },
-        {
-          "type": "array_mode_view_indication",
-          "named": true
-        },
-        {
-          "type": "identifier_list",
-          "named": true
-        },
-        {
-          "type": "record_mode_view_indication",
-          "named": true
-        },
-        {
-          "type": "simple_mode_indication",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "intervace_signal_declaration",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "SIGNAL",
-          "named": true
-        },
-        {
-          "type": "array_mode_view_indication",
-          "named": true
-        },
-        {
-          "type": "identifier_list",
-          "named": true
-        },
-        {
-          "type": "record_mode_view_indication",
-          "named": true
-        },
-        {
-          "type": "simple_mode_indication",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "intervace_variable_declaration",
+    "type": "interface_variable_declaration",
     "named": true,
     "fields": {},
     "children": {

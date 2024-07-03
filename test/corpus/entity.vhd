@@ -45,7 +45,7 @@ entity MyModule is port(
         (port_clause
           (PORT)
           (interface_list
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier)
@@ -56,7 +56,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -66,7 +66,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -76,18 +76,7 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (intervace_signal_declaration
-              (SIGNAL)
-              (identifier_list
-                (identifier))
-              (simple_mode_indication
-                (mode
-                  (INOUT))
-                (subtype_indication
-                  (name
-                    (library_type)))))
-            (line_comment)
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -98,7 +87,7 @@ entity MyModule is port(
                   (name
                     (library_type)))))
             (line_comment)
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -109,7 +98,7 @@ entity MyModule is port(
                   (name
                     (library_type)))))
             (line_comment)
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -120,7 +109,7 @@ entity MyModule is port(
                   (name
                     (library_type)))))
             (line_comment)
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -131,7 +120,7 @@ entity MyModule is port(
                   (name
                     (library_type)))))
             (line_comment)
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -142,7 +131,7 @@ entity MyModule is port(
                   (name
                     (library_type)))))
             (line_comment)
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -153,18 +142,18 @@ entity MyModule is port(
                   (name
                     (library_type)))))
             (line_comment)
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
                 (mode
-                  (OUT))
+                  (INOUT))
                 (subtype_indication
                   (name
                     (library_type)))))
             (line_comment)
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -175,7 +164,18 @@ entity MyModule is port(
                   (name
                     (library_type)))))
             (line_comment)
-            (intervace_signal_declaration
+            (interface_signal_declaration
+              (SIGNAL)
+              (identifier_list
+                (identifier))
+              (simple_mode_indication
+                (mode
+                  (OUT))
+                (subtype_indication
+                  (name
+                    (library_type)))))
+            (line_comment)
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -192,7 +192,7 @@ entity MyModule is port(
                       (bit_string_literal
                         (bit_string_base)
                         (bit_string_value)))))))
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -209,7 +209,7 @@ entity MyModule is port(
                       (based_literal
                         (based_base)
                         (based_integer)))))))
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -259,7 +259,7 @@ entity MyModule is port(
               (directive_protect)
               (directive_body)
               (directive_body))
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -277,7 +277,7 @@ entity MyModule is port(
                       (TO)
                       (simple_expression
                         (decimal_integer)))))))
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))
@@ -302,7 +302,7 @@ entity MyModule is port(
                             (DOWNTO)
                             (simple_expression
                               (decimal_integer))))))))))
-            (intervace_signal_declaration
+            (interface_signal_declaration
               (SIGNAL)
               (identifier_list
                 (identifier))

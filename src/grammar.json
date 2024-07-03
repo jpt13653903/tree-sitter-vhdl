@@ -7834,15 +7834,15 @@
         },
         {
           "type": "SYMBOL",
-          "name": "intervace_constant_declaration"
+          "name": "interface_constant_declaration"
         },
         {
           "type": "SYMBOL",
-          "name": "intervace_signal_declaration"
+          "name": "interface_signal_declaration"
         },
         {
           "type": "SYMBOL",
-          "name": "intervace_variable_declaration"
+          "name": "interface_variable_declaration"
         },
         {
           "type": "SYMBOL",
@@ -7879,7 +7879,7 @@
         }
       ]
     },
-    "intervace_constant_declaration": {
+    "interface_constant_declaration": {
       "type": "SEQ",
       "members": [
         {
@@ -7900,7 +7900,7 @@
         }
       ]
     },
-    "intervace_signal_declaration": {
+    "interface_signal_declaration": {
       "type": "SEQ",
       "members": [
         {
@@ -7921,7 +7921,7 @@
         }
       ]
     },
-    "intervace_variable_declaration": {
+    "interface_variable_declaration": {
       "type": "SEQ",
       "members": [
         {
