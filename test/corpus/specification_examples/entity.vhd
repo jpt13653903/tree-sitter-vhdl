@@ -334,7 +334,8 @@ end ROM;
                                   (simple_expression
                                     (name
                                       (identifier)))))))))))
-                  (line_comment)))))))
+                  (line_comment
+                    (comment_content))))))))
       (end_entity
         (END)
         (identifier)))))

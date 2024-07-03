@@ -149,8 +149,10 @@
             case TOKEN_BIT_STRING_BASE:                    return "TOKEN_BIT_STRING_BASE";
             case TOKEN_BIT_STRING_VALUE:                   return "TOKEN_BIT_STRING_VALUE";
             case TOKEN_OPERATOR_SYMBOL:                    return "TOKEN_OPERATOR_SYMBOL";
-            case TOKEN_LINE_COMMENT:                       return "TOKEN_LINE_COMMENT";
-            case TOKEN_BLOCK_COMMENT:                      return "TOKEN_BLOCK_COMMENT";
+            case TOKEN_LINE_COMMENT_START:                 return "TOKEN_LINE_COMMENT_START";
+            case TOKEN_BLOCK_COMMENT_START:                return "TOKEN_BLOCK_COMMENT_START";
+            case TOKEN_BLOCK_COMMENT_END:                  return "TOKEN_BLOCK_COMMENT_END";
+            case TOKEN_COMMENT_CONTENT:                    return "TOKEN_COMMENT_CONTENT";
 
             case TOKEN_END_MARKER:                         return "TOKEN_END_MARKER";
 

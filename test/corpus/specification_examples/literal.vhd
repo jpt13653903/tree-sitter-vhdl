@@ -22,7 +22,8 @@ D <= 6.023E+24;
 --------------------------------------------------------------------------------
 
 (design_file
-  (line_comment)
+  (line_comment
+    (comment_content))
   (design_unit
     (concurrent_simple_signal_assignment
       (name
@@ -56,7 +57,8 @@ D <= 6.023E+24;
         (waveform_element
           (simple_expression
             (decimal_integer)))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -81,7 +83,8 @@ D <= 6.023E+24;
         (waveform_element
           (simple_expression
             (decimal_float)))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -135,7 +138,8 @@ B <= 2#1.1111_1111_111#E11;
 --------------------------------------------------------------------------------
 
 (design_file
-  (line_comment)
+  (line_comment
+    (comment_content))
   (design_unit
   (concurrent_simple_signal_assignment
     (name
@@ -167,7 +171,8 @@ B <= 2#1.1111_1111_111#E11;
           (based_literal
             (based_base)
             (based_integer))))))
-  (line_comment)
+  (line_comment
+    (comment_content))
   (concurrent_simple_signal_assignment
     (name
       (identifier))
@@ -188,7 +193,8 @@ B <= 2#1.1111_1111_111#E11;
           (based_literal
             (based_base)
             (based_integer))))))
-  (line_comment)
+  (line_comment
+    (comment_content))
   (concurrent_simple_signal_assignment
     (name
       (identifier))
@@ -284,7 +290,8 @@ S <= "FIRST PART OF A SEQUENCE OF CHARACTERS "
         (waveform_element
           (simple_expression
             (string_literal)))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -293,7 +300,8 @@ S <= "FIRST PART OF A SEQUENCE OF CHARACTERS "
         (waveform_element
           (simple_expression
             (string_literal)))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -310,7 +318,8 @@ S <= "FIRST PART OF A SEQUENCE OF CHARACTERS "
             (adding_operator)
             (simple_expression
               (string_literal))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -379,7 +388,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
             (bit_string_literal
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -390,7 +400,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
             (bit_string_literal
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -401,7 +412,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
             (bit_string_literal
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -412,7 +424,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
             (bit_string_literal
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -423,7 +436,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
             (bit_string_literal
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -434,7 +448,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
             (bit_string_literal
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -445,7 +460,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
             (bit_string_literal
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -456,31 +472,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
             (bit_string_literal
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
-    (concurrent_simple_signal_assignment
-      (name
-        (identifier))
-      (signal_assignment)
-      (waveform
-        (waveform_element
-          (simple_expression
-            (bit_string_literal
-              (bit_string_length)
-              (bit_string_base)
-              (bit_string_value))))))
-    (line_comment)
-    (concurrent_simple_signal_assignment
-      (name
-        (identifier))
-      (signal_assignment)
-      (waveform
-        (waveform_element
-          (simple_expression
-            (bit_string_literal
-              (bit_string_length)
-              (bit_string_base)
-              (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -492,7 +485,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
               (bit_string_length)
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -504,7 +498,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
               (bit_string_length)
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -516,7 +511,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
               (bit_string_length)
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -528,7 +524,8 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
               (bit_string_length)
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -540,7 +537,34 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
               (bit_string_length)
               (bit_string_base)
               (bit_string_value))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
+    (concurrent_simple_signal_assignment
+      (name
+        (identifier))
+      (signal_assignment)
+      (waveform
+        (waveform_element
+          (simple_expression
+            (bit_string_literal
+              (bit_string_length)
+              (bit_string_base)
+              (bit_string_value))))))
+    (line_comment
+      (comment_content))
+    (concurrent_simple_signal_assignment
+      (name
+        (identifier))
+      (signal_assignment)
+      (waveform
+        (waveform_element
+          (simple_expression
+            (bit_string_literal
+              (bit_string_length)
+              (bit_string_base)
+              (bit_string_value))))))
+    (line_comment
+      (comment_content))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -552,5 +576,6 @@ I <= 12SX"XXXX00";      -- Equivalent to B"XXXX_0000_0000"
               (bit_string_length)
               (bit_string_base)
               (bit_string_value)))))))
-  (line_comment))
+  (line_comment
+    (comment_content)))
 

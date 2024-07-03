@@ -4,9 +4,11 @@
 ; Capture Reference: https://neovim.io/doc/user/treesitter.html#treesitter-highlight-groups
 ;-------------------------------------------------------------------------------
 ;
-(line_comment) @comment @spell
+(line_comment
+  (comment_content) @comment @spell) @comment
 
-(block_comment) @comment.documentation @spell
+(block_comment
+  (comment_content) @comment @spell) @comment
 
 (identifier) @variable
 
