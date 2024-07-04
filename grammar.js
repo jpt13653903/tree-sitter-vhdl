@@ -136,11 +136,9 @@ module.exports = grammar({
         $.directive_body,
         $.directive_constant_builtin,
         $.directive_error,
-        $._directive_newline,
         $.directive_protect,
         $.directive_warning,
-
-        $.directive_end_marker, // Scanner internal use only
+        $._directive_newline,
 
         $._grave_accent,
         $.box,

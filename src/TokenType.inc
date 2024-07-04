@@ -126,11 +126,9 @@
             case DIRECTIVE_BODY:                           return "DIRECTIVE_BODY";
             case DIRECTIVE_CONSTANT_BUILTIN:               return "DIRECTIVE_CONSTANT_BUILTIN";
             case DIRECTIVE_ERROR:                          return "DIRECTIVE_ERROR";
-            case DIRECTIVE_NEWLINE:                        return "DIRECTIVE_NEWLINE";
             case DIRECTIVE_PROTECT:                        return "DIRECTIVE_PROTECT";
             case DIRECTIVE_WARNING:                        return "DIRECTIVE_WARNING";
-
-            case DIRECTIVE_END_MARKER:                     return "DIRECTIVE_END_MARKER";
+            case DIRECTIVE_NEWLINE:                        return "DIRECTIVE_NEWLINE";
 
             case DELIMITER_GRAVE_ACCENT:                   return "DELIMITER_GRAVE_ACCENT";
             case DELIMITER_BOX:                            return "DELIMITER_BOX";
@@ -209,16 +207,17 @@ bool can_be_identifier(Scanner* scanner, TokenType type)
         return can_start_identifier(type);
     }else{
         return (type == IDENTIFIER) ||
-               (type >  RESERVED_END_MARKER && type < DIRECTIVE_END_MARKER) ||
-               (type >  TOKEN_END_MARKER    && type < ERROR_SENTINEL);
+               (type >= DIRECTIVE_BODY   && type <= DIRECTIVE_WARNING) ||
+               (type >  TOKEN_END_MARKER && type <  ERROR_SENTINEL);
     }
 }
 //------------------------------------------------------------------------------
 
 bool can_start_identifier(TokenType type)
 {
-    return (type >= IDENTIFIER       && type < DIRECTIVE_END_MARKER) ||
-           (type >  TOKEN_END_MARKER && type < ERROR_SENTINEL      ) ||
+    return (type >= IDENTIFIER       && type <  RESERVED_END_MARKER) ||
+           (type >= DIRECTIVE_BODY   && type <= DIRECTIVE_WARNING  ) ||
+           (type >  TOKEN_END_MARKER && type <  ERROR_SENTINEL     ) ||
            (type == IDENTIFIER_EXPECTING_LETTER);
 }
 //------------------------------------------------------------------------------

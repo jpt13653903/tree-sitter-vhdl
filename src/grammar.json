@@ -10953,10 +10953,6 @@
     },
     {
       "type": "SYMBOL",
-      "name": "_directive_newline"
-    },
-    {
-      "type": "SYMBOL",
       "name": "directive_protect"
     },
     {
@@ -10965,7 +10961,7 @@
     },
     {
       "type": "SYMBOL",
-      "name": "directive_end_marker"
+      "name": "_directive_newline"
     },
     {
       "type": "SYMBOL",
