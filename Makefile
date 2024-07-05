@@ -5,15 +5,14 @@ LANGUAGE_NAME := tree-sitter-vhdl
 # repository
 SRC_DIR := src
 
-PARSER_URL := https://github.com/jpt13653903/tree-sitter-vhdl
 PARSER_REPO_URL := $(shell git -C $(SRC_DIR) remote get-url origin 2>/dev/null)
 
 ifeq ($(PARSER_URL),)
-	PARSER_URL := $(subst .git,,$(PARSER_REPO_URL))
-ifeq ($(shell echo $(PARSER_URL) | grep '^[a-z][-+.0-9a-z]*://'),)
-	PARSER_URL := $(subst :,/,$(PARSER_URL))
-	PARSER_URL := $(subst git@,https://,$(PARSER_URL))
-endif
+    PARSER_URL := $(subst .git,,$(PARSER_REPO_URL))
+    ifeq ($(shell echo $(PARSER_URL) | grep '^[a-z][-+.0-9a-z]*://'),)
+        PARSER_URL := $(subst :,/,$(PARSER_URL))
+        PARSER_URL := $(subst git@,https://,$(PARSER_URL))
+    endif
 endif
 
 TS ?= tree-sitter
@@ -28,39 +27,37 @@ INCLUDEDIR ?= $(PREFIX)/include
 LIBDIR ?= $(PREFIX)/lib
 PCLIBDIR ?= $(LIBDIR)/pkgconfig
 
-# source/object files
-PARSER := $(SRC_DIR)/parser.c
-EXTRAS := $(filter-out $(PARSER),$(wildcard $(SRC_DIR)/*.c))
-OBJS := $(patsubst %.c,%.o,$(PARSER) $(EXTRAS))
+# object files
+OBJS := $(patsubst %.c,%.o,$(wildcard $(SRC_DIR)/*.c))
 
 # flags
-ARFLAGS ?= rcs
+ARFLAGS := rcs
 override CFLAGS += -I$(SRC_DIR) -std=c11 -fPIC
 
 # OS-specific bits
 ifeq ($(OS),Windows_NT)
-	$(error "Windows is not supported")
+    $(error "Windows is not supported")
 else ifeq ($(shell uname),Darwin)
-	SOEXT = dylib
-	SOEXTVER_MAJOR = $(SONAME_MAJOR).dylib
-	SOEXTVER = $(SONAME_MAJOR).$(SONAME_MINOR).dylib
-	LINKSHARED := $(LINKSHARED)-dynamiclib -Wl,
-	ifneq ($(ADDITIONAL_LIBS),)
-	LINKSHARED := $(LINKSHARED)$(ADDITIONAL_LIBS),
-	endif
-	LINKSHARED := $(LINKSHARED)-install_name,$(LIBDIR)/lib$(LANGUAGE_NAME).$(SONAME_MAJOR).dylib,-rpath,@executable_path/../Frameworks
+    SOEXT = dylib
+    SOEXTVER_MAJOR = $(SONAME_MAJOR).dylib
+    SOEXTVER = $(SONAME_MAJOR).$(SONAME_MINOR).dylib
+    LINKSHARED := $(LINKSHARED)-dynamiclib -Wl,
+    ifneq ($(ADDITIONAL_LIBS),)
+        LINKSHARED := $(LINKSHARED)$(ADDITIONAL_LIBS),
+    endif
+    LINKSHARED := $(LINKSHARED)-install_name,$(LIBDIR)/lib$(LANGUAGE_NAME).$(SONAME_MAJOR).dylib,-rpath,@executable_path/../Frameworks
 else
-	SOEXT = so
-	SOEXTVER_MAJOR = so.$(SONAME_MAJOR)
-	SOEXTVER = so.$(SONAME_MAJOR).$(SONAME_MINOR)
-	LINKSHARED := $(LINKSHARED)-shared -Wl,
-	ifneq ($(ADDITIONAL_LIBS),)
-	LINKSHARED := $(LINKSHARED)$(ADDITIONAL_LIBS)
-	endif
-	LINKSHARED := $(LINKSHARED)-soname,lib$(LANGUAGE_NAME).so.$(SONAME_MAJOR)
+    SOEXT = so
+    SOEXTVER_MAJOR = so.$(SONAME_MAJOR)
+    SOEXTVER = so.$(SONAME_MAJOR).$(SONAME_MINOR)
+    LINKSHARED := $(LINKSHARED)-shared -Wl,
+    ifneq ($(ADDITIONAL_LIBS),)
+    LINKSHARED := $(LINKSHARED)$(ADDITIONAL_LIBS)
+    endif
+    LINKSHARED := $(LINKSHARED)-soname,lib$(LANGUAGE_NAME).so.$(SONAME_MAJOR)
 endif
 ifneq ($(filter $(shell uname),FreeBSD NetBSD DragonFly),)
-	PCLIBDIR := $(PREFIX)/libdata/pkgconfig
+    PCLIBDIR := $(PREFIX)/libdata/pkgconfig
 endif
 
 all: lib$(LANGUAGE_NAME).a lib$(LANGUAGE_NAME).$(SOEXT) $(LANGUAGE_NAME).pc
@@ -84,8 +81,8 @@ $(LANGUAGE_NAME).pc: bindings/c/$(LANGUAGE_NAME).pc.in
 		-e 's|=$(PREFIX)|=$${prefix}|' \
 		-e 's|@PREFIX@|$(PREFIX)|' $< > $@
 
-$(PARSER): $(SRC_DIR)/grammar.json
-	$(TS) generate --no-bindings $^
+$(SRC_DIR)/parser.c: grammar.js
+	$(TS) generate --no-bindings
 
 install: all
 	install -d '$(DESTDIR)$(INCLUDEDIR)'/tree_sitter '$(DESTDIR)$(PCLIBDIR)' '$(DESTDIR)$(LIBDIR)'
@@ -109,5 +106,6 @@ clean:
 
 test:
 	$(TS) test
+	$(TS) parse examples/*.vhd --quiet --time
 
 .PHONY: all install uninstall clean test
