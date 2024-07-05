@@ -8,7 +8,7 @@
   (comment_content) @comment @spell) @comment
 
 (block_comment
-  (comment_content) @comment @spell) @comment
+  (comment_content) @comment.documentation @spell) @comment
 
 (identifier) @variable
 

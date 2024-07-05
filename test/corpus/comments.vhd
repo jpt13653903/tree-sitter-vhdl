@@ -10,9 +10,13 @@ Comment edge-cases
 
 --SingleLineNoSpace
 
+-- Single line comments can end in */
+
 /* Single line block */
 
 /*SingleLineBlockNoSpace*/
+
+/* Block comments /* do not nest */
 
 /*
 Multi-line block
@@ -36,6 +40,10 @@ Multi-line block
   (line_comment
     (comment_content))
   (line_comment
+    (comment_content))
+  (line_comment
+    (comment_content))
+  (block_comment
     (comment_content))
   (block_comment
     (comment_content))
