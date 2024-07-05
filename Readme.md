@@ -1,6 +1,7 @@
 # Tree-sitter-vhdl
 
 [![CI][ci]](https://github.com/jpt13653903/tree-sitter-vhdl/actions/workflows/ci.yml)
+[![Fuzz][fuzz]](https://github.com/jpt13653903/tree-sitter-vhdl/actions/workflows/fuzz.yml)
 [![matrix][matrix]](https://matrix.to/#/#tree-sitter-chat:matrix.org)
 
 A VHDL parser for syntax highlighting.
@@ -118,6 +119,7 @@ theme .toml file.
 Contributions are welcome.  Read [Contributing.md] for more information.
 
 [ci]: https://img.shields.io/github/actions/workflow/status/jpt13653903/tree-sitter-vhdl/ci.yml?logo=github&label=CI
+[fuzz]: https://img.shields.io/github/actions/workflow/status/jpt13653903/tree-sitter-vhdl/fuzz.yml?logo=github&label=Fuzz
 [matrix]: https://img.shields.io/matrix/tree-sitter-chat%3Amatrix.org?logo=matrix&label=matrix
 [Neovim]: https://neovim.io/
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
