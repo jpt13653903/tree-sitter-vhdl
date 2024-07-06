@@ -254,13 +254,8 @@
                     "name": "_identifier"
                   },
                   {
-                    "type": "ALIAS",
-                    "content": {
-                      "type": "SYMBOL",
-                      "name": "ALL"
-                    },
-                    "named": false,
-                    "value": "all"
+                    "type": "SYMBOL",
+                    "name": "ALL"
                   }
                 ]
               }
@@ -7802,13 +7797,8 @@
             ]
           },
           {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "OPEN"
-            },
-            "named": false,
-            "value": "open"
+            "type": "SYMBOL",
+            "name": "OPEN"
           }
         ]
       }
@@ -7985,13 +7975,8 @@
           "name": "operator_symbol"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "ALL"
-          },
-          "named": false,
-          "value": "all"
+          "type": "SYMBOL",
+          "name": "ALL"
         }
       ]
     },
@@ -8228,13 +8213,8 @@
           "name": "_range"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "OTHERS"
-          },
-          "named": false,
-          "value": "others"
+          "type": "SYMBOL",
+          "name": "OTHERS"
         },
         {
           "type": "SYMBOL",
@@ -9375,13 +9355,8 @@
           "value": "("
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "DEFAULT"
-          },
-          "named": false,
-          "value": "default"
+          "type": "SYMBOL",
+          "name": "DEFAULT"
         },
         {
           "type": "STRING",
@@ -10010,22 +9985,12 @@
           ]
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "OTHERS"
-          },
-          "named": false,
-          "value": "others"
+          "type": "SYMBOL",
+          "name": "OTHERS"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "ALL"
-          },
-          "named": false,
-          "value": "all"
+          "type": "SYMBOL",
+          "name": "ALL"
         }
       ]
     },
@@ -10260,22 +10225,12 @@
           ]
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "OTHERS"
-          },
-          "named": false,
-          "value": "others"
+          "type": "SYMBOL",
+          "name": "OTHERS"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "ALL"
-          },
-          "named": false,
-          "value": "all"
+          "type": "SYMBOL",
+          "name": "ALL"
         }
       ]
     },
@@ -10344,13 +10299,8 @@
               "type": "SEQ",
               "members": [
                 {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "OPEN"
-                  },
-                  "named": false,
-                  "value": "open"
+                  "type": "SYMBOL",
+                  "name": "OPEN"
                 },
                 {
                   "type": "SYMBOL",
@@ -11629,13 +11579,8 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "ALL"
-          },
-          "named": false,
-          "value": "all"
+          "type": "SYMBOL",
+          "name": "ALL"
         },
         {
           "type": "SYMBOL",
@@ -11847,22 +11792,12 @@
           ]
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "OTHERS"
-          },
-          "named": false,
-          "value": "others"
+          "type": "SYMBOL",
+          "name": "OTHERS"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "ALL"
-          },
-          "named": false,
-          "value": "all"
+          "type": "SYMBOL",
+          "name": "ALL"
         }
       ]
     },
@@ -11990,13 +11925,8 @@
           ]
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "OPEN"
-          },
-          "named": false,
-          "value": "open"
+          "type": "SYMBOL",
+          "name": "OPEN"
         }
       ]
     },

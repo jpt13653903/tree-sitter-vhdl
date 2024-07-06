@@ -432,8 +432,12 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "OPEN",
+          "named": true
+        },
         {
           "type": "conditional_expression",
           "named": true
@@ -968,6 +972,10 @@
       "required": true,
       "types": [
         {
+          "type": "OTHERS",
+          "named": true
+        },
+        {
           "type": "case_generate_body",
           "named": true
         },
@@ -1373,8 +1381,12 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "OTHERS",
+          "named": true
+        },
         {
           "type": "choices",
           "named": true
@@ -2473,6 +2485,10 @@
       "required": true,
       "types": [
         {
+          "type": "OTHERS",
+          "named": true
+        },
+        {
           "type": "choices",
           "named": true
         },
@@ -3137,8 +3153,12 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "OPEN",
+          "named": true
+        },
         {
           "type": "identifier",
           "named": true
@@ -3388,8 +3408,16 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "ALL",
+          "named": true
+        },
+        {
+          "type": "OTHERS",
+          "named": true
+        },
         {
           "type": "entity_designator",
           "named": true
@@ -3670,6 +3698,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "OPEN",
+          "named": true
+        },
         {
           "type": "condition_expression",
           "named": true
@@ -4115,7 +4147,17 @@
   {
     "type": "generic_map_default",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "DEFAULT",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "group_constituent_list",
@@ -4634,8 +4676,16 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "ALL",
+          "named": true
+        },
+        {
+          "type": "OTHERS",
+          "named": true
+        },
         {
           "type": "label",
           "named": true
@@ -6934,6 +6984,10 @@
       "required": true,
       "types": [
         {
+          "type": "ALL",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         },
@@ -7062,8 +7116,12 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "ALL",
+          "named": true
+        },
         {
           "type": "character_literal",
           "named": true
@@ -7115,8 +7173,12 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "ALL",
+          "named": true
+        },
         {
           "type": "sensitivity_list",
           "named": true
@@ -7440,8 +7502,16 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "ALL",
+          "named": true
+        },
+        {
+          "type": "OTHERS",
+          "named": true
+        },
         {
           "type": "name",
           "named": true
@@ -8380,8 +8450,12 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "OTHERS",
+          "named": true
+        },
         {
           "type": "choices",
           "named": true
@@ -8627,6 +8701,22 @@
     "named": false
   },
   {
+    "type": "ALL",
+    "named": true
+  },
+  {
+    "type": "DEFAULT",
+    "named": true
+  },
+  {
+    "type": "OPEN",
+    "named": true
+  },
+  {
+    "type": "OTHERS",
+    "named": true
+  },
+  {
     "type": "[",
     "named": false
   },
@@ -8648,10 +8738,6 @@
   },
   {
     "type": "alias",
-    "named": false
-  },
-  {
-    "type": "all",
     "named": false
   },
   {
@@ -8793,10 +8879,6 @@
   {
     "type": "decimal_integer",
     "named": true
-  },
-  {
-    "type": "default",
-    "named": false
   },
   {
     "type": "directive_body",
@@ -9007,16 +9089,8 @@
     "named": false
   },
   {
-    "type": "open",
-    "named": false
-  },
-  {
     "type": "operator_symbol",
     "named": true
-  },
-  {
-    "type": "others",
-    "named": false
   },
   {
     "type": "out",

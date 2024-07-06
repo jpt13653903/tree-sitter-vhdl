@@ -101,21 +101,24 @@ end architecture DataFlow;
     (use_clause
       (selected_name
         (library_namespace)
-        (identifier)))
+        (identifier)
+        (ALL)))
     (library_clause
       (logical_name_list
         (library_namespace)))
     (use_clause
       (selected_name
         (library_namespace)
-        (identifier)))
+        (identifier)
+        (ALL)))
     (library_clause
       (logical_name_list
         (library_namespace)))
     (use_clause
       (selected_name
         (library_namespace)
-        (identifier)))
+        (identifier)
+        (ALL)))
     (entity_declaration
       (identifier)
       (entity_head
@@ -919,7 +922,8 @@ end architecture DataFlow;
                               (name
                                 (library_constant_std_logic)))))))
                     (case_statement_alternative
-                      (when_element)
+                      (when_element
+                        (OTHERS))
                       (simple_waveform_assignment
                         (name
                           (identifier)

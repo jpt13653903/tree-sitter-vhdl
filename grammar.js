@@ -249,7 +249,7 @@ module.exports = grammar({
             ),
 
             selected_name: $ => seq(
-                $._logical_name, repeat(seq(".", choice($._identifier, alias($.ALL, "all"))))
+                $._logical_name, repeat(seq(".", choice($._identifier, $.ALL)))
             ),
 
         // Library Units
@@ -1332,7 +1332,7 @@ module.exports = grammar({
 
             _actual_part: $ => prec(21, choice(
                 seq(optional(alias($.INERTIAL, "inertial")), $.conditional_expression),
-                alias($.OPEN, "open")
+                $.OPEN
             )),
 
             attribute: $ => seq(
@@ -1369,7 +1369,7 @@ module.exports = grammar({
                 $.identifier,
                 $.character_literal,
                 $.operator_symbol,
-                alias($.ALL, "all")
+                $.ALL
             ),
 
             _literal: $ => choice(
@@ -1421,7 +1421,7 @@ module.exports = grammar({
             _element: $ => choice(
                 $.simple_expression,
                 $._range,
-                alias($.OTHERS, "others"),
+                $.OTHERS,
                 $.choices
             ),
 
@@ -1608,7 +1608,7 @@ module.exports = grammar({
             ),
 
             generic_map_default: $ => seq(
-                alias($.GENERIC, "generic"), alias($.MAP, "map"), "(", alias($.DEFAULT, "default"), ")"
+                alias($.GENERIC, "generic"), alias($.MAP, "map"), "(", $.DEFAULT, ")"
             ),
 
             generic_map_aspect: $ => seq(
@@ -1716,8 +1716,8 @@ module.exports = grammar({
 
             signal_list: $ => choice(
                 seq($.name, repeat(seq(",", $.name))),
-                alias($.OTHERS, "others"),
-                alias($.ALL, "all")
+                $.OTHERS,
+                $.ALL
             ),
 
             entity_specification: $ => seq(
@@ -1749,8 +1749,8 @@ module.exports = grammar({
 
             entity_name_list: $ => choice(
                 seq($.entity_designator, repeat(seq(",", $.entity_designator))),
-                alias($.OTHERS, "others"),
-                alias($.ALL, "all")
+                $.OTHERS,
+                $.ALL
             ),
 
             entity_designator: $ => seq(
@@ -1770,7 +1770,7 @@ module.exports = grammar({
             ),
 
             file_open_information: $ => seq(
-                optional(seq(alias($.OPEN, "open"), $._expression)), alias($.IS, "is"), $.file_logical_name
+                optional(seq($.OPEN, $._expression)), alias($.IS, "is"), $.file_logical_name
             ),
 
             file_logical_name: $ => $._expression,
@@ -1970,7 +1970,7 @@ module.exports = grammar({
             ),
 
             _process_sensitivity_list: $ => choice(
-                alias($.ALL, "all"),
+                $.ALL,
                 $.sensitivity_list
             ),
 
@@ -1993,8 +1993,8 @@ module.exports = grammar({
 
             instantiation_list: $ => choice(
                 seq($._label, repeat(seq(",", $._label))),
-                alias($.OTHERS, "others"),
-                alias($.ALL, "all")
+                $.OTHERS,
+                $.ALL
             ),
 
             binding_indication: $ => seq(
@@ -2004,7 +2004,7 @@ module.exports = grammar({
             entity_aspect: $ => choice(
                 seq(alias($.ENTITY, "entity"), $.name, optional(seq("(", $._identifier, ")"))),
                 seq(alias($.CONFIGURATION, "configuration"), $.name),
-                alias($.OPEN, "open")
+                $.OPEN
             ),
 
         // Comments

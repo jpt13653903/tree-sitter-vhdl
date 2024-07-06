@@ -19,7 +19,8 @@ end process;
 (design_file
   (design_unit
     (process_statement
-      (sensitivity_specification)
+      (sensitivity_specification
+        (ALL))
       (sequential_block
         (if_statement_block
           (if_statement

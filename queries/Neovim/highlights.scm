@@ -57,11 +57,11 @@
 ] @keyword
 
 [
-  "all"
-  "others"
+  (ALL)
+  (OTHERS)
   "<>"
-  "default"
-  "open"
+  (DEFAULT)
+  (OPEN)
 ] @constant.builtin
 
 [

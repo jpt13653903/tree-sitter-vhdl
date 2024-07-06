@@ -194,10 +194,12 @@ end ROM;
         (use_clause
           (selected_name
             (library_namespace)
-            (identifier))
+            (identifier)
+            (ALL))
           (selected_name
             (library_namespace)
-            (identifier)))
+            (identifier)
+            (ALL)))
         (constant_declaration
           (identifier_list
             (identifier))
@@ -385,7 +387,8 @@ end;
         (use_clause
           (selected_name
             (library_namespace)
-            (identifier))))
+            (identifier)
+            (ALL))))
       (entity_body
         (concurrent_assertion_statement
           (assertion
