@@ -159,8 +159,10 @@ module.exports = grammar({
         $.bit_string_base,
         $.bit_string_value,
         $.operator_symbol,
-        $.line_comment,
-        $.block_comment,
+        $._line_comment_start,
+        $._block_comment_start,
+        $._block_comment_end,
+        $.comment_content,
 
         $.token_end_marker, // Scanner internal use only
 
@@ -2005,6 +2007,18 @@ module.exports = grammar({
                 seq($.ENTITY, $.name, optional(seq("(", $._identifier, ")"))),
                 seq($.CONFIGURATION, $.name),
                 $.OPEN
+            ),
+
+        // Comments
+            line_comment: $ => seq(
+                $._line_comment_start,
+                $.comment_content,
+            ),
+
+            block_comment: $ => seq(
+                $._block_comment_start,
+                $.comment_content,
+                $._block_comment_end,
             ),
     }
 });

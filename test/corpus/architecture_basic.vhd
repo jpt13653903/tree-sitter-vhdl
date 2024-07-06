@@ -16,7 +16,8 @@ end EXAMPLE;
 --------------------------------------------------------------------------------
 
 (design_file
-  (block_comment)
+  (block_comment
+    (comment_content))
   (design_unit
     (architecture_definition
       (ARCHITECTURE)
@@ -51,7 +52,8 @@ end EXAMPLE;
         (waveform_element
           (simple_expression
             (decimal_integer))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (end_architecture
       (END)
       (identifier)))))

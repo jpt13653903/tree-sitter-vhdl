@@ -172,7 +172,8 @@ end Behaviour;
             (waveform_element
               (simple_expression
                 (string_literal)))))
-        (line_comment)
+        (line_comment
+          (comment_content))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -181,7 +182,8 @@ end Behaviour;
             (waveform_element
               (simple_expression
                 (string_literal))))))
-      (line_comment)
+      (line_comment
+        (comment_content))
       (end_architecture
         (END)
         (identifier)))))

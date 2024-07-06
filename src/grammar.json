@@ -10414,6 +10414,36 @@
           "name": "OPEN"
         }
       ]
+    },
+    "line_comment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_line_comment_start"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "comment_content"
+        }
+      ]
+    },
+    "block_comment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_block_comment_start"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "comment_content"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_block_comment_end"
+        }
+      ]
     }
   },
   "extras": [
@@ -10999,11 +11029,19 @@
     },
     {
       "type": "SYMBOL",
-      "name": "line_comment"
+      "name": "_line_comment_start"
     },
     {
       "type": "SYMBOL",
-      "name": "block_comment"
+      "name": "_block_comment_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_block_comment_end"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "comment_content"
     },
     {
       "type": "SYMBOL",

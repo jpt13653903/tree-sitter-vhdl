@@ -86,7 +86,8 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (line_comment)
+            (line_comment
+              (comment_content))
             (interface_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -97,7 +98,8 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (line_comment)
+            (line_comment
+              (comment_content))
             (interface_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -108,7 +110,8 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (line_comment)
+            (line_comment
+              (comment_content))
             (interface_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -119,7 +122,8 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (line_comment)
+            (line_comment
+              (comment_content))
             (interface_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -130,7 +134,8 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (line_comment)
+            (line_comment
+              (comment_content))
             (interface_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -141,7 +146,8 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (line_comment)
+            (line_comment
+              (comment_content))
             (interface_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -152,7 +158,8 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (line_comment)
+            (line_comment
+              (comment_content))
             (interface_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -163,7 +170,8 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (line_comment)
+            (line_comment
+              (comment_content))
             (interface_signal_declaration
               (SIGNAL)
               (identifier_list
@@ -174,7 +182,8 @@ entity MyModule is port(
                 (subtype_indication
                   (name
                     (library_type)))))
-            (line_comment)
+            (line_comment
+              (comment_content))
             (interface_signal_declaration
               (SIGNAL)
               (identifier_list

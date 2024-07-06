@@ -1,5 +1,5 @@
 architecture EXAMPLE of STRUCTURE is
--- <- keyword
+-- ^ keyword
 --           ^ property
 --                   ^ keyword.operator
 --                      ^ module
@@ -15,14 +15,14 @@ architecture EXAMPLE of STRUCTURE is
 --                                     ^ number
 --                                      ^ punctuation.delimiters
 begin
--- <- keyword
+-- ^ keyword
   DIGIT_A <= 3;
 -- ^ variable
 --        ^ operator
 --           ^ number
 --            ^ punctuation.delimiters
 end EXAMPLE;
--- <- keyword
+--^ keyword
 --  ^ property
 --         ^ punctuation.delimiters
 
