@@ -208,7 +208,7 @@ module.exports = grammar({
             ),
 
             design_unit: $ => prec.right(choice(
-                $._context_item,
+                seq(repeat1($._context_item), optional($._library_unit)),
                 $._library_unit,
 
                 // These are useful for language injection, e.g. Markdown

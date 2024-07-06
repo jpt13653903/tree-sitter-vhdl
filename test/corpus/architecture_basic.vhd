@@ -22,13 +22,13 @@ end EXAMPLE;
     (architecture_definition
       (identifier)
       (name
-      (identifier))
+        (identifier))
     (architecture_head
       (subtype_declaration
         (identifier)
         (subtype_indication
           (name
-          (library_type))
+            (library_type))
         (range_constraint
           (simple_range
             (simple_expression
@@ -38,7 +38,7 @@ end EXAMPLE;
     (concurrent_block
       (concurrent_simple_signal_assignment
         (name
-        (identifier))
+          (identifier))
       (signal_assignment)
       (waveform
         (waveform_element
