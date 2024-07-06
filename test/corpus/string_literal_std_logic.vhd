@@ -26,16 +26,12 @@ end Behaviour;
 (design_file
   (design_unit
     (architecture_definition
-      (ARCHITECTURE)
       (identifier)
-      (OF)
       (name
         (identifier))
       (architecture_head
-        (IS)
         (subprogram_declaration
           (function_specification
-            (FUNCTION)
             (operator_symbol)
             (parameter_list_specification
               (interface_list
@@ -47,11 +43,9 @@ end Behaviour;
                     (subtype_indication
                       (name
                         (library_type)))))))
-            (RETURN)
             (name
               (library_type)))))
       (concurrent_block
-        (BEGIN)
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -185,6 +179,5 @@ end Behaviour;
       (line_comment
         (comment_content))
       (end_architecture
-        (END)
         (identifier)))))
 

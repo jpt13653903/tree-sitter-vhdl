@@ -19,32 +19,23 @@ end process;
 (design_file
   (design_unit
     (process_statement
-      (PROCESS)
-      (sensitivity_specification
-        (ALL))
+      (sensitivity_specification)
       (sequential_block
-        (BEGIN)
         (if_conditional_analysis
-          (IF)
           (conditional_analysis_expression
             (conditional_analysis_relation
               (identifier)
-              (string_literal)))
-          (THEN))
+              (string_literal))))
         (loop_statement
           (for_loop
-            (FOR)
             (parameter_specification
               (identifier)
-              (IN)
               (simple_range
                 (simple_expression
                   (decimal_integer))
-                (TO)
                 (simple_expression
                   (decimal_integer)))))
           (loop_body
-            (LOOP)
             (simple_variable_assignment
               (name
                 (identifier))
@@ -66,25 +57,18 @@ end process;
                                 (simple_expression
                                   (name
                                     (identifier))))))))))))))
-          (end_loop
-            (END)
-            (LOOP)))
-        (else_conditional_analysis
-          (ELSE))
+          (end_loop))
+        (else_conditional_analysis)
         (loop_statement
           (for_loop
-            (FOR)
             (parameter_specification
               (identifier)
-              (IN)
               (simple_range
                 (simple_expression
                   (decimal_integer))
-                (TO)
                 (simple_expression
                   (decimal_integer)))))
           (loop_body
-            (LOOP)
             (simple_variable_assignment
               (name
                 (identifier))
@@ -106,13 +90,7 @@ end process;
                                 (simple_expression
                                   (name
                                     (identifier))))))))))))))
-          (end_loop
-            (END)
-            (LOOP))))
-      (end_conditional_analysis
-        (END)
-        (IF))
-      (end_process
-        (END)
-        (PROCESS)))))
+          (end_loop)))
+      (end_conditional_analysis)
+      (end_process))))
 

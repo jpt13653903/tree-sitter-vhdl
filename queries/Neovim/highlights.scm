@@ -13,193 +13,193 @@
 (identifier) @variable
 
 [
-  (ACCESS)
-  (AFTER)
-  (ALIAS)
-  (ARCHITECTURE)
-  (ARRAY)
-  (ASSUME)
-  (ATTRIBUTE)
-  (BLOCK)
-  (BODY)
-  (COMPONENT)
-  (CONFIGURATION)
-  (CONTEXT)
-  (COVER)
-  (DISCONNECT)
-  (ENTITY)
-  (FAIRNESS)
-  (FILE)
-  (FORCE)
-  (GENERATE)
-  (GENERIC)
-  (GROUP)
-  (LABEL)
-  (LITERAL)
-  (MAP)
-  (NEW)
-  (PACKAGE)
-  (PARAMETER)
-  (PORT)
-  (PROPERTY)
-  (RANGE)
-  (REJECT)
-  (RELEASE)
-  (RESTRICT)
-  (SEQUENCE)
-  (TRANSPORT)
-  (UNAFFECTED)
-  (VIEW)
-  (VPKG)
-  (VMODE)
-  (VPROP)
-  (VUNIT)
+  "access"
+  "after"
+  "alias"
+  "architecture"
+  "array"
+  ; "assume"
+  "attribute"
+  "block"
+  "body"
+  "component"
+  "configuration"
+  "context"
+  ; "cover"
+  "disconnect"
+  "entity"
+  ; "fairness"
+  "file"
+  "force"
+  "generate"
+  "generic"
+  "group"
+  "label"
+  "literal"
+  "map"
+  "new"
+  "package"
+  "parameter"
+  "port"
+  "property"
+  "range"
+  "reject"
+  "release"
+  ; "restrict"
+  "sequence"
+  "transport"
+  "unaffected"
+  "view"
+  ; "vmode"
+  ; "vpkg"
+  ; "vprop"
+  "vunit"
 ] @keyword
 
 [
-  (ALL)
-  (OTHERS)
-  (box)
-  (DEFAULT)
-  (OPEN)
+  "all"
+  "others"
+  "<>"
+  "default"
+  "open"
 ] @constant.builtin
 
 [
-  (IS)
-  (BEGIN)
-  (END)
+  "is"
+  "begin"
+  "end"
 ] @keyword
 
 (parameter_specification
-  (IN) @keyword)
+  "in" @keyword)
 
 [
-  (PROCESS)
-  (WAIT)
-  (ON)
-  (UNTIL)
+  "process"
+  "wait"
+  "on"
+  "until"
 ] @keyword.coroutine
 
 (timeout_clause
-  (FOR) @keyword.coroutine)
+  "for" @keyword.coroutine)
 
 [
-  (FUNCTION)
-  (PROCEDURE)
+  "function"
+  "procedure"
 ] @keyword.function
 
 [
-  (TO)
-  (DOWNTO)
-  (OF)
+  "to"
+  "downto"
+  "of"
 ] @keyword.operator
 
 [
-  (LIBRARY)
-  (USE)
+  "library"
+  "use"
 ] @keyword.import
 
 [
-  (SUBTYPE)
-  (TYPE)
-  (RECORD)
-  (UNITS)
-  (CONSTANT)
-  (SIGNAL)
-  (VARIABLE)
+  "subtype"
+  "type"
+  "record"
+  "units"
+  "constant"
+  "signal"
+  "variable"
 ] @keyword.type
 
 [
-  (PROTECTED)
-  (PRIVATE)
-  (PURE)
-  (IMPURE)
-  (INERTIAL)
-  (POSTPONED)
-  (STRONG)
-  (GUARDED)
-  (OUT)
-  (INOUT)
-  (LINKAGE)
-  (BUFFER)
-  (REGISTER)
-  (BUS)
-  (SHARED)
+  "protected"
+  "private"
+  "pure"
+  "impure"
+  "inertial"
+  "postponed"
+  ; "strong"
+  "guarded"
+  "out"
+  "inout"
+  "linkage"
+  "buffer"
+  "register"
+  "bus"
+  "shared"
 ] @keyword.modifier
 
 (mode
-  (IN) @keyword.modifier)
+  "in" @keyword.modifier)
 
 (force_mode
-  (IN) @keyword.modifier)
+  "in" @keyword.modifier)
 
 [
-  (WHILE)
-  (LOOP)
-  (NEXT)
-  (EXIT)
+  "while"
+  "loop"
+  "next"
+  "exit"
 ] @keyword.repeat
 
 (for_loop
-  (FOR) @keyword.repeat)
+  "for" @keyword.repeat)
 
 (block_configuration
-  (FOR) @keyword)
+  "for" @keyword)
 
 (configuration_specification
-  (FOR) @keyword)
+  "for" @keyword)
 
 (component_configuration
-  (FOR) @keyword)
+  "for" @keyword)
 
 (end_for
-  (FOR) @keyword)
+  "for" @keyword)
 
-(RETURN) @keyword.return
+"return" @keyword.return
 
 [
-  (ASSERT)
-  (REPORT)
-  (SEVERITY)
+  "assert"
+  "report"
+  "severity"
 ] @keyword.debug
 
 [
-  (IF)
-  (THEN)
-  (ELSIF)
-  (CASE)
+  "if"
+  "then"
+  "elsif"
+  "case"
 ] @keyword.conditional
 
 (when_element
-  (WHEN) @keyword.conditional)
+  "when" @keyword.conditional)
 
 (case_generate_alternative
-  (WHEN) @keyword.conditional)
+  "when" @keyword.conditional)
 
 (else_statement
-  (ELSE) @keyword.conditional)
+  "else" @keyword.conditional)
 
 (else_generate
-  (ELSE) @keyword.conditional)
+  "else" @keyword.conditional)
 
 [
-  (WITH)
-  (SELECT)
+  "with"
+  "select"
 ] @keyword.conditional.ternary
 
 (when_expression
-  (WHEN) @keyword.conditional.ternary)
+  "when" @keyword.conditional.ternary)
 
 (else_expression
-  (ELSE) @keyword.conditional.ternary)
+  "else" @keyword.conditional.ternary)
 
 (else_waveform
-  (ELSE) @keyword.conditional.ternary)
+  "else" @keyword.conditional.ternary)
 
 (else_expression_or_unaffected
-  (ELSE) @keyword.conditional.ternary)
+  "else" @keyword.conditional.ternary)
 
-(NULL) @constant.builtin
+"null" @constant.builtin
 
 (user_directive) @keyword.directive
 
@@ -210,22 +210,22 @@
 (error_directive) @keyword.directive
 
 (if_conditional_analysis
-  (IF) @keyword.directive)
+  "if" @keyword.directive)
 
 (if_conditional_analysis
-  (THEN) @keyword.directive)
+  "then" @keyword.directive)
 
 (elsif_conditional_analysis
-  (ELSIF) @keyword.directive)
+  "elsif" @keyword.directive)
 
 (else_conditional_analysis
-  (ELSE) @keyword.directive)
+  "else" @keyword.directive)
 
 (end_conditional_analysis
-  (END) @keyword.directive)
+  "end" @keyword.directive)
 
 (end_conditional_analysis
-  (IF) @keyword.directive)
+  "if" @keyword.directive)
 
 (directive_body) @keyword.directive
 
@@ -332,12 +332,12 @@
 (label) @label
 
 (generic_map_aspect
-  (GENERIC) @constructor
-  (MAP) @constructor)
+  "generic" @constructor
+  "map" @constructor)
 
 (port_map_aspect
-  (PORT) @constructor
-  (MAP) @constructor)
+  "port" @constructor
+  "map" @constructor)
 
 (subtype_indication
   (name
@@ -402,9 +402,9 @@
   (identifier) @module)
 
 (architecture_definition
-  (ARCHITECTURE)
+  "architecture"
   (identifier) @property
-  (OF)
+  "of"
   (name
     (identifier) @module))
 

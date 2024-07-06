@@ -11,12 +11,9 @@ end Full_Adder;
 (design_file
   (design_unit
     (entity_declaration
-      (ENTITY)
       (identifier)
       (entity_head
-        (IS)
         (port_clause
-          (PORT)
           (interface_list
             (interface_declaration
               (identifier_list
@@ -24,8 +21,7 @@ end Full_Adder;
                 (identifier)
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
                   (name
                     (library_type)))))
@@ -34,13 +30,11 @@ end Full_Adder;
                 (identifier)
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (OUT))
+                (mode)
                 (subtype_indication
                   (name
                     (library_type))))))))
       (end_entity
-        (END)
         (identifier)))))
 
 ================================================================================
@@ -58,12 +52,9 @@ end entity AndGate;
 (design_file
   (design_unit
     (entity_declaration
-      (ENTITY)
       (identifier)
       (entity_head
-        (IS)
         (generic_clause
-          (GENERIC)
           (interface_list
             (interface_declaration
               (identifier_list
@@ -78,14 +69,12 @@ end entity AndGate;
                     (simple_expression
                       (decimal_integer))))))))
         (port_clause
-          (PORT)
           (interface_list
             (interface_declaration
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
                   (name
                     (library_type)
@@ -95,7 +84,6 @@ end entity AndGate;
                           (simple_range
                             (simple_expression
                               (decimal_integer))
-                            (TO)
                             (simple_expression
                               (name
                                 (identifier)))))))))))
@@ -103,14 +91,11 @@ end entity AndGate;
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (OUT))
+                (mode)
                 (subtype_indication
                   (name
                     (library_type))))))))
       (end_entity
-        (END)
-        (ENTITY)
         (identifier)))))
 
 ================================================================================
@@ -125,12 +110,9 @@ end TestBench;
 (design_file
   (design_unit
     (entity_declaration
-      (ENTITY)
       (identifier)
-      (entity_head
-        (IS))
+      (entity_head)
       (end_entity
-        (END)
         (identifier)))))
 
 ================================================================================
@@ -158,19 +140,15 @@ end ROM;
 (design_file
   (design_unit
     (entity_declaration
-      (ENTITY)
       (identifier)
       (entity_head
-        (IS)
         (port_clause
-          (PORT)
           (interface_list
             (interface_declaration
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
                   (name
                     (identifier)))))
@@ -178,8 +156,7 @@ end ROM;
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (OUT))
+                (mode)
                 (subtype_indication
                   (name
                     (identifier)))))
@@ -187,57 +164,41 @@ end ROM;
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
                   (name
                     (library_type)))))))
         (type_declaration
-          (TYPE)
           (identifier)
-          (IS)
           (array_type_definition
-            (ARRAY)
             (array_index_incomplete_type_list
               (index_constraint
                 (simple_range
                   (simple_expression
                     (decimal_integer))
-                  (TO)
                   (simple_expression
                     (decimal_integer)))))
-            (OF)
             (subtype_indication
               (name
                 (library_type)))))
         (type_declaration
-          (TYPE)
           (identifier)
-          (IS)
           (array_type_definition
-            (ARRAY)
             (array_index_incomplete_type_list
               (index_subtype_definition
                 (name
-                  (library_type))
-                (RANGE)
-                (box)))
-            (OF)
+                  (library_type))))
             (subtype_indication
               (name
                 (identifier)))))
         (use_clause
-          (USE)
           (selected_name
             (library_namespace)
-            (identifier)
-            (ALL))
+            (identifier))
           (selected_name
             (library_namespace)
-            (identifier)
-            (ALL)))
+            (identifier)))
         (constant_declaration
-          (CONSTANT)
           (identifier_list
             (identifier))
           (subtype_indication
@@ -337,7 +298,6 @@ end ROM;
                   (line_comment
                     (comment_content))))))))
       (end_entity
-        (END)
         (identifier)))))
 
 ================================================================================
@@ -362,19 +322,15 @@ end;
 (design_file
   (design_unit
     (entity_declaration
-      (ENTITY)
       (identifier)
       (entity_head
-        (IS)
         (port_clause
-          (PORT)
           (interface_list
             (interface_declaration
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
                   (name
                     (identifier)))))
@@ -382,8 +338,7 @@ end;
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (OUT))
+                (mode)
                 (subtype_indication
                   (name
                     (identifier)))))
@@ -391,8 +346,7 @@ end;
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
                   (name
                     (library_type)))))
@@ -400,13 +354,11 @@ end;
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
                   (name
                     (library_type)))))))
         (constant_declaration
-          (CONSTANT)
           (identifier_list
             (identifier))
           (subtype_indication
@@ -419,7 +371,6 @@ end;
                 (decimal_integer)
                 (library_constant_unit)))))
         (constant_declaration
-          (CONSTANT)
           (identifier_list
             (identifier))
           (subtype_indication
@@ -432,16 +383,12 @@ end;
                 (decimal_integer)
                 (library_constant_unit)))))
         (use_clause
-          (USE)
           (selected_name
             (library_namespace)
-            (identifier)
-            (ALL))))
+            (identifier))))
       (entity_body
-        (BEGIN)
         (concurrent_assertion_statement
           (assertion
-            (ASSERT)
             (logical_expression
               (relational_expression
                 (simple_expression
@@ -495,5 +442,4 @@ end;
                       (simple_expression
                         (name
                           (identifier)))))))))))
-      (end_entity
-        (END)))))
+      (end_entity))))

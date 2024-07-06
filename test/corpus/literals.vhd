@@ -514,6 +514,5 @@ A <= null;
       (signal_assignment)
       (waveform
         (waveform_element
-          (simple_expression
-            (NULL)))))))
+          (simple_expression))))))
 

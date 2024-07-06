@@ -20,30 +20,22 @@ end EXAMPLE;
     (comment_content))
   (design_unit
     (architecture_definition
-      (ARCHITECTURE)
       (identifier)
-      (OF)
       (name
       (identifier))
     (architecture_head
-      (IS)
       (subtype_declaration
-        (SUBTYPE)
         (identifier)
-        (IS)
         (subtype_indication
           (name
           (library_type))
         (range_constraint
-          (RANGE)
           (simple_range
             (simple_expression
               (decimal_integer))
-            (TO)
             (simple_expression
               (decimal_integer)))))))
     (concurrent_block
-      (BEGIN)
       (concurrent_simple_signal_assignment
         (name
         (identifier))
@@ -55,6 +47,5 @@ end EXAMPLE;
     (line_comment
       (comment_content))
     (end_architecture
-      (END)
       (identifier)))))
 

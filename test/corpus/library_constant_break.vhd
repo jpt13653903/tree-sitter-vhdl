@@ -13,15 +13,11 @@ end Behaviour;
 (design_file
   (design_unit
     (architecture_definition
-      (ARCHITECTURE)
       (identifier)
-      (OF)
       (name
         (identifier))
-      (architecture_head
-        (IS))
+      (architecture_head)
       (concurrent_block
-        (BEGIN)
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -47,6 +43,5 @@ end Behaviour;
                     (selection
                       (identifier)))))))))
       (end_architecture
-        (END)
         (identifier)))))
 

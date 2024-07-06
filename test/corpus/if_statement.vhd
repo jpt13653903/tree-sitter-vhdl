@@ -19,14 +19,10 @@ end process;
 (design_file
   (design_unit
     (process_statement
-      (PROCESS)
-      (sensitivity_specification
-        (ALL))
+      (sensitivity_specification)
       (sequential_block
-        (BEGIN)
         (if_statement_block
           (if_statement
-            (IF)
             (relational_expression
               (simple_expression
                 (name
@@ -34,7 +30,6 @@ end process;
               (relational_operator)
               (simple_expression
                 (decimal_integer)))
-            (THEN)
             (if_statement_body
               (simple_waveform_assignment
                 (name
@@ -51,7 +46,6 @@ end process;
                         (name
                           (identifier)))))))))
           (elsif_statement
-            (ELSIF)
             (relational_expression
               (simple_expression
                 (name
@@ -59,7 +53,6 @@ end process;
               (relational_operator)
               (simple_expression
                 (decimal_integer)))
-            (THEN)
             (if_statement_body
               (simple_waveform_assignment
                 (name
@@ -76,7 +69,6 @@ end process;
                         (name
                           (identifier)))))))))
           (elsif_statement
-            (ELSIF)
             (relational_expression
               (simple_expression
                 (name
@@ -84,7 +76,6 @@ end process;
               (relational_operator)
               (simple_expression
                 (decimal_integer)))
-            (THEN)
             (if_statement_body
               (simple_waveform_assignment
                 (name
@@ -101,7 +92,6 @@ end process;
                         (name
                           (identifier)))))))))
           (else_statement
-            (ELSE)
             (if_statement_body
               (simple_waveform_assignment
                 (name
@@ -117,10 +107,6 @@ end process;
                       (simple_expression
                         (name
                           (identifier)))))))))
-          (end_if
-            (END)
-            (IF))))
-      (end_process
-        (END)
-        (PROCESS)))))
+          (end_if)))
+      (end_process))))
 
