@@ -98,39 +98,33 @@ end architecture DataFlow;
     (library_clause
       (LIBRARY)
       (logical_name_list
-        (library_namespace))))
-  (design_unit
+        (library_namespace)))
     (use_clause
       (USE)
       (selected_name
         (library_namespace)
         (identifier)
-        (ALL))))
-  (design_unit
+        (ALL)))
     (library_clause
       (LIBRARY)
       (logical_name_list
-        (library_namespace))))
-  (design_unit
+        (library_namespace)))
     (use_clause
       (USE)
       (selected_name
         (library_namespace)
         (identifier)
-        (ALL))))
-  (design_unit
+        (ALL)))
     (library_clause
       (LIBRARY)
       (logical_name_list
-        (library_namespace))))
-  (design_unit
+        (library_namespace)))
     (use_clause
       (USE)
       (selected_name
         (library_namespace)
         (identifier)
-        (ALL))))
-  (design_unit
+        (ALL)))
     (entity_declaration
       (ENTITY)
       (identifier)
