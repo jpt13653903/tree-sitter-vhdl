@@ -256,13 +256,8 @@
                   {
                     "type": "ALIAS",
                     "content": {
-                      "type": "ALIAS",
-                      "content": {
-                        "type": "SYMBOL",
-                        "name": "ALL"
-                      },
-                      "named": false,
-                      "value": "all"
+                      "type": "SYMBOL",
+                      "name": "ALL"
                     },
                     "named": false,
                     "value": "all"
@@ -921,13 +916,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "ARCHITECTURE"
-            },
-            "named": false,
-            "value": "architecture"
+            "type": "SYMBOL",
+            "name": "ARCHITECTURE"
           },
           "named": false,
           "value": "architecture"
@@ -1006,13 +996,8 @@
             {
               "type": "ALIAS",
               "content": {
-                "type": "ALIAS",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "ARCHITECTURE"
-                },
-                "named": false,
-                "value": "architecture"
+                "type": "SYMBOL",
+                "name": "ARCHITECTURE"
               },
               "named": false,
               "value": "architecture"
@@ -2394,13 +2379,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "ALIAS"
-            },
-            "named": false,
-            "value": "alias"
+            "type": "SYMBOL",
+            "name": "ALIAS"
           },
           "named": false,
           "value": "alias"
@@ -2700,13 +2680,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "AFTER"
-            },
-            "named": false,
-            "value": "after"
+            "type": "SYMBOL",
+            "name": "AFTER"
           },
           "named": false,
           "value": "after"
@@ -3080,13 +3055,8 @@
             {
               "type": "ALIAS",
               "content": {
-                "type": "ALIAS",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "ARRAY"
-                },
-                "named": false,
-                "value": "array"
+                "type": "SYMBOL",
+                "name": "ARRAY"
               },
               "named": false,
               "value": "array"
@@ -3124,13 +3094,8 @@
             {
               "type": "ALIAS",
               "content": {
-                "type": "ALIAS",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "ARRAY"
-                },
-                "named": false,
-                "value": "array"
+                "type": "SYMBOL",
+                "name": "ARRAY"
               },
               "named": false,
               "value": "array"
@@ -3260,13 +3225,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "ACCESS"
-            },
-            "named": false,
-            "value": "access"
+            "type": "SYMBOL",
+            "name": "ACCESS"
           },
           "named": false,
           "value": "access"
@@ -3295,13 +3255,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "ACCESS"
-            },
-            "named": false,
-            "value": "access"
+            "type": "SYMBOL",
+            "name": "ACCESS"
           },
           "named": false,
           "value": "access"
@@ -5030,13 +4985,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "ASSERT"
-            },
-            "named": false,
-            "value": "assert"
+            "type": "SYMBOL",
+            "name": "ASSERT"
           },
           "named": false,
           "value": "assert"
@@ -8037,13 +7987,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "ALL"
-            },
-            "named": false,
-            "value": "all"
+            "type": "SYMBOL",
+            "name": "ALL"
           },
           "named": false,
           "value": "all"
@@ -10076,13 +10021,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "ALL"
-            },
-            "named": false,
-            "value": "all"
+            "type": "SYMBOL",
+            "name": "ALL"
           },
           "named": false,
           "value": "all"
@@ -10121,13 +10061,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "ARCHITECTURE"
-            },
-            "named": false,
-            "value": "architecture"
+            "type": "SYMBOL",
+            "name": "ARCHITECTURE"
           },
           "named": false,
           "value": "architecture"
@@ -10336,13 +10271,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "ALL"
-            },
-            "named": false,
-            "value": "all"
+            "type": "SYMBOL",
+            "name": "ALL"
           },
           "named": false,
           "value": "all"
@@ -11018,13 +10948,8 @@
                 {
                   "type": "ALIAS",
                   "content": {
-                    "type": "ALIAS",
-                    "content": {
-                      "type": "SYMBOL",
-                      "name": "AFTER"
-                    },
-                    "named": false,
-                    "value": "after"
+                    "type": "SYMBOL",
+                    "name": "AFTER"
                   },
                   "named": false,
                   "value": "after"
@@ -11706,13 +11631,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "ALL"
-            },
-            "named": false,
-            "value": "all"
+            "type": "SYMBOL",
+            "name": "ALL"
           },
           "named": false,
           "value": "all"
@@ -11938,13 +11858,8 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "ALL"
-            },
-            "named": false,
-            "value": "all"
+            "type": "SYMBOL",
+            "name": "ALL"
           },
           "named": false,
           "value": "all"
