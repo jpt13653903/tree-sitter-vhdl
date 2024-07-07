@@ -1527,7 +1527,18 @@
   {
     "type": "component_instantiation_statement",
     "named": true,
-    "fields": {},
+    "fields": {
+      "component": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
@@ -1542,10 +1553,6 @@
         },
         {
           "type": "label_declaration",
-          "named": true
-        },
-        {
-          "type": "name",
           "named": true
         },
         {

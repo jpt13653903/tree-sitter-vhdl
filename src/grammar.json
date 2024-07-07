@@ -4474,8 +4474,12 @@
               "name": "label_declaration"
             },
             {
-              "type": "SYMBOL",
-              "name": "name"
+              "type": "FIELD",
+              "name": "component",
+              "content": {
+                "type": "SYMBOL",
+                "name": "name"
+              }
             },
             {
               "type": "CHOICE",

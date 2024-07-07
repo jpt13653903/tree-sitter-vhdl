@@ -867,8 +867,8 @@ module.exports = grammar({
             ),
 
             component_instantiation_statement: $ => choice(
-                seq($.label_declaration, $.instantiated_unit, optional($.generic_map_aspect), optional($.port_map_aspect), ";"),
-                seq($.label_declaration, $.name,              optional($.generic_map_aspect),          $.port_map_aspect,  ";")
+                seq($.label_declaration, $.instantiated_unit,        optional($.generic_map_aspect), optional($.port_map_aspect), ";"),
+                seq($.label_declaration, field("component", $.name), optional($.generic_map_aspect),          $.port_map_aspect,  ";")
             ),
 
             instantiated_unit: $ => choice(
