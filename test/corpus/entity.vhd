@@ -38,161 +38,132 @@ entity MyModule is port(
 (design_file
   (design_unit
     (entity_declaration
-      (ENTITY)
-      (identifier)
+      entity: (identifier)
       (entity_head
-        (IS)
         (port_clause
-          (PORT)
           (interface_list
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier)
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (OUT))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (INOUT))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (INOUT))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (INOUT))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (INOUT))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (INOUT))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (INOUT))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (INOUT))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (INOUT))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (OUT))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (OUT))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))
                 (initialiser
                   (variable_assignment)
@@ -202,14 +173,12 @@ entity MyModule is port(
                         (bit_string_base)
                         (bit_string_value)))))))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))
                 (initialiser
                   (variable_assignment)
@@ -219,14 +188,12 @@ entity MyModule is port(
                         (based_base)
                         (based_integer)))))))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))
                 (initialiser
                   (variable_assignment)
@@ -247,85 +214,67 @@ entity MyModule is port(
               (directive_body)
               (directive_body))
             (if_conditional_analysis
-              (IF)
               (conditional_analysis_expression
                 (conditional_analysis_relation
                   (library_function)
-                  (string_literal)))
-              (THEN))
+                  (string_literal))))
             (warning_directive
               (directive_warning)
               (string_literal))
-            (else_conditional_analysis
-              (ELSE))
+            (else_conditional_analysis)
             (error_directive
               (directive_error)
               (string_literal))
-            (end_conditional_analysis
-              (END)
-              (IF))
+            (end_conditional_analysis)
             (protect_directive
               (directive_protect)
               (directive_body)
               (directive_body))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type))
                   (range_constraint
-                    (RANGE)
                     (simple_range
                       (simple_expression
                         (decimal_integer))
-                      (TO)
                       (simple_expression
                         (decimal_integer)))))))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)
-                    (name_selector
-                      (parenthesis_group
-                        (association_or_range_list
-                          (simple_range
-                            (simple_expression
-                              (decimal_integer))
-                            (DOWNTO)
-                            (simple_expression
-                              (decimal_integer)))
-                          (simple_range
-                            (simple_expression
-                              (decimal_integer))
-                            (DOWNTO)
-                            (simple_expression
-                              (decimal_integer))))))))))
+                    (parenthesis_group
+                      (association_or_range_list
+                        (simple_range
+                          (simple_expression
+                            (decimal_integer))
+                          (simple_expression
+                            (decimal_integer)))
+                        (simple_range
+                          (simple_expression
+                            (decimal_integer))
+                          (simple_expression
+                            (decimal_integer)))))))))
             (interface_signal_declaration
-              (SIGNAL)
               (identifier_list
                 (identifier))
               (simple_mode_indication
-                (mode
-                  (IN))
+                (mode)
                 (subtype_indication
                   (resolution_indication
                     (name
                       (library_function)))
-                  (name
+                  type: (name
                     (library_type))))))))
       (end_entity
-        (END)
-        (ENTITY)
-        (identifier)))))
+        entity: (identifier)))))
 

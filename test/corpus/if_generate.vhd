@@ -18,7 +18,6 @@ end generate testGenerate;
       (label_declaration
         (label))
       (if_generate
-        (IF)
         (relational_expression
           (simple_expression
             (name
@@ -28,7 +27,6 @@ end generate testGenerate;
             (decimal_integer)))
         (generate_body
           (generate_direct_block
-            (GENERATE)
             (concurrent_simple_signal_assignment
               (name
                 (identifier))
@@ -44,7 +42,6 @@ end generate testGenerate;
                       (name
                         (identifier))))))))))
       (elsif_generate
-        (ELSIF)
         (relational_expression
           (simple_expression
             (name
@@ -54,7 +51,6 @@ end generate testGenerate;
             (decimal_integer)))
         (generate_body
           (generate_direct_block
-            (GENERATE)
             (concurrent_simple_signal_assignment
               (name
                 (identifier))
@@ -70,10 +66,8 @@ end generate testGenerate;
                       (name
                         (identifier))))))))))
       (else_generate
-        (ELSE)
         (generate_body
           (generate_direct_block
-            (GENERATE)
             (concurrent_simple_signal_assignment
               (name
                 (identifier))
@@ -89,7 +83,5 @@ end generate testGenerate;
                       (name
                         (identifier))))))))))
       (end_generate
-        (END)
-        (GENERATE)
         (label)))))
 
