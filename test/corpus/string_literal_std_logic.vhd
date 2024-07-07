@@ -26,17 +26,13 @@ end Behaviour;
 (design_file
   (design_unit
     (architecture_definition
-      (ARCHITECTURE)
-      (identifier)
-      (OF)
-      (name
+      architecture: (identifier)
+      entity: (name
         (identifier))
       (architecture_head
-        (IS)
         (subprogram_declaration
           (function_specification
-            (FUNCTION)
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -45,13 +41,11 @@ end Behaviour;
                     (library_constant))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (RETURN)
-            (name
+            type: (name
               (library_type)))))
       (concurrent_block
-        (BEGIN)
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -172,7 +166,8 @@ end Behaviour;
             (waveform_element
               (simple_expression
                 (string_literal)))))
-        (line_comment)
+        (line_comment
+          (comment_content))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -181,8 +176,8 @@ end Behaviour;
             (waveform_element
               (simple_expression
                 (string_literal))))))
-      (line_comment)
+      (line_comment
+        (comment_content))
       (end_architecture
-        (END)
-        (identifier)))))
+        architecture: (identifier)))))
 

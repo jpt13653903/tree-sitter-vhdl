@@ -126,11 +126,9 @@
             case DIRECTIVE_BODY:                           return "DIRECTIVE_BODY";
             case DIRECTIVE_CONSTANT_BUILTIN:               return "DIRECTIVE_CONSTANT_BUILTIN";
             case DIRECTIVE_ERROR:                          return "DIRECTIVE_ERROR";
-            case DIRECTIVE_NEWLINE:                        return "DIRECTIVE_NEWLINE";
             case DIRECTIVE_PROTECT:                        return "DIRECTIVE_PROTECT";
             case DIRECTIVE_WARNING:                        return "DIRECTIVE_WARNING";
-
-            case DIRECTIVE_END_MARKER:                     return "DIRECTIVE_END_MARKER";
+            case DIRECTIVE_NEWLINE:                        return "DIRECTIVE_NEWLINE";
 
             case DELIMITER_GRAVE_ACCENT:                   return "DELIMITER_GRAVE_ACCENT";
             case DELIMITER_BOX:                            return "DELIMITER_BOX";
@@ -149,8 +147,10 @@
             case TOKEN_BIT_STRING_BASE:                    return "TOKEN_BIT_STRING_BASE";
             case TOKEN_BIT_STRING_VALUE:                   return "TOKEN_BIT_STRING_VALUE";
             case TOKEN_OPERATOR_SYMBOL:                    return "TOKEN_OPERATOR_SYMBOL";
-            case TOKEN_LINE_COMMENT:                       return "TOKEN_LINE_COMMENT";
-            case TOKEN_BLOCK_COMMENT:                      return "TOKEN_BLOCK_COMMENT";
+            case TOKEN_LINE_COMMENT_START:                 return "TOKEN_LINE_COMMENT_START";
+            case TOKEN_BLOCK_COMMENT_START:                return "TOKEN_BLOCK_COMMENT_START";
+            case TOKEN_BLOCK_COMMENT_END:                  return "TOKEN_BLOCK_COMMENT_END";
+            case TOKEN_COMMENT_CONTENT:                    return "TOKEN_COMMENT_CONTENT";
 
             case TOKEN_END_MARKER:                         return "TOKEN_END_MARKER";
 
@@ -207,16 +207,17 @@ bool can_be_identifier(Scanner* scanner, TokenType type)
         return can_start_identifier(type);
     }else{
         return (type == IDENTIFIER) ||
-               (type >  RESERVED_END_MARKER && type < DIRECTIVE_END_MARKER) ||
-               (type >  TOKEN_END_MARKER    && type < ERROR_SENTINEL);
+               (type >= DIRECTIVE_BODY   && type <= DIRECTIVE_WARNING) ||
+               (type >  TOKEN_END_MARKER && type <  ERROR_SENTINEL);
     }
 }
 //------------------------------------------------------------------------------
 
 bool can_start_identifier(TokenType type)
 {
-    return (type >= IDENTIFIER       && type < DIRECTIVE_END_MARKER) ||
-           (type >  TOKEN_END_MARKER && type < ERROR_SENTINEL      ) ||
+    return (type >= IDENTIFIER       && type <  RESERVED_END_MARKER) ||
+           (type >= DIRECTIVE_BODY   && type <= DIRECTIVE_WARNING  ) ||
+           (type >  TOKEN_END_MARKER && type <  ERROR_SENTINEL     ) ||
            (type == IDENTIFIER_EXPECTING_LETTER);
 }
 //------------------------------------------------------------------------------

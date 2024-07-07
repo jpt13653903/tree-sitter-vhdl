@@ -16,43 +16,36 @@ end EXAMPLE;
 --------------------------------------------------------------------------------
 
 (design_file
-  (block_comment)
+  (block_comment
+    (comment_content))
   (design_unit
     (architecture_definition
-      (ARCHITECTURE)
-      (identifier)
-      (OF)
-      (name
-      (identifier))
+      architecture: (identifier)
+      entity: (name
+        (identifier))
     (architecture_head
-      (IS)
       (subtype_declaration
-        (SUBTYPE)
-        (identifier)
-        (IS)
+        type: (identifier)
         (subtype_indication
-          (name
-          (library_type))
+          type: (name
+            (library_type))
         (range_constraint
-          (RANGE)
           (simple_range
             (simple_expression
               (decimal_integer))
-            (TO)
             (simple_expression
               (decimal_integer)))))))
     (concurrent_block
-      (BEGIN)
       (concurrent_simple_signal_assignment
         (name
-        (identifier))
+          (identifier))
       (signal_assignment)
       (waveform
         (waveform_element
           (simple_expression
             (decimal_integer))))))
-    (line_comment)
+    (line_comment
+      (comment_content))
     (end_architecture
-      (END)
-      (identifier)))))
+      architecture: (identifier)))))
 

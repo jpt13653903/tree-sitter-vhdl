@@ -47,6 +47,7 @@ end package body interfaces;
 --------------------------------------------------------------------------------
 
 entity Processor is
+  generic(CLK_FREQ : integer);
   port(
     clk, rst : in   std_logic;
     adc_data : view streaming_slave;

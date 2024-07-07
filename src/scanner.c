@@ -30,6 +30,7 @@
 
 typedef struct ScannerTag{
     bool      is_in_directive;
+    bool      is_block_comment; // else line comment
     TokenType bit_string_base;
     int       base;
 } Scanner;
@@ -101,18 +102,24 @@ void tree_sitter_vhdl_external_scanner_deserialize(Scanner* scanner, const char*
 }
 //------------------------------------------------------------------------------
 
-static void skip_whitespace(Scanner* scanner, TSLexer* lexer)
+static bool is_whitespace(int32_t character)
 {
-    if(scanner->is_in_directive){
-        while(lexer->lookahead == ' ' || lexer->lookahead == '\t'){
-            debug("Skipping whitespace");
-            lexer->advance(lexer, true);
+    return character == ' '  || character == '\t' ||
+           character == '\n' || character == '\r';
+}
+//------------------------------------------------------------------------------
+
+static void skip_whitespace(TSLexer* lexer, bool skip_newline, bool discard)
+{
+    if(skip_newline){
+        while(is_whitespace(lexer->lookahead)){
+            debug("Skipping whitespace and newlines");
+            lexer->advance(lexer, discard);
         }
     }else{
-        while(lexer->lookahead == ' '  || lexer->lookahead == '\t' ||
-              lexer->lookahead == '\n' || lexer->lookahead == '\r' ){
-            debug("Skipping whitespace and newlines");
-            lexer->advance(lexer, true);
+        while(lexer->lookahead == ' ' || lexer->lookahead == '\t'){
+            debug("Skipping whitespace");
+            lexer->advance(lexer, discard);
         }
     }
 }
@@ -270,10 +277,30 @@ static void finish_line_comment(TSLexer* lexer)
         }
         lexer->advance(lexer, false);
     }
+    lexer->mark_end(lexer);
 }
 //------------------------------------------------------------------------------
 
-static bool finish_block_comment(TSLexer* lexer)
+static void finish_block_comment(TSLexer* lexer)
+{
+    while(!lexer->eof(lexer)){
+        if(lexer->lookahead == '*'){
+            lexer->advance(lexer, false);
+            if(lexer->lookahead == '/') return;
+            lexer->mark_end(lexer);
+
+        }else if(is_whitespace(lexer->lookahead)){
+            lexer->advance(lexer, false);
+
+        }else{
+            lexer->advance(lexer, false);
+            lexer->mark_end(lexer);
+        }
+    }
+}
+//------------------------------------------------------------------------------
+
+static bool finish_block_comment_end(TSLexer* lexer)
 {
     while(!lexer->eof(lexer)){
         if(lexer->lookahead == '*'){
@@ -288,6 +315,14 @@ static bool finish_block_comment(TSLexer* lexer)
         }
     }
     return false;
+}
+//------------------------------------------------------------------------------
+
+static void finish_comment_content(TSLexer* lexer, bool is_block_comment)
+{
+    lexer->mark_end(lexer);
+    if(is_block_comment) finish_block_comment(lexer);
+    else                 finish_line_comment(lexer);
 }
 //------------------------------------------------------------------------------
 
@@ -388,8 +423,6 @@ static bool parse_base_literal(TSLexer* lexer, int base)
 
 static bool parse_digit_based_literal(Scanner* scanner, TSLexer* lexer)
 {
-    TokenType type;
-
     lexer->result_symbol = TOKEN_DECIMAL_INTEGER;
 
     scanner->base = parse_integer(lexer);
@@ -462,7 +495,23 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
         }
     #endif
 
-    skip_whitespace(scanner, lexer);
+    if(!valid_symbols[ERROR_SENTINEL] && valid_symbols[TOKEN_COMMENT_CONTENT]){
+        finish_comment_content(lexer, scanner->is_block_comment);
+        lexer->result_symbol = TOKEN_COMMENT_CONTENT;
+        debug("Returning type TOKEN_COMMENT_CONTENT");
+        return true;
+
+    }else if(!valid_symbols[ERROR_SENTINEL] && valid_symbols[TOKEN_BLOCK_COMMENT_END]){
+        if(finish_block_comment_end(lexer)){
+            lexer->result_symbol = TOKEN_BLOCK_COMMENT_END;
+            debug("Returning type TOKEN_BLOCK_COMMENT_END");
+            return true;
+        }
+        debug("Returning false");
+        return false;
+    }
+
+    skip_whitespace(lexer, !scanner->is_in_directive, true);
 
     if(valid_symbols[END_OF_FILE] && lexer->eof(lexer)){
         lexer->result_symbol = END_OF_FILE;
@@ -560,19 +609,24 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
 
     while(types){
         if(types->type == LINE_COMMENT_START){
-            if(valid_symbols[TOKEN_LINE_COMMENT]){
-                finish_line_comment(lexer);
-                lexer->result_symbol = TOKEN_LINE_COMMENT;
-                debug("Returning type TOKEN_LINE_COMMENT");
+            if(valid_symbols[TOKEN_LINE_COMMENT_START]){
+                scanner->is_block_comment = false;
+                skip_whitespace(lexer, false, false);
+                lexer->mark_end(lexer);
+                lexer->result_symbol = TOKEN_LINE_COMMENT_START;
+                debug("Returning type TOKEN_LINE_COMMENT_START");
                 return true;
             }
             debug("Returning false");
             return false;
 
         }else if(types->type == BLOCK_COMMENT_START){
-            if(valid_symbols[TOKEN_BLOCK_COMMENT] && finish_block_comment(lexer)){
-                lexer->result_symbol = TOKEN_BLOCK_COMMENT;
-                debug("Returning type TOKEN_BLOCK_COMMENT");
+            if(valid_symbols[TOKEN_BLOCK_COMMENT_START]){
+                scanner->is_block_comment = true;
+                skip_whitespace(lexer, true, false);
+                lexer->mark_end(lexer);
+                lexer->result_symbol = TOKEN_BLOCK_COMMENT_START;
+                debug("Returning type TOKEN_BLOCK_COMMENT_START");
                 return true;
             }
             debug("Returning false");
