@@ -777,7 +777,7 @@ end architecture DataFlow;
           (process_head
             (constant_declaration
               (identifier_list
-                (identifier))
+                constant: (identifier))
               (subtype_indication
                 type: (name
                   (library_type)))

@@ -557,7 +557,7 @@ module.exports = grammar({
             ),
 
             constant_declaration: $ => seq(
-                alias($.CONSTANT, "constant"), $.identifier_list, ":", $.subtype_indication, optional($.initialiser), ";"
+                alias($.CONSTANT, "constant"), alias($.constant_identifier_list, $.identifier_list), ":", $.subtype_indication, optional($.initialiser), ";"
             ),
 
             signal_declaration: $ => seq(
@@ -1539,6 +1539,26 @@ module.exports = grammar({
             ),
 
         // Interface Declaration
+            generic_interface_list: $ => seq(
+                $._generic_interface_declaration, repeat(seq(";", $._generic_interface_declaration)), optional(";")
+            ),
+
+            _generic_interface_declaration: $ => choice(
+                alias($.generic_interface_declaration, $.interface_declaration),
+                $.interface_constant_declaration,
+                $.interface_signal_declaration,
+                $.interface_variable_declaration,
+                $.interface_file_declaration,
+
+                $.interface_type_declaration,
+                $.interface_subprogram_declaration,
+                $.interface_package_declaration
+            ),
+
+            generic_interface_declaration: $ => seq(
+                alias($.generic_identifier_list, $.identifier_list), ":", $._mode_indication
+            ),
+
             interface_list: $ => seq(
                 $._interface_declaration, repeat(seq(";", $._interface_declaration)), optional(";")
             ),
@@ -1560,7 +1580,7 @@ module.exports = grammar({
             ),
 
             interface_constant_declaration: $ => seq(
-                alias($.CONSTANT, "constant"), $.identifier_list, ":", $._mode_indication
+                alias($.CONSTANT, "constant"), alias($.constant_identifier_list, $.identifier_list), ":", $._mode_indication
             ),
 
             interface_signal_declaration: $ => seq(
@@ -1630,6 +1650,14 @@ module.exports = grammar({
             _designator: $ => choice(
                 $._identifier,
                 $.operator_symbol
+            ),
+
+            generic_identifier_list: $ => seq(
+                field("generic", $._identifier), repeat(seq(",", field("generic", $._identifier)))
+            ),
+
+            constant_identifier_list: $ => seq(
+                field("constant", $._identifier), repeat(seq(",", field("constant", $._identifier)))
             ),
 
             identifier_list: $ => seq(
@@ -1779,11 +1807,11 @@ module.exports = grammar({
             ),
 
             generic_clause: $ => seq(
-                alias($.GENERIC, "generic"), "(", $.interface_list, ")", ";"
+                alias($.GENERIC, "generic"), "(", alias($.generic_interface_list, $.interface_list), ")", ";"
             ),
 
             subprogram_header: $ => seq(
-                alias($.GENERIC, "generic"), "(", $.interface_list, ")", optional($.generic_map_aspect)
+                alias($.GENERIC, "generic"), "(", alias($.generic_interface_list, $.interface_list), ")", optional($.generic_map_aspect)
             ),
 
             _subprogram_specification: $ => choice(

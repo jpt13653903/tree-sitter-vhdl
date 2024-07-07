@@ -4428,10 +4428,55 @@
   {
     "type": "identifier_list",
     "named": true,
-    "fields": {},
+    "fields": {
+      "constant": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_function",
+            "named": true
+          },
+          {
+            "type": "library_type",
+            "named": true
+          }
+        ]
+      },
+      "generic": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_function",
+            "named": true
+          },
+          {
+            "type": "library_type",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "identifier",

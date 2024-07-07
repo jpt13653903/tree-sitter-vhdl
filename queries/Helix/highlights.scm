@@ -337,6 +337,7 @@
 (_ procedure: (_) @function.method)
 (_ attribute: (_) @attribute)
 (_ constant: (_) @constant)
+(_ generic: (_) @variable.parameter)
 
 (_ view: (name (_)) @type)
 (_ type: (name (_)) @type)

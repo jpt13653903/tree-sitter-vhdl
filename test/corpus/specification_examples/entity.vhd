@@ -58,7 +58,7 @@ end entity AndGate;
           (interface_list
             (interface_declaration
               (identifier_list
-                (identifier))
+                generic: (identifier))
               (simple_mode_indication
                 (subtype_indication
                   type: (name
@@ -201,7 +201,7 @@ end ROM;
             (ALL)))
         (constant_declaration
           (identifier_list
-            (identifier))
+            constant: (identifier))
           (subtype_indication
             type: (name
               (identifier)))
@@ -361,7 +361,7 @@ end;
                     (library_type)))))))
         (constant_declaration
           (identifier_list
-            (identifier))
+            constant: (identifier))
           (subtype_indication
             type: (name
               (library_type)))
@@ -373,7 +373,7 @@ end;
                 unit: (library_constant_unit)))))
         (constant_declaration
           (identifier_list
-            (identifier))
+            constant: (identifier))
           (subtype_indication
             type: (name
               (library_type)))
