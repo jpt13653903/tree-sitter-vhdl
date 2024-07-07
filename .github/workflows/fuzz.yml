@@ -6,10 +6,10 @@ on:
       - master
       - develop
     paths:
-      - src/scanner.c
+      - src/**
   pull_request:
     paths:
-      - src/scanner.c
+      - src/**
 
 jobs:
   fuzz:
