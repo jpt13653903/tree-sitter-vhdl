@@ -240,8 +240,8 @@ module.exports = grammar({
             ),
 
             _logical_name: $ => choice(
-                $.library_namespace,
-                $._identifier
+                field("library", $.library_namespace),
+                field("library", $._identifier)
             ),
 
             selected_name_list: $ => seq(
@@ -265,7 +265,7 @@ module.exports = grammar({
             ),
 
             entity_declaration: $ => seq(
-                alias($.ENTITY, "entity"), $._identifier, $.entity_head, optional($.entity_body), $.end_entity, ";"
+                alias($.ENTITY, "entity"), field("entity", $._identifier), $.entity_head, optional($.entity_body), $.end_entity, ";"
             ),
 
             entity_head: $ => seq(
@@ -281,11 +281,11 @@ module.exports = grammar({
             ),
 
             end_entity: $ => seq(
-                alias($.END, "end"), optional(alias($.ENTITY, "entity")), optional($._identifier)
+                alias($.END, "end"), optional(alias($.ENTITY, "entity")), optional(field("entity", $._identifier))
             ),
 
             configuration_declaration: $ => seq(
-                alias($.CONFIGURATION, "configuration"), $._identifier, alias($.OF, "of"), $.name, $.configuration_head, $.block_configuration, $.end_configuration, ";"
+                alias($.CONFIGURATION, "configuration"), field("configuration", $._identifier), alias($.OF, "of"), field("entity", $.name), $.configuration_head, $.block_configuration, $.end_configuration, ";"
             ),
 
             configuration_head: $ => seq(
@@ -293,11 +293,11 @@ module.exports = grammar({
             ),
 
             end_configuration: $ => seq(
-                alias($.END, "end"), optional(alias($.CONFIGURATION, "configuration")), optional($._identifier)
+                alias($.END, "end"), optional(alias($.CONFIGURATION, "configuration")), optional(field("configuration", $._identifier))
             ),
 
             package_declaration: $ => seq(
-                alias($.PACKAGE, "package"), $._identifier, $.package_declaration_body, $.end_package, ";"
+                alias($.PACKAGE, "package"), field("package", $._identifier), $.package_declaration_body, $.end_package, ";"
             ),
 
             package_declaration_body: $ => seq(
@@ -305,15 +305,15 @@ module.exports = grammar({
             ),
 
             end_package: $ => seq(
-                alias($.END, "end"), optional(alias($.PACKAGE, "package")), optional($._identifier)
+                alias($.END, "end"), optional(alias($.PACKAGE, "package")), optional(field("package", $._identifier))
             ),
 
             package_instantiation_declaration: $ => seq(
-                alias($.PACKAGE, "package"), $._identifier, alias($.IS, "is"), alias($.NEW, "new"), $.name, optional($.generic_map_aspect), ";"
+                alias($.PACKAGE, "package"), field("package", $._identifier), alias($.IS, "is"), alias($.NEW, "new"), $.name, optional($.generic_map_aspect), ";"
             ),
 
             interface_package_declaration: $ => seq(
-                alias($.PACKAGE, "package"), $._identifier, alias($.IS, "is"), alias($.NEW, "new"), $.name, $._interface_package_generic_map_aspect
+                alias($.PACKAGE, "package"), field("package", $._identifier), alias($.IS, "is"), alias($.NEW, "new"), $.name, $._interface_package_generic_map_aspect
             ),
 
             context_declaration: $ => seq(
@@ -329,7 +329,7 @@ module.exports = grammar({
             ),
 
             architecture_definition: $ => seq(
-                alias($.ARCHITECTURE, "architecture"), $._identifier, alias($.OF, "of"), $.name, $.architecture_head, $.concurrent_block, $.end_architecture, ";"
+                alias($.ARCHITECTURE, "architecture"), field("architecture", $._identifier), alias($.OF, "of"), field("entity", $.name), $.architecture_head, $.concurrent_block, $.end_architecture, ";"
             ),
 
             architecture_head: $ => seq(
@@ -337,11 +337,11 @@ module.exports = grammar({
             ),
 
             end_architecture: $ => seq(
-                alias($.END, "end"), optional(alias($.ARCHITECTURE, "architecture")), optional($._identifier)
+                alias($.END, "end"), optional(alias($.ARCHITECTURE, "architecture")), optional(field("architecture", $._identifier))
             ),
 
             package_definition: $ => seq(
-                alias($.PACKAGE, "package"), alias($.BODY, "body"), $._identifier, $.package_definition_body, $.end_package_body, ";"
+                alias($.PACKAGE, "package"), alias($.BODY, "body"), field("package", $._identifier), $.package_definition_body, $.end_package_body, ";"
             ),
 
             package_definition_body: $ => seq(
@@ -349,7 +349,7 @@ module.exports = grammar({
             ),
 
             end_package_body: $ => seq(
-                alias($.END, "end"), optional(seq(alias($.PACKAGE, "package"), alias($.BODY, "body"))), optional($._identifier)
+                alias($.END, "end"), optional(seq(alias($.PACKAGE, "package"), alias($.BODY, "body"))), optional(field("package", $._identifier))
             ),
 
         // Declaration Item Lists
@@ -526,23 +526,26 @@ module.exports = grammar({
             ),
 
             subprogram_end: $ => seq(
-                alias($.END, "end"), optional(choice(alias($.PROCEDURE, "procedure"), alias($.FUNCTION, "function"))), optional($._designator)
+                alias($.END, "end"), optional(choice(alias($.PROCEDURE, "procedure"), alias($.FUNCTION, "function"))), optional(field("function", $._designator))
             ),
 
             subprogram_instantiation_declaration: $ => seq(
-                choice(alias($.PROCEDURE, "procedure"), alias($.FUNCTION, "function")), $._designator, alias($.IS, "is"), alias($.NEW, "new"), $.name, optional($.signature), optional($.generic_map_aspect), ";"
+                choice(
+                    seq(alias($.PROCEDURE, "procedure"), field("procedure", $._designator)),
+                    seq(alias($.FUNCTION, "function"), field("function", $._designator))
+                ), alias($.IS, "is"), alias($.NEW, "new"), $.name, optional($.signature), optional($.generic_map_aspect), ";"
             ),
 
             type_declaration: $ => seq(
-                alias($.TYPE, "type"), $._identifier, optional(seq(alias($.IS, "is"), $._type_definition)), ";"
+                alias($.TYPE, "type"), field("type", $._identifier), optional(seq(alias($.IS, "is"), $._type_definition)), ";"
             ),
 
             subtype_declaration: $ => seq(
-                alias($.SUBTYPE, "subtype"), $._identifier, alias($.IS, "is"), $.subtype_indication, ";"
+                alias($.SUBTYPE, "subtype"), field("type", $._identifier), alias($.IS, "is"), $.subtype_indication, ";"
             ),
 
             mode_view_declaration: $ => seq(
-                alias($.VIEW, "view"), $._identifier, alias($.OF, "of"), $.subtype_indication, $.mode_view_body, $.end_view, ";"
+                alias($.VIEW, "view"), field("view", $._identifier), alias($.OF, "of"), $.subtype_indication, $.mode_view_body, $.end_view, ";"
             ),
 
             mode_view_body: $ => seq(
@@ -550,7 +553,7 @@ module.exports = grammar({
             ),
 
             end_view: $ => seq(
-                alias($.END, "end"), alias($.VIEW, "view"), optional($._identifier)
+                alias($.END, "end"), alias($.VIEW, "view"), optional(field("view", $._identifier))
             ),
 
             constant_declaration: $ => seq(
@@ -587,7 +590,7 @@ module.exports = grammar({
             ),
 
             component_declaration: $ => seq(
-                alias($.COMPONENT, "component"), $._identifier, optional($.component_body), $.end_component, ";"
+                alias($.COMPONENT, "component"), field("component", $._identifier), optional($.component_body), $.end_component, ";"
             ),
 
             component_body: $ => choice(
@@ -597,11 +600,11 @@ module.exports = grammar({
             ),
 
             end_component: $ => seq(
-                alias($.END, "end"), optional(alias($.COMPONENT, "component")), optional($._identifier)
+                alias($.END, "end"), optional(alias($.COMPONENT, "component")), optional(field("component", $._identifier))
             ),
 
             attribute_declaration: $ => seq(
-                alias($.ATTRIBUTE, "attribute"), $._identifier, ":", $.name, ";"
+                alias($.ATTRIBUTE, "attribute"), field("attribute", $._identifier), ":", field("type", $.name), ";"
             ),
 
             attribute_specification: $ => seq(
@@ -635,7 +638,7 @@ module.exports = grammar({
             ),
 
             interface_type_declaration: $ => seq(
-                alias($.TYPE, "type"), $._identifier, optional(seq(alias($.IS, "is"), $._incomplete_type_definition))
+                alias($.TYPE, "type"), field("type", $._identifier), optional(seq(alias($.IS, "is"), $._incomplete_type_definition))
             ),
 
             _incomplete_type_definition: $ => choice(
@@ -690,7 +693,7 @@ module.exports = grammar({
             )),
 
             index_subtype_definition: $ => seq(
-                $.name, alias($.RANGE, "range"), alias($.box, "<>")
+                field("type", $.name), alias($.RANGE, "range"), alias($.box, "<>")
             ),
 
             access_type_definition: $ => seq(
@@ -702,15 +705,15 @@ module.exports = grammar({
             ),
 
             file_type_definition: $ => seq(
-                alias($.FILE, "file"), alias($.OF, "of"), $.name
+                alias($.FILE, "file"), alias($.OF, "of"), field("type", $.name)
             ),
 
             file_incomplete_type_definition: $ => seq(
-                alias($.FILE, "file"), alias($.OF, "of"), $.incomplete_type_mark
+                alias($.FILE, "file"), alias($.OF, "of"), $._incomplete_type_mark
             ),
 
             subtype_indication: $ => seq(
-                optional($.resolution_indication), $.name, optional($.range_constraint)
+                optional($.resolution_indication), field("type", $.name), optional($.range_constraint)
             ),
 
             resolution_indication: $ => choice(
@@ -736,8 +739,8 @@ module.exports = grammar({
                 $.unspecified_type_indication
             ),
 
-            incomplete_type_mark: $ => choice(
-                $.name,
+            _incomplete_type_mark: $ => choice(
+                field("type", $.name),
                 $.unspecified_type_indication
             ),
 
@@ -869,13 +872,9 @@ module.exports = grammar({
             ),
 
             instantiated_unit: $ => choice(
-                seq(alias($.COMPONENT, "component"), $.name), // Optional "component" covered by procedure call
-                seq(alias($.ENTITY, "entity"), optional(seq($.library_namespace, ".")), $.name, optional($.architecture_identifier)),
-                seq(alias($.CONFIGURATION, "configuration"), $.name)
-            ),
-
-            architecture_identifier: $ => seq(
-                "(", $._identifier, ")"
+                seq(alias($.COMPONENT, "component"), field("component", $.name)), // Optional "component" covered by procedure call
+                seq(alias($.ENTITY, "entity"), optional(seq(field("library", $.library_namespace), ".")), field("entity", $.name), optional(seq("(", field("architecture", $._identifier), ")"))),
+                seq(alias($.CONFIGURATION, "configuration"), field("configuration", $.name))
             ),
 
             process_statement: $ => seq(
@@ -1213,7 +1212,7 @@ module.exports = grammar({
             ),
 
             name: $ => prec.left(21, seq(
-                seq($._direct_name, repeat($.name_selector)),
+                seq($._direct_name, repeat($._name_selector)),
             )),
 
             _direct_name: $ => prec.left(choice(
@@ -1253,7 +1252,7 @@ module.exports = grammar({
                 $.library_type,
             ),
 
-            name_selector: $ => choice(
+            _name_selector: $ => choice(
                 $.function_call,
                 $.parenthesis_group,
                 $.attribute,
@@ -1344,21 +1343,21 @@ module.exports = grammar({
             ),
 
             _attribute_designator: $ => choice(
-                $._attribute,
-                $.attribute_function,
-                $.attribute_impure_function,
-                $.attribute_mode_view,
-                $.attribute_pure_function,
-                $.attribute_range,
-                $.attribute_signal,
-                $.attribute_subtype,
-                $.attribute_type,
-                $.attribute_value,
-                $.library_attribute
+                field("attribute", $._attribute),
+                field("attribute", $.attribute_function),
+                field("attribute", $.attribute_impure_function),
+                field("attribute", $.attribute_mode_view),
+                field("attribute", $.attribute_pure_function),
+                field("attribute", $.attribute_range),
+                field("attribute", $.attribute_signal),
+                field("attribute", $.attribute_subtype),
+                field("attribute", $.attribute_type),
+                field("attribute", $.attribute_value),
+                field("attribute", $.library_attribute)
             ),
 
             signature: $ => seq(
-                "[", optional(seq($.name, repeat(seq(",", $.name)))), optional(seq(alias($.RETURN, "return"), $.name)), "]"
+                "[", optional(seq(field("type", $.name), repeat(seq(",", field("type", $.name))))), optional(seq(alias($.RETURN, "return"), field("type", $.name))), "]"
             ),
 
             selection: $ => seq(
@@ -1373,7 +1372,7 @@ module.exports = grammar({
             ),
 
             _literal: $ => choice(
-                seq($._abstract_literal, optional($._unit)),
+                seq($._abstract_literal, optional(field("unit", $._unit))),
                 $.bit_string_literal,
                 $.string_literal,
                 $.string_literal_std_logic,
@@ -1582,19 +1581,19 @@ module.exports = grammar({
             ),
 
             procedure_specification: $ => prec.left(seq(
-                alias($.PROCEDURE, "procedure"), $._designator, optional($.subprogram_header), optional($.parameter_list_specification)
+                alias($.PROCEDURE, "procedure"), field("procedure", $._designator), optional($.subprogram_header), optional($.parameter_list_specification)
             )),
 
             interface_procedure_specification: $ => seq(
-                alias($.PROCEDURE, "procedure"), $._designator, optional($.parameter_list_specification)
+                alias($.PROCEDURE, "procedure"), field("procedure", $._designator), optional($.parameter_list_specification)
             ),
 
             function_specification: $ => seq(
-                optional(choice(alias($.PURE, "pure"), alias($.IMPURE, "impure"))), alias($.FUNCTION, "function"), $._designator, optional($.subprogram_header), optional($.parameter_list_specification), alias($.RETURN, "return"), optional(seq($._identifier, alias($.OF, "of"))), $.name
+                optional(choice(alias($.PURE, "pure"), alias($.IMPURE, "impure"))), alias($.FUNCTION, "function"), field("function", $._designator), optional($.subprogram_header), optional($.parameter_list_specification), alias($.RETURN, "return"), optional(seq($._identifier, alias($.OF, "of"))), field("type", $.name)
             ),
 
             interface_function_specification: $ => seq(
-                optional(choice(alias($.PURE, "pure"), alias($.IMPURE, "impure"))), alias($.FUNCTION, "function"), $._designator, optional($.parameter_list_specification), alias($.RETURN, "return"), $.name
+                optional(choice(alias($.PURE, "pure"), alias($.IMPURE, "impure"))), alias($.FUNCTION, "function"), field("function", $._designator), optional($.parameter_list_specification), alias($.RETURN, "return"), field("type", $.name)
             ),
 
             _interface_package_generic_map_aspect: $ => choice(
@@ -1652,11 +1651,11 @@ module.exports = grammar({
             ),
 
             record_mode_view_indication: $ => seq(
-                alias($.VIEW, "view"), $.name, optional(seq(alias($.OF, "of"), $.subtype_indication))
+                alias($.VIEW, "view"), field("view", $.name), optional(seq(alias($.OF, "of"), $.subtype_indication))
             ),
 
             array_mode_view_indication: $ => seq(
-                alias($.VIEW, "view"), "(", $.name, ")", optional(seq(alias($.OF, "of"), $.subtype_indication))
+                alias($.VIEW, "view"), "(", field("view", $.name), ")", optional(seq(alias($.OF, "of"), $.subtype_indication))
             ),
 
             mode_view_element_definition: $ => seq(
@@ -1678,11 +1677,11 @@ module.exports = grammar({
             ),
 
             element_record_mode_view_indication: $ => seq(
-                alias($.VIEW, "view"), $.name
+                alias($.VIEW, "view"), field("view", $.name)
             ),
 
             element_array_mode_view_indication: $ => seq(
-                alias($.VIEW, "view"), "(", $.name, ")"
+                alias($.VIEW, "view"), "(", field("view", $.name), ")"
             ),
 
             mode: $ => choice(
@@ -1711,7 +1710,7 @@ module.exports = grammar({
             ),
 
             guarded_signal_specification: $ => seq(
-                $.signal_list, ":", $.name
+                $.signal_list, ":", field("type", $.name)
             ),
 
             signal_list: $ => choice(
@@ -2002,8 +2001,8 @@ module.exports = grammar({
             ),
 
             entity_aspect: $ => choice(
-                seq(alias($.ENTITY, "entity"), $.name, optional(seq("(", $._identifier, ")"))),
-                seq(alias($.CONFIGURATION, "configuration"), $.name),
+                seq(alias($.ENTITY, "entity"), field("entity", $.name), optional(seq("(", field("architecture", $._identifier), ")"))),
+                seq(alias($.CONFIGURATION, "configuration"), field("configuration", $.name)),
                 $.OPEN
             ),
 

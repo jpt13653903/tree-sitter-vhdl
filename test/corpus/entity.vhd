@@ -38,7 +38,7 @@ entity MyModule is port(
 (design_file
   (design_unit
     (entity_declaration
-      (identifier)
+      entity: (identifier)
       (entity_head
         (port_clause
           (interface_list
@@ -49,7 +49,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (interface_signal_declaration
               (identifier_list
@@ -57,7 +57,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (interface_signal_declaration
               (identifier_list
@@ -65,7 +65,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (interface_signal_declaration
               (identifier_list
@@ -73,17 +73,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
-                    (library_type)))))
-            (line_comment
-              (comment_content))
-            (interface_signal_declaration
-              (identifier_list
-                (identifier))
-              (simple_mode_indication
-                (mode)
-                (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
@@ -93,7 +83,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
@@ -103,7 +93,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
@@ -113,7 +103,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
@@ -123,7 +113,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
@@ -133,7 +123,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
@@ -143,7 +133,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
@@ -153,7 +143,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (line_comment
               (comment_content))
@@ -163,7 +153,17 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
+                    (library_type)))))
+            (line_comment
+              (comment_content))
+            (interface_signal_declaration
+              (identifier_list
+                (identifier))
+              (simple_mode_indication
+                (mode)
+                (subtype_indication
+                  type: (name
                     (library_type)))
                 (initialiser
                   (variable_assignment)
@@ -178,7 +178,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))
                 (initialiser
                   (variable_assignment)
@@ -193,7 +193,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))
                 (initialiser
                   (variable_assignment)
@@ -236,7 +236,7 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type))
                   (range_constraint
                     (simple_range
@@ -250,21 +250,20 @@ entity MyModule is port(
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)
-                    (name_selector
-                      (parenthesis_group
-                        (association_or_range_list
-                          (simple_range
-                            (simple_expression
-                              (decimal_integer))
-                            (simple_expression
-                              (decimal_integer)))
-                          (simple_range
-                            (simple_expression
-                              (decimal_integer))
-                            (simple_expression
-                              (decimal_integer))))))))))
+                    (parenthesis_group
+                      (association_or_range_list
+                        (simple_range
+                          (simple_expression
+                            (decimal_integer))
+                          (simple_expression
+                            (decimal_integer)))
+                        (simple_range
+                          (simple_expression
+                            (decimal_integer))
+                          (simple_expression
+                            (decimal_integer)))))))))
             (interface_signal_declaration
               (identifier_list
                 (identifier))
@@ -274,8 +273,8 @@ entity MyModule is port(
                   (resolution_indication
                     (name
                       (library_function)))
-                  (name
+                  type: (name
                     (library_type))))))))
       (end_entity
-        (identifier)))))
+        entity: (identifier)))))
 

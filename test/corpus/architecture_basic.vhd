@@ -20,14 +20,14 @@ end EXAMPLE;
     (comment_content))
   (design_unit
     (architecture_definition
-      (identifier)
-      (name
+      architecture: (identifier)
+      entity: (name
         (identifier))
     (architecture_head
       (subtype_declaration
-        (identifier)
+        type: (identifier)
         (subtype_indication
-          (name
+          type: (name
             (library_type))
         (range_constraint
           (simple_range
@@ -47,5 +47,5 @@ end EXAMPLE;
     (line_comment
       (comment_content))
     (end_architecture
-      (identifier)))))
+      architecture: (identifier)))))
 

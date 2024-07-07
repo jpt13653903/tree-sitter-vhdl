@@ -300,24 +300,9 @@
 
 (library_constant_std_logic) @constant.builtin
 
-[
-  (attribute_function)
-  (attribute_impure_function)
-  (attribute_mode_view)
-  (attribute_pure_function)
-  (attribute_range)
-  (attribute_signal)
-  (attribute_subtype)
-  (attribute_type)
-  (attribute_value)
-  (library_attribute)
-] @attribute.builtin
-
 (library_constant) @constant.builtin
 
 (library_function) @function.builtin
-
-(library_type) @type.builtin
 
 (library_constant_boolean) @boolean
 
@@ -339,79 +324,56 @@
   "port" @constructor
   "map" @constructor)
 
-(subtype_indication
-  (name
-    (identifier))) @type
-
 (selection
   (identifier) @variable.member)
-
-(attribute_identifier) @attribute
-
-(library_namespace) @module.builtin
-
-(library_clause
-  (logical_name_list
-    (identifier) @module))
 
 (use_clause
   (selected_name
     .
     (identifier) @module))
 
-(instantiated_unit
-  (name
-    .
-    (identifier) @module))
+(_ view: (_) @type)
+(_ type: (_) @type)
+(_ library: (_) @module)
+(_ package: (_) @module)
+(_ entity: (_) @module)
+(_ component: (_) @module)
+(_ configuration: (_) @property)
+(_ architecture: (_) @property)
+(_ function: (_) @function)
+(_ procedure: (_) @function.method)
+(_ attribute: (_) @attribute)
 
-(function_specification
-  (operator_symbol) @function.builtin)
+(_ view: (name (_)) @type)
+(_ type: (name (_)) @type)
+(_ entity: (name (_)) @module)
+(_ component: (name (_)) @module)
+(_ configuration: (name (_)) @module)
 
-(function_specification
-  (identifier) @function)
+(library_type) @type.builtin
 
-(procedure_specification
-  (identifier) @function.method)
+[
+  (attribute_function)
+  (attribute_impure_function)
+  (attribute_mode_view)
+  (attribute_pure_function)
+  (attribute_range)
+  (attribute_signal)
+  (attribute_subtype)
+  (attribute_type)
+  (attribute_value)
+  (library_attribute)
+] @attribute.builtin
+
+(library_namespace) @module.builtin
+
+(subtype_declaration
+  (identifier) @type.definition)
 
 (type_declaration
   (identifier) @type.definition)
 
 (mode_view_declaration
   (identifier) @type.definition)
-
-(record_mode_view_indication
-  (name
-    (identifier) @type))
-
-(package_declaration
-  (identifier) @module)
-
-(package_definition
-  (identifier) @module)
-
-(end_package
-  (identifier) @module)
-
-(end_package_body
-  (identifier) @module)
-
-(entity_declaration
-  (identifier) @module)
-
-(end_entity
-  (identifier) @module)
-
-(architecture_definition
-  "architecture"
-  (identifier) @property
-  "of"
-  (name
-    (identifier) @module))
-
-(end_architecture
-  (identifier) @property)
-
-(subprogram_end
-  (identifier) @function)
 
 (ERROR) @error

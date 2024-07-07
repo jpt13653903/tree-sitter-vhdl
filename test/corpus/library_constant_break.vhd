@@ -13,8 +13,8 @@ end Behaviour;
 (design_file
   (design_unit
     (architecture_definition
-      (identifier)
-      (name
+      architecture: (identifier)
+      entity: (name
         (identifier))
       (architecture_head)
       (concurrent_block
@@ -27,9 +27,8 @@ end Behaviour;
               (simple_expression
                 (name
                   (library_constant)
-                  (name_selector
-                    (selection
-                      (identifier))))))))
+                  (selection
+                    (identifier)))))))
         (concurrent_simple_signal_assignment
           (name
             (identifier))
@@ -39,9 +38,8 @@ end Behaviour;
               (simple_expression
                 (name
                   (library_constant)
-                  (name_selector
-                    (selection
-                      (identifier)))))))))
+                  (selection
+                    (identifier))))))))
       (end_architecture
-        (identifier)))))
+        architecture: (identifier)))))
 

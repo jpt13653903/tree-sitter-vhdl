@@ -97,30 +97,30 @@ end architecture DataFlow;
   (design_unit
     (library_clause
       (logical_name_list
-        (library_namespace)))
+        library: (library_namespace)))
     (use_clause
       (selected_name
-        (library_namespace)
+        library: (library_namespace)
         (identifier)
         (ALL)))
     (library_clause
       (logical_name_list
-        (library_namespace)))
+        library: (library_namespace)))
     (use_clause
       (selected_name
-        (library_namespace)
+        library: (library_namespace)
         (identifier)
         (ALL)))
     (library_clause
       (logical_name_list
-        (library_namespace)))
+        library: (library_namespace)))
     (use_clause
       (selected_name
-        (library_namespace)
+        library: (library_namespace)
         (identifier)
         (ALL)))
     (entity_declaration
-      (identifier)
+      entity: (identifier)
       (entity_head
         (port_clause
           (interface_list
@@ -130,7 +130,7 @@ end architecture DataFlow;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (interface_declaration
               (identifier_list
@@ -138,16 +138,16 @@ end architecture DataFlow;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type))))))))
       (end_entity
-        (identifier))))
+        entity: (identifier))))
   (line_comment
     (comment_content))
   (design_unit
     (architecture_definition
-      (identifier)
-      (name
+      architecture: (identifier)
+      entity: (name
         (identifier))
       (architecture_head
         (signal_declaration
@@ -155,11 +155,11 @@ end architecture DataFlow;
             (identifier)
             (identifier))
           (subtype_indication
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -167,13 +167,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -181,13 +181,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -195,13 +195,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -209,13 +209,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -223,13 +223,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -237,13 +237,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -251,13 +251,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -265,13 +265,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -279,13 +279,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -293,13 +293,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -307,13 +307,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -321,13 +321,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -335,13 +335,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -349,13 +349,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -363,13 +363,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -377,13 +377,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -391,13 +391,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -405,13 +405,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -419,13 +419,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -433,13 +433,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -447,13 +447,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -461,13 +461,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -475,13 +475,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -489,13 +489,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -503,13 +503,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -517,13 +517,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -531,13 +531,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -545,13 +545,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -559,13 +559,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -573,13 +573,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -587,13 +587,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -601,13 +601,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -615,13 +615,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -629,13 +629,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -643,13 +643,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (operator_symbol)
+            function: (operator_symbol)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -657,13 +657,13 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type))))
         (subprogram_declaration
           (function_specification
-            (identifier)
+            function: (identifier)
             (parameter_list_specification
               (interface_list
                 (interface_declaration
@@ -671,17 +671,17 @@ end architecture DataFlow;
                     (identifier))
                   (simple_mode_indication
                     (subtype_indication
-                      (name
+                      type: (name
                         (library_type)))))))
-            (name
+            type: (name
               (library_type)))))
       (concurrent_block
         (component_instantiation_statement
           (label_declaration
             (label))
           (instantiated_unit
-            (library_namespace)
-            (name
+            library: (library_namespace)
+            entity: (name
               (identifier)))
           (port_map_aspect
             (association_list
@@ -779,7 +779,7 @@ end architecture DataFlow;
               (identifier_list
                 (identifier))
               (subtype_indication
-                (name
+                type: (name
                   (library_type)))
               (initialiser
                 (variable_assignment)
@@ -790,7 +790,7 @@ end architecture DataFlow;
               (identifier_list
                 (identifier))
               (subtype_indication
-                (name
+                type: (name
                   (library_type)))
               (initialiser
                 (variable_assignment)
@@ -808,14 +808,13 @@ end architecture DataFlow;
                           (simple_expression
                             (name
                               (library_function)
-                              (name_selector
-                                (parenthesis_group
-                                  (association_or_range_list
-                                    (association_element
-                                      (conditional_expression
-                                        (simple_expression
-                                          (name
-                                            (identifier)))))))))))))))
+                              (parenthesis_group
+                                (association_or_range_list
+                                  (association_element
+                                    (conditional_expression
+                                      (simple_expression
+                                        (name
+                                          (identifier))))))))))))))
                 (if_statement_body
                   (simple_waveform_assignment
                     (name
@@ -856,20 +855,17 @@ end architecture DataFlow;
                               (simple_expression
                                 (name
                                   (identifier)
-                                  (name_selector
-                                    (selection
-                                      (identifier)))
-                                  (name_selector
-                                    (selection
-                                      (identifier)))
-                                  (name_selector
-                                    (parenthesis_group
-                                      (association_or_range_list
-                                        (association_element
-                                          (conditional_expression
-                                            (simple_expression
-                                              (name
-                                                (identifier))))))))))))))))
+                                  (selection
+                                    (identifier))
+                                  (selection
+                                    (identifier))
+                                  (parenthesis_group
+                                    (association_or_range_list
+                                      (association_element
+                                        (conditional_expression
+                                          (simple_expression
+                                            (name
+                                              (identifier)))))))))))))))
                   (case_body
                     (case_statement_alternative
                       (when_element
@@ -878,18 +874,17 @@ end architecture DataFlow;
                       (simple_waveform_assignment
                         (name
                           (identifier)
-                          (name_selector
-                            (parenthesis_group
-                              (association_or_range_list
-                                (association_element
-                                  (conditional_expression
+                          (parenthesis_group
+                            (association_or_range_list
+                              (association_element
+                                (conditional_expression
+                                  (simple_expression
                                     (simple_expression
-                                      (simple_expression
-                                        (name
-                                          (identifier)))
-                                      (adding_operator)
-                                      (simple_expression
-                                        (decimal_integer)))))))))
+                                      (name
+                                        (identifier)))
+                                    (adding_operator)
+                                    (simple_expression
+                                      (decimal_integer))))))))
                         (signal_assignment)
                         (waveform
                           (waveform_element
@@ -903,18 +898,17 @@ end architecture DataFlow;
                       (simple_waveform_assignment
                         (name
                           (identifier)
-                          (name_selector
-                            (parenthesis_group
-                              (association_or_range_list
-                                (association_element
-                                  (conditional_expression
+                          (parenthesis_group
+                            (association_or_range_list
+                              (association_element
+                                (conditional_expression
+                                  (simple_expression
                                     (simple_expression
-                                      (simple_expression
-                                        (name
-                                          (identifier)))
-                                      (adding_operator)
-                                      (simple_expression
-                                        (decimal_integer)))))))))
+                                      (name
+                                        (identifier)))
+                                    (adding_operator)
+                                    (simple_expression
+                                      (decimal_integer))))))))
                         (signal_assignment)
                         (waveform
                           (waveform_element
@@ -927,32 +921,30 @@ end architecture DataFlow;
                       (simple_waveform_assignment
                         (name
                           (identifier)
-                          (name_selector
-                            (parenthesis_group
-                              (association_or_range_list
-                                (association_element
-                                  (conditional_expression
+                          (parenthesis_group
+                            (association_or_range_list
+                              (association_element
+                                (conditional_expression
+                                  (simple_expression
                                     (simple_expression
-                                      (simple_expression
-                                        (name
-                                          (identifier)))
-                                      (adding_operator)
-                                      (simple_expression
-                                        (decimal_integer)))))))))
+                                      (name
+                                        (identifier)))
+                                    (adding_operator)
+                                    (simple_expression
+                                      (decimal_integer))))))))
                         (signal_assignment)
                         (waveform
                           (waveform_element
                             (simple_expression
                               (name
                                 (identifier)
-                                (name_selector
-                                  (parenthesis_group
-                                    (association_or_range_list
-                                      (association_element
-                                        (conditional_expression
-                                          (simple_expression
-                                            (name
-                                              (identifier)))))))))))))))
+                                (parenthesis_group
+                                  (association_or_range_list
+                                    (association_element
+                                      (conditional_expression
+                                        (simple_expression
+                                          (name
+                                            (identifier))))))))))))))
                   (end_case)))
               (end_loop)))
           (end_process))
@@ -973,5 +965,5 @@ end architecture DataFlow;
                             (name
                               (identifier)))))))))))))
       (end_architecture
-        (identifier)))))
+        architecture: (identifier)))))
 

@@ -298,24 +298,9 @@
 
 (library_constant_std_logic) @constant.builtin
 
-[
-  (attribute_function)
-  (attribute_impure_function)
-  (attribute_mode_view)
-  (attribute_pure_function)
-  (attribute_range)
-  (attribute_signal)
-  (attribute_subtype)
-  (attribute_type)
-  (attribute_value)
-  (library_attribute)
-] @attribute
-
 (library_constant) @constant.builtin
 
 (library_function) @function.builtin
-
-(library_type) @type.builtin
 
 (library_constant_boolean) @constant.builtin.boolean
 
@@ -337,79 +322,32 @@
   "port" @constructor
   "map" @constructor)
 
-(subtype_indication
-  (name
-    (identifier))) @type
-
 (selection
   (identifier) @variable.other.member)
-
-(attribute_identifier) @attribute
-
-(library_namespace) @namespace
-
-(library_clause
-  (logical_name_list
-    (identifier) @namespace))
 
 (use_clause
   (selected_name
     .
     (identifier) @namespace))
 
-(instantiated_unit
-  (name
-    .
-    (identifier) @namespace))
+(_ view: (_) @type)
+(_ type: (_) @type)
+(_ library: (_) @namespace)
+(_ package: (_) @namespace)
+(_ entity: (_) @namespace)
+(_ component: (_) @namespace)
+(_ configuration: (_) @type.parameter)
+(_ architecture: (_) @type.parameter)
+(_ function: (_) @function)
+(_ procedure: (_) @function.method)
+(_ attribute: (_) @attribute)
 
-(function_specification
-  (operator_symbol) @function.builtin)
+(_ view: (name (_)) @type)
+(_ type: (name (_)) @type)
+(_ entity: (name (_)) @namespace)
+(_ component: (name (_)) @namespace)
+(_ configuration: (name (_)) @namespace)
 
-(function_specification
-  (identifier) @function)
-
-(procedure_specification
-  (identifier) @function.method)
-
-(type_declaration
-  (identifier) @type)
-
-(mode_view_declaration
-  (identifier) @type)
-
-(record_mode_view_indication
-  (name
-    (identifier) @type))
-
-(package_declaration
-  (identifier) @namespace)
-
-(package_definition
-  (identifier) @namespace)
-
-(end_package
-  (identifier) @namespace)
-
-(end_package_body
-  (identifier) @namespace)
-
-(entity_declaration
-  (identifier) @namespace)
-
-(end_entity
-  (identifier) @namespace)
-
-(architecture_definition
-  "architecture"
-  (identifier) @type.parameter
-  "of"
-  (name
-    (identifier) @namespace))
-
-(end_architecture
-  (identifier) @type.parameter)
-
-(subprogram_end
-  (identifier) @function)
+(library_type) @type.builtin
 
 (ERROR) @error

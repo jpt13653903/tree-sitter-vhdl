@@ -11,7 +11,7 @@ end Full_Adder;
 (design_file
   (design_unit
     (entity_declaration
-      (identifier)
+      entity: (identifier)
       (entity_head
         (port_clause
           (interface_list
@@ -23,7 +23,7 @@ end Full_Adder;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (interface_declaration
               (identifier_list
@@ -32,10 +32,10 @@ end Full_Adder;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type))))))))
       (end_entity
-        (identifier)))))
+        entity: (identifier)))))
 
 ================================================================================
 An entity declaration with generic declarations also:
@@ -52,7 +52,7 @@ end entity AndGate;
 (design_file
   (design_unit
     (entity_declaration
-      (identifier)
+      entity: (identifier)
       (entity_head
         (generic_clause
           (interface_list
@@ -61,7 +61,7 @@ end entity AndGate;
                 (identifier))
               (simple_mode_indication
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))
                 (initialiser
                   (variable_assignment)
@@ -76,27 +76,26 @@ end entity AndGate;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)
-                    (name_selector
-                      (parenthesis_group
-                        (association_or_range_list
-                          (simple_range
-                            (simple_expression
-                              (decimal_integer))
-                            (simple_expression
-                              (name
-                                (identifier)))))))))))
+                    (parenthesis_group
+                      (association_or_range_list
+                        (simple_range
+                          (simple_expression
+                            (decimal_integer))
+                          (simple_expression
+                            (name
+                              (identifier))))))))))
             (interface_declaration
               (identifier_list
                 (identifier))
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type))))))))
       (end_entity
-        (identifier)))))
+        entity: (identifier)))))
 
 ================================================================================
 An entity declaration with neither:
@@ -110,10 +109,10 @@ end TestBench;
 (design_file
   (design_unit
     (entity_declaration
-      (identifier)
+      entity: (identifier)
       (entity_head)
       (end_entity
-        (identifier)))))
+        entity: (identifier)))))
 
 ================================================================================
 An entity declaration with entity declarative items:
@@ -140,7 +139,7 @@ end ROM;
 (design_file
   (design_unit
     (entity_declaration
-      (identifier)
+      entity: (identifier)
       (entity_head
         (port_clause
           (interface_list
@@ -150,7 +149,7 @@ end ROM;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (identifier)))))
             (interface_declaration
               (identifier_list
@@ -158,7 +157,7 @@ end ROM;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (identifier)))))
             (interface_declaration
               (identifier_list
@@ -166,10 +165,10 @@ end ROM;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))))
         (type_declaration
-          (identifier)
+          type: (identifier)
           (array_type_definition
             (array_index_incomplete_type_list
               (index_constraint
@@ -179,32 +178,32 @@ end ROM;
                   (simple_expression
                     (decimal_integer)))))
             (subtype_indication
-              (name
+              type: (name
                 (library_type)))))
         (type_declaration
-          (identifier)
+          type: (identifier)
           (array_type_definition
             (array_index_incomplete_type_list
               (index_subtype_definition
-                (name
+                type: (name
                   (library_type))))
             (subtype_indication
-              (name
+              type: (name
                 (identifier)))))
         (use_clause
           (selected_name
-            (library_namespace)
+            library: (library_namespace)
             (identifier)
             (ALL))
           (selected_name
-            (library_namespace)
+            library: (library_namespace)
             (identifier)
             (ALL)))
         (constant_declaration
           (identifier_list
             (identifier))
           (subtype_indication
-            (name
+            type: (name
               (identifier)))
           (initialiser
             (variable_assignment)
@@ -300,7 +299,7 @@ end ROM;
                   (line_comment
                     (comment_content))))))))
       (end_entity
-        (identifier)))))
+        entity: (identifier)))))
 
 ================================================================================
 An entity declaration with statements:
@@ -324,7 +323,7 @@ end;
 (design_file
   (design_unit
     (entity_declaration
-      (identifier)
+      entity: (identifier)
       (entity_head
         (port_clause
           (interface_list
@@ -334,7 +333,7 @@ end;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (identifier)))))
             (interface_declaration
               (identifier_list
@@ -342,7 +341,7 @@ end;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (identifier)))))
             (interface_declaration
               (identifier_list
@@ -350,7 +349,7 @@ end;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))
             (interface_declaration
               (identifier_list
@@ -358,35 +357,35 @@ end;
               (simple_mode_indication
                 (mode)
                 (subtype_indication
-                  (name
+                  type: (name
                     (library_type)))))))
         (constant_declaration
           (identifier_list
             (identifier))
           (subtype_indication
-            (name
+            type: (name
               (library_type)))
           (initialiser
             (variable_assignment)
             (conditional_expression
               (simple_expression
                 (decimal_integer)
-                (library_constant_unit)))))
+                unit: (library_constant_unit)))))
         (constant_declaration
           (identifier_list
             (identifier))
           (subtype_indication
-            (name
+            type: (name
               (library_type)))
           (initialiser
             (variable_assignment)
             (conditional_expression
               (simple_expression
                 (decimal_integer)
-                (library_constant_unit)))))
+                unit: (library_constant_unit)))))
         (use_clause
           (selected_name
-            (library_namespace)
+            library: (library_namespace)
             (identifier)
             (ALL))))
       (entity_body
@@ -405,44 +404,40 @@ end;
               (simple_expression
                 (name
                   (identifier)
-                  (name_selector
-                    (attribute
-                      (attribute_signal)))
-                  (name_selector
-                    (attribute
-                      (attribute_signal)))
-                  (name_selector
-                    (parenthesis_group
-                      (association_or_range_list
-                        (association_element
-                          (conditional_expression
-                            (simple_expression
-                              (name
-                                (identifier)))))))))))))
+                  (attribute
+                    attribute: (attribute_signal))
+                  (attribute
+                    attribute: (attribute_signal))
+                  (parenthesis_group
+                    (association_or_range_list
+                      (association_element
+                        (conditional_expression
+                          (simple_expression
+                            (name
+                              (identifier))))))))))))
         (concurrent_procedure_call_statement
           (name
             (identifier)
-            (name_selector
-              (parenthesis_group
-                (association_or_range_list
-                  (association_element
-                    (conditional_expression
-                      (simple_expression
-                        (name
-                          (identifier)))))
-                  (association_element
-                    (conditional_expression
-                      (simple_expression
-                        (name
-                          (identifier)))))
-                  (association_element
-                    (conditional_expression
-                      (simple_expression
-                        (name
-                          (identifier)))))
-                  (association_element
-                    (conditional_expression
-                      (simple_expression
-                        (name
-                          (identifier)))))))))))
+            (parenthesis_group
+              (association_or_range_list
+                (association_element
+                  (conditional_expression
+                    (simple_expression
+                      (name
+                        (identifier)))))
+                (association_element
+                  (conditional_expression
+                    (simple_expression
+                      (name
+                        (identifier)))))
+                (association_element
+                  (conditional_expression
+                    (simple_expression
+                      (name
+                        (identifier)))))
+                (association_element
+                  (conditional_expression
+                    (simple_expression
+                      (name
+                        (identifier))))))))))
       (end_entity))))

@@ -50,14 +50,13 @@ end process;
                   (simple_expression
                     (name
                       (identifier)
-                      (name_selector
-                        (parenthesis_group
-                          (association_or_range_list
-                            (association_element
-                              (conditional_expression
-                                (simple_expression
-                                  (name
-                                    (identifier))))))))))))))
+                      (parenthesis_group
+                        (association_or_range_list
+                          (association_element
+                            (conditional_expression
+                              (simple_expression
+                                (name
+                                  (identifier)))))))))))))
           (end_loop))
         (else_conditional_analysis)
         (loop_statement
@@ -83,14 +82,13 @@ end process;
                   (simple_expression
                     (name
                       (identifier)
-                      (name_selector
-                        (parenthesis_group
-                          (association_or_range_list
-                            (association_element
-                              (conditional_expression
-                                (simple_expression
-                                  (name
-                                    (identifier))))))))))))))
+                      (parenthesis_group
+                        (association_or_range_list
+                          (association_element
+                            (conditional_expression
+                              (simple_expression
+                                (name
+                                  (identifier)))))))))))))
           (end_loop)))
       (end_conditional_analysis)
       (end_process))))
