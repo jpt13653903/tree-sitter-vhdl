@@ -325,11 +325,6 @@
 (selection
   (identifier) @variable.other.member)
 
-(use_clause
-  (selected_name
-    .
-    (identifier) @namespace))
-
 (_ view: (_) @type)
 (_ type: (_) @type)
 (_ library: (_) @namespace)

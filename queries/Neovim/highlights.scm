@@ -327,11 +327,6 @@
 (selection
   (identifier) @variable.member)
 
-(use_clause
-  (selected_name
-    .
-    (identifier) @module))
-
 (_ view: (_) @type)
 (_ type: (_) @type)
 (_ library: (_) @module)
