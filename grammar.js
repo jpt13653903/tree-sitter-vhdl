@@ -1952,7 +1952,7 @@ module.exports = grammar({
             ),
 
             enumeration_literal: $ => choice(
-                $._identifier,
+                field("constant", $._identifier),
                 $.character_literal
             ),
 

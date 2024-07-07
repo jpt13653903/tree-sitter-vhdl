@@ -3523,29 +3523,36 @@
   {
     "type": "enumeration_literal",
     "named": true,
-    "fields": {},
+    "fields": {
+      "constant": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_function",
+            "named": true
+          },
+          {
+            "type": "library_type",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": false,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "character_literal",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "library_constant",
-          "named": true
-        },
-        {
-          "type": "library_function",
-          "named": true
-        },
-        {
-          "type": "library_type",
           "named": true
         }
       ]

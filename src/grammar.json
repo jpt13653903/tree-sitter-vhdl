@@ -11751,8 +11751,12 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "_identifier"
+          "type": "FIELD",
+          "name": "constant",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_identifier"
+          }
         },
         {
           "type": "SYMBOL",
