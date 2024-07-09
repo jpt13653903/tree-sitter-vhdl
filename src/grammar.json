@@ -3660,8 +3660,16 @@
               "name": "generate_block"
             },
             {
-              "type": "SYMBOL",
-              "name": "generate_block_end"
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "generate_block_end"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
             }
           ]
         }
@@ -3766,8 +3774,16 @@
               "name": "generate_block"
             },
             {
-              "type": "SYMBOL",
-              "name": "generate_block_end"
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "generate_block_end"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
             }
           ]
         }
@@ -12448,7 +12464,14 @@
       "value": "\\s+"
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    [
+      "generate_body"
+    ],
+    [
+      "case_generate_body"
+    ]
+  ],
   "precedences": [],
   "externals": [
     {

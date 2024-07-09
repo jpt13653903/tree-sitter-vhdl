@@ -199,7 +199,10 @@ module.exports = grammar({
         /\s+/
     ],
 
-    conflicts: $ => [ ],
+    conflicts: $ => [
+        [ $.generate_body ],
+        [ $.case_generate_body ]
+    ],
 
     rules: {
         // Design File
@@ -755,7 +758,7 @@ module.exports = grammar({
 
             generate_body: $ => choice(
                 $.generate_direct_block,
-                seq($.generate_head, $.generate_block, $.generate_block_end)
+                seq($.generate_head, $.generate_block, optional($.generate_block_end))
             ),
 
             generate_head: $ => seq(
@@ -772,7 +775,7 @@ module.exports = grammar({
 
             case_generate_body: $ => choice(
                 $.case_generate_direct_block,
-                seq($.case_generate_head, $.generate_block, $.generate_block_end)
+                seq($.case_generate_head, $.generate_block, optional($.generate_block_end))
             ),
 
             case_generate_head: $ => seq(
