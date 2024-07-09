@@ -106,7 +106,7 @@ end block Gen2;
                 (simple_expression
                   (decimal_integer)))))
           (generate_body
-            (generate_direct_block
+            (generate_block
               (for_generate_statement
                 (label_declaration
                   (label))
@@ -119,7 +119,7 @@ end block Gen2;
                       (simple_expression
                         (decimal_integer)))))
                 (generate_body
-                  (generate_direct_block
+                  (generate_block
                     (if_generate_statement
                       (label_declaration
                         (label))
@@ -137,7 +137,7 @@ end block Gen2;
                           (simple_expression
                             (decimal_integer)))
                         (generate_body
-                          (generate_direct_block
+                          (generate_block
                             (component_instantiation_statement
                               (label_declaration
                                 (label))
@@ -216,7 +216,7 @@ end block Gen2;
                 (simple_expression
                   (decimal_integer)))))
           (generate_body
-            (generate_direct_block
+            (generate_block
               (for_generate_statement
                 (label_declaration
                   (label))
@@ -229,7 +229,7 @@ end block Gen2;
                       (simple_expression
                         (decimal_integer)))))
                 (generate_body
-                  (generate_direct_block
+                  (generate_block
                     (if_generate_statement
                       (label_declaration
                         (label))
@@ -247,7 +247,7 @@ end block Gen2;
                           (simple_expression
                             (decimal_integer)))
                         (generate_body
-                          (generate_direct_block
+                          (generate_block
                             (component_instantiation_statement
                               (label_declaration
                                 (label))
@@ -338,7 +338,7 @@ end block Gen2;
                   (name
                     (identifier))))
               (case_generate_body
-                (case_generate_direct_block
+                (generate_block
                   (component_instantiation_statement
                     (label_declaration
                       (label))
@@ -359,7 +359,7 @@ end block Gen2;
                 (label))
               (OTHERS)
               (case_generate_body
-                (case_generate_head
+                (generate_head
                   (signal_declaration
                     (identifier_list
                       (identifier))

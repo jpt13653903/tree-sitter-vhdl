@@ -757,16 +757,12 @@ module.exports = grammar({
             ),
 
             generate_body: $ => choice(
-                $.generate_direct_block,
-                seq($.generate_head, $.generate_block, optional($.generate_block_end))
+                seq(alias($.GENERATE, "generate"), optional($.generate_block)),
+                seq(alias($.GENERATE, "generate"), optional($.generate_head), alias($.BEGIN, "begin"), optional($.generate_block), optional($.generate_block_end))
             ),
 
             generate_head: $ => seq(
-                alias($.GENERATE, "generate"), repeat($._block_declarative_item)
-            ),
-
-            generate_direct_block: $ => seq(
-                alias($.GENERATE, "generate"), repeat($._concurrent_statement)
+                repeat1($._block_declarative_item)
             ),
 
             case_generate_alternative: $ => prec.left(seq(
@@ -774,20 +770,12 @@ module.exports = grammar({
             )),
 
             case_generate_body: $ => choice(
-                $.case_generate_direct_block,
-                seq($.case_generate_head, $.generate_block, optional($.generate_block_end))
-            ),
-
-            case_generate_head: $ => seq(
-                "=>", repeat($._block_declarative_item)
-            ),
-
-            case_generate_direct_block: $ => seq(
-                "=>", repeat($._concurrent_statement)
+                seq("=>", optional($.generate_block)),
+                seq("=>", optional($.generate_head), alias($.BEGIN, "begin"), optional($.generate_block), optional($.generate_block_end))
             ),
 
             generate_block: $ => seq(
-                alias($.BEGIN, "begin"), repeat($._concurrent_statement)
+                repeat1($._concurrent_statement)
             ),
 
             generate_block_end: $ => seq(
@@ -898,11 +886,11 @@ module.exports = grammar({
             ),
 
             case_generate_statement: $ => seq(
-                $.label_declaration, alias($.CASE, "case"), $._expression, $.case_generate_block, $.end_generate, ";"
+                $.label_declaration, alias($.CASE, "case"), $._expression, alias($.GENERATE, "generate"), $.case_generate_block, $.end_generate, ";"
             ),
 
             case_generate_block: $ => seq(
-                alias($.GENERATE, "generate"), repeat1($.case_generate_alternative)
+                repeat1($.case_generate_alternative)
             ),
 
             for_generate_statement: $ => seq(

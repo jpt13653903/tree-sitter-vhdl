@@ -26,7 +26,7 @@ end generate testGenerate;
           (simple_expression
             (decimal_integer)))
         (generate_body
-          (generate_direct_block
+          (generate_block
             (concurrent_simple_signal_assignment
               (name
                 (identifier))
@@ -50,7 +50,7 @@ end generate testGenerate;
           (simple_expression
             (decimal_integer)))
         (generate_body
-          (generate_direct_block
+          (generate_block
             (concurrent_simple_signal_assignment
               (name
                 (identifier))
@@ -67,7 +67,7 @@ end generate testGenerate;
                         (identifier))))))))))
       (else_generate
         (generate_body
-          (generate_direct_block
+          (generate_block
             (concurrent_simple_signal_assignment
               (name
                 (identifier))
