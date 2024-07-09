@@ -325,25 +325,64 @@
 (selection
   (identifier) @variable.other.member)
 
-(_ view: (_) @type)
-(_ type: (_) @type)
-(_ library: (_) @namespace)
-(_ package: (_) @namespace)
-(_ entity: (_) @namespace)
-(_ component: (_) @namespace)
-(_ configuration: (_) @type.parameter)
-(_ architecture: (_) @type.parameter)
-(_ function: (_) @function)
-(_ procedure: (_) @function.method)
-(_ attribute: (_) @attribute)
-(_ constant: (_) @constant)
-(_ generic: (_) @variable.parameter)
+(_
+  view: (_) @type)
 
-(_ view: (name (_)) @type)
-(_ type: (name (_)) @type)
-(_ entity: (name (_)) @namespace)
-(_ component: (name (_)) @namespace)
-(_ configuration: (name (_)) @namespace)
+(_
+  type: (_) @type)
+
+(_
+  library: (_) @namespace)
+
+(_
+  package: (_) @namespace)
+
+(_
+  entity: (_) @namespace)
+
+(_
+  component: (_) @namespace)
+
+(_
+  configuration: (_) @type.parameter)
+
+(_
+  architecture: (_) @type.parameter)
+
+(_
+  function: (_) @function)
+
+(_
+  procedure: (_) @function.method)
+
+(_
+  attribute: (_) @attribute)
+
+(_
+  constant: (_) @constant)
+
+(_
+  generic: (_) @variable.parameter)
+
+(_
+  view: (name
+    (_)) @type)
+
+(_
+  type: (name
+    (_)) @type)
+
+(_
+  entity: (name
+    (_)) @namespace)
+
+(_
+  component: (name
+    (_)) @namespace)
+
+(_
+  configuration: (name
+    (_)) @namespace)
 
 (library_type) @type.builtin
 
