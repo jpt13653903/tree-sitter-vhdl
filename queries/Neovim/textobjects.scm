@@ -1,5 +1,10 @@
+;-------------------------------------------------------------------------------
+;
+; Maintainer: superzanti
+; Feature Reference: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+;-------------------------------------------------------------------------------
+;
 ; Comments
-
 ; Remove the two dashes for "inner"
 (line_comment
   (comment_content) @comment.inner) @comment.outer
@@ -8,7 +13,6 @@
   (comment_content) @comment.inner) @comment.outer
 
 ; Conditional constructs
-
 (if_statement_block
   (if_statement
     (if_statement_body) @_start @_end)
@@ -40,7 +44,6 @@
   (#make-range! "conditional.inner" @_start @_end)) @conditional.outer
 
 ; Class
-
 (architecture_definition
   (architecture_head
     "is"
@@ -73,8 +76,7 @@
     "is"
     .
     (_) @_start @_end
-    (_)? @_end
-    .)
+    (_)? @_end .)
   (_)? @_end
   .
   (end_entity)
@@ -143,7 +145,6 @@
     (#make-range! "class.inner" @_start @_end))) @class.outer
 
 ; Blocks
-
 (component_instantiation_statement
   (instantiated_unit)
   .
@@ -182,8 +183,7 @@
         "generate"
         .
         (_) @_start @_end
-        (_)? @_end
-        . )))
+        (_)? @_end .)))
   (_)? @_end
   .
   (end_generate)
@@ -251,7 +251,6 @@
       (#make-range! "block.inner" @_start @_end)))) @block.outer
 
 ; Loops
-
 (loop_statement
   (loop_body
     "loop"
@@ -262,7 +261,6 @@
     (#make-range! "loop.inner" @_start @_end))) @loop.outer
 
 ; Functions and Procedures
-
 (subprogram_definition
   (sequential_block
     "begin"
@@ -274,7 +272,7 @@
 
 (subprogram_declaration
   (function_specification
-    (parameter_list_specification) @_start ) @_end
+    (parameter_list_specification) @_start) @_end
   (#make-range! "call.inner" @_start @_end)) @call.outer
 
 (procedure_call_statement
@@ -283,7 +281,6 @@
       (association_or_range_list) @call.inner))) @call.outer
 
 ; Parameters
-
 (generic_clause
   (interface_list) @parameter.inner) @parameter.outer
 
@@ -311,7 +308,6 @@
     (#make-range! "parameter.inner" @_start @_end))) @parameter.outer
 
 ; Returns
-
 (_
   "return" @_start1
   .
@@ -323,7 +319,6 @@
   (#make-range! "return.outer" @_start1 @_end1))
 
 ; Numbers
-
 [
   (bit_string_value)
   (string_literal_std_logic)
@@ -333,7 +328,6 @@
 ] @number.inner
 
 ; Attributes
-
 (signal_declaration
   (subtype_indication) @attribute.inner) @attribute.outer
 
@@ -365,7 +359,6 @@
   (subtype_indication) @attribute.inner) @attribute.outer
 
 ; Assignments
-
 (simple_variable_assignment
   (name) @assignment.lhs
   (conditional_or_unaffected_expression) @assignment.rhs @assignment.inner) @assignment.outer
@@ -380,7 +373,7 @@
   (_
     (subtype_indication) @assignment.rhs @assignment.inner
     (initialiser
-      (conditional_expression) @assignment.rhs)? )) @assignment.outer
+      (conditional_expression) @assignment.rhs)?)) @assignment.outer
 
 (concurrent_simple_signal_assignment
   (name) @assignment.lhs
@@ -409,7 +402,6 @@
     (#make-range! "assignment.inner" @_start @_end)) @assignment.rhs) @assignment.outer
 
 ; Attributes
-
 (attribute_declaration
   (identifier)
   (name) @attribute.inner) @attribute.outer
@@ -420,7 +412,6 @@
   (conditional_expression)) @attribute.outer
 
 ; Scope names
-
 (package_declaration
   (identifier) @scopename.inner) @scopename.outer
 

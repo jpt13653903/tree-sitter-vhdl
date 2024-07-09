@@ -327,25 +327,64 @@
 (selection
   (identifier) @variable.member)
 
-(_ view: (_) @type)
-(_ type: (_) @type)
-(_ library: (_) @module)
-(_ package: (_) @module)
-(_ entity: (_) @module)
-(_ component: (_) @module)
-(_ configuration: (_) @property)
-(_ architecture: (_) @property)
-(_ function: (_) @function)
-(_ procedure: (_) @function.method)
-(_ attribute: (_) @attribute)
-(_ constant: (_) @constant)
-(_ generic: (_) @variable.parameter)
+(_
+  view: (_) @type)
 
-(_ view: (name (_)) @type)
-(_ type: (name (_)) @type)
-(_ entity: (name (_)) @module)
-(_ component: (name (_)) @module)
-(_ configuration: (name (_)) @module)
+(_
+  type: (_) @type)
+
+(_
+  library: (_) @module)
+
+(_
+  package: (_) @module)
+
+(_
+  entity: (_) @module)
+
+(_
+  component: (_) @module)
+
+(_
+  configuration: (_) @property)
+
+(_
+  architecture: (_) @property)
+
+(_
+  function: (_) @function)
+
+(_
+  procedure: (_) @function.method)
+
+(_
+  attribute: (_) @attribute)
+
+(_
+  constant: (_) @constant)
+
+(_
+  generic: (_) @variable.parameter)
+
+(_
+  view: (name
+    (_)) @type)
+
+(_
+  type: (name
+    (_)) @type)
+
+(_
+  entity: (name
+    (_)) @module)
+
+(_
+  component: (name
+    (_)) @module)
+
+(_
+  configuration: (name
+    (_)) @module)
 
 (library_type) @type.builtin
 
