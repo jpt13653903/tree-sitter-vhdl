@@ -36,9 +36,6 @@
     (identifier) @context.end)
   (sequential_block)
   (loop_statement)
-  (if_statement_block
-    (if_statement
-      (if_statement_body) @context.end))
   (if_statement
     (if_statement_body) @context.end)
   (elsif_statement
@@ -48,7 +45,6 @@
   (case_statement)
   (case_statement_alternative)
   (for_generate_statement)
-  (if_generate_statement)
   (if_generate)
   (elsif_generate)
   (else_generate)
