@@ -421,33 +421,33 @@ end block Gen2;
                             (name
                               (identifier)))))))))
               (generate_block_end
-                (label))))
-          (else_generate
-            (label_declaration
-              (label))
-            (generate_body
-              (generate_head
-                (signal_declaration
-                  (identifier_list
-                    (identifier))
-                  (subtype_indication
-                    type: (name
-                      (library_type)))))
-              (generate_block
-                (component_instantiation_statement
-                  (label_declaration
-                    (label))
-                  component: (name
-                    (identifier))
-                  (port_map_aspect
-                    (association_list
-                      (association_element
-                        (conditional_expression
-                          (simple_expression
-                            (name
-                              (identifier)))))))))
-              (generate_block_end
-                (label))))
+                (label)))
+            (else_generate
+              (label_declaration
+                (label))
+              (generate_body
+                (generate_head
+                  (signal_declaration
+                    (identifier_list
+                      (identifier))
+                    (subtype_indication
+                      type: (name
+                        (library_type)))))
+                (generate_block
+                  (component_instantiation_statement
+                    (label_declaration
+                      (label))
+                    component: (name
+                      (identifier))
+                    (port_map_aspect
+                      (association_list
+                        (association_element
+                          (conditional_expression
+                            (simple_expression
+                              (name
+                                (identifier)))))))))
+                (generate_block_end
+                  (label)))))
           (end_generate
             (label))))
       (end_block

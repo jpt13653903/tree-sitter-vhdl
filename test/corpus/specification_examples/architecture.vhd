@@ -823,17 +823,17 @@ end architecture DataFlow;
                     (waveform
                       (waveform_element
                         (simple_expression
-                          (decimal_integer)))))))
-              (else_statement
-                (if_statement_body
-                  (simple_waveform_assignment
-                    (name
-                      (identifier))
-                    (signal_assignment)
-                    (waveform
-                      (waveform_element
-                        (simple_expression
-                          (decimal_integer)))))))
+                          (decimal_integer))))))
+                (else_statement
+                  (if_statement_body
+                    (simple_waveform_assignment
+                      (name
+                        (identifier))
+                      (signal_assignment)
+                      (waveform
+                        (waveform_element
+                          (simple_expression
+                            (decimal_integer))))))))
               (end_if))
             (loop_statement
               (for_loop
