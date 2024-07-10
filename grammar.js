@@ -962,11 +962,16 @@ module.exports = grammar({
             ),
 
             if_statement_block: $ => seq(
-                optional($.label_declaration), $.if_statement, repeat($.elsif_statement), optional($.else_statement), $.end_if, ";"
+                optional($.label_declaration), $.if_statement, $.end_if, ";"
+            ),
+
+            _elsif_else_statement: $ => choice(
+                $.elsif_statement,
+                $.else_statement
             ),
 
             if_statement: $ => seq(
-                alias($.IF, "if"), $._expression, alias($.THEN, "then"), optional($.if_statement_body)
+                alias($.IF, "if"), $._expression, alias($.THEN, "then"), optional($.if_statement_body), optional($._elsif_else_statement)
             ),
 
             if_statement_body: $ => seq(
@@ -974,7 +979,7 @@ module.exports = grammar({
             ),
 
             elsif_statement: $ => seq(
-                alias($.ELSIF, "elsif"), $._expression, alias($.THEN, "then"), optional($.if_statement_body)
+                alias($.ELSIF, "elsif"), $._expression, alias($.THEN, "then"), optional($.if_statement_body), optional($._elsif_else_statement)
             ),
 
             else_statement: $ => seq(

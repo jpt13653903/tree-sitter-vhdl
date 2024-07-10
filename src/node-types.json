@@ -2640,6 +2640,14 @@
           "named": true
         },
         {
+          "type": "else_statement",
+          "named": true
+        },
+        {
+          "type": "elsif_statement",
+          "named": true
+        },
+        {
           "type": "if_statement_body",
           "named": true
         },
@@ -4378,6 +4386,14 @@
           "named": true
         },
         {
+          "type": "else_statement",
+          "named": true
+        },
+        {
+          "type": "elsif_statement",
+          "named": true
+        },
+        {
           "type": "if_statement_body",
           "named": true
         },
@@ -4408,14 +4424,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "else_statement",
-          "named": true
-        },
-        {
-          "type": "elsif_statement",
-          "named": true
-        },
         {
           "type": "end_if",
           "named": true

@@ -5497,31 +5497,25 @@
           "name": "if_statement"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "elsif_statement"
-          }
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "else_statement"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
           "type": "SYMBOL",
           "name": "end_if"
         },
         {
           "type": "STRING",
           "value": ";"
+        }
+      ]
+    },
+    "_elsif_else_statement": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "elsif_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "else_statement"
         }
       ]
     },
@@ -5556,6 +5550,18 @@
             {
               "type": "SYMBOL",
               "name": "if_statement_body"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_elsif_else_statement"
             },
             {
               "type": "BLANK"
@@ -5607,6 +5613,18 @@
             {
               "type": "SYMBOL",
               "name": "if_statement_body"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_elsif_else_statement"
             },
             {
               "type": "BLANK"
