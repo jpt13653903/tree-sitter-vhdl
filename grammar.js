@@ -898,15 +898,20 @@ module.exports = grammar({
             ),
 
             if_generate_statement: $ => seq(
-                $.label_declaration, $.if_generate, repeat($.elsif_generate), optional($.else_generate), $.end_generate, ";"
+                $.label_declaration, $.if_generate, $.end_generate, ";"
             ),
 
             if_generate: $ => seq(
-                alias($.IF, "if"), optional($.label_declaration), $._expression, $.generate_body
+                alias($.IF, "if"), optional($.label_declaration), $._expression, $.generate_body, optional($._elsif_else_generate)
+            ),
+
+            _elsif_else_generate: $ => choice(
+                $.elsif_generate,
+                $.else_generate
             ),
 
             elsif_generate: $ => seq(
-                alias($.ELSIF, "elsif"), optional($.label_declaration), $._expression, $.generate_body
+                alias($.ELSIF, "elsif"), optional($.label_declaration), $._expression, $.generate_body, optional($._elsif_else_generate)
             ),
 
             else_generate: $ => seq(
@@ -965,17 +970,13 @@ module.exports = grammar({
                 optional($.label_declaration), $.if_statement, $.end_if, ";"
             ),
 
-            _elsif_else_statement: $ => choice(
-                $.elsif_statement,
-                $.else_statement
-            ),
-
             if_statement: $ => seq(
                 alias($.IF, "if"), $._expression, alias($.THEN, "then"), optional($.if_statement_body), optional($._elsif_else_statement)
             ),
 
-            if_statement_body: $ => seq(
-                repeat1($._sequential_statement)
+            _elsif_else_statement: $ => choice(
+                $.elsif_statement,
+                $.else_statement
             ),
 
             elsif_statement: $ => seq(
@@ -984,6 +985,10 @@ module.exports = grammar({
 
             else_statement: $ => seq(
                 alias($.ELSE, "else"), optional($.if_statement_body)
+            ),
+
+            if_statement_body: $ => seq(
+                repeat1($._sequential_statement)
             ),
 
             end_if: $ => seq(

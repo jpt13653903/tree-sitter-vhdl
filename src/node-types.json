@@ -2601,6 +2601,14 @@
           "named": true
         },
         {
+          "type": "else_generate",
+          "named": true
+        },
+        {
+          "type": "elsif_generate",
+          "named": true
+        },
+        {
           "type": "generate_body",
           "named": true
         },
@@ -4316,6 +4324,14 @@
           "named": true
         },
         {
+          "type": "else_generate",
+          "named": true
+        },
+        {
+          "type": "elsif_generate",
+          "named": true
+        },
+        {
           "type": "generate_body",
           "named": true
         },
@@ -4350,14 +4366,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "else_generate",
-          "named": true
-        },
-        {
-          "type": "elsif_generate",
-          "named": true
-        },
         {
           "type": "end_generate",
           "named": true
