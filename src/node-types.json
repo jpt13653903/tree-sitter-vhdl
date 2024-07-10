@@ -1049,16 +1049,8 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
-        {
-          "type": "case_generate_direct_block",
-          "named": true
-        },
-        {
-          "type": "case_generate_head",
-          "named": true
-        },
         {
           "type": "generate_block",
           "named": true
@@ -1066,159 +1058,9 @@
         {
           "type": "generate_block_end",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "case_generate_direct_block",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "block_statement",
-          "named": true
         },
         {
-          "type": "case_generate_statement",
-          "named": true
-        },
-        {
-          "type": "component_instantiation_statement",
-          "named": true
-        },
-        {
-          "type": "concurrent_assertion_statement",
-          "named": true
-        },
-        {
-          "type": "concurrent_conditional_signal_assignment",
-          "named": true
-        },
-        {
-          "type": "concurrent_procedure_call_statement",
-          "named": true
-        },
-        {
-          "type": "concurrent_selected_signal_assignment",
-          "named": true
-        },
-        {
-          "type": "concurrent_simple_signal_assignment",
-          "named": true
-        },
-        {
-          "type": "for_generate_statement",
-          "named": true
-        },
-        {
-          "type": "if_generate_statement",
-          "named": true
-        },
-        {
-          "type": "process_statement",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "case_generate_head",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "alias_declaration",
-          "named": true
-        },
-        {
-          "type": "attribute_declaration",
-          "named": true
-        },
-        {
-          "type": "attribute_specification",
-          "named": true
-        },
-        {
-          "type": "component_declaration",
-          "named": true
-        },
-        {
-          "type": "configuration_specification",
-          "named": true
-        },
-        {
-          "type": "constant_declaration",
-          "named": true
-        },
-        {
-          "type": "disconnection_specification",
-          "named": true
-        },
-        {
-          "type": "file_declaration",
-          "named": true
-        },
-        {
-          "type": "group_declaration",
-          "named": true
-        },
-        {
-          "type": "group_template_declaration",
-          "named": true
-        },
-        {
-          "type": "mode_view_declaration",
-          "named": true
-        },
-        {
-          "type": "package_declaration",
-          "named": true
-        },
-        {
-          "type": "package_definition",
-          "named": true
-        },
-        {
-          "type": "package_instantiation_declaration",
-          "named": true
-        },
-        {
-          "type": "signal_declaration",
-          "named": true
-        },
-        {
-          "type": "subprogram_declaration",
-          "named": true
-        },
-        {
-          "type": "subprogram_definition",
-          "named": true
-        },
-        {
-          "type": "subprogram_instantiation_declaration",
-          "named": true
-        },
-        {
-          "type": "subtype_declaration",
-          "named": true
-        },
-        {
-          "type": "type_declaration",
-          "named": true
-        },
-        {
-          "type": "use_clause",
-          "named": true
-        },
-        {
-          "type": "variable_declaration",
+          "type": "generate_head",
           "named": true
         }
       ]
@@ -3992,7 +3834,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "block_statement",
@@ -4062,7 +3904,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "generate_block",
@@ -4073,66 +3915,7 @@
           "named": true
         },
         {
-          "type": "generate_direct_block",
-          "named": true
-        },
-        {
           "type": "generate_head",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "generate_direct_block",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "case_generate_statement",
-          "named": true
-        },
-        {
-          "type": "component_instantiation_statement",
-          "named": true
-        },
-        {
-          "type": "concurrent_assertion_statement",
-          "named": true
-        },
-        {
-          "type": "concurrent_conditional_signal_assignment",
-          "named": true
-        },
-        {
-          "type": "concurrent_procedure_call_statement",
-          "named": true
-        },
-        {
-          "type": "concurrent_selected_signal_assignment",
-          "named": true
-        },
-        {
-          "type": "concurrent_simple_signal_assignment",
-          "named": true
-        },
-        {
-          "type": "for_generate_statement",
-          "named": true
-        },
-        {
-          "type": "if_generate_statement",
-          "named": true
-        },
-        {
-          "type": "process_statement",
           "named": true
         }
       ]
@@ -4144,7 +3927,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "alias_declaration",

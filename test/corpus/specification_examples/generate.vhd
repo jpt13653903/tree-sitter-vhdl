@@ -1,5 +1,5 @@
 ================================================================================
-Generate statements
+Generate statements, section 11.8
 ================================================================================
 
 Gen: block
@@ -106,7 +106,7 @@ end block Gen2;
                 (simple_expression
                   (decimal_integer)))))
           (generate_body
-            (generate_direct_block
+            (generate_block
               (for_generate_statement
                 (label_declaration
                   (label))
@@ -119,7 +119,7 @@ end block Gen2;
                       (simple_expression
                         (decimal_integer)))))
                 (generate_body
-                  (generate_direct_block
+                  (generate_block
                     (if_generate_statement
                       (label_declaration
                         (label))
@@ -137,7 +137,7 @@ end block Gen2;
                           (simple_expression
                             (decimal_integer)))
                         (generate_body
-                          (generate_direct_block
+                          (generate_block
                             (component_instantiation_statement
                               (label_declaration
                                 (label))
@@ -216,7 +216,7 @@ end block Gen2;
                 (simple_expression
                   (decimal_integer)))))
           (generate_body
-            (generate_direct_block
+            (generate_block
               (for_generate_statement
                 (label_declaration
                   (label))
@@ -229,7 +229,7 @@ end block Gen2;
                       (simple_expression
                         (decimal_integer)))))
                 (generate_body
-                  (generate_direct_block
+                  (generate_block
                     (if_generate_statement
                       (label_declaration
                         (label))
@@ -247,7 +247,7 @@ end block Gen2;
                           (simple_expression
                             (decimal_integer)))
                         (generate_body
-                          (generate_direct_block
+                          (generate_block
                             (component_instantiation_statement
                               (label_declaration
                                 (label))
@@ -338,7 +338,7 @@ end block Gen2;
                   (name
                     (identifier))))
               (case_generate_body
-                (case_generate_direct_block
+                (generate_block
                   (component_instantiation_statement
                     (label_declaration
                       (label))
@@ -359,7 +359,7 @@ end block Gen2;
                 (label))
               (OTHERS)
               (case_generate_body
-                (case_generate_head
+                (generate_head
                   (signal_declaration
                     (identifier_list
                       (identifier))
@@ -450,6 +450,355 @@ end block Gen2;
                 (label))))
           (end_generate
             (label))))
+      (end_block
+        (label)))))
+
+================================================================================
+Generate statements, section 14.5.3
+================================================================================
+
+-- The following generate statement:
+LABL: for I in 1 to 2 generate
+  signal s1: INTEGER;
+begin
+  s1 <= p1;
+  Inst1: and_gate port map (s1, p2(I), p3);
+end generate LABL;
+
+-- is equivalent to the following two block statements:
+LABL: block
+  constant I: INTEGER := 1;
+  signal s1: INTEGER;
+begin
+  s1 <= p1;
+  Inst1: and_gate port map (s1, p2(I), p3);
+end block LABL;
+
+LABL: block
+  constant I: INTEGER := 2;
+  signal s1: INTEGER;
+begin
+  s1 <= p1;
+  Inst1: and_gate port map (s1, p2(I), p3);
+end block LABL;
+
+-- The following generate statement:
+LABL: if (g1 = g2) generate
+  signal s1: INTEGER;
+begin
+  s1 <= p1;
+  Inst1: and_gate port map (s1, p4, p3);
+end generate LABL;
+
+-- is equivalent to the following statement if g1 = g2;
+-- otherwise, it is equivalent to no statement at all:
+
+LABL: block
+  signal s1: INTEGER;
+begin
+  s1 <= p1;
+  Inst1: and_gate port map (s1, p4, p3);
+end block LABL;
+
+--------------------------------------------------------------------------------
+
+(design_file
+  (line_comment
+    (comment_content))
+  (design_unit
+    (for_generate_statement
+      (label_declaration
+        (label))
+      (for_loop
+        (parameter_specification
+          (identifier)
+          (simple_range
+            (simple_expression
+              (decimal_integer))
+            (simple_expression
+              (decimal_integer)))))
+      (generate_body
+        (generate_head
+          (signal_declaration
+            (identifier_list
+              (identifier))
+            (subtype_indication
+              type: (name
+                (library_type)))))
+        (generate_block
+          (concurrent_simple_signal_assignment
+            (name
+              (identifier))
+            (signal_assignment)
+            (waveform
+              (waveform_element
+                (simple_expression
+                  (name
+                    (identifier))))))
+          (component_instantiation_statement
+            (label_declaration
+              (label))
+            component: (name
+              (identifier))
+            (port_map_aspect
+              (association_list
+                (association_element
+                  (conditional_expression
+                    (simple_expression
+                      (name
+                        (identifier)))))
+                (association_element
+                  (conditional_expression
+                    (simple_expression
+                      (name
+                        (identifier)
+                        (parenthesis_group
+                          (association_or_range_list
+                            (association_element
+                              (conditional_expression
+                                (simple_expression
+                                  (name
+                                    (identifier)))))))))))
+                (association_element
+                  (conditional_expression
+                    (simple_expression
+                      (name
+                        (identifier))))))))))
+      (end_generate
+        (label)))
+    (line_comment
+      (comment_content))
+    (block_statement
+      (label_declaration
+        (label))
+      (block_head
+        (constant_declaration
+          (identifier_list
+            constant: (identifier))
+          (subtype_indication
+            type: (name
+              (library_type)))
+          (initialiser
+            (variable_assignment)
+            (conditional_expression
+              (simple_expression
+                (decimal_integer)))))
+        (signal_declaration
+          (identifier_list
+            (identifier))
+          (subtype_indication
+            type: (name
+              (library_type)))))
+      (concurrent_block
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (name
+                  (identifier))))))
+        (component_instantiation_statement
+          (label_declaration
+            (label))
+          component: (name
+            (identifier))
+          (port_map_aspect
+            (association_list
+              (association_element
+                (conditional_expression
+                  (simple_expression
+                    (name
+                      (identifier)))))
+              (association_element
+                (conditional_expression
+                  (simple_expression
+                    (name
+                      (identifier)
+                      (parenthesis_group
+                        (association_or_range_list
+                          (association_element
+                            (conditional_expression
+                              (simple_expression
+                                (name
+                                  (identifier)))))))))))
+              (association_element
+                (conditional_expression
+                  (simple_expression
+                    (name
+                      (identifier)))))))))
+      (end_block
+        (label)))
+    (block_statement
+      (label_declaration
+        (label))
+      (block_head
+        (constant_declaration
+          (identifier_list
+            constant: (identifier))
+          (subtype_indication
+            type: (name
+              (library_type)))
+          (initialiser
+            (variable_assignment)
+            (conditional_expression
+              (simple_expression
+                (decimal_integer)))))
+        (signal_declaration
+          (identifier_list
+            (identifier))
+          (subtype_indication
+            type: (name
+              (library_type)))))
+      (concurrent_block
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (name
+                  (identifier))))))
+        (component_instantiation_statement
+          (label_declaration
+            (label))
+          component: (name
+            (identifier))
+          (port_map_aspect
+            (association_list
+              (association_element
+                (conditional_expression
+                  (simple_expression
+                    (name
+                      (identifier)))))
+              (association_element
+                (conditional_expression
+                  (simple_expression
+                    (name
+                      (identifier)
+                      (parenthesis_group
+                        (association_or_range_list
+                          (association_element
+                            (conditional_expression
+                              (simple_expression
+                                (name
+                                  (identifier)))))))))))
+              (association_element
+                (conditional_expression
+                  (simple_expression
+                    (name
+                      (identifier)))))))))
+      (end_block
+        (label)))
+    (line_comment
+      (comment_content))
+    (if_generate_statement
+      (label_declaration
+        (label))
+      (if_generate
+        (simple_expression
+          (parenthesis_expression
+            (element_association_list
+              (element_association
+                (conditional_expression
+                  (relational_expression
+                    (simple_expression
+                      (name
+                        (identifier)))
+                    (relational_operator)
+                    (simple_expression
+                      (name
+                        (identifier)))))))))
+        (generate_body
+          (generate_head
+            (signal_declaration
+              (identifier_list
+                (identifier))
+              (subtype_indication
+                type: (name
+                  (library_type)))))
+          (generate_block
+            (concurrent_simple_signal_assignment
+              (name
+                (identifier))
+              (signal_assignment)
+              (waveform
+                (waveform_element
+                  (simple_expression
+                    (name
+                      (identifier))))))
+            (component_instantiation_statement
+              (label_declaration
+                (label))
+              component: (name
+                (identifier))
+              (port_map_aspect
+                (association_list
+                  (association_element
+                    (conditional_expression
+                      (simple_expression
+                        (name
+                          (identifier)))))
+                  (association_element
+                    (conditional_expression
+                      (simple_expression
+                        (name
+                          (identifier)))))
+                  (association_element
+                    (conditional_expression
+                      (simple_expression
+                        (name
+                          (identifier)))))))))))
+      (end_generate
+        (label)))
+    (line_comment
+      (comment_content))
+    (line_comment
+      (comment_content))
+    (block_statement
+      (label_declaration
+        (label))
+      (block_head
+        (signal_declaration
+          (identifier_list
+            (identifier))
+          (subtype_indication
+            type: (name
+              (library_type)))))
+      (concurrent_block
+        (concurrent_simple_signal_assignment
+          (name
+            (identifier))
+          (signal_assignment)
+          (waveform
+            (waveform_element
+              (simple_expression
+                (name
+                  (identifier))))))
+        (component_instantiation_statement
+          (label_declaration
+            (label))
+          component: (name
+            (identifier))
+          (port_map_aspect
+            (association_list
+              (association_element
+                (conditional_expression
+                  (simple_expression
+                    (name
+                      (identifier)))))
+              (association_element
+                (conditional_expression
+                  (simple_expression
+                    (name
+                      (identifier)))))
+              (association_element
+                (conditional_expression
+                  (simple_expression
+                    (name
+                      (identifier)))))))))
       (end_block
         (label)))))
 

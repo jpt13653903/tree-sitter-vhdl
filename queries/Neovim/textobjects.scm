@@ -179,8 +179,8 @@
 (if_generate_statement
   (if_generate
     (generate_body
-      (generate_direct_block
-        "generate"
+      "generate"
+      (generate_block
         .
         (_) @_start @_end
         (_)? @_end .)))
@@ -191,8 +191,8 @@
 
 (if_generate
   (generate_body
-    (generate_direct_block
-      "generate"
+    "generate"
+    (generate_block
       .
       (_) @_start @_end
       (_)? @_end
@@ -201,8 +201,8 @@
 
 (elsif_generate
   (generate_body
-    (generate_direct_block
-      "generate"
+    "generate"
+    (generate_block
       .
       (_) @_start @_end
       (_)? @_end
@@ -211,8 +211,8 @@
 
 (else_generate
   (generate_body
-    (generate_direct_block
-      "generate"
+    "generate"
+    (generate_block
       .
       (_) @_start @_end
       (_)? @_end
@@ -221,8 +221,8 @@
 
 (for_generate_statement
   (generate_body
-    (generate_direct_block
-      "generate"
+    "generate"
+    (generate_block
       .
       (_) @_start @_end
       (_)? @_end
@@ -230,8 +230,8 @@
       (#make-range! "block.inner" @_start @_end)))) @block.outer
 
 (case_generate_statement
+  "generate"
   (case_generate_block
-    "generate"
     .
     (_) @_start @_end
     (_)? @_end
@@ -240,8 +240,8 @@
 
 (case_generate_alternative
   (case_generate_body
-    (case_generate_direct_block
-      "=>"
+    "=>"
+    (generate_block
       .
       (_) @_start @_end
       (_)? @_end
