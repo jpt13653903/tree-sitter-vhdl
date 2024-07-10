@@ -276,7 +276,7 @@ module.exports = grammar({
             ),
 
             port_clause: $ => seq(
-                alias($.PORT, "port"), "(", $.interface_list, ")", ";"
+                alias($.PORT, "port"), "(", optional($.interface_list), ")", ";"
             ),
 
             entity_body: $ => seq(
@@ -1798,11 +1798,11 @@ module.exports = grammar({
             ),
 
             generic_clause: $ => seq(
-                alias($.GENERIC, "generic"), "(", alias($.generic_interface_list, $.interface_list), ")", ";"
+                alias($.GENERIC, "generic"), "(", optional(alias($.generic_interface_list, $.interface_list)), ")", ";"
             ),
 
             subprogram_header: $ => seq(
-                alias($.GENERIC, "generic"), "(", alias($.generic_interface_list, $.interface_list), ")", optional($.generic_map_aspect)
+                alias($.GENERIC, "generic"), "(", optional(alias($.generic_interface_list, $.interface_list)), ")", optional($.generic_map_aspect)
             ),
 
             _subprogram_specification: $ => choice(
@@ -1811,7 +1811,7 @@ module.exports = grammar({
             ),
 
             parameter_list_specification: $ => seq(
-                optional(alias($.PARAMETER, "parameter")), "(", $.interface_list, ")"
+                optional(alias($.PARAMETER, "parameter")), "(", optional($.interface_list), ")"
             ),
 
             _type_definition: $ => choice(
