@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-vhdl",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "VHDL grammar for tree-sitter",
   "repository": "github:jpt13653903/tree-sitter-vhdl",
   "author": "John-Philip Taylor",
@@ -48,7 +48,10 @@
   "tree-sitter": [
     {
       "scope": "source.vhdl",
-      "file-types": ["vhd", "vhdl"],
+      "file-types": [
+        "vhd",
+        "vhdl"
+      ],
       "highlights": "queries/Neovim/highlights.scm",
       "injection-regex": "^vhdl$"
     }
