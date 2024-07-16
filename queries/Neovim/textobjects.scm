@@ -16,8 +16,7 @@
 (if_statement_block
   (if_statement
     (if_statement_body) @_start @_end
-    (_)? @_end
-    .)
+    (_)? @_end .)
   (_)? @_end
   .
   (end_if)
