@@ -199,7 +199,10 @@ module.exports = grammar({
         /\s+/
     ],
 
-    conflicts: $ => [ ],
+    conflicts: $ => [
+        [ $.generate_body ],
+        [ $.case_generate_body ]
+    ],
 
     rules: {
         // Design File
@@ -273,7 +276,7 @@ module.exports = grammar({
             ),
 
             port_clause: $ => seq(
-                alias($.PORT, "port"), "(", $.interface_list, ")", ";"
+                alias($.PORT, "port"), "(", optional($.interface_list), ")", ";"
             ),
 
             entity_body: $ => seq(
@@ -754,16 +757,12 @@ module.exports = grammar({
             ),
 
             generate_body: $ => choice(
-                $.generate_direct_block,
-                seq($.generate_head, $.generate_block, $.generate_block_end)
+                seq(alias($.GENERATE, "generate"), optional($.generate_block)),
+                seq(alias($.GENERATE, "generate"), optional($.generate_head), alias($.BEGIN, "begin"), optional($.generate_block), optional($.generate_block_end))
             ),
 
             generate_head: $ => seq(
-                alias($.GENERATE, "generate"), repeat($._block_declarative_item)
-            ),
-
-            generate_direct_block: $ => seq(
-                alias($.GENERATE, "generate"), repeat($._concurrent_statement)
+                repeat1($._block_declarative_item)
             ),
 
             case_generate_alternative: $ => prec.left(seq(
@@ -771,20 +770,12 @@ module.exports = grammar({
             )),
 
             case_generate_body: $ => choice(
-                $.case_generate_direct_block,
-                seq($.case_generate_head, $.generate_block, $.generate_block_end)
-            ),
-
-            case_generate_head: $ => seq(
-                "=>", repeat($._block_declarative_item)
-            ),
-
-            case_generate_direct_block: $ => seq(
-                "=>", repeat($._concurrent_statement)
+                seq("=>", optional($.generate_block)),
+                seq("=>", optional($.generate_head), alias($.BEGIN, "begin"), optional($.generate_block), optional($.generate_block_end))
             ),
 
             generate_block: $ => seq(
-                alias($.BEGIN, "begin"), repeat($._concurrent_statement)
+                repeat1($._concurrent_statement)
             ),
 
             generate_block_end: $ => seq(
@@ -895,11 +886,11 @@ module.exports = grammar({
             ),
 
             case_generate_statement: $ => seq(
-                $.label_declaration, alias($.CASE, "case"), $._expression, $.case_generate_block, $.end_generate, ";"
+                $.label_declaration, alias($.CASE, "case"), $._expression, alias($.GENERATE, "generate"), $.case_generate_block, $.end_generate, ";"
             ),
 
             case_generate_block: $ => seq(
-                alias($.GENERATE, "generate"), repeat1($.case_generate_alternative)
+                repeat1($.case_generate_alternative)
             ),
 
             for_generate_statement: $ => seq(
@@ -907,15 +898,20 @@ module.exports = grammar({
             ),
 
             if_generate_statement: $ => seq(
-                $.label_declaration, $.if_generate, repeat($.elsif_generate), optional($.else_generate), $.end_generate, ";"
+                $.label_declaration, $.if_generate, $.end_generate, ";"
             ),
 
             if_generate: $ => seq(
-                alias($.IF, "if"), optional($.label_declaration), $._expression, $.generate_body
+                alias($.IF, "if"), optional($.label_declaration), $._expression, $.generate_body, optional($._elsif_else_generate)
+            ),
+
+            _elsif_else_generate: $ => choice(
+                $.elsif_generate,
+                $.else_generate
             ),
 
             elsif_generate: $ => seq(
-                alias($.ELSIF, "elsif"), optional($.label_declaration), $._expression, $.generate_body
+                alias($.ELSIF, "elsif"), optional($.label_declaration), $._expression, $.generate_body, optional($._elsif_else_generate)
             ),
 
             else_generate: $ => seq(
@@ -971,23 +967,28 @@ module.exports = grammar({
             ),
 
             if_statement_block: $ => seq(
-                optional($.label_declaration), $.if_statement, repeat($.elsif_statement), optional($.else_statement), $.end_if, ";"
+                optional($.label_declaration), $.if_statement, $.end_if, ";"
             ),
 
             if_statement: $ => seq(
-                alias($.IF, "if"), $._expression, alias($.THEN, "then"), optional($.if_statement_body)
+                alias($.IF, "if"), $._expression, alias($.THEN, "then"), optional($.if_statement_body), optional($._elsif_else_statement)
             ),
 
-            if_statement_body: $ => seq(
-                repeat1($._sequential_statement)
+            _elsif_else_statement: $ => choice(
+                $.elsif_statement,
+                $.else_statement
             ),
 
             elsif_statement: $ => seq(
-                alias($.ELSIF, "elsif"), $._expression, alias($.THEN, "then"), optional($.if_statement_body)
+                alias($.ELSIF, "elsif"), $._expression, alias($.THEN, "then"), optional($.if_statement_body), optional($._elsif_else_statement)
             ),
 
             else_statement: $ => seq(
                 alias($.ELSE, "else"), optional($.if_statement_body)
+            ),
+
+            if_statement_body: $ => seq(
+                repeat1($._sequential_statement)
             ),
 
             end_if: $ => seq(
@@ -1807,11 +1808,11 @@ module.exports = grammar({
             ),
 
             generic_clause: $ => seq(
-                alias($.GENERIC, "generic"), "(", alias($.generic_interface_list, $.interface_list), ")", ";"
+                alias($.GENERIC, "generic"), "(", optional(alias($.generic_interface_list, $.interface_list)), ")", ";"
             ),
 
             subprogram_header: $ => seq(
-                alias($.GENERIC, "generic"), "(", alias($.generic_interface_list, $.interface_list), ")", optional($.generic_map_aspect)
+                alias($.GENERIC, "generic"), "(", optional(alias($.generic_interface_list, $.interface_list)), ")", optional($.generic_map_aspect)
             ),
 
             _subprogram_specification: $ => choice(
@@ -1820,7 +1821,7 @@ module.exports = grammar({
             ),
 
             parameter_list_specification: $ => seq(
-                optional(alias($.PARAMETER, "parameter")), "(", $.interface_list, ")"
+                optional(alias($.PARAMETER, "parameter")), "(", optional($.interface_list), ")"
             ),
 
             _type_definition: $ => choice(
