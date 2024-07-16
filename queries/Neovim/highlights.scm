@@ -256,7 +256,7 @@
   ","
   "."
   ";"
-] @punctuation.delimiters
+] @punctuation.delimiter
 
 [
   "("
@@ -412,4 +412,4 @@
 (mode_view_declaration
   (identifier) @type.definition)
 
-(ERROR) @error
+; (ERROR) @error
