@@ -1,0 +1,332 @@
+diff --git a/grammar.js b/grammar.js
+index a8db016..3206e49 100644
+--- a/grammar.js
++++ b/grammar.js
+@@ -14,12 +14,12 @@ module.exports = grammar({
+     externals: $ => [
+         $.identifier,
+
+-        $._ABS,
++        $.ABS,
+         $.ACCESS,
+         $.AFTER,
+         $.ALIAS,
+         $.ALL,
+-        $._AND,
++        $.AND,
+         $.ARCHITECTURE,
+         $.ARRAY,
+         $.ASSERT,
+@@ -65,17 +65,17 @@ module.exports = grammar({
+         $.LITERAL,
+         $.LOOP,
+         $.MAP,
+-        $._MOD,
+-        $._NAND,
++        $.MOD,
++        $.NAND,
+         $.NEW,
+         $.NEXT,
+-        $._NOR,
+-        $._NOT,
++        $.NOR,
++        $.NOT,
+         $.NULL,
+         $.OF,
+         $.ON,
+         $.OPEN,
+-        $._OR,
++        $.OR,
+         $.OTHERS,
+         $.OUT,
+         $.PACKAGE,
+@@ -93,21 +93,21 @@ module.exports = grammar({
+         $.REGISTER,
+         $.REJECT,
+         $.RELEASE,
+-        $._REM,
++        $.REM,
+         $.REPORT,
+         $.RESTRICT, // Not used -- PSL keyword
+         $.RETURN,
+-        $._ROL,
+-        $._ROR,
++        $.ROL,
++        $.ROR,
+         $.SELECT,
+         $.SEQUENCE,
+         $.SEVERITY,
+         $.SIGNAL,
+         $.SHARED,
+-        $._SLA,
+-        $._SLL,
+-        $._SRA,
+-        $._SRL,
++        $.SLA,
++        $.SLL,
++        $.SRA,
++        $.SRL,
+         $.STRONG, // Not used -- PSL keyword
+         $.SUBTYPE,
+         $.THEN,
+@@ -128,8 +128,8 @@ module.exports = grammar({
+         $.WHEN,
+         $.WHILE,
+         $.WITH,
+-        $._XNOR,
+-        $._XOR,
++        $.XNOR,
++        $.XOR,
+
+         $.reserved_end_marker, // Scanner internal use only
+
+@@ -231,7 +231,7 @@ module.exports = grammar({
+             ),
+
+             use_clause: $ => seq(
+-                alias($.USE, "use"), $.selected_name, repeat(seq(",", $.selected_name)), ";"
++                alias($.USE, "use"), $.selected_name_list, ";"
+             ),
+
+             context_reference: $ => seq(
+@@ -252,7 +252,7 @@ module.exports = grammar({
+             ),
+
+             selected_name: $ => seq(
+-                $._logical_name, repeat(seq(".", choice($._identifier, $.ALL)))
++                $._logical_name, repeat(seq(".", choice(field("package", $._identifier), $.ALL)))
+             ),
+
+         // Library Units
+@@ -1142,23 +1142,23 @@ module.exports = grammar({
+             ),
+
+             unary_operator: $ => choice(
+-                $._ABS,
+-                $._NOT,
+-                $._AND,
+-                $._OR,
+-                $._NAND,
+-                $._NOR,
+-                $._XOR,
+-                $._XNOR
++                alias($.ABS,  "abs"),
++                alias($.NOT,  "not"),
++                alias($.AND,  "and"),
++                alias($.OR,   "or"),
++                alias($.NAND, "nand"),
++                alias($.NOR,  "nor"),
++                alias($.XOR,  "xor"),
++                alias($.XNOR, "xnor")
+             ),
+
+             logical_operator: $ => choice(
+-                $._AND,
+-                $._OR,
+-                $._NAND,
+-                $._NOR,
+-                $._XOR,
+-                $._XNOR
++                alias($.AND,  "and"),
++                alias($.OR,   "or"),
++                alias($.NAND, "nand"),
++                alias($.NOR,  "nor"),
++                alias($.XOR,  "xor"),
++                alias($.XNOR, "xnor"),
+             ),
+
+             relational_operator: $ => choice(
+@@ -1177,12 +1177,12 @@ module.exports = grammar({
+             ),
+
+             shift_operator: $ => choice(
+-                $._SLL,
+-                $._SRL,
+-                $._SLA,
+-                $._SRA,
+-                $._ROL,
+-                $._ROR
++                alias($.SLL, "sll"),
++                alias($.SRL, "srl"),
++                alias($.SLA, "sla"),
++                alias($.SRA, "sra"),
++                alias($.ROL, "rol"),
++                alias($.ROR, "ror")
+             ),
+
+             sign: $ => choice(
+@@ -1199,8 +1199,8 @@ module.exports = grammar({
+             multiplying_operator: $ => choice(
+                 "*",
+                 "/",
+-                $._MOD,
+-                $._REM
++                alias($.MOD, "mod"),
++                alias($.REM, "rem")
+             ),
+
+             exponentiate: $ => "**",
+@@ -1497,7 +1497,7 @@ module.exports = grammar({
+             ),
+
+             conditional_analysis_relation: $ => choice(
+-                seq(optional(alias($._NOT, $.unary_operator)), "(", $.conditional_analysis_expression, ")"),
++                seq(optional(alias($.NOT, "not")), "(", $.conditional_analysis_expression, ")"),
+                 seq($._conditional_analysis_identifier, $._conditional_analysis_operator, $.string_literal)
+             ),
+
+diff --git a/queries/Neovim/textobjects.scm b/queries/Neovim/textobjects.scm
+index 49f6cf7..b7b3e54 100644
+--- a/queries/Neovim/textobjects.scm
++++ b/queries/Neovim/textobjects.scm
+@@ -432,7 +432,8 @@
+   (logical_name_list) @scopename.inner) @scopename.outer
+
+ (use_clause
+-  (selected_name) @scopename.inner) @scopename.outer
++  (selected_name_list
++    (selected_name) @scopename.inner)) @scopename.outer
+
+ (component_instantiation_statement
+   (instantiated_unit) @scopename.inner) @scopename.outer
+diff --git a/test/corpus/specification_examples/architecture.vhd b/test/corpus/specification_examples/architecture.vhd
+index efaa1ae..0ebbfeb 100644
+--- a/test/corpus/specification_examples/architecture.vhd
++++ b/test/corpus/specification_examples/architecture.vhd
+@@ -99,26 +99,29 @@ end architecture DataFlow;
+       (logical_name_list
+         library: (library_namespace)))
+     (use_clause
+-      (selected_name
+-        library: (library_namespace)
+-        (identifier)
+-        (ALL)))
++      (selected_name_list
++        (selected_name
++          library: (library_namespace)
++          package: (identifier)
++          (ALL))))
+     (library_clause
+       (logical_name_list
+         library: (library_namespace)))
+     (use_clause
+-      (selected_name
+-        library: (library_namespace)
+-        (identifier)
+-        (ALL)))
++      (selected_name_list
++        (selected_name
++          library: (library_namespace)
++          package: (identifier)
++          (ALL))))
+     (library_clause
+       (logical_name_list
+         library: (library_namespace)))
+     (use_clause
+-      (selected_name
+-        library: (library_namespace)
+-        (identifier)
+-        (ALL)))
++      (selected_name_list
++        (selected_name
++          library: (library_namespace)
++          package: (identifier)
++          (ALL))))
+     (entity_declaration
+       entity: (identifier)
+       (entity_head
+diff --git a/test/corpus/specification_examples/configuration.vhd b/test/corpus/specification_examples/configuration.vhd
+index edb9943..5f803a1 100644
+--- a/test/corpus/specification_examples/configuration.vhd
++++ b/test/corpus/specification_examples/configuration.vhd
+@@ -33,9 +33,10 @@ end configuration V4_27_87;
+         (identifier))
+       (configuration_head
+         (use_clause
+-          (selected_name
+-            library: (library_namespace)
+-            (ALL))))
++          (selected_name_list
++            (selected_name
++              library: (library_namespace)
++              (ALL)))))
+       (block_configuration
+         (name
+           (identifier))
+diff --git a/test/corpus/specification_examples/entity.vhd b/test/corpus/specification_examples/entity.vhd
+index 57bca9c..093b541 100644
+--- a/test/corpus/specification_examples/entity.vhd
++++ b/test/corpus/specification_examples/entity.vhd
+@@ -124,7 +124,7 @@ entity ROM is
+          Sel: in Bit);
+   type Instruction is array (1 to 5) of Natural;
+   type Program is array (Natural range <>) of Instruction;
+-  use Work.OpCodes.all, Work.RegisterNames.all;
++  use MyWork.OpCodes.all, Work.RegisterNames.all;
+   constant ROM_Code: Program :=
+     (
+       (STM, R14, R12, 12, R13),
+@@ -191,14 +191,15 @@ end ROM;
+               type: (name
+                 (identifier)))))
+         (use_clause
+-          (selected_name
+-            library: (library_namespace)
+-            (identifier)
+-            (ALL))
+-          (selected_name
+-            library: (library_namespace)
+-            (identifier)
+-            (ALL)))
++          (selected_name_list
++            (selected_name
++              library: (identifier)
++              package: (identifier)
++              (ALL))
++            (selected_name
++              library: (library_namespace)
++              package: (identifier)
++              (ALL))))
+         (constant_declaration
+           (identifier_list
+             constant: (identifier))
+@@ -384,10 +385,11 @@ end;
+                 (decimal_integer)
+                 unit: (library_constant_unit)))))
+         (use_clause
+-          (selected_name
+-            library: (library_namespace)
+-            (identifier)
+-            (ALL))))
++          (selected_name_list
++            (selected_name
++              library: (library_namespace)
++              package: (identifier)
++              (ALL)))))
+       (entity_body
+         (concurrent_assertion_statement
+           (assertion
+diff --git a/test/highlight/architecture_basic.vhd b/test/highlight/architecture_basic.vhd
+index b3c8716..a7706e1 100644
+--- a/test/highlight/architecture_basic.vhd
++++ b/test/highlight/architecture_basic.vhd
+@@ -13,16 +13,16 @@ architecture EXAMPLE of STRUCTURE is
+ --                               ^ number
+ --                                 ^ keyword.operator
+ --                                    ^ number
+---                                     ^ punctuation.delimiters
++--                                     ^ punctuation.delimiter
+ begin
+ -- ^ keyword
+   DIGIT_A <= 3;
+ -- ^ variable
+ --        ^ operator
+ --           ^ number
+---            ^ punctuation.delimiters
++--            ^ punctuation.delimiter
+ end EXAMPLE;
+ --^ keyword
+ --  ^ property
+---         ^ punctuation.delimiters
++--         ^ punctuation.delimiter
+

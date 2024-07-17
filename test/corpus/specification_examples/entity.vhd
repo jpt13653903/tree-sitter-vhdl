@@ -124,7 +124,7 @@ entity ROM is
          Sel: in Bit);
   type Instruction is array (1 to 5) of Natural;
   type Program is array (Natural range <>) of Instruction;
-  use Work.OpCodes.all, Work.RegisterNames.all;
+  use MyWork.OpCodes.all, Work.RegisterNames.all;
   constant ROM_Code: Program :=
     (
       (STM, R14, R12, 12, R13),
@@ -191,14 +191,15 @@ end ROM;
               type: (name
                 (identifier)))))
         (use_clause
-          (selected_name
-            library: (library_namespace)
-            (identifier)
-            (ALL))
-          (selected_name
-            library: (library_namespace)
-            (identifier)
-            (ALL)))
+          (selected_name_list
+            (selected_name
+              library: (identifier)
+              package: (identifier)
+              (ALL))
+            (selected_name
+              library: (library_namespace)
+              package: (identifier)
+              (ALL))))
         (constant_declaration
           (identifier_list
             constant: (identifier))
@@ -384,10 +385,11 @@ end;
                 (decimal_integer)
                 unit: (library_constant_unit)))))
         (use_clause
-          (selected_name
-            library: (library_namespace)
-            (identifier)
-            (ALL))))
+          (selected_name_list
+            (selected_name
+              library: (library_namespace)
+              package: (identifier)
+              (ALL)))))
       (entity_body
         (concurrent_assertion_statement
           (assertion

@@ -249,6 +249,7 @@
   (exponentiate)
   (variable_assignment)
   (signal_assignment)
+  "not"
 ] @operator
 
 [
