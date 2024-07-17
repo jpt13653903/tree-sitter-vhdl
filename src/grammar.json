@@ -247,7 +247,7 @@
                       "name": "package",
                       "content": {
                         "type": "SYMBOL",
-                        "name": "_identifier"
+                        "name": "identifier"
                       }
                     },
                     {

@@ -7076,18 +7076,6 @@
           {
             "type": "identifier",
             "named": true
-          },
-          {
-            "type": "library_constant",
-            "named": true
-          },
-          {
-            "type": "library_function",
-            "named": true
-          },
-          {
-            "type": "library_type",
-            "named": true
           }
         ]
       }

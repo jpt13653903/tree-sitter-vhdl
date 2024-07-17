@@ -6,6 +6,7 @@ use ieee.math_real.all;
 use ieee.math_real.sin;
 use work.whatnot.all;
 use work.whatnot.func;
+use work.sin.func.all;
 use my_work.whatnot.func;
 use my_work.func;
 use my_work.all;
@@ -38,6 +39,13 @@ use my_work.all;
           library: (library_namespace)
           package: (identifier)
           (identifier))))
+    (use_clause
+      (selected_name_list
+        (selected_name
+          library: (library_namespace)
+          package: (identifier)
+          (identifier)
+          (ALL))))
     (use_clause
       (selected_name_list
         (selected_name

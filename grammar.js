@@ -252,7 +252,7 @@ module.exports = grammar({
             ),
 
             selected_name: $ => seq(
-                $._logical_name, optional(seq(".", choice(field("package", $._identifier), $.ALL), repeat(seq(".", choice($._identifier, $.ALL))))),
+                $._logical_name, optional(seq(".", choice(field("package", $.identifier), $.ALL), repeat(seq(".", choice($._identifier, $.ALL))))),
             ),
 
         // Library Units
