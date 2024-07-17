@@ -1741,10 +1741,6 @@
         {
           "type": "string_literal",
           "named": true
-        },
-        {
-          "type": "unary_operator",
-          "named": true
         }
       ]
     }
@@ -7072,6 +7068,16 @@
             "named": true
           }
         ]
+      },
+      "package": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -8408,11 +8414,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "selected_name",
+          "type": "selected_name_list",
           "named": true
         }
       ]
@@ -8883,6 +8889,10 @@
     "named": false
   },
   {
+    "type": "abs",
+    "named": false
+  },
+  {
     "type": "access",
     "named": false
   },
@@ -8892,6 +8902,10 @@
   },
   {
     "type": "alias",
+    "named": false
+  },
+  {
+    "type": "and",
     "named": false
   },
   {
@@ -9223,11 +9237,27 @@
     "named": false
   },
   {
+    "type": "mod",
+    "named": false
+  },
+  {
+    "type": "nand",
+    "named": false
+  },
+  {
     "type": "new",
     "named": false
   },
   {
     "type": "next",
+    "named": false
+  },
+  {
+    "type": "nor",
+    "named": false
+  },
+  {
+    "type": "not",
     "named": false
   },
   {
@@ -9245,6 +9275,10 @@
   {
     "type": "operator_symbol",
     "named": true
+  },
+  {
+    "type": "or",
+    "named": false
   },
   {
     "type": "out",
@@ -9311,11 +9345,23 @@
     "named": false
   },
   {
+    "type": "rem",
+    "named": false
+  },
+  {
     "type": "report",
     "named": false
   },
   {
     "type": "return",
+    "named": false
+  },
+  {
+    "type": "rol",
+    "named": false
+  },
+  {
+    "type": "ror",
     "named": false
   },
   {
@@ -9336,6 +9382,22 @@
   },
   {
     "type": "signal",
+    "named": false
+  },
+  {
+    "type": "sla",
+    "named": false
+  },
+  {
+    "type": "sll",
+    "named": false
+  },
+  {
+    "type": "sra",
+    "named": false
+  },
+  {
+    "type": "srl",
     "named": false
   },
   {
@@ -9416,6 +9478,14 @@
   },
   {
     "type": "with",
+    "named": false
+  },
+  {
+    "type": "xnor",
+    "named": false
+  },
+  {
+    "type": "xor",
     "named": false
   },
   {

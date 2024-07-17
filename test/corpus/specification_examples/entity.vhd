@@ -191,14 +191,15 @@ end ROM;
               type: (name
                 (identifier)))))
         (use_clause
-          (selected_name
-            library: (library_namespace)
-            (identifier)
-            (ALL))
-          (selected_name
-            library: (library_namespace)
-            (identifier)
-            (ALL)))
+          (selected_name_list
+            (selected_name
+              library: (library_namespace)
+              package: (identifier)
+              (ALL))
+            (selected_name
+              library: (library_namespace)
+              package: (identifier)
+              (ALL))))
         (constant_declaration
           (identifier_list
             constant: (identifier))
@@ -384,10 +385,11 @@ end;
                 (decimal_integer)
                 unit: (library_constant_unit)))))
         (use_clause
-          (selected_name
-            library: (library_namespace)
-            (identifier)
-            (ALL))))
+          (selected_name_list
+            (selected_name
+              library: (library_namespace)
+              package: (identifier)
+              (ALL)))))
       (entity_body
         (concurrent_assertion_statement
           (assertion

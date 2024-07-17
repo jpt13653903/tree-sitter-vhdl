@@ -13,16 +13,16 @@ architecture EXAMPLE of STRUCTURE is
 --                               ^ number
 --                                 ^ keyword.operator
 --                                    ^ number
---                                     ^ punctuation.delimiters
+--                                     ^ punctuation.delimiter
 begin
 -- ^ keyword
   DIGIT_A <= 3;
 -- ^ variable
 --        ^ operator
 --           ^ number
---            ^ punctuation.delimiters
+--            ^ punctuation.delimiter
 end EXAMPLE;
 --^ keyword
 --  ^ property
---         ^ punctuation.delimiters
+--         ^ punctuation.delimiter
 

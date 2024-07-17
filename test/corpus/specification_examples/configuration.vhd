@@ -33,9 +33,10 @@ end configuration V4_27_87;
         (identifier))
       (configuration_head
         (use_clause
-          (selected_name
-            library: (library_namespace)
-            (ALL))))
+          (selected_name_list
+            (selected_name
+              library: (library_namespace)
+              (ALL)))))
       (block_configuration
         (name
           (identifier))

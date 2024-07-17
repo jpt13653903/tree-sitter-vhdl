@@ -14,12 +14,12 @@ module.exports = grammar({
     externals: $ => [
         $.identifier,
 
-        $._ABS,
+        $.ABS,
         $.ACCESS,
         $.AFTER,
         $.ALIAS,
         $.ALL,
-        $._AND,
+        $.AND,
         $.ARCHITECTURE,
         $.ARRAY,
         $.ASSERT,
@@ -65,17 +65,17 @@ module.exports = grammar({
         $.LITERAL,
         $.LOOP,
         $.MAP,
-        $._MOD,
-        $._NAND,
+        $.MOD,
+        $.NAND,
         $.NEW,
         $.NEXT,
-        $._NOR,
-        $._NOT,
+        $.NOR,
+        $.NOT,
         $.NULL,
         $.OF,
         $.ON,
         $.OPEN,
-        $._OR,
+        $.OR,
         $.OTHERS,
         $.OUT,
         $.PACKAGE,
@@ -93,21 +93,21 @@ module.exports = grammar({
         $.REGISTER,
         $.REJECT,
         $.RELEASE,
-        $._REM,
+        $.REM,
         $.REPORT,
         $.RESTRICT, // Not used -- PSL keyword
         $.RETURN,
-        $._ROL,
-        $._ROR,
+        $.ROL,
+        $.ROR,
         $.SELECT,
         $.SEQUENCE,
         $.SEVERITY,
         $.SIGNAL,
         $.SHARED,
-        $._SLA,
-        $._SLL,
-        $._SRA,
-        $._SRL,
+        $.SLA,
+        $.SLL,
+        $.SRA,
+        $.SRL,
         $.STRONG, // Not used -- PSL keyword
         $.SUBTYPE,
         $.THEN,
@@ -128,8 +128,8 @@ module.exports = grammar({
         $.WHEN,
         $.WHILE,
         $.WITH,
-        $._XNOR,
-        $._XOR,
+        $.XNOR,
+        $.XOR,
 
         $.reserved_end_marker, // Scanner internal use only
 
@@ -231,7 +231,7 @@ module.exports = grammar({
             ),
 
             use_clause: $ => seq(
-                alias($.USE, "use"), $.selected_name, repeat(seq(",", $.selected_name)), ";"
+                alias($.USE, "use"), $.selected_name_list, ";"
             ),
 
             context_reference: $ => seq(
@@ -252,7 +252,7 @@ module.exports = grammar({
             ),
 
             selected_name: $ => seq(
-                $._logical_name, repeat(seq(".", choice($._identifier, $.ALL)))
+                $._logical_name, optional(seq(".", choice(field("package", $.identifier), $.ALL), repeat(seq(".", choice($._identifier, $.ALL))))),
             ),
 
         // Library Units
@@ -1142,23 +1142,23 @@ module.exports = grammar({
             ),
 
             unary_operator: $ => choice(
-                $._ABS,
-                $._NOT,
-                $._AND,
-                $._OR,
-                $._NAND,
-                $._NOR,
-                $._XOR,
-                $._XNOR
+                alias($.ABS,  "abs"),
+                alias($.NOT,  "not"),
+                alias($.AND,  "and"),
+                alias($.OR,   "or"),
+                alias($.NAND, "nand"),
+                alias($.NOR,  "nor"),
+                alias($.XOR,  "xor"),
+                alias($.XNOR, "xnor")
             ),
 
             logical_operator: $ => choice(
-                $._AND,
-                $._OR,
-                $._NAND,
-                $._NOR,
-                $._XOR,
-                $._XNOR
+                alias($.AND,  "and"),
+                alias($.OR,   "or"),
+                alias($.NAND, "nand"),
+                alias($.NOR,  "nor"),
+                alias($.XOR,  "xor"),
+                alias($.XNOR, "xnor"),
             ),
 
             relational_operator: $ => choice(
@@ -1177,12 +1177,12 @@ module.exports = grammar({
             ),
 
             shift_operator: $ => choice(
-                $._SLL,
-                $._SRL,
-                $._SLA,
-                $._SRA,
-                $._ROL,
-                $._ROR
+                alias($.SLL, "sll"),
+                alias($.SRL, "srl"),
+                alias($.SLA, "sla"),
+                alias($.SRA, "sra"),
+                alias($.ROL, "rol"),
+                alias($.ROR, "ror")
             ),
 
             sign: $ => choice(
@@ -1199,8 +1199,8 @@ module.exports = grammar({
             multiplying_operator: $ => choice(
                 "*",
                 "/",
-                $._MOD,
-                $._REM
+                alias($.MOD, "mod"),
+                alias($.REM, "rem")
             ),
 
             exponentiate: $ => "**",
@@ -1497,7 +1497,7 @@ module.exports = grammar({
             ),
 
             conditional_analysis_relation: $ => choice(
-                seq(optional(alias($._NOT, $.unary_operator)), "(", $.conditional_analysis_expression, ")"),
+                seq(optional(alias($.NOT, "not")), "(", $.conditional_analysis_expression, ")"),
                 seq($._conditional_analysis_identifier, $._conditional_analysis_operator, $.string_literal)
             ),
 

@@ -3,6 +3,7 @@
 *.bak
 *.swp
 ~*
+diff.log
 debug.log
 
 # Rust artifacts

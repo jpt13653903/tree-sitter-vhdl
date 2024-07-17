@@ -93,7 +93,7 @@ source = { git = "https://github.com/teburd/tree-sitter-vhdl", rev = "c57313adee
 with:
 
 ```toml
-source = { git = "https://github.com/jpt13653903/tree-sitter-vhdl", rev = "256ddae0ba5d1a36ef54d59a1bdb6f0360a9c818" }
+source = { git = "https://github.com/jpt13653903/tree-sitter-vhdl", rev = "28f517457db15afeb239ba0f79a139ae3e8cbdfd" }
 ```
 
 Adjust the revision git hash if necessary (latest stable is recommended).

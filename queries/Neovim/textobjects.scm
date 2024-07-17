@@ -432,7 +432,8 @@
   (logical_name_list) @scopename.inner) @scopename.outer
 
 (use_clause
-  (selected_name) @scopename.inner) @scopename.outer
+  (selected_name_list
+    (selected_name) @scopename.inner)) @scopename.outer
 
 (component_instantiation_statement
   (instantiated_unit) @scopename.inner) @scopename.outer

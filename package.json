@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-vhdl",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "VHDL grammar for tree-sitter",
   "repository": "github:jpt13653903/tree-sitter-vhdl",
   "author": "John-Philip Taylor",
