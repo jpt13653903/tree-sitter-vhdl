@@ -35,7 +35,6 @@ static void register_ieee_math_real_functions(TokenTree* token_tree)
     token_tree_insert(token_tree, "floor",   LIBRARY_FUNCTION);
     token_tree_insert(token_tree, "round",   LIBRARY_FUNCTION);
     token_tree_insert(token_tree, "trunc",   LIBRARY_FUNCTION);
-    token_tree_insert(token_tree, "mod",     LIBRARY_FUNCTION);
     token_tree_insert(token_tree, "realmax", LIBRARY_FUNCTION);
     token_tree_insert(token_tree, "realmin", LIBRARY_FUNCTION);
     token_tree_insert(token_tree, "uniform", LIBRARY_FUNCTION);

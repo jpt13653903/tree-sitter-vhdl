@@ -7070,7 +7070,7 @@
         ]
       },
       "package": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
@@ -7098,6 +7098,22 @@
       "types": [
         {
           "type": "ALL",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_function",
+          "named": true
+        },
+        {
+          "type": "library_type",
           "named": true
         }
       ]

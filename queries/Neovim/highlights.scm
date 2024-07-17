@@ -5,7 +5,7 @@
 ;-------------------------------------------------------------------------------
 ;
 (line_comment
-  (comment_content) @comment @spell) @comment
+  (comment_content) @spell) @comment
 
 (block_comment
   (comment_content) @comment.documentation @spell) @comment
@@ -80,6 +80,9 @@
   "until"
 ] @keyword.coroutine
 
+(end_process
+  "end" @keyword.coroutine)
+
 (timeout_clause
   "for" @keyword.coroutine)
 
@@ -87,6 +90,9 @@
   "function"
   "procedure"
 ] @keyword.function
+
+(subprogram_end
+  "end" @keyword.function)
 
 [
   "to"
@@ -140,6 +146,9 @@
   "exit"
 ] @keyword.repeat
 
+(end_loop
+  "end" @keyword.repeat)
+
 (for_loop
   "for" @keyword.repeat)
 
@@ -169,6 +178,12 @@
   "elsif"
   "case"
 ] @keyword.conditional
+
+(end_if
+  "end" @keyword.conditional)
+
+(end_case
+  "end" @keyword.conditional)
 
 (when_element
   "when" @keyword.conditional)
@@ -239,18 +254,26 @@
 
 [
   (condition_conversion)
-  (unary_operator)
-  (logical_operator)
   (relational_operator)
-  (shift_operator)
   (sign)
   (adding_operator)
-  (multiplying_operator)
   (exponentiate)
   (variable_assignment)
   (signal_assignment)
-  "not"
+  "*"
+  "/"
+  ":"
+  "=>"
 ] @operator
+
+[
+  (unary_operator)
+  (logical_operator)
+  (shift_operator)
+  "mod"
+  "not"
+  "rem"
+] @keyword.operator
 
 [
   "'"
@@ -269,9 +292,7 @@
 ] @punctuation.bracket
 
 [
-  ":"
   "@"
-  "=>"
 ] @punctuation.special
 
 [

@@ -124,7 +124,7 @@ entity ROM is
          Sel: in Bit);
   type Instruction is array (1 to 5) of Natural;
   type Program is array (Natural range <>) of Instruction;
-  use MyWork.OpCodes.all, Work.RegisterNames.all;
+  use Work.OpCodes.all, Work.RegisterNames.all;
   constant ROM_Code: Program :=
     (
       (STM, R14, R12, 12, R13),
@@ -193,7 +193,7 @@ end ROM;
         (use_clause
           (selected_name_list
             (selected_name
-              library: (identifier)
+              library: (library_namespace)
               package: (identifier)
               (ALL))
             (selected_name
