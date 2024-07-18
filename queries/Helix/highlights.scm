@@ -237,17 +237,26 @@
 
 [
   (condition_conversion)
-  (unary_operator)
-  (logical_operator)
   (relational_operator)
-  (shift_operator)
   (sign)
   (adding_operator)
-  (multiplying_operator)
   (exponentiate)
   (variable_assignment)
   (signal_assignment)
+  "*"
+  "/"
+  ":"
+  "=>"
 ] @operator
+
+[
+  (unary_operator)
+  (logical_operator)
+  (shift_operator)
+  "mod"
+  "not"
+  "rem"
+] @keyword.operator
 
 [
   "'"
@@ -265,11 +274,7 @@
   ">>"
 ] @punctuation.bracket
 
-[
-  ":"
-  "@"
-  "=>"
-] @punctuation.special
+"@" @punctuation.special
 
 [
   (decimal_integer)
