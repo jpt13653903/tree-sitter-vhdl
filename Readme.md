@@ -43,9 +43,12 @@ outside the scope of this project.
 
 ## Neovim Setup Process
 
-This parser has not been merged into the official tree-sitter yet, so you need
-to perform a manual setup process.
-Configure your `treesitter.lua` (or equivalent) as follows:
+This parser has been merged into the official nvim-treesitter, so it should
+work out of the box after adding it to the list of languages to install.
+
+If you would like to use the `develop` branch instead (because it contains
+the latest features that might not have been merged upstream yet), configure
+your `treesitter.lua` (or equivalent) as follows:
 
 ```lua
 local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
@@ -54,7 +57,7 @@ parser_config.vhdl = {
   install_info = {
     url = "https://github.com/jpt13653903/tree-sitter-vhdl.git",
     files = { 'src/parser.c', 'src/scanner.c' },
-    branch = 'master', -- or 'develop' if you want the latest features
+    branch = 'develop',
     generate_requires_npm = false,
     requires_generate_from_grammar = false,
   },
@@ -80,6 +83,10 @@ and `~/AppData/Local/nvim/after/queries/vhdl` on Windows.
 
 Finally, run `:TSUpdate`.
 
+If this does not work, change the `url` to a local clone of this repo instead.
+The nvim-treesitter installer doesn't always follow the override if the `url`
+points to an online repository.
+
 ## Helix Setup Process
 
 Helix still uses a fork of the old unmaintained
@@ -93,7 +100,7 @@ source = { git = "https://github.com/teburd/tree-sitter-vhdl", rev = "c57313adee
 with:
 
 ```toml
-source = { git = "https://github.com/jpt13653903/tree-sitter-vhdl", rev = "28f517457db15afeb239ba0f79a139ae3e8cbdfd" }
+source = { git = "https://github.com/jpt13653903/tree-sitter-vhdl", rev = "f4c492accff02b5c85517ff5dd4720e2229feb75" }
 ```
 
 Adjust the revision git hash if necessary (latest stable is recommended).
