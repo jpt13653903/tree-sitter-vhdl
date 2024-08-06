@@ -12,8 +12,7 @@ guide you through it.
 
 Direct contribution follows the following branching model:
 
-- `master` contains the latest, and tested, features (I'm not running
-  versioning yet -- I'll start that once the alpha-testing is complete)
+- `master` contains the latest, and tested, features.  Typically, a merge to master will be accompanied by a version-bump and associated Git tag.
 - `develop` contains the latest, greatest features and updates, but might not
   be fully tested yet.
 - `feature/...`, `bugfix/...`, etc. might or might not work.  Consider these
