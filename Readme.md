@@ -20,6 +20,22 @@ A VHDL parser for syntax highlighting.
 
 ![Screenshot](examples/Screenshot.png)
 
+<details><summary>Other colour schemes</summary>
+
+[Neovim], using [nvim-treesitter] and a [Tokyo Night] colour scheme:
+
+![TokyoNight](examples/Screenshot_TokyoNight.png)
+
+[Neovim], using [nvim-treesitter] and a [One Dark] colour scheme:
+
+![OneDark](examples/Screenshot_OneDark.png)
+
+If you'd like your favourite colour scheme to be listed here,
+issue a PR with a new screenshot of [the screenshot example][screenshot]
+in the same style and composition as the other screenshots.
+
+</details>
+
 ## History
 
 This version started off as a fork of [alemuller/tree-sitter-vhdl][alemuller],
@@ -131,6 +147,9 @@ Contributions are welcome.  Read [Contributing.md] for more information.
 [Neovim]: https://neovim.io/
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [Catppuccin]: https://github.com/catppuccin/nvim
+[Tokyo Night]: https://github.com/folke/tokyonight.nvim
+[One Dark]: https://github.com/navarasu/onedark.nvim
+[screenshot]: examples/Screenshot.vhd
 [alemuller]: https://github.com/alemuller/tree-sitter-vhdl
 [issues]: https://github.com/jpt13653903/tree-sitter-vhdl/issues
 [helix]: https://github.com/helix-editor/helix
