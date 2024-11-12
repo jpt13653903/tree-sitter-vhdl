@@ -14,7 +14,7 @@
     }
   ],
   "metadata": {
-    "version": "1.2.0",
+    "version": "1.2.2",
     "license": "MIT",
     "description": "VHDL grammar for tree-sitter",
     "authors": [
