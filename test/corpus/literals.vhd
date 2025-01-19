@@ -175,7 +175,7 @@ A <= null;
         (waveform_element
           (simple_expression
             (decimal_integer)
-            (library_constant_unit)))))
+            unit: (library_constant_unit)))))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -184,7 +184,7 @@ A <= null;
         (waveform_element
           (simple_expression
             (decimal_integer)
-            (unit)))))
+            unit: (unit)))))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
@@ -195,7 +195,7 @@ A <= null;
             (based_literal
               (based_base)
               (based_integer))
-            (library_constant_unit)))))
+            unit: (library_constant_unit)))))
     (concurrent_simple_signal_assignment
       (name
         (identifier))
