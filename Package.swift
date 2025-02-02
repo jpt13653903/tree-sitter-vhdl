@@ -1,47 +1,41 @@
 // swift-tools-version:5.3
+
+import Foundation
 import PackageDescription
+
+var sources = ["src/parser.c"]
+if FileManager.default.fileExists(atPath: "src/scanner.c") {
+    sources.append("src/scanner.c")
+}
 
 let package = Package(
     name: "TreeSitterVhdl",
     products: [
         .library(name: "TreeSitterVhdl", targets: ["TreeSitterVhdl"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/tree-sitter/swift-tree-sitter", from: "0.8.0"),
+    ],
     targets: [
-        .target(name: "TreeSitterVhdl",
-                path: ".",
-                exclude: [
-                    "Cargo.toml",
-                    "Makefile",
-                    "binding.gyp",
-                    "bindings/c",
-                    "bindings/go",
-                    "bindings/node",
-                    "bindings/python",
-                    "bindings/rust",
-                    "prebuilds",
-                    "grammar.js",
-                    "package.json",
-                    "package-lock.json",
-                    "pyproject.toml",
-                    "setup.py",
-                    "test",
-                    "examples",
-                    ".editorconfig",
-                    ".github",
-                    ".gitignore",
-                    ".gitattributes",
-                    ".gitmodules",
-                ],
-                sources: [
-                    "src/parser.c",
-                    "src/scanner.c",
-                ],
-                resources: [
-                    .copy("queries")
-                ],
-                publicHeadersPath: "bindings/swift",
-                cSettings: [.headerSearchPath("src")])
+        .target(
+            name: "TreeSitterVhdl",
+            dependencies: [],
+            path: ".",
+            sources: sources,
+            resources: [
+                .copy("queries")
+            ],
+            publicHeadersPath: "bindings/swift",
+            cSettings: [.headerSearchPath("src")]
+        ),
+        .testTarget(
+            name: "TreeSitterVhdlTests",
+            dependencies: [
+                "SwiftTreeSitter",
+                "TreeSitterVhdl",
+            ],
+            path: "bindings/swift/TreeSitterVhdlTests"
+        )
     ],
     cLanguageStandard: .c11
 )
