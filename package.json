@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-vhdl",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "VHDL grammar for tree-sitter",
   "repository": "github:jpt13653903/tree-sitter-vhdl",
   "author": "John-Philip Taylor",
@@ -15,11 +15,13 @@
   ],
   "files": [
     "grammar.js",
+    "tree-sitter.json",
     "binding.gyp",
     "prebuilds/**",
     "bindings/node/*",
-    "queries/**",
-    "src/**"
+    "queries/*",
+    "src/**",
+    "*.wasm"
   ],
   "dependencies": {
     "node-addon-api": "^8.3.0",
@@ -27,10 +29,10 @@
   },
   "devDependencies": {
     "prebuildify": "^6.0.1",
-    "tree-sitter-cli": "^0.24.7"
+    "tree-sitter-cli": "^0.25.1"
   },
   "peerDependencies": {
-    "tree-sitter": "^0.21.0"
+    "tree-sitter": "^0.21.1"
   },
   "peerDependenciesMeta": {
     "tree-sitter": {
