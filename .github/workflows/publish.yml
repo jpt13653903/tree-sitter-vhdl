@@ -1,0 +1,16 @@
+name: Publish package
+
+on:
+  push:
+    tags: ["v*"]
+
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  pypi:
+    uses: tree-sitter/workflows/.github/workflows/package-pypi.yml@main
+    secrets:
+      PYPI_API_TOKEN: ${{secrets.PYPI_TOKEN}}
+

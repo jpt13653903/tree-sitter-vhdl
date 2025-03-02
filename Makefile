@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-vhdl
 HOMEPAGE_URL := https://github.com/jpt13653903/tree-sitter-vhdl
-VERSION := 1.2.4
+VERSION := 1.2.5
 
 # repository
 SRC_DIR := src

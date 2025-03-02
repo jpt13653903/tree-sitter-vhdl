@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-vhdl"
 description = "VHDL grammar for tree-sitter"
-version = "1.2.4"
+version = "1.2.5"
 authors = ["John-Philip Taylor"]
 license = "MIT"
 readme = "README.md"
