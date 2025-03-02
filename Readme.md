@@ -3,6 +3,7 @@
 [![CI][ci]](https://github.com/jpt13653903/tree-sitter-vhdl/actions/workflows/ci.yml)
 [![Fuzz][fuzz]](https://github.com/jpt13653903/tree-sitter-vhdl/actions/workflows/fuzz.yml)
 [![matrix][matrix]](https://matrix.to/#/#tree-sitter-chat:matrix.org)
+[![pypi][pypi]](https://pypi.org/project/tree-sitter-vhdl/)
 
 A VHDL parser for syntax highlighting.
 
@@ -156,3 +157,4 @@ Contributions are welcome.  Read [Contributing.md] for more information.
 [build_helix]: https://docs.helix-editor.com/install.html#building-from-source
 [ts-docs]: https://tree-sitter.github.io/tree-sitter/creating-parsers#getting-started
 [Contributing.md]: https://github.com/jpt13653903/tree-sitter-vhdl/blob/master/Contributing.md
+[pypi]: https://img.shields.io/pypi/v/tree-sitter-vhdl?logo=pypi&logoColor=ffd242
