@@ -60,8 +60,9 @@ outside the scope of this project.
 
 ## Neovim Setup Process
 
-This parser has been merged into the official nvim-treesitter, so it should
-work out of the box after adding it to the list of languages to install.
+This parser has been [merged][NeovimMerge] into the official nvim-treesitter,
+so it should work out of the box after adding it to the list of languages to
+install.
 
 If you would like to use the `develop` branch instead (because it contains
 the latest features that might not have been merged upstream yet), configure
@@ -106,29 +107,8 @@ points to an online repository.
 
 ## Helix Setup Process
 
-Helix still uses a fork of the old unmaintained
-[alemuller/tree-sitter-vhdl][alemuller]. To manually use this tree-sitter
-instead, clone the [Helix repo][helix]. In `languages.toml` replace the line:
-
-```toml
-source = { git = "https://github.com/teburd/tree-sitter-vhdl", rev = "c57313adee2231100db0a7880033f6865deeadb2" }
-```
-
-with:
-
-```toml
-source = { git = "https://github.com/jpt13653903/tree-sitter-vhdl", rev = "f4c492accff02b5c85517ff5dd4720e2229feb75" }
-```
-
-Adjust the revision git hash if necessary (latest stable is recommended).
-
-Now [build Helix from source][build_helix]. You can check if you got the right
-tree-sitter source files in the `helix/runtime/grammars/sources/vhdl/` directory.
-
-Replace the `helix/runtime/queries/vhdl/highlights.scm` file with the
-`queries/Helix/highlights.scm` from this repo. You can also adjust
-the `highlights.scm` file to your liking or change the highlighting in your
-theme .toml file.
+This parser has been [merged][HelixMerge] into the official Helix repo,
+so it should work out of the box.
 
 ## Building
 
@@ -158,3 +138,5 @@ Contributions are welcome.  Read [Contributing.md] for more information.
 [ts-docs]: https://tree-sitter.github.io/tree-sitter/creating-parsers#getting-started
 [Contributing.md]: https://github.com/jpt13653903/tree-sitter-vhdl/blob/master/Contributing.md
 [pypi]: https://img.shields.io/pypi/v/tree-sitter-vhdl?logo=pypi&logoColor=ffd242
+[NeovimMerge]: https://github.com/nvim-treesitter/nvim-treesitter/pull/6925
+[HelixMerge]: https://github.com/helix-editor/helix/pull/13091
