@@ -6,5 +6,5 @@ rm -rf bindings build node_modules binding.gyp CMakeLists.txt Cargo.toml \
 npm install --save-dev tree-sitter-cli
 
 node_modules/.bin/tree-sitter init --update
-node_modules/.bin/tree-sitter generate --abi 14 && tree-sitter test --show-fields
+node_modules/.bin/tree-sitter generate && tree-sitter test --show-fields
 
