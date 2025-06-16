@@ -60,50 +60,9 @@ outside the scope of this project.
 
 ## Neovim Setup Process
 
-This parser has been [merged][NeovimMerge] into the official nvim-treesitter,
+This parser has been [merged][NeovimMerge] into the official [nvim-treesitter],
 so it should work out of the box after adding it to the list of languages to
 install.
-
-If you would like to use the `develop` branch instead (because it contains
-the latest features that might not have been merged upstream yet), configure
-your `treesitter.lua` (or equivalent) as follows:
-
-```lua
-local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
-
-parser_config.vhdl = {
-  install_info = {
-    url = "https://github.com/jpt13653903/tree-sitter-vhdl.git",
-    files = { 'src/parser.c', 'src/scanner.c' },
-    branch = 'develop',
-    generate_requires_npm = false,
-    requires_generate_from_grammar = false,
-  },
-  filetype = 'vhdl',
-}
-
-local treesitter = require('nvim-treesitter.configs')
-
-treesitter.setup {
-  ensure_installed = {
-    -- Some list of languages...
-    'vhdl',
-    -- Some more languages...
-  },
-
-  -- Some other options and configuration...
-}
-```
-
-Then copy the contents of the `queries/Neovim` folder to your `after/queries/vhdl`
-configuration folder, typically `~/.config/nvim/after/queries/vhdl` on Linux
-and `~/AppData/Local/nvim/after/queries/vhdl` on Windows.
-
-Finally, run `:TSUpdate`.
-
-If this does not work, change the `url` to a local clone of this repo instead.
-The nvim-treesitter installer doesn't always follow the override if the `url`
-points to an online repository.
 
 ## Helix Setup Process
 
@@ -126,7 +85,7 @@ Contributions are welcome.  Read [Contributing.md] for more information.
 [fuzz]: https://img.shields.io/github/actions/workflow/status/jpt13653903/tree-sitter-vhdl/fuzz.yml?logo=github&label=Fuzz
 [matrix]: https://img.shields.io/matrix/tree-sitter-chat%3Amatrix.org?logo=matrix&label=matrix
 [Neovim]: https://neovim.io/
-[nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
+[nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter/tree/main
 [Catppuccin]: https://github.com/catppuccin/nvim
 [Tokyo Night]: https://github.com/folke/tokyonight.nvim
 [One Dark]: https://github.com/navarasu/onedark.nvim
