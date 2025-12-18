@@ -457,18 +457,19 @@ end architecutre;
 (design_file
   (design_unit
     (architecture_definition
-      (identifier)
-      (name
+      architecture: (identifier)
+      entity: (name
         (identifier))
       (architecture_head)
       (concurrent_block
-        (concurrent_procedure_call_statement
+        (component_instantiation_statement
           (label_declaration
             (label))
-          (name
+          component: (name
             (identifier))))
       (end_architecture
-        (identifier)))))
+        architecture: (identifier)))))
+
 ================================================================================
 An architecutre with an instance with only a generic map
 ================================================================================
@@ -482,18 +483,19 @@ begin
 end architecutre;
 
 --------------------------------------------------------------------------------
+
 (design_file
   (design_unit
     (architecture_definition
-      (identifier)
-      (name
+      architecture: (identifier)
+      entity: (name
         (identifier))
       (architecture_head)
       (concurrent_block
         (component_instantiation_statement
           (label_declaration
             (label))
-          (name
+          component: (name
             (identifier))
           (generic_map_aspect
             (association_list
@@ -504,4 +506,40 @@ end architecutre;
                   (simple_expression
                     (library_constant_boolean))))))))
       (end_architecture
-        (identifier)))))
+        architecture: (identifier)))))
+
+================================================================================
+An architecutre with cocurrent procedure calls with a generic map
+================================================================================
+
+architecture rtl of my_ent is
+begin
+    func
+    generic map (
+        A_GEN => true
+    );
+
+    my_label: postponed func2
+    generic map (
+        A_GEN => true
+    );
+
+    func3
+    generic map (
+        A_GEN => true
+    ) (A, B, C);
+
+    postponed func4
+    generic map (
+        A_GEN => true
+    ) (A, B, C);
+
+    my_label: func5
+    generic map (
+        A_GEN => true
+    ) (A, B, C);
+end architecutre;
+
+--------------------------------------------------------------------------------
+
+
