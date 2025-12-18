@@ -1,4 +1,4 @@
-module.exports = grammar({
+export default grammar({
     name: 'vhdl',
 
     /* The external scanner tokenises all lexical elements (i.e. section 15 of

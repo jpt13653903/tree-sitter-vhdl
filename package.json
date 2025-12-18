@@ -2,6 +2,7 @@
   "name": "tree-sitter-vhdl",
   "version": "1.3.1",
   "description": "VHDL grammar for tree-sitter",
+  "type": "module",
   "repository": "github:jpt13653903/tree-sitter-vhdl",
   "author": "John-Philip Taylor",
   "license": "MIT",
@@ -29,7 +30,7 @@
   },
   "devDependencies": {
     "prebuildify": "^6.0.1",
-    "tree-sitter-cli": "^0.25.10"
+    "tree-sitter-cli": "^0.26.3"
   },
   "peerDependencies": {
     "tree-sitter": "^0.21.1"
