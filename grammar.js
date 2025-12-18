@@ -201,7 +201,8 @@ export default grammar({
 
     conflicts: $ => [
         [ $.generate_body ],
-        [ $.case_generate_body ]
+        [ $.case_generate_body ],
+        [ $.component_instantiation_statement, $.concurrent_procedure_call_statement ]
     ],
 
     rules: {
@@ -857,10 +858,16 @@ export default grammar({
                 seq(repeat1($._process_declarative_item))
             ),
 
-            component_instantiation_statement: $ => choice(
-                seq($.label_declaration, $.instantiated_unit,        optional($.generic_map_aspect), optional($.port_map_aspect), ";"),
-                seq($.label_declaration, field("component", $.name), optional($.generic_map_aspect),          $.port_map_aspect,  ";")
-            ),
+            component_instantiation_statement: $ => prec.dynamic(5, seq(
+                $.label_declaration,
+                choice(
+                    $.instantiated_unit,           // e.g., entity work.my_ent(arch)
+                    field("component", $.name)      // e.g., my_comp
+                ),
+                optional($.generic_map_aspect),
+                optional($.port_map_aspect),
+                ";"
+            )),
 
             instantiated_unit: $ => choice(
                 seq(alias($.COMPONENT, "component"), field("component", $.name)), // Optional "component" covered by procedure call
@@ -1024,9 +1031,12 @@ export default grammar({
                 optional($.label_declaration), $.name, ";"
             ),
 
-            concurrent_procedure_call_statement: $ => seq(
-                optional($.label_declaration), optional(alias($.POSTPONED, "postponed")), $.name, ";"
-            ),
+            concurrent_procedure_call_statement: $ => prec.dynamic(10, seq(
+              optional($.label_declaration),
+              optional(alias($.POSTPONED, "postponed")),
+              $.name, // This name rule ALREADY handles (arg, arg, arg) via function_call selectors
+              ";"
+            )),
 
             report_statement: $ => seq(
                 optional($.label_declaration), $.report_expression, optional($.severity_expression), ";"

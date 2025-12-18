@@ -443,3 +443,65 @@ end;
                       (name
                         (identifier))))))))))
       (end_entity))))
+
+================================================================================
+An architecutre with an instance with no map
+================================================================================
+
+architecture rtl of my_ent is
+begin
+    my_inst: inst;
+end architecutre;
+
+--------------------------------------------------------------------------------
+(design_file
+  (design_unit
+    (architecture_definition
+      (identifier)
+      (name
+        (identifier))
+      (architecture_head)
+      (concurrent_block
+        (concurrent_procedure_call_statement
+          (label_declaration
+            (label))
+          (name
+            (identifier))))
+      (end_architecture
+        (identifier)))))
+================================================================================
+An architecutre with an instance with only a generic map
+================================================================================
+
+architecture rtl of my_ent is
+begin
+    my_inst: inst
+    generic map (
+        A_GEN => true
+    );
+end architecutre;
+
+--------------------------------------------------------------------------------
+(design_file
+  (design_unit
+    (architecture_definition
+      (identifier)
+      (name
+        (identifier))
+      (architecture_head)
+      (concurrent_block
+        (component_instantiation_statement
+          (label_declaration
+            (label))
+          (name
+            (identifier))
+          (generic_map_aspect
+            (association_list
+              (association_element
+                (name
+                  (identifier))
+                (conditional_expression
+                  (simple_expression
+                    (library_constant_boolean))))))))
+      (end_architecture
+        (identifier)))))
