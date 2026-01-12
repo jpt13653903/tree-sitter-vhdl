@@ -18,11 +18,11 @@ def __getattr__(name):
     if name == "HIGHLIGHTS_QUERY":
         return _get_query("HIGHLIGHTS_QUERY", "queries/Neovim/highlights.scm")
     if name == "INJECTIONS_QUERY":
-        return _get_query("INJECTIONS_QUERY", "queries\injections.scm")
+        return _get_query("INJECTIONS_QUERY", "queries/injections.scm")
     if name == "LOCALS_QUERY":
-        return _get_query("LOCALS_QUERY", "queries\locals.scm")
+        return _get_query("LOCALS_QUERY", "queries/locals.scm")
     if name == "TAGS_QUERY":
-        return _get_query("TAGS_QUERY", "queries\tags.scm")
+        return _get_query("TAGS_QUERY", "queries/tags.scm")
 
     raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 

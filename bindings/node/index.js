@@ -15,9 +15,9 @@ try {
 
 const queries = [
   ["HIGHLIGHTS_QUERY", `${root}/queries/Neovim/highlights.scm`],
-  ["INJECTIONS_QUERY", `${root}/queries\injections.scm`],
-  ["LOCALS_QUERY", `${root}/queries\locals.scm`],
-  ["TAGS_QUERY", `${root}/queries\tags.scm`],
+  ["INJECTIONS_QUERY", `${root}/queries/injections.scm`],
+  ["LOCALS_QUERY", `${root}/queries/locals.scm`],
+  ["TAGS_QUERY", `${root}/queries/tags.scm`],
 ];
 
 for (const [prop, path] of queries) {
