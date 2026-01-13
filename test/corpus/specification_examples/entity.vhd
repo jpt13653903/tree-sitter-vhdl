@@ -443,3 +443,103 @@ end;
                       (name
                         (identifier))))))))))
       (end_entity))))
+
+================================================================================
+An architecutre with an instance with no map
+================================================================================
+
+architecture rtl of my_ent is
+begin
+    my_inst: inst;
+end architecutre;
+
+--------------------------------------------------------------------------------
+(design_file
+  (design_unit
+    (architecture_definition
+      architecture: (identifier)
+      entity: (name
+        (identifier))
+      (architecture_head)
+      (concurrent_block
+        (component_instantiation_statement
+          (label_declaration
+            (label))
+          component: (name
+            (identifier))))
+      (end_architecture
+        architecture: (identifier)))))
+
+================================================================================
+An architecutre with an instance with only a generic map
+================================================================================
+
+architecture rtl of my_ent is
+begin
+    my_inst: inst
+    generic map (
+        A_GEN => true
+    );
+end architecutre;
+
+--------------------------------------------------------------------------------
+
+(design_file
+  (design_unit
+    (architecture_definition
+      architecture: (identifier)
+      entity: (name
+        (identifier))
+      (architecture_head)
+      (concurrent_block
+        (component_instantiation_statement
+          (label_declaration
+            (label))
+          component: (name
+            (identifier))
+          (generic_map_aspect
+            (association_list
+              (association_element
+                (name
+                  (identifier))
+                (conditional_expression
+                  (simple_expression
+                    (library_constant_boolean))))))))
+      (end_architecture
+        architecture: (identifier)))))
+
+================================================================================
+An architecutre with cocurrent procedure calls with a generic map
+================================================================================
+
+architecture rtl of my_ent is
+begin
+    func
+    generic map (
+        A_GEN => true
+    );
+
+    my_label: postponed func2
+    generic map (
+        A_GEN => true
+    );
+
+    func3
+    generic map (
+        A_GEN => true
+    ) (A, B, C);
+
+    postponed func4
+    generic map (
+        A_GEN => true
+    ) (A, B, C);
+
+    my_label: func5
+    generic map (
+        A_GEN => true
+    ) (A, B, C);
+end architecutre;
+
+--------------------------------------------------------------------------------
+
+

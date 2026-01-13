@@ -4502,87 +4502,62 @@
       ]
     },
     "component_instantiation_statement": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "label_declaration"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "instantiated_unit"
-            },
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "generic_map_aspect"
-                },
-                {
-                  "type": "BLANK"
-                }
-              ]
-            },
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "port_map_aspect"
-                },
-                {
-                  "type": "BLANK"
-                }
-              ]
-            },
-            {
-              "type": "STRING",
-              "value": ";"
-            }
-          ]
-        },
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "label_declaration"
-            },
-            {
-              "type": "FIELD",
-              "name": "component",
-              "content": {
+      "type": "PREC_DYNAMIC",
+      "value": 5,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "label_declaration"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
                 "type": "SYMBOL",
-                "name": "name"
-              }
-            },
-            {
-              "type": "CHOICE",
-              "members": [
-                {
+                "name": "instantiated_unit"
+              },
+              {
+                "type": "FIELD",
+                "name": "component",
+                "content": {
                   "type": "SYMBOL",
-                  "name": "generic_map_aspect"
-                },
-                {
-                  "type": "BLANK"
+                  "name": "name"
                 }
-              ]
-            },
-            {
-              "type": "SYMBOL",
-              "name": "port_map_aspect"
-            },
-            {
-              "type": "STRING",
-              "value": ";"
-            }
-          ]
-        }
-      ]
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "generic_map_aspect"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "port_map_aspect"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "STRING",
+            "value": ";"
+          }
+        ]
+      }
     },
     "instantiated_unit": {
       "type": "CHOICE",
@@ -5951,46 +5926,50 @@
       ]
     },
     "concurrent_procedure_call_statement": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "label_declaration"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "ALIAS",
-              "content": {
+      "type": "PREC_DYNAMIC",
+      "value": 10,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
                 "type": "SYMBOL",
-                "name": "POSTPONED"
+                "name": "label_declaration"
               },
-              "named": false,
-              "value": "postponed"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "SYMBOL",
-          "name": "name"
-        },
-        {
-          "type": "STRING",
-          "value": ";"
-        }
-      ]
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "POSTPONED"
+                },
+                "named": false,
+                "value": "postponed"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "SYMBOL",
+            "name": "name"
+          },
+          {
+            "type": "STRING",
+            "value": ";"
+          }
+        ]
+      }
     },
     "report_statement": {
       "type": "SEQ",
@@ -12698,6 +12677,10 @@
     ],
     [
       "case_generate_body"
+    ],
+    [
+      "component_instantiation_statement",
+      "concurrent_procedure_call_statement"
     ]
   ],
   "precedences": [],
@@ -13372,6 +13355,5 @@
     }
   ],
   "inline": [],
-  "supertypes": [],
-  "reserved": {}
+  "supertypes": []
 }
