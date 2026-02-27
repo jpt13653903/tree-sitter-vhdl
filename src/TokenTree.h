@@ -25,25 +25,8 @@ balanced sub-tree of the next character, etc.
 #include "tree_sitter/alloc.h"
 //------------------------------------------------------------------------------
 
-typedef struct TypeNodeTag{
-    TokenType           type;
-    struct TypeNodeTag* next;
-} TypeNode;
-//------------------------------------------------------------------------------
-
-typedef struct TokenTreeTag{
-    void* root;
-} TokenTree;
-
-TokenTree* token_tree_new();
-void       token_tree_free(TokenTree* this);
-
-// Insert all the items, then balance it once.  Do not add more items after.
-void token_tree_insert (TokenTree* this, const char* pattern, TokenType type);
-void token_tree_balance(TokenTree* this);
-
-// Finds the longest match and returns the token type linked list
-TypeNode* token_tree_match(TokenTree* this, TSLexer* lexer);
+// Finds the longest match and returns the token type null-terminated array
+const int* token_tree_match(TSLexer* lexer);
 //------------------------------------------------------------------------------
 
 

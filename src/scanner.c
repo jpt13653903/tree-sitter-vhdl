@@ -14,102 +14,43 @@
 #include "TokenTree.h"
 //------------------------------------------------------------------------------
 
-// These headers contain the "register_*" functions
-#include "core.h"
-
-#include "libraries/std/env.h"
-#include "libraries/std/standard.h"
-#include "libraries/std/textio.h"
-
-#include "libraries/ieee/std_logic_1164.h"
-#include "libraries/ieee/numeric_std.h"
-#include "libraries/ieee/fixed_pkg.h"
-#include "libraries/ieee/float_pkg.h"
-#include "libraries/ieee/math_real.h"
-#include "libraries/ieee/math_complex.h"
-//------------------------------------------------------------------------------
-
 typedef struct ScannerTag{
     // Serialized state (must remain at the start of the struct)
     bool      is_in_directive;
     bool      is_block_comment; // else line comment
     TokenType bit_string_base;
     int       base;
-    // Non-serialized state
-    TokenTree* token_tree;
 } Scanner;
-
-#define SCANNER_SERIALIZED_SIZE offsetof(Scanner, token_tree)
 //------------------------------------------------------------------------------
 
 #include "TokenType.inc"
 #include "TokenTree.inc"
 //------------------------------------------------------------------------------
 
-static TokenTree* build_token_tree()
-{
-    TokenTree* tree = token_tree_new();
-    if(!tree){
-        error("Cannot allocate memory for the token tree");
-        return 0;
-    }
-
-    debug("Building the token tree...");
-
-    register_core               (tree);
-    register_std_env            (tree);
-    register_std_standard       (tree);
-    register_std_textio         (tree);
-    register_ieee_std_logic_1164(tree);
-    register_ieee_numeric_std   (tree);
-    register_ieee_fixed_pkg     (tree);
-    register_ieee_float_pkg     (tree);
-    register_ieee_math_real     (tree);
-    register_ieee_math_complex  (tree);
-
-    debug("Balancing the token tree");
-    token_tree_balance(tree);
-
-    return tree;
-}
-//------------------------------------------------------------------------------
-
 void* tree_sitter_vhdl_external_scanner_create()
 {
     Scanner* scanner = ts_calloc(1, sizeof(Scanner));
-    if(!scanner) return 0;
-
-    scanner->token_tree = build_token_tree();
-    if(!scanner->token_tree){
-        ts_free(scanner);
-        return 0;
-    }
-
     return scanner;
 }
 //------------------------------------------------------------------------------
 
 void tree_sitter_vhdl_external_scanner_destroy(Scanner* scanner)
 {
-    if(scanner){
-        if(scanner->token_tree) token_tree_free(scanner->token_tree);
-        ts_free(scanner);
-    }
+    if(scanner) ts_free(scanner);
 }
 //------------------------------------------------------------------------------
 
 unsigned tree_sitter_vhdl_external_scanner_serialize(Scanner* scanner, char* buffer)
 {
-    memcpy(buffer, scanner, SCANNER_SERIALIZED_SIZE);
-    return SCANNER_SERIALIZED_SIZE;
+    memcpy(buffer, scanner, sizeof(Scanner));
+    return sizeof(Scanner);
 }
 //------------------------------------------------------------------------------
 
 void tree_sitter_vhdl_external_scanner_deserialize(Scanner* scanner, const char* buffer, unsigned length)
 {
-    if(length > 0 && length <= SCANNER_SERIALIZED_SIZE && buffer){
+    if(length > 0 && length <= sizeof(Scanner) && buffer)
         memcpy(scanner, buffer, length);
-    }
 }
 //------------------------------------------------------------------------------
 
@@ -592,7 +533,7 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
 
     bool first_char_is_double_quote = (lexer->lookahead == '"');
 
-    TypeNode* types = token_tree_match(scanner->token_tree, lexer);
+    const int* types = token_tree_match(lexer);
 
     if(!types && first_char_is_letter){
         /* This works because all registered tokens in the search tree that
@@ -618,114 +559,116 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
     bool found_can_be_identifier    = false;
     bool found_cannot_be_identifier = false;
 
-    while(types){
-        if(types->type == LINE_COMMENT_START){
-            if(valid_symbols[TOKEN_LINE_COMMENT_START]){
-                scanner->is_block_comment = false;
-                skip_whitespace(lexer, false, false);
-                lexer->mark_end(lexer);
-                lexer->result_symbol = TOKEN_LINE_COMMENT_START;
-                debug("Returning type TOKEN_LINE_COMMENT_START");
-                return true;
-            }
-            debug("Returning false");
-            return false;
+    if(types){
+        while(*types){
+            if(*types == LINE_COMMENT_START){
+                if(valid_symbols[TOKEN_LINE_COMMENT_START]){
+                    scanner->is_block_comment = false;
+                    skip_whitespace(lexer, false, false);
+                    lexer->mark_end(lexer);
+                    lexer->result_symbol = TOKEN_LINE_COMMENT_START;
+                    debug("Returning type TOKEN_LINE_COMMENT_START");
+                    return true;
+                }
+                debug("Returning false");
+                return false;
 
-        }else if(types->type == BLOCK_COMMENT_START){
-            if(valid_symbols[TOKEN_BLOCK_COMMENT_START]){
-                scanner->is_block_comment = true;
-                skip_whitespace(lexer, true, false);
-                lexer->mark_end(lexer);
-                lexer->result_symbol = TOKEN_BLOCK_COMMENT_START;
-                debug("Returning type TOKEN_BLOCK_COMMENT_START");
-                return true;
-            }
-            debug("Returning false");
-            return false;
+            }else if(*types == BLOCK_COMMENT_START){
+                if(valid_symbols[TOKEN_BLOCK_COMMENT_START]){
+                    scanner->is_block_comment = true;
+                    skip_whitespace(lexer, true, false);
+                    lexer->mark_end(lexer);
+                    lexer->result_symbol = TOKEN_BLOCK_COMMENT_START;
+                    debug("Returning type TOKEN_BLOCK_COMMENT_START");
+                    return true;
+                }
+                debug("Returning false");
+                return false;
 
-        }else if(can_start_identifier(types->type) &&
-            finish_identifier(lexer, types->type == IDENTIFIER_EXPECTING_LETTER)){
-            lexer->result_symbol = IDENTIFIER;
-            debug("Returning type IDENTIFIER");
-            return true;
-
-        }else if(is_base_specifier(types->type)){
-            if(lexer->lookahead == '"'){
-                scanner->bit_string_base = types->type;
-                lexer->result_symbol = TOKEN_BIT_STRING_BASE;
-                debug("Returning type TOKEN_BIT_STRING_BASE");
-                return true;
-            }else if(!types->next){
-                finish_identifier(lexer, false);
+            }else if(can_start_identifier(*types) &&
+                finish_identifier(lexer, *types == IDENTIFIER_EXPECTING_LETTER)){
                 lexer->result_symbol = IDENTIFIER;
                 debug("Returning type IDENTIFIER");
                 return true;
-            }
 
-        }else if(types->type == LIBRARY_CONSTANT_CHARACTER && lexer->lookahead == '"'){
-            // This could actually be a bit-string base, so let the while continue
-            // It is not possible to follow a character constant with a string
+            }else if(is_base_specifier(*types)){
+                if(lexer->lookahead == '"'){
+                    scanner->bit_string_base = *types;
+                    lexer->result_symbol = TOKEN_BIT_STRING_BASE;
+                    debug("Returning type TOKEN_BIT_STRING_BASE");
+                    return true;
+                }else if(!types[1]){
+                    finish_identifier(lexer, false);
+                    lexer->result_symbol = IDENTIFIER;
+                    debug("Returning type IDENTIFIER");
+                    return true;
+                }
 
-        }else if(types->type == TOKEN_OPERATOR_SYMBOL ||
-                 types->type == TOKEN_STRING_LITERAL_STD_LOGIC){
-            if(lexer->lookahead == '"'){
-                if(valid_symbols[TOKEN_STRING_LITERAL]){
-                    lexer->advance(lexer, false);
-                    if(!bounded_token(lexer, '"')) return false;
+            }else if(*types == LIBRARY_CONSTANT_CHARACTER && lexer->lookahead == '"'){
+                // This could actually be a bit-string base, so let the while continue
+                // It is not possible to follow a character constant with a string
+
+            }else if(*types == TOKEN_OPERATOR_SYMBOL ||
+                     *types == TOKEN_STRING_LITERAL_STD_LOGIC){
+                if(lexer->lookahead == '"'){
+                    if(valid_symbols[TOKEN_STRING_LITERAL]){
+                        lexer->advance(lexer, false);
+                        if(!bounded_token(lexer, '"')) return false;
+                        lexer->result_symbol = TOKEN_STRING_LITERAL;
+                        debug("Returning type TOKEN_STRING_LITERAL");
+                        return true;
+                    }else{
+                        debug("Returning false");
+                        return false;
+                    }
+                }else if(valid_symbols[*types]){
+                    lexer->result_symbol = *types;
+                    debug("Returning type %s", token_type_to_string(*types));
+                    return true;
+                }else if(!types[1] && valid_symbols[TOKEN_STRING_LITERAL]){
                     lexer->result_symbol = TOKEN_STRING_LITERAL;
                     debug("Returning type TOKEN_STRING_LITERAL");
                     return true;
-                }else{
-                    debug("Returning false");
-                    return false;
                 }
-            }else if(valid_symbols[types->type]){
-                lexer->result_symbol = types->type;
-                debug("Returning type %s", token_type_to_string(types->type));
-                return true;
-            }else if(!types->next && valid_symbols[TOKEN_STRING_LITERAL]){
-                lexer->result_symbol = TOKEN_STRING_LITERAL;
-                debug("Returning type TOKEN_STRING_LITERAL");
-                return true;
-            }
 
-        }else if(types->type == STRING_LITERAL_STD_LOGIC_START){
-            if(valid_symbols[TOKEN_STRING_LITERAL_STD_LOGIC] && binary_string_literal(lexer)){
-                if(lexer->lookahead != '"'){
-                    lexer->result_symbol = TOKEN_STRING_LITERAL_STD_LOGIC;
-                    debug("Returning type TOKEN_STRING_LITERAL_STD_LOGIC");
-                    return valid_symbols[TOKEN_STRING_LITERAL_STD_LOGIC];
-                }else{
-                    lexer->advance(lexer, false);
-                    // and drop down to continue the string parsing below
+            }else if(*types == STRING_LITERAL_STD_LOGIC_START){
+                if(valid_symbols[TOKEN_STRING_LITERAL_STD_LOGIC] && binary_string_literal(lexer)){
+                    if(lexer->lookahead != '"'){
+                        lexer->result_symbol = TOKEN_STRING_LITERAL_STD_LOGIC;
+                        debug("Returning type TOKEN_STRING_LITERAL_STD_LOGIC");
+                        return valid_symbols[TOKEN_STRING_LITERAL_STD_LOGIC];
+                    }else{
+                        lexer->advance(lexer, false);
+                        // and drop down to continue the string parsing below
+                    }
                 }
-            }
-            if(valid_symbols[TOKEN_STRING_LITERAL] && bounded_token(lexer, '"')){
-                lexer->result_symbol = TOKEN_STRING_LITERAL;
-                debug("Returning type TOKEN_STRING_LITERAL");
-                return valid_symbols[TOKEN_STRING_LITERAL];
-            }
-            debug("Returning false");
-            return false;
+                if(valid_symbols[TOKEN_STRING_LITERAL] && bounded_token(lexer, '"')){
+                    lexer->result_symbol = TOKEN_STRING_LITERAL;
+                    debug("Returning type TOKEN_STRING_LITERAL");
+                    return valid_symbols[TOKEN_STRING_LITERAL];
+                }
+                debug("Returning false");
+                return false;
 
-        }else if(types->type < ERROR_SENTINEL && valid_symbols[types->type]){
-            lexer->result_symbol = types->type;
+            }else if(*types < ERROR_SENTINEL && valid_symbols[*types]){
+                lexer->result_symbol = *types;
 
-            if(scanner->is_in_directive){
-               scanner->is_in_directive = (types->type != DIRECTIVE_NEWLINE);
+                if(scanner->is_in_directive){
+                   scanner->is_in_directive = (*types != DIRECTIVE_NEWLINE);
+                }else{
+                   scanner->is_in_directive = (*types == DELIMITER_GRAVE_ACCENT);
+                }
+
+                debug("Returning type %s", token_type_to_string(*types));
+                return true;
+
+            }else if(can_be_identifier(scanner, *types)){
+                found_can_be_identifier = true;
             }else{
-               scanner->is_in_directive = (types->type == DELIMITER_GRAVE_ACCENT);
+                found_cannot_be_identifier = true;
             }
-
-            debug("Returning type %s", token_type_to_string(types->type));
-            return true;
-
-        }else if(can_be_identifier(scanner, types->type)){
-            found_can_be_identifier = true;
-        }else{
-            found_cannot_be_identifier = true;
+            types++;
         }
-        types = types->next;
     }
     if(valid_symbols[IDENTIFIER] && found_can_be_identifier && !found_cannot_be_identifier){
         lexer->result_symbol = IDENTIFIER;

@@ -3,6 +3,10 @@ export CC=gcc
 # touch grammar.js
 # touch src/scanner.c
 
+cd autogen
+py gen_token_trie.py
+cd ..
+
 tree-sitter generate && tree-sitter test --show-fields
 
 # tree-sitter generate && tree-sitter parse test/temp.vhd
