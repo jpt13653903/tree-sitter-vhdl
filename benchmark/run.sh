@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 #
 # Benchmark tree-sitter-vhdl parser: master vs feature/thread-safety
 #
@@ -13,8 +13,8 @@ BUILD_DIR="$BENCH_DIR/build"
 INPUT_SMALL="$BENCH_DIR/input_small.vhd"
 INPUT_LARGE="$BENCH_DIR/input_large.vhd"
 
-TS_INCLUDE="/opt/homebrew/Cellar/tree-sitter@0.25/0.25.10/include"
-TS_LIB="/opt/homebrew/Cellar/tree-sitter@0.25/0.25.10/lib"
+TS_INCLUDE="../../tree-sitter/lib/include"
+TS_LIB="../../tree-sitter"
 
 BRANCHES=("master" "feature/thread-safety")
 
@@ -33,17 +33,17 @@ build_bench() {
     local out="$BUILD_DIR/bench_${safe_name}"
 
     echo "=== Building benchmark for: $branch ==="
-    git -C "$REPO_ROOT" checkout --quiet "$branch"
+    git -C "$REPO_ROOT" checkout --quiet "$branch" -- .
 
-    cc -O2 -std=c11 \
-       -I "$TS_INCLUDE" \
-       -I "$REPO_ROOT/src" \
-       "$BENCH_DIR/bench.c" \
-       "$REPO_ROOT/src/parser.c" \
-       "$REPO_ROOT/src/scanner.c" \
-       -L "$TS_LIB" \
-       -ltree-sitter \
-       -o "$out"
+    gcc -O2 -std=gnu11 \
+        -I "$TS_INCLUDE" \
+        -I "$REPO_ROOT/src" \
+        "$BENCH_DIR/bench.c" \
+        "$REPO_ROOT/src/parser.c" \
+        "$REPO_ROOT/src/scanner.c" \
+        -L "$TS_LIB" \
+        -ltree-sitter \
+        -o "$out"
 
     echo "  -> $out"
 }
