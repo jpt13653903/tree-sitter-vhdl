@@ -13,10 +13,10 @@ static int32_t advance(TSLexer* lexer)
 }
 //------------------------------------------------------------------------------
 
-const int* token_tree_match(TSLexer* lexer)
+const TokenType* token_tree_match(TSLexer* lexer)
 {
-    uint32_t lookahead = lowercase(lexer->lookahead);
-    const int* type    = 0;
+    uint32_t lookahead    = lowercase(lexer->lookahead);
+    const TokenType* type = 0;
 
     #include "token_tree_match.inc"
 

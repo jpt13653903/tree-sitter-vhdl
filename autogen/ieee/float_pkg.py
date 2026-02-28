@@ -1,4 +1,4 @@
-def register_ieee_float_pkg_types(token_list):
+def types(token_list):
     token_list.append(('unresolved_float',    'LIBRARY_TYPE'))
     token_list.append(('float',               'LIBRARY_TYPE'))
     token_list.append(('unresolved_float32',  'LIBRARY_TYPE'))
@@ -10,7 +10,7 @@ def register_ieee_float_pkg_types(token_list):
     token_list.append(('valid_fpstate',       'LIBRARY_TYPE'))
 #-------------------------------------------------------------------------------
 
-def register_ieee_float_pkg_constants(token_list):
+def constants(token_list):
     token_list.append(('nan',                'LIBRARY_CONSTANT'))
     token_list.append(('quiet_nan',          'LIBRARY_CONSTANT'))
     token_list.append(('neg_inf',            'LIBRARY_CONSTANT'))
@@ -26,7 +26,7 @@ def register_ieee_float_pkg_constants(token_list):
     token_list.append(('fphdlsynth_or_real', 'LIBRARY_CONSTANT'))
 #-------------------------------------------------------------------------------
 
-def register_ieee_float_pkg_functions(token_list):
+def functions(token_list):
     token_list.append(('classfp',      'LIBRARY_FUNCTION'))
     token_list.append(('add',          'LIBRARY_FUNCTION'))
     token_list.append(('subtract',     'LIBRARY_FUNCTION'))
@@ -61,17 +61,17 @@ def register_ieee_float_pkg_functions(token_list):
     token_list.append(('neg_zerofp',   'LIBRARY_FUNCTION'))
 #-------------------------------------------------------------------------------
 
-def register_ieee_float_pkg_aliases(token_list):
+def aliases(token_list):
     token_list.append(('u_float',    'LIBRARY_TYPE'))
     token_list.append(('u_float32',  'LIBRARY_TYPE'))
     token_list.append(('u_float64',  'LIBRARY_TYPE'))
     token_list.append(('u_float128', 'LIBRARY_TYPE'))
 #-------------------------------------------------------------------------------
 
-def register_ieee_float_pkg(token_list):
-    register_ieee_float_pkg_types    (token_list)
-    register_ieee_float_pkg_constants(token_list)
-    register_ieee_float_pkg_functions(token_list)
-    register_ieee_float_pkg_aliases  (token_list)
+def register(token_list):
+    types    (token_list)
+    constants(token_list)
+    functions(token_list)
+    aliases  (token_list)
 #-------------------------------------------------------------------------------
 

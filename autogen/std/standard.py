@@ -1,4 +1,4 @@
-def register_std_standard_types(token_list):
+def types(token_list):
     token_list.append(('range_direction',                'LIBRARY_TYPE'))
     token_list.append(('range_direction_range_record',   'LIBRARY_TYPE'))
     token_list.append(('boolean',                        'LIBRARY_TYPE'))
@@ -37,7 +37,7 @@ def register_std_standard_types(token_list):
     token_list.append(('file_origin_kind_range_record',  'LIBRARY_TYPE'))
 #-------------------------------------------------------------------------------
 
-def register_std_standard_constants(token_list):
+def constants(token_list):
     token_list.append(('true',                'LIBRARY_CONSTANT_BOOLEAN'))
     token_list.append(('false',               'LIBRARY_CONSTANT_BOOLEAN'))
 
@@ -142,7 +142,7 @@ def register_std_standard_constants(token_list):
     token_list.append(('hr',                  'LIBRARY_CONSTANT_UNIT'))
 #-------------------------------------------------------------------------------
 
-def register_std_standard_functions(token_list):
+def functions(token_list):
     token_list.append(('rising_edge',  'LIBRARY_FUNCTION'))
     token_list.append(('falling_edge', 'LIBRARY_FUNCTION'))
     token_list.append(('now',          'LIBRARY_FUNCTION'))
@@ -150,22 +150,22 @@ def register_std_standard_functions(token_list):
     token_list.append(('to_hstring',   'LIBRARY_FUNCTION'))
 #-------------------------------------------------------------------------------
 
-def register_std_standard_aliases(token_list):
+def aliases(token_list):
     token_list.append(('to_bstring',       'LIBRARY_FUNCTION'))
     token_list.append(('to_binary_string', 'LIBRARY_FUNCTION'))
     token_list.append(('to_octal_string',  'LIBRARY_FUNCTION'))
     token_list.append(('to_hex_string',    'LIBRARY_FUNCTION'))
 #-------------------------------------------------------------------------------
 
-def register_std_standard_attributes(token_list):
+def attributes(token_list):
     token_list.append(('foreign', 'LIBRARY_ATTRIBUTE'))
 #-------------------------------------------------------------------------------
 
-def register_std_standard(token_list):
-    register_std_standard_types     (token_list)
-    register_std_standard_constants (token_list)
-    register_std_standard_functions (token_list)
-    register_std_standard_aliases   (token_list)
-    register_std_standard_attributes(token_list)
+def register(token_list):
+    types     (token_list)
+    constants (token_list)
+    functions (token_list)
+    aliases   (token_list)
+    attributes(token_list)
 #-------------------------------------------------------------------------------
 

@@ -1,4 +1,4 @@
-def register_std_env_types(token_list):
+def types(token_list):
     token_list.append(('dayofweek',                       'LIBRARY_TYPE'))
     token_list.append(('time_record',                     'LIBRARY_TYPE'))
     token_list.append(('directory_items',                 'LIBRARY_TYPE'))
@@ -16,7 +16,7 @@ def register_std_env_types(token_list):
     token_list.append(('call_path_vector_ptr',            'LIBRARY_TYPE'))
 #-------------------------------------------------------------------------------
 
-def register_std_env_constants(token_list):
+def constants(token_list):
     token_list.append(('sunday',               'LIBRARY_CONSTANT_ENV'))
     token_list.append(('monday',               'LIBRARY_CONSTANT_ENV'))
     token_list.append(('tuesday',              'LIBRARY_CONSTANT_ENV'))
@@ -37,7 +37,7 @@ def register_std_env_constants(token_list):
     token_list.append(('dir_separator',        'LIBRARY_CONSTANT_ENV'))
 #-------------------------------------------------------------------------------
 
-def register_std_env_functions(token_list):
+def functions(token_list):
     token_list.append(('stop',                'LIBRARY_FUNCTION'))
     token_list.append(('finish',              'LIBRARY_FUNCTION'))
     token_list.append(('resolution_limit',    'LIBRARY_FUNCTION'))
@@ -87,16 +87,16 @@ def register_std_env_functions(token_list):
     token_list.append(('getvhdlreadseverity', 'LIBRARY_FUNCTION'))
 #-------------------------------------------------------------------------------
 
-def register_std_env_namespaces(token_list):
+def namespaces(token_list):
     token_list.append(('work', 'LIBRARY_NAMESPACE'))
     token_list.append(('std',  'LIBRARY_NAMESPACE'))
     token_list.append(('ieee', 'LIBRARY_NAMESPACE'))
 #-------------------------------------------------------------------------------
 
-def register_std_env(token_list):
-    register_std_env_types     (token_list)
-    register_std_env_constants (token_list)
-    register_std_env_functions (token_list)
-    register_std_env_namespaces(token_list)
+def register(token_list):
+    types     (token_list)
+    constants (token_list)
+    functions (token_list)
+    namespaces(token_list)
 #-------------------------------------------------------------------------------
 

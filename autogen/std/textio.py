@@ -1,4 +1,4 @@
-def register_std_textio_types(token_list):
+def types(token_list):
     token_list.append(('line',              'LIBRARY_TYPE'))
     token_list.append(('line_vector',       'LIBRARY_TYPE'))
     token_list.append(('text',              'LIBRARY_TYPE'))
@@ -7,7 +7,7 @@ def register_std_textio_types(token_list):
     token_list.append(('width',             'LIBRARY_TYPE'))
 #-------------------------------------------------------------------------------
 
-def register_std_textio_constants(token_list):
+def constants(token_list):
     token_list.append(('right',  'LIBRARY_CONSTANT'))
     token_list.append(('left',   'LIBRARY_CONSTANT'))
 
@@ -16,7 +16,7 @@ def register_std_textio_constants(token_list):
     token_list.append(('output', 'LIBRARY_CONSTANT'))
 #-------------------------------------------------------------------------------
 
-def register_std_textio_functions(token_list):
+def functions(token_list):
     token_list.append(('file_open',     'LIBRARY_FUNCTION'))
     token_list.append(('file_open',     'LIBRARY_CONSTANT'))
     token_list.append(('file_close',    'LIBRARY_FUNCTION'))
@@ -43,7 +43,7 @@ def register_std_textio_functions(token_list):
     token_list.append(('hwrite',        'LIBRARY_FUNCTION'))
 #-------------------------------------------------------------------------------
 
-def register_std_textio_aliases(token_list):
+def aliases(token_list):
     token_list.append(('string_read',  'LIBRARY_FUNCTION'))
     token_list.append(('bread',        'LIBRARY_FUNCTION'))
     token_list.append(('binary_read',  'LIBRARY_FUNCTION'))
@@ -57,10 +57,10 @@ def register_std_textio_aliases(token_list):
     token_list.append(('hex_write',    'LIBRARY_FUNCTION'))
 #-------------------------------------------------------------------------------
 
-def register_std_textio(token_list):
-    register_std_textio_types    (token_list)
-    register_std_textio_constants(token_list)
-    register_std_textio_functions(token_list)
-    register_std_textio_aliases  (token_list)
+def register(token_list):
+    types    (token_list)
+    constants(token_list)
+    functions(token_list)
+    aliases  (token_list)
 #-------------------------------------------------------------------------------
 

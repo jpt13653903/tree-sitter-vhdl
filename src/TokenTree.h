@@ -26,7 +26,7 @@ balanced sub-tree of the next character, etc.
 //------------------------------------------------------------------------------
 
 // Finds the longest match and returns the token type null-terminated array
-const int* token_tree_match(TSLexer* lexer);
+const TokenType* token_tree_match(TSLexer* lexer);
 //------------------------------------------------------------------------------
 
 

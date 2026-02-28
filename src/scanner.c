@@ -15,7 +15,6 @@
 //------------------------------------------------------------------------------
 
 typedef struct ScannerTag{
-    // Serialized state (must remain at the start of the struct)
     bool      is_in_directive;
     bool      is_block_comment; // else line comment
     TokenType bit_string_base;
@@ -533,7 +532,7 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
 
     bool first_char_is_double_quote = (lexer->lookahead == '"');
 
-    const int* types = token_tree_match(lexer);
+    const TokenType* types = token_tree_match(lexer);
 
     if(!types && first_char_is_letter){
         /* This works because all registered tokens in the search tree that

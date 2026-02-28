@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-vhdl
-        VERSION "1.3.1"
+        VERSION "1.4.0"
         DESCRIPTION "VHDL grammar for tree-sitter"
         HOMEPAGE_URL "https://github.com/jpt13653903/tree-sitter-vhdl"
         LANGUAGES C)

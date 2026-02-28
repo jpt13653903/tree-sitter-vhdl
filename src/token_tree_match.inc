@@ -16,7 +16,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_ABS, 0 };
+              static const TokenType type_array[] = { RESERVED_ABS, 0 };
               type = type_array;
             }
             break;
@@ -44,7 +44,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_ACCESS, 0 };
+                          static const TokenType type_array[] = { RESERVED_ACCESS, 0 };
                           type = type_array;
                         }
                         break;
@@ -76,7 +76,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { ATTRIBUTE_FUNCTION, 0 };
+                          static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -96,7 +96,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -120,7 +120,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_AFTER, 0 };
+                      static const TokenType type_array[] = { RESERVED_AFTER, 0 };
                       type = type_array;
                     }
                     break;
@@ -152,7 +152,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_ALIAS, 0 };
+                      static const TokenType type_array[] = { RESERVED_ALIAS, 0 };
                       type = type_array;
                     }
                     break;
@@ -168,7 +168,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_ALL, 0 };
+              static const TokenType type_array[] = { RESERVED_ALL, 0 };
               type = type_array;
             }
             break;
@@ -184,7 +184,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_AND, 0 };
+              static const TokenType type_array[] = { RESERVED_AND, 0 };
               type = type_array;
             }
             break;
@@ -236,7 +236,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { RESERVED_ARCHITECTURE, 0 };
+                                                  static const TokenType type_array[] = { RESERVED_ARCHITECTURE, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -284,7 +284,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -292,7 +292,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -320,7 +320,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -328,7 +328,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -356,7 +356,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -364,7 +364,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -396,7 +396,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_ARRAY, 0 };
+                      static const TokenType type_array[] = { RESERVED_ARRAY, 0 };
                       type = type_array;
                     }
                     break;
@@ -412,7 +412,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
               type = type_array;
             }
             break;
@@ -440,7 +440,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_ASSERT, 0 };
+                          static const TokenType type_array[] = { RESERVED_ASSERT, 0 };
                           type = type_array;
                         }
                         break;
@@ -464,7 +464,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_ASSUME, 0 };
+                          static const TokenType type_array[] = { RESERVED_ASSUME, 0 };
                           type = type_array;
                         }
                         break;
@@ -508,7 +508,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -572,7 +572,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { RESERVED_ATTRIBUTE, 0 };
+                                      static const TokenType type_array[] = { RESERVED_ATTRIBUTE, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -628,7 +628,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -648,7 +648,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -696,7 +696,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -704,7 +704,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -728,7 +728,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -768,7 +768,7 @@ switch(lookahead){
     lookahead = advance(lexer);
     lexer->mark_end(lexer);
     {
-      static const int type_array[] = { BASE_SPECIFIER_BINARY, 0 };
+      static const TokenType type_array[] = { BASE_SPECIFIER_BINARY, 0 };
       type = type_array;
     }
     switch(lookahead){
@@ -788,7 +788,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_BEGIN, 0 };
+                      static const TokenType type_array[] = { RESERVED_BEGIN, 0 };
                       type = type_array;
                     }
                     break;
@@ -804,7 +804,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -828,7 +828,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_BLOCK, 0 };
+                      static const TokenType type_array[] = { RESERVED_BLOCK, 0 };
                       type = type_array;
                     }
                     break;
@@ -856,7 +856,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_BODY, 0 };
+                  static const TokenType type_array[] = { RESERVED_BODY, 0 };
                   type = type_array;
                 }
                 break;
@@ -884,7 +884,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -892,7 +892,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -920,7 +920,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                           type = type_array;
                                                         }
                                                         switch(lookahead){
@@ -948,7 +948,7 @@ switch(lookahead){
                                                                                 lookahead = advance(lexer);
                                                                                 lexer->mark_end(lexer);
                                                                                 {
-                                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                   type = type_array;
                                                                                 }
                                                                                 break;
@@ -1020,7 +1020,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -1092,7 +1092,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_BUFFER, 0 };
+                          static const TokenType type_array[] = { RESERVED_BUFFER, 0 };
                           type = type_array;
                         }
                         break;
@@ -1112,7 +1112,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_BUS, 0 };
+              static const TokenType type_array[] = { RESERVED_BUS, 0 };
               type = type_array;
             }
             break;
@@ -1132,7 +1132,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { ATTRIBUTE_TYPE, 0 };
+                  static const TokenType type_array[] = { ATTRIBUTE_TYPE, 0 };
                   type = type_array;
                 }
                 break;
@@ -1152,7 +1152,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_TYPE, 0 };
+              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -1160,7 +1160,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -1188,7 +1188,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -1216,7 +1216,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 break;
@@ -1288,7 +1288,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -1344,7 +1344,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -1396,7 +1396,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -1416,7 +1416,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -1452,7 +1452,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -1500,7 +1500,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
           type = type_array;
         }
         break;
@@ -1520,7 +1520,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -1532,7 +1532,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -1560,7 +1560,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -1624,7 +1624,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -1664,7 +1664,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_CASE, 0 };
+                  static const TokenType type_array[] = { RESERVED_CASE, 0 };
                   type = type_array;
                 }
                 break;
@@ -1684,7 +1684,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -1708,7 +1708,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -1740,7 +1740,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -1792,7 +1792,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 switch(lookahead){
@@ -1800,7 +1800,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     switch(lookahead){
@@ -1816,7 +1816,7 @@ switch(lookahead){
                                                                                 lookahead = advance(lexer);
                                                                                 lexer->mark_end(lexer);
                                                                                 {
-                                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                   type = type_array;
                                                                                 }
                                                                                 break;
@@ -1892,7 +1892,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -1932,7 +1932,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { RESERVED_COMPONENT, 0 };
+                                      static const TokenType type_array[] = { RESERVED_COMPONENT, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -1964,7 +1964,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -1972,7 +1972,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -1996,7 +1996,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -2028,7 +2028,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -2052,7 +2052,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 break;
@@ -2152,7 +2152,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { RESERVED_CONFIGURATION, 0 };
+                                                      static const TokenType type_array[] = { RESERVED_CONFIGURATION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -2212,7 +2212,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { RESERVED_CONSTANT, 0 };
+                                  static const TokenType type_array[] = { RESERVED_CONSTANT, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -2248,7 +2248,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { RESERVED_CONTEXT, 0 };
+                              static const TokenType type_array[] = { RESERVED_CONTEXT, 0 };
                               type = type_array;
                             }
                             break;
@@ -2284,7 +2284,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { ATTRIBUTE_MODE_VIEW, 0 };
+                                  static const TokenType type_array[] = { ATTRIBUTE_MODE_VIEW, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -2308,7 +2308,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -2328,7 +2328,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_COVER, 0 };
+                      static const TokenType type_array[] = { RESERVED_COVER, 0 };
                       type = type_array;
                     }
                     break;
@@ -2392,7 +2392,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -2452,7 +2452,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -2480,7 +2480,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -2488,7 +2488,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -2548,7 +2548,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -2620,7 +2620,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -2692,7 +2692,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -2748,7 +2748,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -2756,7 +2756,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -2784,7 +2784,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 switch(lookahead){
@@ -2812,7 +2812,7 @@ switch(lookahead){
                                                                                         lookahead = advance(lexer);
                                                                                         lexer->mark_end(lexer);
                                                                                         {
-                                                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                           type = type_array;
                                                                                         }
                                                                                         break;
@@ -2900,7 +2900,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
           type = type_array;
         }
         break;
@@ -2916,7 +2916,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -2924,7 +2924,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -2940,7 +2940,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -2948,7 +2948,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -2956,7 +2956,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -2964,7 +2964,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -2972,7 +2972,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -2980,7 +2980,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -2988,7 +2988,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -2996,7 +2996,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3004,7 +3004,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3012,7 +3012,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3028,7 +3028,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3036,7 +3036,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3044,7 +3044,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3052,7 +3052,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3060,7 +3060,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3068,7 +3068,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3076,7 +3076,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3084,7 +3084,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3092,7 +3092,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3100,7 +3100,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3116,7 +3116,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3124,7 +3124,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3132,7 +3132,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3140,7 +3140,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3148,7 +3148,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3156,7 +3156,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3164,7 +3164,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3172,7 +3172,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3180,7 +3180,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3188,7 +3188,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
                   type = type_array;
                 }
                 break;
@@ -3212,7 +3212,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -3236,7 +3236,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -3264,7 +3264,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -3288,7 +3288,7 @@ switch(lookahead){
     lookahead = advance(lexer);
     lexer->mark_end(lexer);
     {
-      static const int type_array[] = { BASE_SPECIFIER_DECIMAL, 0 };
+      static const TokenType type_array[] = { BASE_SPECIFIER_DECIMAL, 0 };
       type = type_array;
     }
     switch(lookahead){
@@ -3316,7 +3316,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { RESERVED_DEFAULT, 0 };
+                              static const TokenType type_array[] = { RESERVED_DEFAULT, 0 };
                               type = type_array;
                             }
                             break;
@@ -3372,7 +3372,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -3404,7 +3404,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { ATTRIBUTE_SUBTYPE, 0 };
+                                                                          static const TokenType type_array[] = { ATTRIBUTE_SUBTYPE, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         break;
@@ -3492,7 +3492,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -3528,7 +3528,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -3548,7 +3548,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { ATTRIBUTE_SIGNAL, 0 };
+                              static const TokenType type_array[] = { ATTRIBUTE_SIGNAL, 0 };
                               type = type_array;
                             }
                             break;
@@ -3560,7 +3560,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -3588,7 +3588,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -3660,7 +3660,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -3732,7 +3732,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { RESERVED_DISCONNECT, 0 };
+                                          static const TokenType type_array[] = { RESERVED_DISCONNECT, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -3792,7 +3792,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -3800,7 +3800,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -3824,7 +3824,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -3876,7 +3876,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -3896,7 +3896,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -3904,7 +3904,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -3932,7 +3932,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                               type = type_array;
                                                             }
                                                             switch(lookahead){
@@ -3940,7 +3940,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 switch(lookahead){
@@ -3968,7 +3968,7 @@ switch(lookahead){
                                                                                         lookahead = advance(lexer);
                                                                                         lexer->mark_end(lexer);
                                                                                         {
-                                                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                           type = type_array;
                                                                                         }
                                                                                         switch(lookahead){
@@ -3996,7 +3996,7 @@ switch(lookahead){
                                                                                                                 lookahead = advance(lexer);
                                                                                                                 lexer->mark_end(lexer);
                                                                                                                 {
-                                                                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                                   type = type_array;
                                                                                                                 }
                                                                                                                 break;
@@ -4120,7 +4120,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -4148,7 +4148,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     switch(lookahead){
@@ -4156,7 +4156,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         switch(lookahead){
@@ -4184,7 +4184,7 @@ switch(lookahead){
                                                                                                 lookahead = advance(lexer);
                                                                                                 lexer->mark_end(lexer);
                                                                                                 {
-                                                                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                                   type = type_array;
                                                                                                 }
                                                                                                 switch(lookahead){
@@ -4212,7 +4212,7 @@ switch(lookahead){
                                                                                                                         lookahead = advance(lexer);
                                                                                                                         lexer->mark_end(lexer);
                                                                                                                         {
-                                                                                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                                           type = type_array;
                                                                                                                         }
                                                                                                                         break;
@@ -4304,7 +4304,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -4352,7 +4352,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -4400,7 +4400,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -4428,7 +4428,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     switch(lookahead){
@@ -4436,7 +4436,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         switch(lookahead){
@@ -4464,7 +4464,7 @@ switch(lookahead){
                                                                                                 lookahead = advance(lexer);
                                                                                                 lexer->mark_end(lexer);
                                                                                                 {
-                                                                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                                   type = type_array;
                                                                                                 }
                                                                                                 switch(lookahead){
@@ -4492,7 +4492,7 @@ switch(lookahead){
                                                                                                                         lookahead = advance(lexer);
                                                                                                                         lexer->mark_end(lexer);
                                                                                                                         {
-                                                                                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                                           type = type_array;
                                                                                                                         }
                                                                                                                         break;
@@ -4584,7 +4584,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -4612,7 +4612,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -4688,7 +4688,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -4764,7 +4764,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -4808,7 +4808,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -4836,7 +4836,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -4916,7 +4916,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -4980,7 +4980,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -5000,7 +5000,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -5056,7 +5056,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_DOWNTO, 0 };
+                          static const TokenType type_array[] = { RESERVED_DOWNTO, 0 };
                           type = type_array;
                         }
                         break;
@@ -5100,7 +5100,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { ATTRIBUTE_FUNCTION, 0 };
+                              static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -5108,7 +5108,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -5132,7 +5132,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { ATTRIBUTE_FUNCTION, 0 };
+                                                      static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -5212,7 +5212,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -5252,7 +5252,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -5268,7 +5268,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -5276,7 +5276,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -5284,7 +5284,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -5292,7 +5292,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -5320,7 +5320,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_ELSE, 0 };
+                  static const TokenType type_array[] = { RESERVED_ELSE, 0 };
                   type = type_array;
                 }
                 break;
@@ -5332,7 +5332,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_ELSIF, 0 };
+                      static const TokenType type_array[] = { RESERVED_ELSIF, 0 };
                       type = type_array;
                     }
                     break;
@@ -5364,7 +5364,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { ATTRIBUTE_SUBTYPE, 0 };
+                              static const TokenType type_array[] = { ATTRIBUTE_SUBTYPE, 0 };
                               type = type_array;
                             }
                             break;
@@ -5396,7 +5396,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_END, 0 };
+              static const TokenType type_array[] = { RESERVED_END, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -5416,7 +5416,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -5452,7 +5452,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_ENTITY, 0 };
+                          static const TokenType type_array[] = { RESERVED_ENTITY, 0 };
                           type = type_array;
                         }
                         break;
@@ -5472,7 +5472,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -5492,7 +5492,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_EXIT, 0 };
+                  static const TokenType type_array[] = { RESERVED_EXIT, 0 };
                   type = type_array;
                 }
                 break;
@@ -5504,7 +5504,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
               type = type_array;
             }
             break;
@@ -5528,7 +5528,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_CONSTANT_DEBUG, DIRECTIVE_ERROR, 0 };
+                      static const TokenType type_array[] = { LIBRARY_CONSTANT_DEBUG, DIRECTIVE_ERROR, 0 };
                       type = type_array;
                     }
                     break;
@@ -5560,7 +5560,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { ATTRIBUTE_FUNCTION, 0 };
+                      static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -5592,7 +5592,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -5616,7 +5616,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -5624,7 +5624,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -5640,7 +5640,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -5652,7 +5652,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
           type = type_array;
         }
         break;
@@ -5664,7 +5664,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -5676,7 +5676,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
           type = type_array;
         }
         break;
@@ -5716,7 +5716,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { RESERVED_FAIRNESS, 0 };
+                                  static const TokenType type_array[] = { RESERVED_FAIRNESS, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -5752,7 +5752,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_CONSTANT_DEBUG, 0 };
+                              static const TokenType type_array[] = { LIBRARY_CONSTANT_DEBUG, 0 };
                               type = type_array;
                             }
                             break;
@@ -5784,7 +5784,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_CONSTANT_BOOLEAN, 0 };
+                      static const TokenType type_array[] = { LIBRARY_CONSTANT_BOOLEAN, 0 };
                       type = type_array;
                     }
                     break;
@@ -5812,7 +5812,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -5832,7 +5832,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -5888,7 +5888,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_FILE, 0 };
+                  static const TokenType type_array[] = { RESERVED_FILE, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -5896,7 +5896,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -5928,7 +5928,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                   type = type_array;
                                                 }
                                                 switch(lookahead){
@@ -5956,7 +5956,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         switch(lookahead){
@@ -5964,7 +5964,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             switch(lookahead){
@@ -5992,7 +5992,7 @@ switch(lookahead){
                                                                                                     lookahead = advance(lexer);
                                                                                                     lexer->mark_end(lexer);
                                                                                                     {
-                                                                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                                       type = type_array;
                                                                                                     }
                                                                                                     switch(lookahead){
@@ -6020,7 +6020,7 @@ switch(lookahead){
                                                                                                                             lookahead = advance(lexer);
                                                                                                                             lexer->mark_end(lexer);
                                                                                                                             {
-                                                                                                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                                               type = type_array;
                                                                                                                             }
                                                                                                                             break;
@@ -6140,7 +6140,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -6172,7 +6172,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -6212,7 +6212,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -6260,7 +6260,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -6292,7 +6292,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_CONSTANT, LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_CONSTANT, LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -6300,7 +6300,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -6320,7 +6320,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                           type = type_array;
                                                         }
                                                         switch(lookahead){
@@ -6328,7 +6328,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                               type = type_array;
                                                             }
                                                             switch(lookahead){
@@ -6356,7 +6356,7 @@ switch(lookahead){
                                                                                     lookahead = advance(lexer);
                                                                                     lexer->mark_end(lexer);
                                                                                     {
-                                                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                       type = type_array;
                                                                                     }
                                                                                     switch(lookahead){
@@ -6384,7 +6384,7 @@ switch(lookahead){
                                                                                                             lookahead = advance(lexer);
                                                                                                             lexer->mark_end(lexer);
                                                                                                             {
-                                                                                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                               type = type_array;
                                                                                                             }
                                                                                                             break;
@@ -6476,7 +6476,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 switch(lookahead){
@@ -6484,7 +6484,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     switch(lookahead){
@@ -6512,7 +6512,7 @@ switch(lookahead){
                                                                                             lookahead = advance(lexer);
                                                                                             lexer->mark_end(lexer);
                                                                                             {
-                                                                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                               type = type_array;
                                                                                             }
                                                                                             switch(lookahead){
@@ -6540,7 +6540,7 @@ switch(lookahead){
                                                                                                                     lookahead = advance(lexer);
                                                                                                                     lexer->mark_end(lexer);
                                                                                                                     {
-                                                                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                                       type = type_array;
                                                                                                                     }
                                                                                                                     break;
@@ -6604,7 +6604,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                               type = type_array;
                                                             }
                                                             switch(lookahead){
@@ -6612,7 +6612,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 switch(lookahead){
@@ -6640,7 +6640,7 @@ switch(lookahead){
                                                                                         lookahead = advance(lexer);
                                                                                         lexer->mark_end(lexer);
                                                                                         {
-                                                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                           type = type_array;
                                                                                         }
                                                                                         switch(lookahead){
@@ -6668,7 +6668,7 @@ switch(lookahead){
                                                                                                                 lookahead = advance(lexer);
                                                                                                                 lexer->mark_end(lexer);
                                                                                                                 {
-                                                                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                                   type = type_array;
                                                                                                                 }
                                                                                                                 break;
@@ -6780,7 +6780,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                   type = type_array;
                                                 }
                                                 switch(lookahead){
@@ -6800,7 +6800,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 switch(lookahead){
@@ -6808,7 +6808,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     switch(lookahead){
@@ -6836,7 +6836,7 @@ switch(lookahead){
                                                                                             lookahead = advance(lexer);
                                                                                             lexer->mark_end(lexer);
                                                                                             {
-                                                                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                               type = type_array;
                                                                                             }
                                                                                             switch(lookahead){
@@ -6864,7 +6864,7 @@ switch(lookahead){
                                                                                                                     lookahead = advance(lexer);
                                                                                                                     lexer->mark_end(lexer);
                                                                                                                     {
-                                                                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                                       type = type_array;
                                                                                                                     }
                                                                                                                     break;
@@ -6952,7 +6952,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -7000,7 +7000,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -7040,7 +7040,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -7100,7 +7100,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -7140,7 +7140,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -7192,7 +7192,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -7232,7 +7232,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -7260,7 +7260,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -7288,7 +7288,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -7336,7 +7336,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -7384,7 +7384,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -7428,7 +7428,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -7444,7 +7444,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -7464,7 +7464,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -7500,7 +7500,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -7568,7 +7568,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -7632,7 +7632,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -7656,7 +7656,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -7664,7 +7664,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                   type = type_array;
                                                 }
                                                 switch(lookahead){
@@ -7692,7 +7692,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         switch(lookahead){
@@ -7712,7 +7712,7 @@ switch(lookahead){
                                                                                         lookahead = advance(lexer);
                                                                                         lexer->mark_end(lexer);
                                                                                         {
-                                                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                           type = type_array;
                                                                                         }
                                                                                         break;
@@ -7812,7 +7812,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                               type = type_array;
                                                             }
                                                             switch(lookahead){
@@ -7840,7 +7840,7 @@ switch(lookahead){
                                                                                     lookahead = advance(lexer);
                                                                                     lexer->mark_end(lexer);
                                                                                     {
-                                                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                       type = type_array;
                                                                                     }
                                                                                     switch(lookahead){
@@ -7860,7 +7860,7 @@ switch(lookahead){
                                                                                                     lookahead = advance(lexer);
                                                                                                     lexer->mark_end(lexer);
                                                                                                     {
-                                                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                       type = type_array;
                                                                                                     }
                                                                                                     break;
@@ -7968,7 +7968,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -8032,7 +8032,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -8080,7 +8080,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -8124,7 +8124,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_FOR, 0 };
+              static const TokenType type_array[] = { RESERVED_FOR, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -8136,7 +8136,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_FORCE, 0 };
+                      static const TokenType type_array[] = { RESERVED_FORCE, 0 };
                       type = type_array;
                     }
                     break;
@@ -8160,7 +8160,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_ATTRIBUTE, 0 };
+                              static const TokenType type_array[] = { LIBRARY_ATTRIBUTE, 0 };
                               type = type_array;
                             }
                             break;
@@ -8212,7 +8212,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { RESERVED_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { RESERVED_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -8260,7 +8260,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                          static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                           type = type_array;
                         }
                         break;
@@ -8288,7 +8288,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -8316,7 +8316,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -8368,7 +8368,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -8412,7 +8412,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -8440,7 +8440,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -8516,7 +8516,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -8552,7 +8552,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -8580,7 +8580,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -8648,7 +8648,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -8696,7 +8696,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                   type = type_array;
                                                 }
                                                 switch(lookahead){
@@ -8724,7 +8724,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         break;
@@ -8796,7 +8796,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
           type = type_array;
         }
         break;
@@ -8804,7 +8804,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -8812,7 +8812,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -8836,7 +8836,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -8860,7 +8860,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -8872,7 +8872,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                               type = type_array;
                             }
                             break;
@@ -8888,7 +8888,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                               type = type_array;
                             }
                             break;
@@ -8908,7 +8908,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -8936,7 +8936,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -8992,7 +8992,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -9008,7 +9008,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                           type = type_array;
                                                         }
                                                         switch(lookahead){
@@ -9028,7 +9028,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         break;
@@ -9108,7 +9108,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -9136,7 +9136,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { RESERVED_GENERATE, 0 };
+                                  static const TokenType type_array[] = { RESERVED_GENERATE, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -9156,7 +9156,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { RESERVED_GENERIC, 0 };
+                              static const TokenType type_array[] = { RESERVED_GENERIC, 0 };
                               type = type_array;
                             }
                             break;
@@ -9192,7 +9192,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -9208,7 +9208,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -9232,7 +9232,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -9252,7 +9252,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -9328,7 +9328,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                           type = type_array;
                                                         }
                                                         switch(lookahead){
@@ -9352,7 +9352,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -9472,7 +9472,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -9588,7 +9588,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         break;
@@ -9632,7 +9632,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -9680,7 +9680,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -9776,7 +9776,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -9864,7 +9864,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_GROUP, 0 };
+                      static const TokenType type_array[] = { RESERVED_GROUP, 0 };
                       type = type_array;
                     }
                     break;
@@ -9904,7 +9904,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { RESERVED_GUARDED, 0 };
+                              static const TokenType type_array[] = { RESERVED_GUARDED, 0 };
                               type = type_array;
                             }
                             break;
@@ -9948,7 +9948,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -9976,7 +9976,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -9988,7 +9988,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
           type = type_array;
         }
         break;
@@ -10004,7 +10004,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { RESERVED_IF, 0 };
+          static const TokenType type_array[] = { RESERVED_IF, 0 };
           type = type_array;
         }
         break;
@@ -10028,7 +10028,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_IMPURE, 0 };
+                          static const TokenType type_array[] = { RESERVED_IMPURE, 0 };
                           type = type_array;
                         }
                         break;
@@ -10056,7 +10056,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
+                      static const TokenType type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -10076,7 +10076,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { RESERVED_IN, 0 };
+          static const TokenType type_array[] = { RESERVED_IN, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -10104,7 +10104,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { RESERVED_INERTIAL, 0 };
+                                  static const TokenType type_array[] = { RESERVED_INERTIAL, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -10140,7 +10140,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_INOUT, 0 };
+                      static const TokenType type_array[] = { RESERVED_INOUT, 0 };
                       type = type_array;
                     }
                     break;
@@ -10164,7 +10164,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { ATTRIBUTE_SUBTYPE, 0 };
+                      static const TokenType type_array[] = { ATTRIBUTE_SUBTYPE, 0 };
                       type = type_array;
                     }
                     break;
@@ -10204,7 +10204,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -10224,7 +10224,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { ATTRIBUTE_VALUE, 0 };
+                                                      static const TokenType type_array[] = { ATTRIBUTE_VALUE, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -10288,7 +10288,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -10296,7 +10296,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -10324,7 +10324,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                           type = type_array;
                                                         }
                                                         switch(lookahead){
@@ -10352,7 +10352,7 @@ switch(lookahead){
                                                                                 lookahead = advance(lexer);
                                                                                 lexer->mark_end(lexer);
                                                                                 {
-                                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                   type = type_array;
                                                                                 }
                                                                                 break;
@@ -10424,7 +10424,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -10484,7 +10484,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                      static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                       type = type_array;
                     }
                     break;
@@ -10504,7 +10504,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { RESERVED_IS, 0 };
+          static const TokenType type_array[] = { RESERVED_IS, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -10572,7 +10572,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         break;
@@ -10640,7 +10640,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -10648,7 +10648,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -10684,7 +10684,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -10724,7 +10724,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
               type = type_array;
             }
             break;
@@ -10740,7 +10740,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -10768,7 +10768,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_NAMESPACE, 0 };
+                  static const TokenType type_array[] = { LIBRARY_NAMESPACE, 0 };
                   type = type_array;
                 }
                 break;
@@ -10804,7 +10804,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_LABEL, 0 };
+                      static const TokenType type_array[] = { RESERVED_LABEL, 0 };
                       type = type_array;
                     }
                     break;
@@ -10828,7 +10828,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -10852,7 +10852,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { ATTRIBUTE_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -10896,7 +10896,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { ATTRIBUTE_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -10940,7 +10940,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { ATTRIBUTE_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -11000,7 +11000,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { RESERVED_LIBRARY, 0 };
+                              static const TokenType type_array[] = { RESERVED_LIBRARY, 0 };
                               type = type_array;
                             }
                             break;
@@ -11040,7 +11040,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { RESERVED_LINKAGE, 0 };
+                              static const TokenType type_array[] = { RESERVED_LINKAGE, 0 };
                               type = type_array;
                             }
                             break;
@@ -11060,7 +11060,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -11068,7 +11068,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -11096,7 +11096,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -11152,7 +11152,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { RESERVED_LITERAL, 0 };
+                              static const TokenType type_array[] = { RESERVED_LITERAL, 0 };
                               type = type_array;
                             }
                             break;
@@ -11188,7 +11188,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_LOOP, 0 };
+                  static const TokenType type_array[] = { RESERVED_LOOP, 0 };
                   type = type_array;
                 }
                 break;
@@ -11200,7 +11200,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
+              static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
               type = type_array;
             }
             break;
@@ -11232,7 +11232,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -11264,7 +11264,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -11272,7 +11272,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -11280,7 +11280,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -11292,7 +11292,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -11312,7 +11312,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -11324,7 +11324,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT, ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT, ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -11336,7 +11336,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
+                          static const TokenType type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -11368,7 +11368,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { ATTRIBUTE_FUNCTION, ATTRIBUTE_PURE_FUNCTION, 0 };
+                          static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, ATTRIBUTE_PURE_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -11392,7 +11392,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
           type = type_array;
         }
         break;
@@ -11400,7 +11400,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
           type = type_array;
         }
         break;
@@ -11420,7 +11420,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_MAP, 0 };
+              static const TokenType type_array[] = { RESERVED_MAP, 0 };
               type = type_array;
             }
             break;
@@ -11444,7 +11444,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -11468,7 +11468,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
               type = type_array;
             }
             break;
@@ -11484,7 +11484,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -11492,7 +11492,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                           type = type_array;
                         }
                         break;
@@ -11504,7 +11504,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -11528,7 +11528,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                   type = type_array;
                                                 }
                                                 switch(lookahead){
@@ -11536,7 +11536,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -11548,7 +11548,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -11576,7 +11576,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     switch(lookahead){
@@ -11584,7 +11584,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         break;
@@ -11644,7 +11644,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                              static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -11652,7 +11652,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -11676,7 +11676,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                       type = type_array;
                                                     }
                                                     switch(lookahead){
@@ -11684,7 +11684,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -11692,7 +11692,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -11700,7 +11700,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -11744,7 +11744,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -11756,7 +11756,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -11780,7 +11780,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -11796,7 +11796,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -11820,7 +11820,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                               type = type_array;
                                                             }
                                                             switch(lookahead){
@@ -11828,7 +11828,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 break;
@@ -11888,7 +11888,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -11904,7 +11904,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                   type = type_array;
                                                 }
                                                 switch(lookahead){
@@ -11912,7 +11912,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -11924,7 +11924,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -11956,7 +11956,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -11972,7 +11972,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                       type = type_array;
                                                     }
                                                     switch(lookahead){
@@ -11980,7 +11980,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -12016,7 +12016,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -12032,7 +12032,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                           type = type_array;
                                                         }
                                                         switch(lookahead){
@@ -12040,7 +12040,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -12100,7 +12100,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -12108,7 +12108,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -12120,7 +12120,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -12164,7 +12164,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -12180,7 +12180,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                   type = type_array;
                                                 }
                                                 switch(lookahead){
@@ -12196,7 +12196,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -12252,7 +12252,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -12268,7 +12268,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                   type = type_array;
                                                 }
                                                 switch(lookahead){
@@ -12284,7 +12284,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -12348,7 +12348,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -12356,7 +12356,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -12364,7 +12364,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -12404,7 +12404,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -12448,7 +12448,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_MOD, 0 };
+              static const TokenType type_array[] = { RESERVED_MOD, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -12460,7 +12460,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -12484,7 +12484,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -12524,7 +12524,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -12556,7 +12556,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                          static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                           type = type_array;
                         }
                         break;
@@ -12584,7 +12584,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -12604,7 +12604,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -12632,7 +12632,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
           type = type_array;
         }
         break;
@@ -12664,7 +12664,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -12708,7 +12708,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -12716,7 +12716,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_NAND, 0 };
+                  static const TokenType type_array[] = { RESERVED_NAND, 0 };
                   type = type_array;
                 }
                 break;
@@ -12728,7 +12728,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -12760,7 +12760,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                               type = type_array;
                             }
                             break;
@@ -12784,7 +12784,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -12800,7 +12800,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -12824,7 +12824,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -12864,7 +12864,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -12872,7 +12872,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_NEW, 0 };
+              static const TokenType type_array[] = { RESERVED_NEW, 0 };
               type = type_array;
             }
             break;
@@ -12884,7 +12884,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_NEXT, 0 };
+                  static const TokenType type_array[] = { RESERVED_NEXT, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -12908,7 +12908,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -12944,7 +12944,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -12960,7 +12960,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                              static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -12972,7 +12972,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -13016,7 +13016,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -13072,7 +13072,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -13120,7 +13120,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -13132,7 +13132,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -13176,7 +13176,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_NOR, 0 };
+              static const TokenType type_array[] = { RESERVED_NOR, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -13204,7 +13204,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -13236,7 +13236,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_NOT, 0 };
+              static const TokenType type_array[] = { RESERVED_NOT, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -13244,7 +13244,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_DEBUG, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_DEBUG, 0 };
                   type = type_array;
                 }
                 break;
@@ -13256,7 +13256,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
               type = type_array;
             }
             break;
@@ -13272,7 +13272,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -13280,7 +13280,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_NULL, 0 };
+                  static const TokenType type_array[] = { RESERVED_NULL, 0 };
                   type = type_array;
                 }
                 break;
@@ -13296,7 +13296,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
           type = type_array;
         }
         break;
@@ -13308,7 +13308,7 @@ switch(lookahead){
     lookahead = advance(lexer);
     lexer->mark_end(lexer);
     {
-      static const int type_array[] = { BASE_SPECIFIER_OCTAL, 0 };
+      static const TokenType type_array[] = { BASE_SPECIFIER_OCTAL, 0 };
       type = type_array;
     }
     switch(lookahead){
@@ -13316,7 +13316,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { RESERVED_OF, 0 };
+          static const TokenType type_array[] = { RESERVED_OF, 0 };
           type = type_array;
         }
         break;
@@ -13324,7 +13324,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { RESERVED_ON, 0 };
+          static const TokenType type_array[] = { RESERVED_ON, 0 };
           type = type_array;
         }
         break;
@@ -13340,7 +13340,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_OPEN, 0 };
+                  static const TokenType type_array[] = { RESERVED_OPEN, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -13348,7 +13348,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -13360,7 +13360,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                              static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                               type = type_array;
                             }
                             break;
@@ -13388,7 +13388,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { RESERVED_OR, 0 };
+          static const TokenType type_array[] = { RESERVED_OR, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -13404,7 +13404,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -13440,7 +13440,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_OTHERS, 0 };
+                          static const TokenType type_array[] = { RESERVED_OTHERS, 0 };
                           type = type_array;
                         }
                         break;
@@ -13468,7 +13468,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_OUT, 0 };
+              static const TokenType type_array[] = { RESERVED_OUT, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -13484,7 +13484,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                           type = type_array;
                         }
                         break;
@@ -13524,7 +13524,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -13564,7 +13564,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -13584,7 +13584,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -13620,7 +13620,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -13692,7 +13692,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { RESERVED_PACKAGE, 0 };
+                              static const TokenType type_array[] = { RESERVED_PACKAGE, 0 };
                               type = type_array;
                             }
                             break;
@@ -13740,7 +13740,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { RESERVED_PARAMETER, 0 };
+                                      static const TokenType type_array[] = { RESERVED_PARAMETER, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -13780,7 +13780,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -13800,7 +13800,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { ATTRIBUTE_VALUE, 0 };
+                                      static const TokenType type_array[] = { ATTRIBUTE_VALUE, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -13844,7 +13844,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_PORT, 0 };
+                  static const TokenType type_array[] = { RESERVED_PORT, 0 };
                   type = type_array;
                 }
                 break;
@@ -13856,7 +13856,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
+              static const TokenType type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -13884,7 +13884,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { RESERVED_POSTPONED, 0 };
+                                      static const TokenType type_array[] = { RESERVED_POSTPONED, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -13928,7 +13928,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -13936,7 +13936,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -13956,7 +13956,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -14000,7 +14000,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -14020,7 +14020,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -14068,7 +14068,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -14124,7 +14124,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -14160,7 +14160,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                              static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -14172,7 +14172,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -14216,7 +14216,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -14232,7 +14232,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -14264,7 +14264,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 break;
@@ -14356,7 +14356,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { RESERVED_PROCEDURE, 0 };
+                                      static const TokenType type_array[] = { RESERVED_PROCEDURE, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -14380,7 +14380,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { RESERVED_PROCESS, 0 };
+                              static const TokenType type_array[] = { RESERVED_PROCESS, 0 };
                               type = type_array;
                             }
                             break;
@@ -14416,7 +14416,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { RESERVED_PROPERTY, 0 };
+                                  static const TokenType type_array[] = { RESERVED_PROPERTY, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -14452,7 +14452,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { DIRECTIVE_PROTECT, 0 };
+                              static const TokenType type_array[] = { DIRECTIVE_PROTECT, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -14464,7 +14464,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { RESERVED_PROTECTED, 0 };
+                                      static const TokenType type_array[] = { RESERVED_PROTECTED, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -14512,7 +14512,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { RESERVED_PRIVATE, 0 };
+                              static const TokenType type_array[] = { RESERVED_PRIVATE, 0 };
                               type = type_array;
                             }
                             break;
@@ -14556,7 +14556,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -14580,7 +14580,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -14640,7 +14640,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
+                  static const TokenType type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -14664,7 +14664,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_PURE, 0 };
+                  static const TokenType type_array[] = { RESERVED_PURE, 0 };
                   type = type_array;
                 }
                 break;
@@ -14680,7 +14680,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -14736,7 +14736,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -14820,7 +14820,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -14900,7 +14900,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         break;
@@ -14992,7 +14992,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { ATTRIBUTE_RANGE, RESERVED_RANGE, 0 };
+                      static const TokenType type_array[] = { ATTRIBUTE_RANGE, RESERVED_RANGE, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -15000,7 +15000,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -15040,7 +15040,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                               type = type_array;
                                                             }
                                                             switch(lookahead){
@@ -15048,7 +15048,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 switch(lookahead){
@@ -15076,7 +15076,7 @@ switch(lookahead){
                                                                                         lookahead = advance(lexer);
                                                                                         lexer->mark_end(lexer);
                                                                                         {
-                                                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                           type = type_array;
                                                                                         }
                                                                                         switch(lookahead){
@@ -15104,7 +15104,7 @@ switch(lookahead){
                                                                                                                 lookahead = advance(lexer);
                                                                                                                 lexer->mark_end(lexer);
                                                                                                                 {
-                                                                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                                   type = type_array;
                                                                                                                 }
                                                                                                                 break;
@@ -15232,7 +15232,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { ATTRIBUTE_TYPE, RESERVED_RECORD, 0 };
+                          static const TokenType type_array[] = { ATTRIBUTE_TYPE, RESERVED_RECORD, 0 };
                           type = type_array;
                         }
                         break;
@@ -15272,7 +15272,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -15328,7 +15328,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { RESERVED_REGISTER, 0 };
+                                  static const TokenType type_array[] = { RESERVED_REGISTER, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -15368,7 +15368,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_REJECT, 0 };
+                          static const TokenType type_array[] = { RESERVED_REJECT, 0 };
                           type = type_array;
                         }
                         break;
@@ -15404,7 +15404,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { RESERVED_RELEASE, 0 };
+                              static const TokenType type_array[] = { RESERVED_RELEASE, 0 };
                               type = type_array;
                             }
                             break;
@@ -15428,7 +15428,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_REM, 0 };
+              static const TokenType type_array[] = { RESERVED_REM, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -15456,7 +15456,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -15500,7 +15500,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_REPORT, 0 };
+                          static const TokenType type_array[] = { RESERVED_REPORT, 0 };
                           type = type_array;
                         }
                         break;
@@ -15540,7 +15540,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { RESERVED_RESTRICT, 0 };
+                                  static const TokenType type_array[] = { RESERVED_RESTRICT, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -15592,7 +15592,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -15616,7 +15616,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 break;
@@ -15672,7 +15672,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -15704,7 +15704,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -15736,7 +15736,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_RETURN, 0 };
+                          static const TokenType type_array[] = { RESERVED_RETURN, 0 };
                           type = type_array;
                         }
                         break;
@@ -15776,7 +15776,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -15800,7 +15800,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { ATTRIBUTE_RANGE, 0 };
+                                                      static const TokenType type_array[] = { ATTRIBUTE_RANGE, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -15864,7 +15864,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { ATTRIBUTE_IMPURE_FUNCTION, 0 };
+                              static const TokenType type_array[] = { ATTRIBUTE_IMPURE_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -15892,7 +15892,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -15900,7 +15900,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -15928,7 +15928,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -15956,7 +15956,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -16028,7 +16028,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -16080,7 +16080,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -16116,7 +16116,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -16132,7 +16132,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -16152,7 +16152,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -16160,7 +16160,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -16180,7 +16180,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -16220,7 +16220,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -16240,7 +16240,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -16300,7 +16300,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -16336,7 +16336,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_ROL, 0 };
+              static const TokenType type_array[] = { RESERVED_ROL, 0 };
               type = type_array;
             }
             break;
@@ -16344,7 +16344,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_ROR, 0 };
+              static const TokenType type_array[] = { RESERVED_ROR, 0 };
               type = type_array;
             }
             break;
@@ -16368,7 +16368,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -16388,7 +16388,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -16424,7 +16424,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -16476,7 +16476,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -16484,7 +16484,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -16504,7 +16504,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -16548,7 +16548,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -16584,7 +16584,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -16620,7 +16620,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -16648,7 +16648,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -16700,7 +16700,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_CONSTANT, ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
+                      static const TokenType type_array[] = { LIBRARY_CONSTANT, ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -16712,7 +16712,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
+                              static const TokenType type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -16752,7 +16752,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -16772,7 +16772,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -16820,7 +16820,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -16856,7 +16856,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_SELECT, 0 };
+                          static const TokenType type_array[] = { RESERVED_SELECT, 0 };
                           type = type_array;
                         }
                         break;
@@ -16896,7 +16896,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { RESERVED_SEQUENCE, 0 };
+                                  static const TokenType type_array[] = { RESERVED_SEQUENCE, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -16944,7 +16944,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { RESERVED_SEVERITY, 0 };
+                                  static const TokenType type_array[] = { RESERVED_SEVERITY, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -16952,7 +16952,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -16976,7 +16976,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                           type = type_array;
                                                         }
                                                         switch(lookahead){
@@ -16984,7 +16984,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                               type = type_array;
                                                             }
                                                             switch(lookahead){
@@ -17012,7 +17012,7 @@ switch(lookahead){
                                                                                     lookahead = advance(lexer);
                                                                                     lexer->mark_end(lexer);
                                                                                     {
-                                                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                       type = type_array;
                                                                                     }
                                                                                     switch(lookahead){
@@ -17040,7 +17040,7 @@ switch(lookahead){
                                                                                                             lookahead = advance(lexer);
                                                                                                             lexer->mark_end(lexer);
                                                                                                             {
-                                                                                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                               type = type_array;
                                                                                                             }
                                                                                                             break;
@@ -17144,7 +17144,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -17168,7 +17168,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -17184,7 +17184,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -17204,7 +17204,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -17316,7 +17316,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -17436,7 +17436,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -17484,7 +17484,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -17580,7 +17580,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -17656,7 +17656,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -17668,7 +17668,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -17680,7 +17680,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { ATTRIBUTE_SIGNAL, RESERVED_SIGNAL, 0 };
+                          static const TokenType type_array[] = { ATTRIBUTE_SIGNAL, RESERVED_SIGNAL, 0 };
                           type = type_array;
                         }
                         break;
@@ -17696,7 +17696,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                           type = type_array;
                         }
                         break;
@@ -17732,7 +17732,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -17752,7 +17752,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { ATTRIBUTE_VALUE, 0 };
+                                              static const TokenType type_array[] = { ATTRIBUTE_VALUE, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -17796,7 +17796,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -17804,7 +17804,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -17832,7 +17832,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -17860,7 +17860,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -17924,7 +17924,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -17932,7 +17932,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -17964,7 +17964,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_SHARED, 0 };
+                          static const TokenType type_array[] = { RESERVED_SHARED, 0 };
                           type = type_array;
                         }
                         break;
@@ -17996,7 +17996,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -18016,7 +18016,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -18052,7 +18052,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -18100,7 +18100,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_SLA, 0 };
+              static const TokenType type_array[] = { RESERVED_SLA, 0 };
               type = type_array;
             }
             break;
@@ -18108,7 +18108,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_SLL, 0 };
+              static const TokenType type_array[] = { RESERVED_SLL, 0 };
               type = type_array;
             }
             break;
@@ -18124,7 +18124,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_SRA, 0 };
+              static const TokenType type_array[] = { RESERVED_SRA, 0 };
               type = type_array;
             }
             break;
@@ -18132,7 +18132,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_SRL, 0 };
+              static const TokenType type_array[] = { RESERVED_SRL, 0 };
               type = type_array;
             }
             break;
@@ -18148,7 +18148,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -18184,7 +18184,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { RESERVED_STRONG, 0 };
+                          static const TokenType type_array[] = { RESERVED_STRONG, 0 };
                           type = type_array;
                         }
                         break;
@@ -18208,7 +18208,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -18216,7 +18216,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -18236,7 +18236,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -18272,7 +18272,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -18328,7 +18328,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { ATTRIBUTE_SIGNAL, 0 };
+                          static const TokenType type_array[] = { ATTRIBUTE_SIGNAL, 0 };
                           type = type_array;
                         }
                         break;
@@ -18356,7 +18356,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -18368,7 +18368,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -18392,7 +18392,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -18416,7 +18416,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 break;
@@ -18456,7 +18456,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 break;
@@ -18488,7 +18488,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -18528,7 +18528,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -18580,7 +18580,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                                           type = type_array;
                                                         }
                                                         break;
@@ -18636,7 +18636,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                           type = type_array;
                                                         }
                                                         switch(lookahead){
@@ -18664,7 +18664,7 @@ switch(lookahead){
                                                                                 lookahead = advance(lexer);
                                                                                 lexer->mark_end(lexer);
                                                                                 {
-                                                                                  static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                                                                   type = type_array;
                                                                                 }
                                                                                 break;
@@ -18736,7 +18736,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                   type = type_array;
                                                 }
                                                 switch(lookahead){
@@ -18764,7 +18764,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                                                          static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         break;
@@ -18828,7 +18828,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -18868,7 +18868,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -18888,7 +18888,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -18928,7 +18928,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -18976,7 +18976,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -18988,7 +18988,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_NAMESPACE, 0 };
+              static const TokenType type_array[] = { LIBRARY_NAMESPACE, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -18996,7 +18996,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -19024,7 +19024,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -19032,7 +19032,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -19060,7 +19060,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -19132,7 +19132,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -19140,7 +19140,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -19168,7 +19168,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 break;
@@ -19236,7 +19236,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -19268,7 +19268,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -19284,7 +19284,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -19304,7 +19304,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { ATTRIBUTE_SUBTYPE, RESERVED_SUBTYPE, 0 };
+                              static const TokenType type_array[] = { ATTRIBUTE_SUBTYPE, RESERVED_SUBTYPE, 0 };
                               type = type_array;
                             }
                             break;
@@ -19332,7 +19332,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -19364,7 +19364,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
+                  static const TokenType type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -19388,7 +19388,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                          static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                           type = type_array;
                         }
                         break;
@@ -19412,7 +19412,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { BASE_SPECIFIER_BINARY, 0 };
+          static const TokenType type_array[] = { BASE_SPECIFIER_BINARY, 0 };
           type = type_array;
         }
         break;
@@ -19420,7 +19420,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, BASE_SPECIFIER_OCTAL, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, BASE_SPECIFIER_OCTAL, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -19428,7 +19428,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -19440,7 +19440,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { BASE_SPECIFIER_HEX, 0 };
+          static const TokenType type_array[] = { BASE_SPECIFIER_HEX, 0 };
           type = type_array;
         }
         break;
@@ -19472,7 +19472,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -19496,7 +19496,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -19532,7 +19532,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -19560,7 +19560,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -19600,7 +19600,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -19608,7 +19608,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -19628,7 +19628,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -19656,7 +19656,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -19684,7 +19684,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -19704,7 +19704,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -19732,7 +19732,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -19776,7 +19776,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -19804,7 +19804,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -19836,7 +19836,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_THEN, 0 };
+                  static const TokenType type_array[] = { RESERVED_THEN, 0 };
                   type = type_array;
                 }
                 break;
@@ -19868,7 +19868,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -19900,7 +19900,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { RESERVED_TO, 0 };
+          static const TokenType type_array[] = { RESERVED_TO, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -19916,7 +19916,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -19936,7 +19936,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -19976,7 +19976,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -20012,7 +20012,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -20056,7 +20056,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -20100,7 +20100,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -20144,7 +20144,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -20172,7 +20172,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -20216,7 +20216,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 switch(lookahead){
@@ -20244,7 +20244,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         break;
@@ -20336,7 +20336,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -20384,7 +20384,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -20412,7 +20412,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                       type = type_array;
                                                     }
                                                     switch(lookahead){
@@ -20440,7 +20440,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -20516,7 +20516,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                           type = type_array;
                                                         }
                                                         switch(lookahead){
@@ -20544,7 +20544,7 @@ switch(lookahead){
                                                                                 lookahead = advance(lexer);
                                                                                 lexer->mark_end(lexer);
                                                                                 {
-                                                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                                   type = type_array;
                                                                                 }
                                                                                 break;
@@ -20616,7 +20616,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -20636,7 +20636,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -20668,7 +20668,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -20700,7 +20700,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -20712,7 +20712,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -20764,7 +20764,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -20808,7 +20808,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -20836,7 +20836,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -20912,7 +20912,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -20948,7 +20948,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -20976,7 +20976,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -21044,7 +21044,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -21092,7 +21092,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -21120,7 +21120,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 break;
@@ -21168,7 +21168,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -21196,7 +21196,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -21224,7 +21224,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -21252,7 +21252,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -21292,7 +21292,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -21308,7 +21308,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -21328,7 +21328,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -21336,7 +21336,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -21368,7 +21368,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -21408,7 +21408,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -21448,7 +21448,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -21460,7 +21460,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -21512,7 +21512,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -21556,7 +21556,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -21592,7 +21592,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -21604,7 +21604,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -21620,7 +21620,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -21640,7 +21640,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -21712,7 +21712,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { RESERVED_TRANSPORT, 0 };
+                                      static const TokenType type_array[] = { RESERVED_TRANSPORT, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -21752,7 +21752,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { ATTRIBUTE_SIGNAL, 0 };
+                                              static const TokenType type_array[] = { ATTRIBUTE_SIGNAL, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -21796,7 +21796,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_CONSTANT_BOOLEAN, 0 };
+                  static const TokenType type_array[] = { LIBRARY_CONSTANT_BOOLEAN, 0 };
                   type = type_array;
                 }
                 break;
@@ -21808,7 +21808,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -21836,7 +21836,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_TYPE, 0 };
+                  static const TokenType type_array[] = { RESERVED_TYPE, 0 };
                   type = type_array;
                 }
                 break;
@@ -21860,7 +21860,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -21868,7 +21868,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -21896,7 +21896,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -21936,7 +21936,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -21964,7 +21964,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -22024,7 +22024,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                   type = type_array;
                                 }
                                 switch(lookahead){
@@ -22056,7 +22056,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                                               type = type_array;
                                                             }
                                                             break;
@@ -22120,7 +22120,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -22184,7 +22184,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                              static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                               type = type_array;
                             }
                             break;
@@ -22220,7 +22220,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                   type = type_array;
                 }
                 break;
@@ -22232,7 +22232,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
               type = type_array;
             }
             break;
@@ -22248,7 +22248,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -22256,7 +22256,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;
@@ -22312,7 +22312,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { RESERVED_UNAFFECTED, 0 };
+                                          static const TokenType type_array[] = { RESERVED_UNAFFECTED, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -22356,7 +22356,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_UNITS, 0 };
+                      static const TokenType type_array[] = { RESERVED_UNITS, 0 };
                       type = type_array;
                     }
                     break;
@@ -22392,7 +22392,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                           type = type_array;
                                         }
                                         switch(lookahead){
@@ -22428,7 +22428,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         switch(lookahead){
@@ -22456,7 +22456,7 @@ switch(lookahead){
                                                                                                 lookahead = advance(lexer);
                                                                                                 lexer->mark_end(lexer);
                                                                                                 {
-                                                                                                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                                   type = type_array;
                                                                                                 }
                                                                                                 switch(lookahead){
@@ -22484,7 +22484,7 @@ switch(lookahead){
                                                                                                                         lookahead = advance(lexer);
                                                                                                                         lexer->mark_end(lexer);
                                                                                                                         {
-                                                                                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                                           type = type_array;
                                                                                                                         }
                                                                                                                         break;
@@ -22580,7 +22580,7 @@ switch(lookahead){
                                                         lookahead = advance(lexer);
                                                         lexer->mark_end(lexer);
                                                         {
-                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                           type = type_array;
                                                         }
                                                         switch(lookahead){
@@ -22588,7 +22588,7 @@ switch(lookahead){
                                                             lookahead = advance(lexer);
                                                             lexer->mark_end(lexer);
                                                             {
-                                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                               type = type_array;
                                                             }
                                                             switch(lookahead){
@@ -22616,7 +22616,7 @@ switch(lookahead){
                                                                                     lookahead = advance(lexer);
                                                                                     lexer->mark_end(lexer);
                                                                                     {
-                                                                                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                                                                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                                                                       type = type_array;
                                                                                     }
                                                                                     switch(lookahead){
@@ -22644,7 +22644,7 @@ switch(lookahead){
                                                                                                             lookahead = advance(lexer);
                                                                                                             lexer->mark_end(lexer);
                                                                                                             {
-                                                                                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                                                               type = type_array;
                                                                                                             }
                                                                                                             break;
@@ -22756,7 +22756,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -22788,7 +22788,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_UNTIL, 0 };
+                      static const TokenType type_array[] = { RESERVED_UNTIL, 0 };
                       type = type_array;
                     }
                     break;
@@ -22836,7 +22836,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                                               type = type_array;
                                             }
                                             switch(lookahead){
@@ -22872,7 +22872,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -22920,7 +22920,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -22968,7 +22968,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -23008,7 +23008,7 @@ switch(lookahead){
                                                                     lookahead = advance(lexer);
                                                                     lexer->mark_end(lexer);
                                                                     {
-                                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                       type = type_array;
                                                                     }
                                                                     break;
@@ -23052,7 +23052,7 @@ switch(lookahead){
                                                                 lookahead = advance(lexer);
                                                                 lexer->mark_end(lexer);
                                                                 {
-                                                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                   type = type_array;
                                                                 }
                                                                 switch(lookahead){
@@ -23064,7 +23064,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         break;
@@ -23080,7 +23080,7 @@ switch(lookahead){
                                                                         lookahead = advance(lexer);
                                                                         lexer->mark_end(lexer);
                                                                         {
-                                                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                           type = type_array;
                                                                         }
                                                                         break;
@@ -23100,7 +23100,7 @@ switch(lookahead){
                                                                             lookahead = advance(lexer);
                                                                             lexer->mark_end(lexer);
                                                                             {
-                                                                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                                               type = type_array;
                                                                             }
                                                                             break;
@@ -23192,7 +23192,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -23244,7 +23244,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -23280,7 +23280,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -23288,7 +23288,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_USE, 0 };
+              static const TokenType type_array[] = { RESERVED_USE, 0 };
               type = type_array;
             }
             break;
@@ -23296,7 +23296,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+              static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
             }
             break;
@@ -23308,7 +23308,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { BASE_SPECIFIER_BINARY, 0 };
+          static const TokenType type_array[] = { BASE_SPECIFIER_BINARY, 0 };
           type = type_array;
         }
         break;
@@ -23316,7 +23316,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { BASE_SPECIFIER_OCTAL, 0 };
+          static const TokenType type_array[] = { BASE_SPECIFIER_OCTAL, 0 };
           type = type_array;
         }
         break;
@@ -23324,7 +23324,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { BASE_SPECIFIER_HEX, 0 };
+          static const TokenType type_array[] = { BASE_SPECIFIER_HEX, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -23336,7 +23336,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -23344,7 +23344,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                       type = type_array;
                     }
                     break;
@@ -23364,7 +23364,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -23400,7 +23400,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -23448,7 +23448,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -23496,7 +23496,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -23536,7 +23536,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -23580,7 +23580,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_TYPE, 0 };
+                              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -23592,7 +23592,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -23608,7 +23608,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -23628,7 +23628,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -23684,7 +23684,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_TYPE, 0 };
+                          static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -23692,7 +23692,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                              static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                               type = type_array;
                             }
                             switch(lookahead){
@@ -23712,7 +23712,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -23740,7 +23740,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -23768,7 +23768,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -23788,7 +23788,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -23816,7 +23816,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -23880,7 +23880,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { RESERVED_VARIABLE, 0 };
+                                  static const TokenType type_array[] = { RESERVED_VARIABLE, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -23908,7 +23908,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
+              static const TokenType type_array[] = { ATTRIBUTE_PURE_FUNCTION, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -23920,7 +23920,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { ATTRIBUTE_VALUE, ATTRIBUTE_PURE_FUNCTION, 0 };
+                      static const TokenType type_array[] = { ATTRIBUTE_VALUE, ATTRIBUTE_PURE_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -23940,7 +23940,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -23972,7 +23972,7 @@ switch(lookahead){
                                                     lookahead = advance(lexer);
                                                     lexer->mark_end(lexer);
                                                     {
-                                                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                                                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                                                       type = type_array;
                                                     }
                                                     break;
@@ -24032,7 +24032,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_VIEW, 0 };
+                  static const TokenType type_array[] = { RESERVED_VIEW, 0 };
                   type = type_array;
                 }
                 break;
@@ -24060,7 +24060,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_VMODE, 0 };
+                      static const TokenType type_array[] = { RESERVED_VMODE, 0 };
                       type = type_array;
                     }
                     break;
@@ -24088,7 +24088,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_VPKG, 0 };
+                  static const TokenType type_array[] = { RESERVED_VPKG, 0 };
                   type = type_array;
                 }
                 break;
@@ -24108,7 +24108,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_VPROP, 0 };
+                      static const TokenType type_array[] = { RESERVED_VPROP, 0 };
                       type = type_array;
                     }
                     break;
@@ -24140,7 +24140,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_VUNIT, 0 };
+                      static const TokenType type_array[] = { RESERVED_VUNIT, 0 };
                       type = type_array;
                     }
                     break;
@@ -24172,7 +24172,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                      static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -24204,7 +24204,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const int type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -24252,7 +24252,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
           type = type_array;
         }
         break;
@@ -24276,7 +24276,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_WAIT, 0 };
+                  static const TokenType type_array[] = { RESERVED_WAIT, 0 };
                   type = type_array;
                 }
                 break;
@@ -24304,7 +24304,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_CONSTANT_DEBUG, DIRECTIVE_WARNING, 0 };
+                              static const TokenType type_array[] = { LIBRARY_CONSTANT_DEBUG, DIRECTIVE_WARNING, 0 };
                               type = type_array;
                             }
                             break;
@@ -24340,7 +24340,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_WHEN, 0 };
+                  static const TokenType type_array[] = { RESERVED_WHEN, 0 };
                   type = type_array;
                 }
                 break;
@@ -24360,7 +24360,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { RESERVED_WHILE, 0 };
+                      static const TokenType type_array[] = { RESERVED_WHILE, 0 };
                       type = type_array;
                     }
                     break;
@@ -24388,7 +24388,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_WITH, 0 };
+                  static const TokenType type_array[] = { RESERVED_WITH, 0 };
                   type = type_array;
                 }
                 break;
@@ -24408,7 +24408,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_TYPE, 0 };
+                      static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                       type = type_array;
                     }
                     break;
@@ -24456,7 +24456,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_CONSTANT_ENV, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -24500,7 +24500,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_NAMESPACE, 0 };
+                  static const TokenType type_array[] = { LIBRARY_NAMESPACE, 0 };
                   type = type_array;
                 }
                 break;
@@ -24528,7 +24528,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -24536,7 +24536,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -24556,7 +24556,7 @@ switch(lookahead){
                                         lookahead = advance(lexer);
                                         lexer->mark_end(lexer);
                                         {
-                                          static const int type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
+                                          static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, 0 };
                                           type = type_array;
                                         }
                                         break;
@@ -24592,7 +24592,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -24632,7 +24632,7 @@ switch(lookahead){
     lookahead = advance(lexer);
     lexer->mark_end(lexer);
     {
-      static const int type_array[] = { BASE_SPECIFIER_HEX, 0 };
+      static const TokenType type_array[] = { BASE_SPECIFIER_HEX, 0 };
       type = type_array;
     }
     switch(lookahead){
@@ -24648,7 +24648,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { RESERVED_XNOR, 0 };
+                  static const TokenType type_array[] = { RESERVED_XNOR, 0 };
                   type = type_array;
                 }
                 break;
@@ -24668,7 +24668,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { RESERVED_XOR, 0 };
+              static const TokenType type_array[] = { RESERVED_XOR, 0 };
               type = type_array;
             }
             break;
@@ -24684,7 +24684,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { LIBRARY_TYPE, 0 };
+              static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
               type = type_array;
             }
             switch(lookahead){
@@ -24692,7 +24692,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { LIBRARY_TYPE, 0 };
+                  static const TokenType type_array[] = { LIBRARY_TYPE, 0 };
                   type = type_array;
                 }
                 break;
@@ -24712,7 +24712,7 @@ switch(lookahead){
     lookahead = advance(lexer);
     lexer->mark_end(lexer);
     {
-      static const int type_array[] = { DIRECTIVE_NEWLINE, 0 };
+      static const TokenType type_array[] = { DIRECTIVE_NEWLINE, 0 };
       type = type_array;
     }
     switch(lookahead){
@@ -24720,7 +24720,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { DIRECTIVE_NEWLINE, 0 };
+          static const TokenType type_array[] = { DIRECTIVE_NEWLINE, 0 };
           type = type_array;
         }
         break;
@@ -24732,7 +24732,7 @@ switch(lookahead){
     lookahead = advance(lexer);
     lexer->mark_end(lexer);
     {
-      static const int type_array[] = { DIRECTIVE_NEWLINE, 0 };
+      static const TokenType type_array[] = { DIRECTIVE_NEWLINE, 0 };
       type = type_array;
     }
     switch(lookahead){
@@ -24740,7 +24740,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { DIRECTIVE_NEWLINE, 0 };
+          static const TokenType type_array[] = { DIRECTIVE_NEWLINE, 0 };
           type = type_array;
         }
         break;
@@ -24752,7 +24752,7 @@ switch(lookahead){
     lookahead = advance(lexer);
     lexer->mark_end(lexer);
     {
-      static const int type_array[] = { DELIMITER_GRAVE_ACCENT, 0 };
+      static const TokenType type_array[] = { DELIMITER_GRAVE_ACCENT, 0 };
       type = type_array;
     }
     break;
@@ -24764,7 +24764,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { DELIMITER_BOX, 0 };
+          static const TokenType type_array[] = { DELIMITER_BOX, 0 };
           type = type_array;
         }
         break;
@@ -24780,7 +24780,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LINE_COMMENT_START, 0 };
+          static const TokenType type_array[] = { LINE_COMMENT_START, 0 };
           type = type_array;
         }
         break;
@@ -24796,7 +24796,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { BLOCK_COMMENT_START, 0 };
+          static const TokenType type_array[] = { BLOCK_COMMENT_START, 0 };
           type = type_array;
         }
         break;
@@ -24820,7 +24820,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                  static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                   type = type_array;
                 }
                 break;
@@ -24836,7 +24836,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                  static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                   type = type_array;
                 }
                 break;
@@ -24856,7 +24856,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -24876,7 +24876,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                  static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                   type = type_array;
                 }
                 break;
@@ -24888,7 +24888,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -24908,7 +24908,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                  static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                   type = type_array;
                 }
                 break;
@@ -24920,7 +24920,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -24952,7 +24952,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -24976,7 +24976,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25004,7 +25004,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                  static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                   type = type_array;
                 }
                 break;
@@ -25036,7 +25036,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                          static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                           type = type_array;
                         }
                         break;
@@ -25064,7 +25064,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25080,7 +25080,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25100,7 +25100,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
+          static const TokenType type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -25116,7 +25116,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25144,7 +25144,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                          static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                           type = type_array;
                         }
                         break;
@@ -25164,7 +25164,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
+              static const TokenType type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
               type = type_array;
             }
             break;
@@ -25180,7 +25180,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+              static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
               type = type_array;
             }
             break;
@@ -25200,7 +25200,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                  static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                   type = type_array;
                 }
                 break;
@@ -25212,7 +25212,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+              static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
               type = type_array;
             }
             break;
@@ -25228,7 +25228,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+              static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
               type = type_array;
             }
             break;
@@ -25240,7 +25240,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                  static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                   type = type_array;
                 }
                 break;
@@ -25260,7 +25260,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+              static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
               type = type_array;
             }
             break;
@@ -25272,7 +25272,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                  static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                   type = type_array;
                 }
                 break;
@@ -25300,7 +25300,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25316,7 +25316,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25340,7 +25340,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25356,7 +25356,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25388,7 +25388,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25404,7 +25404,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25428,7 +25428,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25452,7 +25452,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+              static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
               type = type_array;
             }
             break;
@@ -25464,7 +25464,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
+          static const TokenType type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -25472,7 +25472,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, TOKEN_OPERATOR_SYMBOL, 0 };
+              static const TokenType type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, TOKEN_OPERATOR_SYMBOL, 0 };
               type = type_array;
             }
             break;
@@ -25488,7 +25488,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+              static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
               type = type_array;
             }
             break;
@@ -25504,7 +25504,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+              static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
               type = type_array;
             }
             break;
@@ -25516,7 +25516,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                  static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                   type = type_array;
                 }
                 break;
@@ -25544,7 +25544,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
+                      static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, 0 };
                       type = type_array;
                     }
                     break;
@@ -25564,7 +25564,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
+          static const TokenType type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -25572,7 +25572,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
+              static const TokenType type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
               type = type_array;
             }
             break;
@@ -25584,7 +25584,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
+          static const TokenType type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -25592,7 +25592,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
+              static const TokenType type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
               type = type_array;
             }
             break;
@@ -25604,7 +25604,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
+          static const TokenType type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -25612,7 +25612,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
+              static const TokenType type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
               type = type_array;
             }
             break;
@@ -25624,7 +25624,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
+          static const TokenType type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -25632,7 +25632,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
+              static const TokenType type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
               type = type_array;
             }
             break;
@@ -25644,7 +25644,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
+          static const TokenType type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -25652,7 +25652,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
+              static const TokenType type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
               type = type_array;
             }
             break;
@@ -25664,7 +25664,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
+          static const TokenType type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -25672,7 +25672,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
+              static const TokenType type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
               type = type_array;
             }
             break;
@@ -25684,7 +25684,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
+          static const TokenType type_array[] = { STRING_LITERAL_STD_LOGIC_START, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -25692,7 +25692,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const int type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
+              static const TokenType type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
               type = type_array;
             }
             break;
@@ -25720,7 +25720,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
+                  static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
                   type = type_array;
                 }
                 break;
@@ -25736,7 +25736,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
           type = type_array;
         }
         break;
@@ -25744,7 +25744,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const int type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
+          static const TokenType type_array[] = { LIBRARY_CONSTANT_UNIT, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -25760,7 +25760,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                       type = type_array;
                     }
                     break;
@@ -25796,7 +25796,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -25828,7 +25828,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                  static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -25848,7 +25848,7 @@ switch(lookahead){
                                 lookahead = advance(lexer);
                                 lexer->mark_end(lexer);
                                 {
-                                  static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                   type = type_array;
                                 }
                                 break;
@@ -25884,7 +25884,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -25940,7 +25940,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const int type_array[] = { ATTRIBUTE_SIGNAL, 0 };
+                      static const TokenType type_array[] = { ATTRIBUTE_SIGNAL, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -25948,7 +25948,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
+                          static const TokenType type_array[] = { IDENTIFIER_EXPECTING_LETTER, 0 };
                           type = type_array;
                         }
                         switch(lookahead){
@@ -25964,7 +25964,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const int type_array[] = { LIBRARY_CONSTANT, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_CONSTANT, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -26016,7 +26016,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -26068,7 +26068,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                              static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                               type = type_array;
                             }
                             break;
@@ -26120,7 +26120,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const int type_array[] = { LIBRARY_FUNCTION, 0 };
+                          static const TokenType type_array[] = { LIBRARY_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;

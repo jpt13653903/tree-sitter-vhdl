@@ -1,30 +1,31 @@
-""" These headers contain the "register_*" functions """
-from core import *
+import core
 
-from libraries.std.env      import *
-from libraries.std.standard import *
-from libraries.std.textio   import *
+import std.env
+import std.standard
+import std.textio
 
-from libraries.ieee.std_logic_1164 import *
-from libraries.ieee.numeric_std    import *
-from libraries.ieee.fixed_pkg      import *
-from libraries.ieee.float_pkg      import *
-from libraries.ieee.math_real      import *
-from libraries.ieee.math_complex   import *
+import ieee.std_logic_1164
+import ieee.numeric_std
+import ieee.fixed_pkg
+import ieee.float_pkg
+import ieee.math_real
+import ieee.math_complex
 #-------------------------------------------------------------------------------
 
 token_list = []
 
-register_core               (token_list)
-register_std_env            (token_list)
-register_std_standard       (token_list)
-register_std_textio         (token_list)
-register_ieee_std_logic_1164(token_list)
-register_ieee_numeric_std   (token_list)
-register_ieee_fixed_pkg     (token_list)
-register_ieee_float_pkg     (token_list)
-register_ieee_math_real     (token_list)
-register_ieee_math_complex  (token_list)
+core.register(token_list)
+
+std.env     .register(token_list)
+std.standard.register(token_list)
+std.textio  .register(token_list)
+
+ieee.std_logic_1164.register(token_list)
+ieee.numeric_std   .register(token_list)
+ieee.fixed_pkg     .register(token_list)
+ieee.float_pkg     .register(token_list)
+ieee.math_real     .register(token_list)
+ieee.math_complex  .register(token_list)
 #-------------------------------------------------------------------------------
 
 class Node:
@@ -68,7 +69,7 @@ def gen_case(file, root, indent = 0):
         if len(node.type) > 0:
             file.write((indent+2)*' ' + f'lexer->mark_end(lexer);\n')
             file.write((indent+2)*' ' + '{\n')
-            file.write((indent+4)*' ' + 'static const int type_array[] = { ')
+            file.write((indent+4)*' ' + 'static const TokenType type_array[] = { ')
             for type in node.type:
                 file.write(f'{type}, ')
             file.write('0 };\n')

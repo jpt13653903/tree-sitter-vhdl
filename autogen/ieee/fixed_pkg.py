@@ -1,4 +1,4 @@
-def register_ieee_fixed_pkg_types(token_list):
+def types(token_list):
     token_list.append(('fixed_round_style_type',    'LIBRARY_TYPE'))
     token_list.append(('fixed_overflow_style_type', 'LIBRARY_TYPE'))
     token_list.append(('round_type',                'LIBRARY_TYPE'))
@@ -8,7 +8,7 @@ def register_ieee_fixed_pkg_types(token_list):
     token_list.append(('sfixed',                    'LIBRARY_TYPE'))
 #-------------------------------------------------------------------------------
 
-def register_ieee_fixed_pkg_constants(token_list):
+def constants(token_list):
     token_list.append(('fixed_round',    'LIBRARY_CONSTANT'))
     token_list.append(('fixed_truncate', 'LIBRARY_CONSTANT'))
     token_list.append(('fixed_saturate', 'LIBRARY_CONSTANT'))
@@ -20,7 +20,7 @@ def register_ieee_fixed_pkg_constants(token_list):
     token_list.append(('round_zero',     'LIBRARY_CONSTANT'))
 #-------------------------------------------------------------------------------
 
-def register_ieee_fixed_pkg_functions(token_list):
+def functions(token_list):
     token_list.append(('divide',       'LIBRARY_FUNCTION'))
     token_list.append(('reciprocal',   'LIBRARY_FUNCTION'))
     token_list.append(('remainder',    'LIBRARY_FUNCTION'))
@@ -47,7 +47,7 @@ def register_ieee_fixed_pkg_functions(token_list):
     token_list.append(('from_hstring', 'LIBRARY_FUNCTION'))
 #-------------------------------------------------------------------------------
 
-def register_ieee_fixed_pkg_aliases(token_list):
+def aliases(token_list):
     token_list.append(('u_ufixed',           'LIBRARY_TYPE'))
     token_list.append(('u_sfixed',           'LIBRARY_TYPE'))
 
@@ -57,10 +57,10 @@ def register_ieee_fixed_pkg_aliases(token_list):
     token_list.append(('from_hex_string',    'LIBRARY_FUNCTION'))
 #-------------------------------------------------------------------------------
 
-def register_ieee_fixed_pkg(token_list):
-    register_ieee_fixed_pkg_types    (token_list)
-    register_ieee_fixed_pkg_constants(token_list)
-    register_ieee_fixed_pkg_functions(token_list)
-    register_ieee_fixed_pkg_aliases  (token_list)
+def register(token_list):
+    types    (token_list)
+    constants(token_list)
+    functions(token_list)
+    aliases  (token_list)
 #-------------------------------------------------------------------------------
 

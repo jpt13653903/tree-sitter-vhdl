@@ -1,4 +1,4 @@
-def register_reserved(token_list):
+def reserved(token_list):
     token_list.append(('abs',           'RESERVED_ABS'))
     token_list.append(('access',        'RESERVED_ACCESS'))
     token_list.append(('after',         'RESERVED_AFTER'))
@@ -117,7 +117,7 @@ def register_reserved(token_list):
     token_list.append(('xor',           'RESERVED_XOR'))
 #-------------------------------------------------------------------------------
 
-def register_directives(token_list):
+def directives(token_list):
     token_list.append(('protect',          'DIRECTIVE_PROTECT'))
     token_list.append(('warning',          'DIRECTIVE_WARNING'))
     token_list.append(('error',            'DIRECTIVE_ERROR'))
@@ -135,7 +135,7 @@ def register_directives(token_list):
     token_list.append(('\n\r',             'DIRECTIVE_NEWLINE'))
 #-------------------------------------------------------------------------------
 
-def register_delimiters(token_list):
+def delimiters(token_list):
     #- token_list.append(('&',   'DELIMITER_AMPERSAND'))
     #- token_list.append((''',   'DELIMITER_TICK'))
     #- token_list.append(('(',   'DELIMITER_LEFT_PARENTHESIS'))
@@ -181,7 +181,7 @@ def register_delimiters(token_list):
     token_list.append(('/*',  'BLOCK_COMMENT_START'))
 #-------------------------------------------------------------------------------
 
-def register_operator_symbols(token_list):
+def operator_symbols(token_list):
     token_list.append(('"??"',   'TOKEN_OPERATOR_SYMBOL'))
     token_list.append(('"and"',  'TOKEN_OPERATOR_SYMBOL'))
     token_list.append(('"or"',   'TOKEN_OPERATOR_SYMBOL'))
@@ -219,7 +219,7 @@ def register_operator_symbols(token_list):
     token_list.append(('"not"',  'TOKEN_OPERATOR_SYMBOL'))
 #-------------------------------------------------------------------------------
 
-def register_attributes(token_list):
+def attributes(token_list):
     token_list.append(('base',               'ATTRIBUTE_TYPE'))
     token_list.append(('left',               'ATTRIBUTE_VALUE'))
     token_list.append(('right',              'ATTRIBUTE_VALUE'))
@@ -268,7 +268,7 @@ def register_attributes(token_list):
     token_list.append(('converse',           'ATTRIBUTE_MODE_VIEW'))
 #-------------------------------------------------------------------------------
 
-def register_base_specifiers(token_list):
+def base_specifiers(token_list):
     token_list.append(('b',  'BASE_SPECIFIER_BINARY'))
     token_list.append(('o',  'BASE_SPECIFIER_OCTAL'))
     token_list.append(('x',  'BASE_SPECIFIER_HEX'))
@@ -281,12 +281,12 @@ def register_base_specifiers(token_list):
     token_list.append(('d',  'BASE_SPECIFIER_DECIMAL'))
 #-------------------------------------------------------------------------------
 
-def register_core(token_list):
-    register_reserved        (token_list)
-    register_directives      (token_list)
-    register_delimiters      (token_list)
-    register_operator_symbols(token_list)
-    register_attributes      (token_list)
-    register_base_specifiers (token_list)
+def register(token_list):
+    reserved        (token_list)
+    directives      (token_list)
+    delimiters      (token_list)
+    operator_symbols(token_list)
+    attributes      (token_list)
+    base_specifiers (token_list)
 #-------------------------------------------------------------------------------
 

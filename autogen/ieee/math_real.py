@@ -1,4 +1,4 @@
-def register_ieee_math_real_constants(token_list):
+def constants(token_list):
     token_list.append(('math_e',             'LIBRARY_CONSTANT'))
     token_list.append(('math_1_over_e',      'LIBRARY_CONSTANT'))
     token_list.append(('math_pi',            'LIBRARY_CONSTANT'))
@@ -19,7 +19,7 @@ def register_ieee_math_real_constants(token_list):
     token_list.append(('math_rad_to_deg',    'LIBRARY_CONSTANT'))
 #-------------------------------------------------------------------------------
 
-def register_ieee_math_real_functions(token_list):
+def functions(token_list):
     token_list.append(('sign',    'LIBRARY_FUNCTION'))
     token_list.append(('ceil',    'LIBRARY_FUNCTION'))
     token_list.append(('floor',   'LIBRARY_FUNCTION'))
@@ -48,8 +48,8 @@ def register_ieee_math_real_functions(token_list):
     token_list.append(('arctanh', 'LIBRARY_FUNCTION'))
 #-------------------------------------------------------------------------------
 
-def register_ieee_math_real(token_list):
-    register_ieee_math_real_constants(token_list)
-    register_ieee_math_real_functions(token_list)
+def register(token_list):
+    constants(token_list)
+    functions(token_list)
 #-------------------------------------------------------------------------------
 
