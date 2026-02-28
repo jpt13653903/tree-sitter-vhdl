@@ -88,11 +88,15 @@ static void bench_lifecycle(const char *source, uint32_t len, int iters)
     clock_gettime(CLOCK_MONOTONIC, &start);
 
     for (int i = 0; i < iters; i++) {
-        TSParser *parser = ts_parser_new();
-        ts_parser_set_language(parser, tree_sitter_vhdl());
-        TSTree *tree = ts_parser_parse_string(parser, NULL, source, len);
-        ts_tree_delete(tree);
-        ts_parser_delete(parser);
+        TSParser *parser[10];
+        for (int n = 0; n < 10; n++) {
+            parser[n] = ts_parser_new();
+            ts_parser_set_language(parser[n], tree_sitter_vhdl());
+            TSTree *tree = ts_parser_parse_string(parser[n], NULL, source, len);
+            ts_tree_delete(tree);
+        }
+        for (int n = 0; n < 10; n++)
+            ts_parser_delete(parser[n]);
     }
 
     clock_gettime(CLOCK_MONOTONIC, &end);
@@ -116,9 +120,13 @@ static void bench_create(int iters)
     clock_gettime(CLOCK_MONOTONIC, &start);
 
     for (int i = 0; i < iters; i++) {
-        TSParser *parser = ts_parser_new();
-        ts_parser_set_language(parser, tree_sitter_vhdl());
-        ts_parser_delete(parser);
+        TSParser *parser[10];
+        for (int n = 0; n < 10; n++) {
+            parser[n] = ts_parser_new();
+            ts_parser_set_language(parser[n], tree_sitter_vhdl());
+        }
+        for (int n = 0; n < 10; n++)
+            ts_parser_delete(parser[n]);
     }
 
     clock_gettime(CLOCK_MONOTONIC, &end);

@@ -184,9 +184,9 @@ hyperfine \
     --shell=none \
     --warmup 3 \
     --min-runs 10 \
-    -n "origin/master" "$BENCH_MASTER create 500" \
-    -n "blopker/thread-safety" "$BENCH_TS create 500" \
-    -n "origin/thread-safety" "$BENCH_TS_JPT create 500"
+    -n "origin/master" "$BENCH_MASTER create 50000" \
+    -n "blopker/thread-safety" "$BENCH_TS create 50000" \
+    -n "origin/thread-safety" "$BENCH_TS_JPT create 50000"
 
 echo ""
 echo "================================================================"
