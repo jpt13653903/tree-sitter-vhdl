@@ -16,16 +16,11 @@ INPUT_LARGE="$BENCH_DIR/input_large.vhd"
 TS_INCLUDE="../../tree-sitter/lib/include"
 TS_LIB="../../tree-sitter"
 
-BRANCHES=("master" "feature/thread-safety")
+BRANCHES=( "origin/master" "origin/feature/thread-safety" "blopker/feature/thread-safety" )
 
 export DYLD_LIBRARY_PATH="$TS_LIB${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
 
 # --- Helpers ----------------------------------------------------------------
-
-cleanup() {
-    echo "Restoring original branch..."
-    git -C "$REPO_ROOT" checkout --quiet master 2>/dev/null || true
-}
 
 build_bench() {
     local branch="$1"
@@ -41,8 +36,7 @@ build_bench() {
         "$BENCH_DIR/bench.c" \
         "$REPO_ROOT/src/parser.c" \
         "$REPO_ROOT/src/scanner.c" \
-        -L "$TS_LIB" \
-        -ltree-sitter \
+        "$TS_LIB/libtree-sitter.a" \
         -o "$out"
 
     echo "  -> $out"
@@ -162,8 +156,6 @@ BLOCK
 
 # --- Main -------------------------------------------------------------------
 
-trap cleanup EXIT
-
 mkdir -p "$BUILD_DIR"
 
 echo "Generating benchmark inputs..."
@@ -180,18 +172,21 @@ for branch in "${BRANCHES[@]}"; do
 done
 echo ""
 
-BENCH_MASTER="$BUILD_DIR/bench_master"
-BENCH_TS="$BUILD_DIR/bench_feature_thread-safety"
+BENCH_MASTER="$BUILD_DIR/bench_origin_master"
+BENCH_TS="$BUILD_DIR/bench_blopker_feature_thread-safety"
+BENCH_TS_JPT="$BUILD_DIR/bench_origin_feature_thread-safety"
 
 echo "================================================================"
 echo "BENCHMARK 1: Parser create + destroy (token tree build cost)"
 echo "================================================================"
 echo ""
 hyperfine \
+    --shell=none \
     --warmup 3 \
     --min-runs 10 \
-    -n "master" "$BENCH_MASTER create 500" \
-    -n "thread-safety" "$BENCH_TS create 500"
+    -n "origin/master" "$BENCH_MASTER create 500" \
+    -n "blopker/thread-safety" "$BENCH_TS create 500" \
+    -n "origin/thread-safety" "$BENCH_TS_JPT create 500"
 
 echo ""
 echo "================================================================"
@@ -199,10 +194,12 @@ echo "BENCHMARK 2: Parse throughput - small file ($(wc -l < "$INPUT_SMALL" | tr 
 echo "================================================================"
 echo ""
 hyperfine \
+    --shell=none \
     --warmup 3 \
     --min-runs 10 \
-    -n "master" "$BENCH_MASTER parse $INPUT_SMALL 2000" \
-    -n "thread-safety" "$BENCH_TS parse $INPUT_SMALL 2000"
+    -n "origin/master" "$BENCH_MASTER parse $INPUT_SMALL 2000" \
+    -n "blopker/thread-safety" "$BENCH_TS parse $INPUT_SMALL 2000" \
+    -n "origin/thread-safety" "$BENCH_TS_JPT parse $INPUT_SMALL 2000"
 
 echo ""
 echo "================================================================"
@@ -210,10 +207,12 @@ echo "BENCHMARK 3: Parse throughput - large file ($(wc -l < "$INPUT_LARGE" | tr 
 echo "================================================================"
 echo ""
 hyperfine \
+    --shell=none \
     --warmup 3 \
     --min-runs 10 \
-    -n "master" "$BENCH_MASTER parse $INPUT_LARGE 100" \
-    -n "thread-safety" "$BENCH_TS parse $INPUT_LARGE 100"
+    -n "origin/master" "$BENCH_MASTER parse $INPUT_LARGE 100" \
+    -n "blopker/thread-safety" "$BENCH_TS parse $INPUT_LARGE 100" \
+    -n "origin/thread-safety" "$BENCH_TS_JPT parse $INPUT_LARGE 100"
 
 echo ""
 echo "================================================================"
@@ -221,10 +220,12 @@ echo "BENCHMARK 4: Full lifecycle - small file (create+parse+destroy)"
 echo "================================================================"
 echo ""
 hyperfine \
+    --shell=none \
     --warmup 3 \
     --min-runs 10 \
-    -n "master" "$BENCH_MASTER lifecycle $INPUT_SMALL 500" \
-    -n "thread-safety" "$BENCH_TS lifecycle $INPUT_SMALL 500"
+    -n "origin/master" "$BENCH_MASTER lifecycle $INPUT_SMALL 500" \
+    -n "blopker/thread-safety" "$BENCH_TS lifecycle $INPUT_SMALL 500" \
+    -n "origin/thread-safety" "$BENCH_TS_JPT lifecycle $INPUT_SMALL 500"
 
 echo ""
 echo "================================================================"
@@ -232,10 +233,12 @@ echo "BENCHMARK 5: Full lifecycle - large file (create+parse+destroy)"
 echo "================================================================"
 echo ""
 hyperfine \
+    --shell=none \
     --warmup 3 \
     --min-runs 10 \
-    -n "master" "$BENCH_MASTER lifecycle $INPUT_LARGE 50" \
-    -n "thread-safety" "$BENCH_TS lifecycle $INPUT_LARGE 50"
+    -n "origin/master" "$BENCH_MASTER lifecycle $INPUT_LARGE 50" \
+    -n "blopker/thread-safety" "$BENCH_TS lifecycle $INPUT_LARGE 50" \
+    -n "origin/thread-safety" "$BENCH_TS_JPT lifecycle $INPUT_LARGE 50"
 
 echo ""
 echo "================================================================"
