@@ -210,9 +210,9 @@ hyperfine \
     --shell=none \
     --warmup 3 \
     --min-runs 10 \
-    -n "origin/master" "$BENCH_MASTER parse $INPUT_LARGE 100" \
-    -n "blopker/thread-safety" "$BENCH_TS parse $INPUT_LARGE 100" \
-    -n "origin/thread-safety" "$BENCH_TS_JPT parse $INPUT_LARGE 100"
+    -n "origin/master" "$BENCH_MASTER parse $INPUT_LARGE 10" \
+    -n "blopker/thread-safety" "$BENCH_TS parse $INPUT_LARGE 10" \
+    -n "origin/thread-safety" "$BENCH_TS_JPT parse $INPUT_LARGE 10"
 
 echo ""
 echo "================================================================"
@@ -223,9 +223,9 @@ hyperfine \
     --shell=none \
     --warmup 3 \
     --min-runs 10 \
-    -n "origin/master" "$BENCH_MASTER lifecycle $INPUT_SMALL 500" \
-    -n "blopker/thread-safety" "$BENCH_TS lifecycle $INPUT_SMALL 500" \
-    -n "origin/thread-safety" "$BENCH_TS_JPT lifecycle $INPUT_SMALL 500"
+    -n "origin/master" "$BENCH_MASTER lifecycle $INPUT_SMALL 2000" \
+    -n "blopker/thread-safety" "$BENCH_TS lifecycle $INPUT_SMALL 2000" \
+    -n "origin/thread-safety" "$BENCH_TS_JPT lifecycle $INPUT_SMALL 2000"
 
 echo ""
 echo "================================================================"
@@ -236,9 +236,9 @@ hyperfine \
     --shell=none \
     --warmup 3 \
     --min-runs 10 \
-    -n "origin/master" "$BENCH_MASTER lifecycle $INPUT_LARGE 50" \
-    -n "blopker/thread-safety" "$BENCH_TS lifecycle $INPUT_LARGE 50" \
-    -n "origin/thread-safety" "$BENCH_TS_JPT lifecycle $INPUT_LARGE 50"
+    -n "origin/master" "$BENCH_MASTER lifecycle $INPUT_LARGE 10" \
+    -n "blopker/thread-safety" "$BENCH_TS lifecycle $INPUT_LARGE 10" \
+    -n "origin/thread-safety" "$BENCH_TS_JPT lifecycle $INPUT_LARGE 10"
 
 echo ""
 echo "================================================================"
