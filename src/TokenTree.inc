@@ -1,6 +1,7 @@
 static TypeNode* type_node_new(TokenType type)
 {
     TypeNode* this = ts_malloc(sizeof(TypeNode));
+    if(!this) return 0;
     this->type = type;
     this->next = 0;
     return this;
@@ -26,6 +27,7 @@ static TypeNode* type_node_insert(TypeNode* head, TokenType type)
     }
 
     temp = type_node_new(type);
+    if(!temp) return head;
     temp->next = head;
     return temp;
 }

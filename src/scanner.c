@@ -1,6 +1,7 @@
 // #define DEBUG
 //------------------------------------------------------------------------------
 
+#include <stddef.h>
 #include <stdio.h>
 #include <string.h>
 //------------------------------------------------------------------------------
@@ -29,49 +30,60 @@
 //------------------------------------------------------------------------------
 
 typedef struct ScannerTag{
+    // Serialized state (must remain at the start of the struct)
     bool      is_in_directive;
     bool      is_block_comment; // else line comment
     TokenType bit_string_base;
     int       base;
+    // Non-serialized state
+    TokenTree* token_tree;
 } Scanner;
+
+#define SCANNER_SERIALIZED_SIZE offsetof(Scanner, token_tree)
 //------------------------------------------------------------------------------
 
 #include "TokenType.inc"
 #include "TokenTree.inc"
 //------------------------------------------------------------------------------
 
-static TokenTree* token_tree     = 0;
-static int        instance_count = 0;
+static TokenTree* build_token_tree()
+{
+    TokenTree* tree = token_tree_new();
+    if(!tree){
+        error("Cannot allocate memory for the token tree");
+        return 0;
+    }
+
+    debug("Building the token tree...");
+
+    register_core               (tree);
+    register_std_env            (tree);
+    register_std_standard       (tree);
+    register_std_textio         (tree);
+    register_ieee_std_logic_1164(tree);
+    register_ieee_numeric_std   (tree);
+    register_ieee_fixed_pkg     (tree);
+    register_ieee_float_pkg     (tree);
+    register_ieee_math_real     (tree);
+    register_ieee_math_complex  (tree);
+
+    debug("Balancing the token tree");
+    token_tree_balance(tree);
+
+    return tree;
+}
 //------------------------------------------------------------------------------
 
 void* tree_sitter_vhdl_external_scanner_create()
 {
-    if(!token_tree){
-        token_tree = token_tree_new();
-        if(!token_tree){
-            error("Cannot allocate memory for the token tree");
-            return 0;
-        }
-
-        debug("Building the token tree...");
-
-        register_core               (token_tree);
-        register_std_env            (token_tree);
-        register_std_standard       (token_tree);
-        register_std_textio         (token_tree);
-        register_ieee_std_logic_1164(token_tree);
-        register_ieee_numeric_std   (token_tree);
-        register_ieee_fixed_pkg     (token_tree);
-        register_ieee_float_pkg     (token_tree);
-        register_ieee_math_real     (token_tree);
-        register_ieee_math_complex  (token_tree);
-
-        debug("Balancing the token tree");
-        token_tree_balance(token_tree);
-    }
-    instance_count++;
-
     Scanner* scanner = ts_calloc(1, sizeof(Scanner));
+    if(!scanner) return 0;
+
+    scanner->token_tree = build_token_tree();
+    if(!scanner->token_tree){
+        ts_free(scanner);
+        return 0;
+    }
 
     return scanner;
 }
@@ -79,26 +91,25 @@ void* tree_sitter_vhdl_external_scanner_create()
 
 void tree_sitter_vhdl_external_scanner_destroy(Scanner* scanner)
 {
-    ts_free(scanner);
-
-    instance_count--;
-    if(!instance_count){
-        if(token_tree) token_tree_free(token_tree);
-        token_tree = 0;
+    if(scanner){
+        if(scanner->token_tree) token_tree_free(scanner->token_tree);
+        ts_free(scanner);
     }
 }
 //------------------------------------------------------------------------------
 
 unsigned tree_sitter_vhdl_external_scanner_serialize(Scanner* scanner, char* buffer)
 {
-    memcpy(buffer, scanner, sizeof(Scanner));
-    return sizeof(Scanner);
+    memcpy(buffer, scanner, SCANNER_SERIALIZED_SIZE);
+    return SCANNER_SERIALIZED_SIZE;
 }
 //------------------------------------------------------------------------------
 
 void tree_sitter_vhdl_external_scanner_deserialize(Scanner* scanner, const char* buffer, unsigned length)
 {
-    memcpy(scanner, buffer, length);
+    if(length > 0 && length <= SCANNER_SERIALIZED_SIZE && buffer){
+        memcpy(scanner, buffer, length);
+    }
 }
 //------------------------------------------------------------------------------
 
@@ -581,7 +592,7 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
 
     bool first_char_is_double_quote = (lexer->lookahead == '"');
 
-    TypeNode* types = token_tree_match(token_tree, lexer);
+    TypeNode* types = token_tree_match(scanner->token_tree, lexer);
 
     if(!types && first_char_is_letter){
         /* This works because all registered tokens in the search tree that
