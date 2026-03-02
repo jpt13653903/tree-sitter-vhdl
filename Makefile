@@ -1,6 +1,6 @@
 LANGUAGE_NAME := tree-sitter-vhdl
 HOMEPAGE_URL := https://github.com/jpt13653903/tree-sitter-vhdl
-VERSION := 1.3.1
+VERSION := 1.4.0
 
 # repository
 SRC_DIR := src

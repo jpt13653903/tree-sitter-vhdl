@@ -74,6 +74,8 @@ so it should work out of the box.
 - Follow the instructions [here][ts-docs] to setup your development environment.
 - Run `npm install --save-dev tree-sitter-cli`
 - Add `node_modules/.bin` to your environment path
+- From within the `autogen` directory, run `py gen_token_trie.py`
+  (only required after updating the token lists within `autogen`)
 - Run `tree-sitter generate`
 - Run `tree-sitter test`
 
