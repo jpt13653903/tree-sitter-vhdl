@@ -201,7 +201,8 @@ export default grammar({
 
     conflicts: $ => [
         [ $.generate_body ],
-        [ $.case_generate_body ]
+        [ $.case_generate_body ],
+        [ $._identifier, $._literal ]
     ],
 
     rules: {
@@ -1225,30 +1226,34 @@ export default grammar({
             )),
 
             _label: $ => choice(
-                alias($.identifier,       $.label),
-                alias($.library_constant, $.label),
-                alias($.library_function, $.label),
-                alias($.library_type,     $.label),
+                alias($.identifier,             $.label),
+                alias($.library_constant,       $.label),
+                alias($.library_constant_debug, $.label),
+                alias($.library_function,       $.label),
+                alias($.library_type,           $.label),
             ),
 
             _attribute: $ => choice(
-                alias($.identifier,       $.attribute_identifier),
-                alias($.library_constant, $.attribute_identifier),
-                alias($.library_function, $.attribute_identifier),
-                alias($.library_type,     $.attribute_identifier),
+                alias($.identifier,             $.attribute_identifier),
+                alias($.library_constant,       $.attribute_identifier),
+                alias($.library_constant_debug, $.attribute_identifier),
+                alias($.library_function,       $.attribute_identifier),
+                alias($.library_type,           $.attribute_identifier),
             ),
 
             _unit: $ => choice(
-                alias($.identifier,       $.unit),
-                alias($.library_constant, $.unit),
-                alias($.library_function, $.unit),
-                alias($.library_type,     $.unit),
+                alias($.identifier,             $.unit),
+                alias($.library_constant,       $.unit),
+                alias($.library_constant_debug, $.unit),
+                alias($.library_function,       $.unit),
+                alias($.library_type,           $.unit),
                 $.library_constant_unit
             ),
 
             _identifier: $ => choice(
                 $.identifier,
                 $.library_constant,
+                alias($.library_constant_debug, $.identifier),
                 $.library_function,
                 $.library_type,
             ),

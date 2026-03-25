@@ -5512,38 +5512,6 @@ switch(lookahead){
             break;
         }
         break;
-      case 'r':
-        lookahead = advance(lexer);
-        type = 0;
-        switch(lookahead){
-          case 'r':
-            lookahead = advance(lexer);
-            type = 0;
-            switch(lookahead){
-              case 'o':
-                lookahead = advance(lexer);
-                type = 0;
-                switch(lookahead){
-                  case 'r':
-                    lookahead = advance(lexer);
-                    lexer->mark_end(lexer);
-                    {
-                      static const TokenType type_array[] = { LIBRARY_CONSTANT_DEBUG, DIRECTIVE_ERROR, 0 };
-                      type = type_array;
-                    }
-                    break;
-                  default:
-                    break;
-                }
-                break;
-              default:
-                break;
-            }
-            break;
-          default:
-            break;
-        }
-        break;
       case 'v':
         lookahead = advance(lexer);
         type = 0;
@@ -5666,6 +5634,38 @@ switch(lookahead){
             {
               static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
+            }
+            break;
+          default:
+            break;
+        }
+        break;
+      case 'r':
+        lookahead = advance(lexer);
+        type = 0;
+        switch(lookahead){
+          case 'r':
+            lookahead = advance(lexer);
+            type = 0;
+            switch(lookahead){
+              case 'o':
+                lookahead = advance(lexer);
+                type = 0;
+                switch(lookahead){
+                  case 'r':
+                    lookahead = advance(lexer);
+                    lexer->mark_end(lexer);
+                    {
+                      static const TokenType type_array[] = { DIRECTIVE_ERROR, LIBRARY_CONSTANT_DEBUG, 0 };
+                      type = type_array;
+                    }
+                    break;
+                  default:
+                    break;
+                }
+                break;
+              default:
+                break;
             }
             break;
           default:
@@ -24304,7 +24304,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const TokenType type_array[] = { LIBRARY_CONSTANT_DEBUG, DIRECTIVE_WARNING, 0 };
+                              static const TokenType type_array[] = { DIRECTIVE_WARNING, LIBRARY_CONSTANT_DEBUG, 0 };
                               type = type_array;
                             }
                             break;

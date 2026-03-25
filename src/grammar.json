@@ -7527,6 +7527,15 @@
           "type": "ALIAS",
           "content": {
             "type": "SYMBOL",
+            "name": "library_constant_debug"
+          },
+          "named": true,
+          "value": "label"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
             "name": "library_function"
           },
           "named": true,
@@ -7560,6 +7569,15 @@
           "content": {
             "type": "SYMBOL",
             "name": "library_constant"
+          },
+          "named": true,
+          "value": "attribute_identifier"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "library_constant_debug"
           },
           "named": true,
           "value": "attribute_identifier"
@@ -7609,6 +7627,15 @@
           "type": "ALIAS",
           "content": {
             "type": "SYMBOL",
+            "name": "library_constant_debug"
+          },
+          "named": true,
+          "value": "unit"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
             "name": "library_function"
           },
           "named": true,
@@ -7639,6 +7666,15 @@
         {
           "type": "SYMBOL",
           "name": "library_constant"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "library_constant_debug"
+          },
+          "named": true,
+          "value": "identifier"
         },
         {
           "type": "SYMBOL",
@@ -12698,6 +12734,10 @@
     ],
     [
       "case_generate_body"
+    ],
+    [
+      "_identifier",
+      "_literal"
     ]
   ],
   "precedences": [],
