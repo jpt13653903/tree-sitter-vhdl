@@ -201,7 +201,7 @@ export default grammar({
 
     conflicts: $ => [
         [ $.generate_body ],
-        [ $.case_generate_body ],
+        [ $.case_generate_body ]
     ],
 
     rules: {

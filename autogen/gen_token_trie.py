@@ -26,7 +26,6 @@ ieee.fixed_pkg     .register(token_list)
 ieee.float_pkg     .register(token_list)
 ieee.math_real     .register(token_list)
 ieee.math_complex  .register(token_list)
-core.directive_severity(token_list)
 #-------------------------------------------------------------------------------
 
 class Node:
@@ -47,7 +46,7 @@ for keyword, type in token_list:
         last = root[character]
         root = last.next
     if last and type not in last.type:
-        last.type.insert(0, type)
+        last.type.append(type)
 #-------------------------------------------------------------------------------
 
 def sanitise(character):
