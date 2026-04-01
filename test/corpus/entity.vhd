@@ -216,7 +216,7 @@ entity MyModule is port(
             (if_conditional_analysis
               (conditional_analysis_expression
                 (conditional_analysis_relation
-                  (library_function)
+                  (directive_constant_builtin)
                   (string_literal))))
             (warning_directive
               (directive_warning)

@@ -508,7 +508,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const TokenType type_array[] = { LIBRARY_CONSTANT_STANDARD, ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
+                                      static const TokenType type_array[] = { ATTRIBUTE_VALUE, ATTRIBUTE_FUNCTION, LIBRARY_CONSTANT_STANDARD, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -5512,6 +5512,38 @@ switch(lookahead){
             break;
         }
         break;
+      case 'r':
+        lookahead = advance(lexer);
+        type = 0;
+        switch(lookahead){
+          case 'r':
+            lookahead = advance(lexer);
+            type = 0;
+            switch(lookahead){
+              case 'o':
+                lookahead = advance(lexer);
+                type = 0;
+                switch(lookahead){
+                  case 'r':
+                    lookahead = advance(lexer);
+                    lexer->mark_end(lexer);
+                    {
+                      static const TokenType type_array[] = { DIRECTIVE_ERROR, LIBRARY_CONSTANT_DEBUG, 0 };
+                      type = type_array;
+                    }
+                    break;
+                  default:
+                    break;
+                }
+                break;
+              default:
+                break;
+            }
+            break;
+          default:
+            break;
+        }
+        break;
       case 'v':
         lookahead = advance(lexer);
         type = 0;
@@ -5634,38 +5666,6 @@ switch(lookahead){
             {
               static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, 0 };
               type = type_array;
-            }
-            break;
-          default:
-            break;
-        }
-        break;
-      case 'r':
-        lookahead = advance(lexer);
-        type = 0;
-        switch(lookahead){
-          case 'r':
-            lookahead = advance(lexer);
-            type = 0;
-            switch(lookahead){
-              case 'o':
-                lookahead = advance(lexer);
-                type = 0;
-                switch(lookahead){
-                  case 'r':
-                    lookahead = advance(lexer);
-                    lexer->mark_end(lexer);
-                    {
-                      static const TokenType type_array[] = { DIRECTIVE_ERROR, LIBRARY_CONSTANT_DEBUG, 0 };
-                      type = type_array;
-                    }
-                    break;
-                  default:
-                    break;
-                }
-                break;
-              default:
-                break;
             }
             break;
           default:
@@ -6292,7 +6292,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const TokenType type_array[] = { LIBRARY_CONSTANT, LIBRARY_FUNCTION, 0 };
+                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, LIBRARY_CONSTANT, 0 };
                                       type = type_array;
                                     }
                                     switch(lookahead){
@@ -11200,7 +11200,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
+              static const TokenType type_array[] = { ATTRIBUTE_VALUE, ATTRIBUTE_FUNCTION, 0 };
               type = type_array;
             }
             break;
@@ -11324,7 +11324,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const TokenType type_array[] = { LIBRARY_CONSTANT, ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
+                  static const TokenType type_array[] = { ATTRIBUTE_VALUE, ATTRIBUTE_FUNCTION, LIBRARY_CONSTANT, 0 };
                   type = type_array;
                 }
                 switch(lookahead){
@@ -11368,7 +11368,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, ATTRIBUTE_PURE_FUNCTION, 0 };
+                          static const TokenType type_array[] = { ATTRIBUTE_PURE_FUNCTION, ATTRIBUTE_FUNCTION, 0 };
                           type = type_array;
                         }
                         break;
@@ -14992,7 +14992,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const TokenType type_array[] = { ATTRIBUTE_RANGE, RESERVED_RANGE, 0 };
+                      static const TokenType type_array[] = { RESERVED_RANGE, ATTRIBUTE_RANGE, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -15232,7 +15232,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const TokenType type_array[] = { ATTRIBUTE_TYPE, RESERVED_RECORD, 0 };
+                          static const TokenType type_array[] = { RESERVED_RECORD, ATTRIBUTE_TYPE, 0 };
                           type = type_array;
                         }
                         break;
@@ -16700,7 +16700,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const TokenType type_array[] = { LIBRARY_CONSTANT, ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
+                      static const TokenType type_array[] = { ATTRIBUTE_VALUE, ATTRIBUTE_FUNCTION, LIBRARY_CONSTANT, 0 };
                       type = type_array;
                     }
                     switch(lookahead){
@@ -17680,7 +17680,7 @@ switch(lookahead){
                         lookahead = advance(lexer);
                         lexer->mark_end(lexer);
                         {
-                          static const TokenType type_array[] = { ATTRIBUTE_SIGNAL, RESERVED_SIGNAL, 0 };
+                          static const TokenType type_array[] = { RESERVED_SIGNAL, ATTRIBUTE_SIGNAL, 0 };
                           type = type_array;
                         }
                         break;
@@ -19304,7 +19304,7 @@ switch(lookahead){
                             lookahead = advance(lexer);
                             lexer->mark_end(lexer);
                             {
-                              static const TokenType type_array[] = { ATTRIBUTE_SUBTYPE, RESERVED_SUBTYPE, 0 };
+                              static const TokenType type_array[] = { RESERVED_SUBTYPE, ATTRIBUTE_SUBTYPE, 0 };
                               type = type_array;
                             }
                             break;
@@ -19420,7 +19420,7 @@ switch(lookahead){
         lookahead = advance(lexer);
         lexer->mark_end(lexer);
         {
-          static const TokenType type_array[] = { LIBRARY_CONSTANT_CHARACTER, BASE_SPECIFIER_OCTAL, 0 };
+          static const TokenType type_array[] = { BASE_SPECIFIER_OCTAL, LIBRARY_CONSTANT_CHARACTER, 0 };
           type = type_array;
         }
         switch(lookahead){
@@ -19936,7 +19936,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                      static const TokenType type_array[] = { DIRECTIVE_CONSTANT_BUILTIN, LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -19976,7 +19976,7 @@ switch(lookahead){
                                             lookahead = advance(lexer);
                                             lexer->mark_end(lexer);
                                             {
-                                              static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                              static const TokenType type_array[] = { DIRECTIVE_CONSTANT_BUILTIN, LIBRARY_FUNCTION, 0 };
                                               type = type_array;
                                             }
                                             break;
@@ -20012,7 +20012,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                                  static const TokenType type_array[] = { DIRECTIVE_CONSTANT_BUILTIN, LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -20056,7 +20056,7 @@ switch(lookahead){
                                     lookahead = advance(lexer);
                                     lexer->mark_end(lexer);
                                     {
-                                      static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                      static const TokenType type_array[] = { DIRECTIVE_CONSTANT_BUILTIN, LIBRARY_FUNCTION, 0 };
                                       type = type_array;
                                     }
                                     break;
@@ -20100,7 +20100,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                                  static const TokenType type_array[] = { DIRECTIVE_CONSTANT_BUILTIN, LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -23920,7 +23920,7 @@ switch(lookahead){
                     lookahead = advance(lexer);
                     lexer->mark_end(lexer);
                     {
-                      static const TokenType type_array[] = { ATTRIBUTE_VALUE, ATTRIBUTE_PURE_FUNCTION, 0 };
+                      static const TokenType type_array[] = { ATTRIBUTE_PURE_FUNCTION, ATTRIBUTE_VALUE, 0 };
                       type = type_array;
                     }
                     break;
@@ -24204,7 +24204,7 @@ switch(lookahead){
                                                 lookahead = advance(lexer);
                                                 lexer->mark_end(lexer);
                                                 {
-                                                  static const TokenType type_array[] = { LIBRARY_FUNCTION, DIRECTIVE_CONSTANT_BUILTIN, 0 };
+                                                  static const TokenType type_array[] = { DIRECTIVE_CONSTANT_BUILTIN, LIBRARY_FUNCTION, 0 };
                                                   type = type_array;
                                                 }
                                                 break;
@@ -25472,7 +25472,7 @@ switch(lookahead){
             lookahead = advance(lexer);
             lexer->mark_end(lexer);
             {
-              static const TokenType type_array[] = { TOKEN_STRING_LITERAL_STD_LOGIC, TOKEN_OPERATOR_SYMBOL, 0 };
+              static const TokenType type_array[] = { TOKEN_OPERATOR_SYMBOL, TOKEN_STRING_LITERAL_STD_LOGIC, 0 };
               type = type_array;
             }
             break;
@@ -25720,7 +25720,7 @@ switch(lookahead){
                 lookahead = advance(lexer);
                 lexer->mark_end(lexer);
                 {
-                  static const TokenType type_array[] = { ATTRIBUTE_FUNCTION, ATTRIBUTE_VALUE, 0 };
+                  static const TokenType type_array[] = { ATTRIBUTE_VALUE, ATTRIBUTE_FUNCTION, 0 };
                   type = type_array;
                 }
                 break;

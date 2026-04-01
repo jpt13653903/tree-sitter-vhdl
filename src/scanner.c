@@ -585,7 +585,7 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
                 return false;
 
             }else if(can_start_identifier(*types) &&
-                finish_identifier(lexer, *types == IDENTIFIER_EXPECTING_LETTER)){
+                     finish_identifier(lexer, *types == IDENTIFIER_EXPECTING_LETTER)){
                 lexer->result_symbol = IDENTIFIER;
                 debug("Returning type IDENTIFIER");
                 return true;
@@ -620,6 +620,11 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
                         debug("Returning false");
                         return false;
                     }
+                }else if(valid_symbols[TOKEN_STRING_LITERAL_STD_LOGIC] && contains(types, TOKEN_STRING_LITERAL_STD_LOGIC)){
+                    lexer->result_symbol = TOKEN_STRING_LITERAL_STD_LOGIC;
+                    debug("Returning type TOKEN_STRING_LITERAL_STD_LOGIC");
+                    return true;
+
                 }else if(valid_symbols[*types]){
                     lexer->result_symbol = *types;
                     debug("Returning type %s", token_type_to_string(*types));
@@ -658,7 +663,10 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
                    scanner->is_in_directive = (*types == DELIMITER_GRAVE_ACCENT);
                 }
 
-                debug("Returning type %s", token_type_to_string(*types));
+                if(valid_symbols[DIRECTIVE_CONSTANT_BUILTIN] && contains(types, DIRECTIVE_CONSTANT_BUILTIN))
+                    lexer->result_symbol = DIRECTIVE_CONSTANT_BUILTIN;
+
+                debug("Returning type %s", token_type_to_string(lexer->result_symbol));
                 return true;
 
             }else if(can_be_identifier(scanner, *types)){

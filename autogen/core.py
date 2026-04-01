@@ -119,6 +119,8 @@ def reserved(token_list):
 
 def directives(token_list):
     token_list.append(('protect',          'DIRECTIVE_PROTECT'))
+    token_list.append(('warning',          'DIRECTIVE_WARNING'))
+    token_list.append(('error',            'DIRECTIVE_ERROR'))
 
     token_list.append(('VHDL_VERSION',     'DIRECTIVE_CONSTANT_BUILTIN'))
     token_list.append(('TOOL_TYPE',        'DIRECTIVE_CONSTANT_BUILTIN'))
@@ -131,12 +133,6 @@ def directives(token_list):
     token_list.append(('\n',               'DIRECTIVE_NEWLINE'))
     token_list.append(('\r\n',             'DIRECTIVE_NEWLINE'))
     token_list.append(('\n\r',             'DIRECTIVE_NEWLINE'))
-
-# Called after library registrations so DIRECTIVE_WARNING/ERROR take priority
-# over LIBRARY_CONSTANT_DEBUG when both are valid (e.g. in user_directive context).
-def directive_severity(token_list):
-    token_list.append(('warning',          'DIRECTIVE_WARNING'))
-    token_list.append(('error',            'DIRECTIVE_ERROR'))
 #-------------------------------------------------------------------------------
 
 def delimiters(token_list):

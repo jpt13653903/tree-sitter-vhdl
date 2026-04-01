@@ -202,6 +202,7 @@ const char* token_type_to_string(TokenType type);
 
 bool can_start_identifier(TokenType type);
 bool is_base_specifier   (TokenType type);
+bool contains(const TokenType* types, TokenType type);
 //------------------------------------------------------------------------------
 
 #endif

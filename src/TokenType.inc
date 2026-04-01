@@ -228,3 +228,13 @@ bool is_base_specifier(TokenType type)
 }
 //------------------------------------------------------------------------------
 
+bool contains(const TokenType* types, TokenType type)
+{
+    while(*types){
+        if(*types == type) return true;
+        types++;
+    }
+    return false;
+}
+//------------------------------------------------------------------------------
+
