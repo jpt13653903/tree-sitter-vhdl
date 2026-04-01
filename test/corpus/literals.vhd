@@ -507,7 +507,8 @@ A <= null;
       (waveform
         (waveform_element
           (simple_expression
-            (library_constant_debug)))))
+            (name
+              (library_constant_debug))))))
     (concurrent_simple_signal_assignment
       (name
         (identifier))

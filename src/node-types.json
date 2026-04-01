@@ -93,6 +93,10 @@
           "named": true
         },
         {
+          "type": "library_constant_debug",
+          "named": true
+        },
+        {
           "type": "library_function",
           "named": true
         },
@@ -144,6 +148,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -576,6 +584,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -1342,6 +1354,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -1732,6 +1748,10 @@
           "named": true
         },
         {
+          "type": "library_constant_debug",
+          "named": true
+        },
+        {
           "type": "library_function",
           "named": true
         },
@@ -1899,6 +1919,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -2037,6 +2061,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -2693,6 +2721,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -2751,6 +2783,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -2784,6 +2820,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -2812,6 +2852,10 @@
           "named": true
         },
         {
+          "type": "library_constant_debug",
+          "named": true
+        },
+        {
           "type": "library_function",
           "named": true
         },
@@ -2836,6 +2880,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -2917,6 +2965,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -2942,6 +2994,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -2988,6 +3044,10 @@
           "named": true
         },
         {
+          "type": "library_constant_debug",
+          "named": true
+        },
+        {
           "type": "library_function",
           "named": true
         },
@@ -3012,6 +3072,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -3042,6 +3106,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -3067,6 +3135,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -3171,6 +3243,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -3218,6 +3294,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -3390,6 +3470,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -3787,6 +3871,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -3821,6 +3909,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -4120,6 +4212,10 @@
           "named": true
         },
         {
+          "type": "library_constant_debug",
+          "named": true
+        },
+        {
           "type": "library_function",
           "named": true
         },
@@ -4152,6 +4248,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -4239,6 +4339,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -4258,6 +4362,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -4281,6 +4389,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -4623,6 +4735,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -4792,6 +4908,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -4887,6 +5007,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -4934,6 +5058,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -5026,6 +5154,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -5204,6 +5336,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -5386,6 +5522,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -5488,6 +5628,10 @@
           "named": true
         },
         {
+          "type": "library_constant_debug",
+          "named": true
+        },
+        {
           "type": "library_constant_std_logic",
           "named": true
         },
@@ -5570,6 +5714,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -5703,6 +5851,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -5846,6 +5998,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -5885,6 +6041,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -5931,6 +6091,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -6011,6 +6175,10 @@
           "named": true
         },
         {
+          "type": "library_constant_debug",
+          "named": true
+        },
+        {
           "type": "library_function",
           "named": true
         },
@@ -6043,6 +6211,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -6151,6 +6323,10 @@
           "named": true
         },
         {
+          "type": "library_constant_debug",
+          "named": true
+        },
+        {
           "type": "library_function",
           "named": true
         },
@@ -6214,6 +6390,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -6475,6 +6655,10 @@
           "named": true
         },
         {
+          "type": "library_constant_debug",
+          "named": true
+        },
+        {
           "type": "library_function",
           "named": true
         },
@@ -6542,6 +6726,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -6645,6 +6833,10 @@
           "named": true
         },
         {
+          "type": "library_constant_debug",
+          "named": true
+        },
+        {
           "type": "library_function",
           "named": true
         },
@@ -6669,6 +6861,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -6935,6 +7131,10 @@
           "named": true
         },
         {
+          "type": "library_constant_debug",
+          "named": true
+        },
+        {
           "type": "library_constant_unit",
           "named": true
         },
@@ -7059,6 +7259,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -7097,6 +7301,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
@@ -7699,10 +7907,6 @@
           "named": true
         },
         {
-          "type": "library_constant_debug",
-          "named": true
-        },
-        {
           "type": "library_constant_env",
           "named": true
         },
@@ -7998,6 +8202,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -8128,6 +8336,10 @@
             "named": true
           },
           {
+            "type": "library_constant_debug",
+            "named": true
+          },
+          {
             "type": "library_function",
             "named": true
           },
@@ -8151,6 +8363,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -8201,6 +8417,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -8300,6 +8520,10 @@
           },
           {
             "type": "library_constant",
+            "named": true
+          },
+          {
+            "type": "library_constant_debug",
             "named": true
           },
           {
@@ -8445,6 +8669,10 @@
         },
         {
           "type": "library_constant",
+          "named": true
+        },
+        {
+          "type": "library_constant_debug",
           "named": true
         },
         {
