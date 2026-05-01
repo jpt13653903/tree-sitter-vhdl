@@ -37,8 +37,8 @@ end Behaviour;
               (interface_list
                 (interface_declaration
                   (identifier_list
-                    (library_constant)
-                    (library_constant))
+                    (identifier)
+                    (identifier))
                   (simple_mode_indication
                     (subtype_indication
                       type: (name

@@ -21,25 +21,25 @@ end Behaviour;
       (architecture_head
         (signal_declaration
           (identifier_list
-            (library_constant_debug))
+            (identifier))
           (subtype_indication
             type: (name
               (library_type))))
         (signal_declaration
           (identifier_list
-            (library_constant_debug))
+            (identifier))
           (subtype_indication
             type: (name
               (library_type))))
         (signal_declaration
           (identifier_list
-            (library_constant_debug))
+            (identifier))
           (subtype_indication
             type: (name
               (library_type))))
         (signal_declaration
           (identifier_list
-            (library_constant_debug))
+            (identifier))
           (subtype_indication
             type: (name
               (library_type)))))

@@ -1257,6 +1257,14 @@ export default grammar({
                 $.library_type,
             ),
 
+            _identifier_as_identifier: $ => choice(
+                $.identifier,
+                alias($.library_constant, $.identifier),
+                alias($.library_constant_debug, $.identifier),
+                alias($.library_function, $.identifier),
+                alias($.library_type, $.identifier),
+            ),
+
             _name_selector: $ => choice(
                 $.function_call,
                 $.parenthesis_group,
@@ -1665,7 +1673,7 @@ export default grammar({
             ),
 
             identifier_list: $ => seq(
-                $._identifier, repeat(seq(",", $._identifier))
+                $._identifier_as_identifier, repeat(seq(",", $._identifier_as_identifier))
             ),
 
             _mode_indication: $ => choice(

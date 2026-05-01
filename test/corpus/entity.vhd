@@ -278,3 +278,80 @@ entity MyModule is port(
       (end_entity
         entity: (identifier)))))
 
+================================================================================
+Port declarations using library-defined names
+================================================================================
+
+entity example is
+  port (
+    clk         : in  std_logic;
+
+    sin, cos    : in  std_logic;
+    read, write : in  std_logic;
+
+    ieee        : out std_logic;
+    std         : out std_logic;
+    work        : out std_logic
+  );
+end entity;
+--------------------------------------------------------------------------------
+
+(design_file
+  (design_unit
+    (entity_declaration
+      entity: (identifier)
+      (entity_head
+        (port_clause
+          (interface_list
+            (interface_declaration
+              (identifier_list
+                (identifier))
+              (simple_mode_indication
+                (mode)
+                (subtype_indication
+                  type: (name
+                    (library_type)))))
+            (interface_declaration
+              (identifier_list
+                (identifier)
+                (identifier))
+              (simple_mode_indication
+                (mode)
+                (subtype_indication
+                  type: (name
+                    (library_type)))))
+            (interface_declaration
+              (identifier_list
+                (identifier)
+                (identifier))
+              (simple_mode_indication
+                (mode)
+                (subtype_indication
+                  type: (name
+                    (library_type)))))
+            (interface_declaration
+              (identifier_list
+                (identifier))
+              (simple_mode_indication
+                (mode)
+                (subtype_indication
+                  type: (name
+                    (library_type)))))
+            (interface_declaration
+              (identifier_list
+                (identifier))
+              (simple_mode_indication
+                (mode)
+                (subtype_indication
+                  type: (name
+                    (library_type)))))
+            (interface_declaration
+              (identifier_list
+                (identifier))
+              (simple_mode_indication
+                (mode)
+                (subtype_indication
+                  type: (name
+                    (library_type))))))))
+      (end_entity))))
+
