@@ -12,6 +12,7 @@ A VHDL parser for syntax highlighting.
 - [VHDL-2000](https://edg.uchicago.edu/~tang/VHDLref.pdf)
 - [VHDL-2008](https://faculty-web.msoe.edu/johnsontimoj/Common/FILES/VHDL_2008.pdf)
 - [VHDL-2019](https://doi.org/10.1109/IEEESTD.2019.8938196)
+- [VHDL Packages](https://opensource.ieee.org/vasg/Packages)
 - [VHDL Library Files](https://standards.ieee.org/downloads/) (search for "1076")
 - [VSCode Modern VHDL](https://github.com/richjyoung/vscode-modern-vhdl/blob/master/syntaxes/vhdl.tmLanguage.yml)
 
