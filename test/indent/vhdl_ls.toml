@@ -1,0 +1,10 @@
+standard = "2008"
+
+[libraries]
+
+lib.files = [
+    "./**/*.vhd",
+]
+
+[lint]
+unnecessary_work_library = false

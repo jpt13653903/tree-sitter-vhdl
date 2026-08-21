@@ -65,6 +65,29 @@ This parser has been [merged][NeovimMerge] into the official [nvim-treesitter],
 so it should work out of the box after adding it to the list of languages to
 install.
 
+You can also use [tree-sitter-manager] instead, in which case it is recommended
+to configure as follows:
+
+```lua
+require("tree-sitter-manager").setup({
+    ensure_installed = {
+        -- ...
+        'vhdl',
+        -- ...
+    },
+    languages = {
+        vhdl = {
+            install_info = {
+                url      = 'https://github.com/jpt13653903/tree-sitter-vhdl',
+                revision = 'master',
+                queries  = 'queries/Neovim',
+                use_repo_queries = true,
+            },
+        },
+    },
+})
+```
+
 ## Helix Setup Process
 
 This parser has been [merged][HelixMerge] into the official Helix repo,
@@ -89,6 +112,7 @@ Contributions are welcome.  Read [Contributing.md] for more information.
 [matrix]: https://img.shields.io/matrix/tree-sitter-chat%3Amatrix.org?logo=matrix&label=matrix
 [Neovim]: https://neovim.io/
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter/tree/main
+[tree-sitter-manager]: https://github.com/romus204/tree-sitter-manager.nvim
 [Catppuccin]: https://github.com/catppuccin/nvim
 [Tokyo Night]: https://github.com/folke/tokyonight.nvim
 [One Dark]: https://github.com/navarasu/onedark.nvim
