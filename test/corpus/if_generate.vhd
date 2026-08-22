@@ -40,48 +40,48 @@ end generate testGenerate;
                     (adding_operator)
                     (simple_expression
                       (name
-                        (identifier)))))))))
-        (elsif_generate
-          (relational_expression
-            (simple_expression
+                        (identifier))))))))))
+      (elsif_generate
+        (relational_expression
+          (simple_expression
+            (name
+              (identifier)))
+          (relational_operator)
+          (simple_expression
+            (decimal_integer)))
+        (generate_body
+          (generate_block
+            (concurrent_simple_signal_assignment
               (name
-                (identifier)))
-            (relational_operator)
-            (simple_expression
-              (decimal_integer)))
-          (generate_body
-            (generate_block
-              (concurrent_simple_signal_assignment
-                (name
-                  (identifier))
-                (signal_assignment)
-                (waveform
-                  (waveform_element
+                (identifier))
+              (signal_assignment)
+              (waveform
+                (waveform_element
+                  (simple_expression
                     (simple_expression
-                      (simple_expression
-                        (name
-                          (identifier)))
-                      (adding_operator)
-                      (simple_expression
-                        (name
-                          (identifier)))))))))
-          (else_generate
-            (generate_body
-              (generate_block
-                (concurrent_simple_signal_assignment
-                  (name
-                    (identifier))
-                  (signal_assignment)
-                  (waveform
-                    (waveform_element
-                      (simple_expression
-                        (simple_expression
-                          (name
-                            (identifier)))
-                        (adding_operator)
-                        (simple_expression
-                          (name
-                            (identifier))))))))))))
+                      (name
+                        (identifier)))
+                    (adding_operator)
+                    (simple_expression
+                      (name
+                        (identifier))))))))))
+      (else_generate
+        (generate_body
+          (generate_block
+            (concurrent_simple_signal_assignment
+              (name
+                (identifier))
+              (signal_assignment)
+              (waveform
+                (waveform_element
+                  (simple_expression
+                    (simple_expression
+                      (name
+                        (identifier)))
+                    (adding_operator)
+                    (simple_expression
+                      (name
+                        (identifier))))))))))
       (end_generate
         (label)))))
 

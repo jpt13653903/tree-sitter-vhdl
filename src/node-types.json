@@ -2627,14 +2627,6 @@
           "named": true
         },
         {
-          "type": "else_generate",
-          "named": true
-        },
-        {
-          "type": "elsif_generate",
-          "named": true
-        },
-        {
           "type": "generate_body",
           "named": true
         },
@@ -2671,14 +2663,6 @@
       "types": [
         {
           "type": "condition_expression",
-          "named": true
-        },
-        {
-          "type": "else_statement",
-          "named": true
-        },
-        {
-          "type": "elsif_statement",
           "named": true
         },
         {
@@ -4418,14 +4402,6 @@
           "named": true
         },
         {
-          "type": "else_generate",
-          "named": true
-        },
-        {
-          "type": "elsif_generate",
-          "named": true
-        },
-        {
           "type": "generate_body",
           "named": true
         },
@@ -4461,6 +4437,14 @@
       "required": true,
       "types": [
         {
+          "type": "else_generate",
+          "named": true
+        },
+        {
+          "type": "elsif_generate",
+          "named": true
+        },
+        {
           "type": "end_generate",
           "named": true
         },
@@ -4485,14 +4469,6 @@
       "types": [
         {
           "type": "condition_expression",
-          "named": true
-        },
-        {
-          "type": "else_statement",
-          "named": true
-        },
-        {
-          "type": "elsif_statement",
           "named": true
         },
         {
@@ -4526,6 +4502,14 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "else_statement",
+          "named": true
+        },
+        {
+          "type": "elsif_statement",
+          "named": true
+        },
         {
           "type": "end_if",
           "named": true
