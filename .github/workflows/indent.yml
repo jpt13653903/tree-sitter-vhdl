@@ -1,0 +1,59 @@
+name: Indent
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+    paths:
+      - grammar.js
+      - queries/**
+      - src/**
+      - test/**
+      - bindings/**
+      - binding.gyp
+  pull_request:
+    paths:
+      - grammar.js
+      - queries/**
+      - src/**
+      - test/**
+      - bindings/**
+      - binding.gyp
+
+jobs:
+  test:
+    name: Test indentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up tree-sitter
+        uses: tree-sitter/setup-action/cli@v2
+
+      - name: Check out nvim-treesitter
+        uses: actions/checkout@v6
+        with:
+          repository: nvim-treesitter/nvim-treesitter
+          ref: main
+          path: nvim-treesitter
+
+      - name: Install Neovim
+        run: |
+          curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+          sudo rm -rf /opt/nvim
+          sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+          echo "/opt/nvim-linux-x86_64/bin" >> "$GITHUB_PATH"
+
+      - name: Check versions
+        run: |
+          nvim --version
+          tree-sitter --version
+
+      - name: Run indentation tests
+        env:
+          NVIM_TREESITTER: ${{ github.workspace }}/nvim-treesitter
+        run: ./test/indent/run.sh
+
