@@ -51,7 +51,7 @@ for ref in "$repo"/test/indent/*.vhd; do
 
     NVIM_TS_WORK="$work" \
     NVIM_TS_PLUGIN="$NVIM_TREESITTER" \
-        nvim --headless -i NONE -u "$repo/test/indent/init.lua" "$ref" \
+        nvim --headless --clean -i NONE -u "$repo/test/indent/init.lua" "$ref" \
         -c "lua indent_test_guard()" \
         -c 'silent normal! gg=G' \
         -c "silent write! $got" \
