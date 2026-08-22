@@ -898,20 +898,15 @@ export default grammar({
             ),
 
             if_generate_statement: $ => seq(
-                $.label_declaration, $.if_generate, $.end_generate, ";"
+                $.label_declaration, $.if_generate, repeat($.elsif_generate), optional($.else_generate), $.end_generate, ";"
             ),
 
             if_generate: $ => seq(
-                alias($.IF, "if"), optional($.label_declaration), $._expression, $.generate_body, optional($._elsif_else_generate)
-            ),
-
-            _elsif_else_generate: $ => choice(
-                $.elsif_generate,
-                $.else_generate
+                alias($.IF, "if"), optional($.label_declaration), $._expression, $.generate_body
             ),
 
             elsif_generate: $ => seq(
-                alias($.ELSIF, "elsif"), optional($.label_declaration), $._expression, $.generate_body, optional($._elsif_else_generate)
+                alias($.ELSIF, "elsif"), optional($.label_declaration), $._expression, $.generate_body
             ),
 
             else_generate: $ => seq(
@@ -967,20 +962,15 @@ export default grammar({
             ),
 
             if_statement_block: $ => seq(
-                optional($.label_declaration), $.if_statement, $.end_if, ";"
+                optional($.label_declaration), $.if_statement, repeat($.elsif_statement), optional($.else_statement), $.end_if, ";"
             ),
 
             if_statement: $ => seq(
-                alias($.IF, "if"), $._expression, alias($.THEN, "then"), optional($.if_statement_body), optional($._elsif_else_statement)
-            ),
-
-            _elsif_else_statement: $ => choice(
-                $.elsif_statement,
-                $.else_statement
+                alias($.IF, "if"), $._expression, alias($.THEN, "then"), optional($.if_statement_body)
             ),
 
             elsif_statement: $ => seq(
-                alias($.ELSIF, "elsif"), $._expression, alias($.THEN, "then"), optional($.if_statement_body), optional($._elsif_else_statement)
+                alias($.ELSIF, "elsif"), $._expression, alias($.THEN, "then"), optional($.if_statement_body)
             ),
 
             else_statement: $ => seq(
