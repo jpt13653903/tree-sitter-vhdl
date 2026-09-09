@@ -324,6 +324,25 @@ begin
     foo(to_hex_string => whatnot);
 
     foo(foreign => whatnot);
+
+    foo(sunday => whatnot);
+    foo(monday => whatnot);
+    foo(tuesday => whatnot);
+    foo(wednesday => whatnot);
+    foo(thursday => whatnot);
+    foo(friday => whatnot);
+    foo(saturday => whatnot);
+
+    foo(status_ok => whatnot);
+    foo(status_not_found => whatnot);
+    foo(status_no_directory => whatnot);
+    foo(status_access_denied => whatnot);
+    foo(status_item_exists => whatnot);
+    foo(status_not_empty => whatnot);
+    foo(status_no_file => whatnot);
+    foo(status_error => whatnot);
+
+    foo(dir_separator => whatnot);
   end process;
 end Behaviour;
 
@@ -1571,6 +1590,198 @@ end Behaviour;
                     (association_element
                       (name
                         (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
+                      (conditional_expression
+                        (simple_expression
+                          (name
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (library_constant_env))
                       (conditional_expression
                         (simple_expression
                           (name
@@ -1701,6 +1912,25 @@ begin
     foo(whatnot => to_hex_string);
 
     foo(whatnot => foreign);
+
+    foo(whatnot => sunday);
+    foo(whatnot => monday);
+    foo(whatnot => tuesday);
+    foo(whatnot => wednesday);
+    foo(whatnot => thursday);
+    foo(whatnot => friday);
+    foo(whatnot => saturday);
+
+    foo(whatnot => status_ok);
+    foo(whatnot => status_not_found);
+    foo(whatnot => status_no_directory);
+    foo(whatnot => status_access_denied);
+    foo(whatnot => status_item_exists);
+    foo(whatnot => status_not_empty);
+    foo(whatnot => status_no_file);
+    foo(whatnot => status_error);
+
+    foo(whatnot => dir_separator);
   end process;
 end Behaviour;
 
@@ -2870,7 +3100,183 @@ end Behaviour;
                       (conditional_expression
                         (simple_expression
                           (name
-                            (identifier))))))))))
+                            (identifier)))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env))))))))
+            (procedure_call_statement
+              (name
+                (identifier)
+                (parenthesis_group
+                  (association_or_range_list
+                    (association_element
+                      (name
+                        (identifier))
+                      (conditional_expression
+                        (simple_expression
+                          (library_constant_env)))))))))
           (end_process)))
       (end_architecture
         architecture: (identifier)))))

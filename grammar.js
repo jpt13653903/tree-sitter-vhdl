@@ -1210,7 +1210,6 @@ export default grammar({
                 $._identifier,
                 $.operator_symbol,
                 $.character_literal,
-                $.library_constant_std_logic,
                 $._external_name,
             )),
 
@@ -1245,7 +1244,9 @@ export default grammar({
                 $.library_constant_boolean,
                 $.library_constant_character,
                 $.library_constant_debug,
+                $.library_constant_env,
                 $.library_constant_standard,
+                $.library_constant_std_logic,
                 $.library_function,
                 $.library_type,
             )),

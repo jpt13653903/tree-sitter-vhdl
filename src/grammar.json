@@ -7457,10 +7457,6 @@
           },
           {
             "type": "SYMBOL",
-            "name": "library_constant_std_logic"
-          },
-          {
-            "type": "SYMBOL",
             "name": "_external_name"
           }
         ]
@@ -7648,7 +7644,15 @@
           },
           {
             "type": "SYMBOL",
+            "name": "library_constant_env"
+          },
+          {
+            "type": "SYMBOL",
             "name": "library_constant_standard"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_constant_std_logic"
           },
           {
             "type": "SYMBOL",
