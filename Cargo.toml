@@ -1,25 +1,18 @@
 [package]
-name = "tree-sitter-vhdl"
-description = "VHDL grammar for tree-sitter"
-version = "2.0.0"
-authors = ["John-Philip Taylor"]
-license = "MIT"
-readme = "README.md"
-keywords = ["incremental", "parsing", "tree-sitter", "vhdl"]
-categories = ["parser-implementations", "parsing", "text-editors"]
-repository = "https://github.com/jpt13653903/tree-sitter-vhdl"
-edition = "2021"
+authors = [ "John-Philip Taylor" ]
 autoexamples = false
+categories = [ "parser-implementations", "parsing", "text-editors" ]
+description = "VHDL grammar for tree-sitter"
+edition = "2024"
+keywords = [ "incremental", "parsing", "tree-sitter", "vhdl" ]
+license = "MIT"
+name = "tree-sitter-vhdl"
+readme = "README.md"
+repository = "https://github.com/jpt13653903/tree-sitter-vhdl"
+version = "2.0.0"
 
 build = "bindings/rust/build.rs"
-include = [
-  "bindings/rust/*",
-  "grammar.js",
-  "queries/*",
-  "src/*",
-  "tree-sitter.json",
-  "/LICENSE",
-]
+include = [ "bindings/rust/*", "grammar.js", "queries/*", "src/*", "tree-sitter.json", "/LICENSE" ]
 
 [lib]
 path = "bindings/rust/lib.rs"
@@ -31,4 +24,4 @@ tree-sitter-language = "0.1"
 cc = "1.2"
 
 [dev-dependencies]
-tree-sitter = "0.26.13"
+tree-sitter = "0.27.0"
