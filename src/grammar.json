@@ -7621,29 +7621,45 @@
       ]
     },
     "_identifier": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "identifier"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "library_constant"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "library_constant_debug"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "library_function"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "library_type"
-        }
-      ]
+      "type": "PREC",
+      "value": 30,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "identifier"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_constant"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_constant_boolean"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_constant_character"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_constant_debug"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_constant_standard"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_function"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_type"
+          }
+        ]
+      }
     },
     "_identifier_as_identifier": {
       "type": "CHOICE",
@@ -8464,71 +8480,75 @@
       ]
     },
     "_literal": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_abstract_literal"
-            },
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "FIELD",
-                  "name": "unit",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "_unit"
+      "type": "PREC",
+      "value": 31,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_abstract_literal"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "FIELD",
+                    "name": "unit",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "_unit"
+                    }
+                  },
+                  {
+                    "type": "BLANK"
                   }
-                },
-                {
-                  "type": "BLANK"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "SYMBOL",
-          "name": "bit_string_literal"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "string_literal"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "string_literal_std_logic"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "library_constant_boolean"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "library_constant_character"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "library_constant_env"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "library_constant_standard"
-        },
-        {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "NULL"
+                ]
+              }
+            ]
           },
-          "named": false,
-          "value": "null"
-        }
-      ]
+          {
+            "type": "SYMBOL",
+            "name": "bit_string_literal"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "string_literal"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "string_literal_std_logic"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_constant_boolean"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_constant_character"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_constant_env"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "library_constant_standard"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "NULL"
+            },
+            "named": false,
+            "value": "null"
+          }
+        ]
+      }
     },
     "bit_string_literal": {
       "type": "SEQ",

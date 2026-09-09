@@ -93,7 +93,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -151,7 +163,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -587,7 +611,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -1354,7 +1390,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -1748,7 +1796,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -1919,7 +1979,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -2064,7 +2136,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -2705,7 +2789,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -2767,7 +2863,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -2804,7 +2912,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -2836,7 +2956,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -2867,7 +2999,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -2949,7 +3093,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -2981,7 +3137,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -3028,7 +3196,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -3059,7 +3239,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -3090,7 +3282,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -3122,7 +3326,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -3227,7 +3443,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -3281,7 +3509,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -3457,7 +3697,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -3855,7 +4107,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -3896,7 +4160,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -4196,7 +4472,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -4235,7 +4523,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -4323,7 +4623,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -4349,7 +4661,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -4703,7 +5027,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -4876,7 +5212,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -4975,7 +5323,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -5029,7 +5389,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -5125,7 +5497,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -5307,7 +5691,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -5490,7 +5886,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -5596,7 +6004,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -5685,7 +6105,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -5822,7 +6254,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -5966,7 +6410,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -6012,7 +6468,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -6062,7 +6530,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -6143,7 +6623,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -6182,7 +6674,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -6291,7 +6795,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -6361,7 +6877,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -6623,7 +7151,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -6697,7 +7237,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -6801,7 +7353,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -6832,7 +7396,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -7099,7 +7675,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -7227,7 +7815,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -7272,7 +7872,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
@@ -8170,7 +8782,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -8304,7 +8928,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -8334,7 +8970,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -8388,7 +9036,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -8491,7 +9151,19 @@
             "named": true
           },
           {
+            "type": "library_constant_boolean",
+            "named": true
+          },
+          {
+            "type": "library_constant_character",
+            "named": true
+          },
+          {
             "type": "library_constant_debug",
+            "named": true
+          },
+          {
+            "type": "library_constant_standard",
             "named": true
           },
           {
@@ -8640,7 +9312,19 @@
           "named": true
         },
         {
+          "type": "library_constant_boolean",
+          "named": true
+        },
+        {
+          "type": "library_constant_character",
+          "named": true
+        },
+        {
           "type": "library_constant_debug",
+          "named": true
+        },
+        {
+          "type": "library_constant_standard",
           "named": true
         },
         {
