@@ -9,7 +9,7 @@ license = "MIT"
 name = "tree-sitter-vhdl"
 readme = "README.md"
 repository = "https://github.com/jpt13653903/tree-sitter-vhdl"
-version = "2.0.0"
+version = "2.0.1"
 
 build = "bindings/rust/build.rs"
 include = [ "bindings/rust/*", "grammar.js", "queries/*", "src/*", "tree-sitter.json", "/LICENSE" ]
