@@ -1239,13 +1239,16 @@ export default grammar({
                 $.library_constant_unit
             ),
 
-            _identifier: $ => choice(
+            _identifier: $ => prec(30, choice(
                 $.identifier,
                 $.library_constant,
+                $.library_constant_boolean,
+                $.library_constant_character,
                 $.library_constant_debug,
+                $.library_constant_standard,
                 $.library_function,
                 $.library_type,
-            ),
+            )),
 
             _identifier_as_identifier: $ => choice(
                 $.identifier,
@@ -1374,7 +1377,7 @@ export default grammar({
                 $.ALL
             ),
 
-            _literal: $ => choice(
+            _literal: $ => prec(31, choice(
                 seq($._abstract_literal, optional(field("unit", $._unit))),
                 $.bit_string_literal,
                 $.string_literal,
@@ -1384,7 +1387,7 @@ export default grammar({
                 $.library_constant_env,
                 $.library_constant_standard,
                 alias($.NULL, "null")
-            ),
+            )),
 
             bit_string_literal: $ => seq(
                 optional($.bit_string_length),
