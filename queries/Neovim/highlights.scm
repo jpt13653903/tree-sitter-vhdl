@@ -263,6 +263,7 @@
   "*"
   "/"
   ":"
+  "|"
   "=>"
 ] @operator
 
@@ -431,5 +432,3 @@
 
 (mode_view_declaration
   (identifier) @type.definition)
-
-; (ERROR) @error
