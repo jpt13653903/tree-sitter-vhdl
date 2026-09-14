@@ -30,6 +30,7 @@
   (port_clause)
   (generic_clause)
   (association_list)
+  (parenthesis_group)
 
   ; Concurrent statements
   (process_statement)
@@ -77,4 +78,7 @@
   ")" @indent.branch)
 
 (association_list
+  ")" @indent.branch)
+
+(parenthesis_group
   ")" @indent.branch)

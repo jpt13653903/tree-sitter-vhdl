@@ -1,6 +1,6 @@
 LANGUAGE_NAME := tree-sitter-vhdl
 HOMEPAGE_URL := https://github.com/jpt13653903/tree-sitter-vhdl
-VERSION := 2.0.2
+VERSION := 2.0.3
 DESCRIPTION := VHDL grammar for tree-sitter
 
 # repository
