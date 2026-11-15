@@ -5187,6 +5187,10 @@
         {
           "type": "simple_range",
           "named": true
+        },
+        {
+          "type": "subtype_indication",
+          "named": true
         }
       ]
     }

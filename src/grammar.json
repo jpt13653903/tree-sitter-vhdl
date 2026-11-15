@@ -3324,7 +3324,7 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "_range"
+            "name": "_discrete_range"
           },
           {
             "type": "REPEAT",
@@ -3337,13 +3337,26 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_range"
+                  "name": "_discrete_range"
                 }
               ]
             }
           }
         ]
       }
+    },
+    "_discrete_range": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "subtype_indication"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_range"
+        }
+      ]
     },
     "index_subtype_definition": {
       "type": "SEQ",
@@ -12758,6 +12771,19 @@
     ],
     [
       "case_generate_body"
+    ],
+    [
+      "subtype_indication",
+      "_primary"
+    ],
+    [
+      "subtype_indication",
+      "resolution_indication",
+      "_primary"
+    ],
+    [
+      "resolution_indication",
+      "_primary"
     ]
   ],
   "precedences": [],

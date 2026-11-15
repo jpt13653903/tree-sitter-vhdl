@@ -201,7 +201,10 @@ export default grammar({
 
     conflicts: $ => [
         [ $.generate_body ],
-        [ $.case_generate_body ]
+        [ $.case_generate_body ],
+        [ $.subtype_indication, $._primary ],
+        [ $.subtype_indication, $.resolution_indication, $._primary ],
+        [ $.resolution_indication, $._primary ]
     ],
 
     rules: {
@@ -692,8 +695,13 @@ export default grammar({
             ),
 
             index_constraint: $ => prec.left(seq(
-                $._range, repeat(seq(",", $._range))
+                $._discrete_range, repeat(seq(",", $._discrete_range))
             )),
+
+            _discrete_range: $ => choice(
+                $.subtype_indication,
+                $._range
+            ),
 
             index_subtype_definition: $ => seq(
                 field("type", $.name), alias($.RANGE, "range"), alias($.box, "<>")
